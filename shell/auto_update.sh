@@ -14,7 +14,7 @@ echo "2. 添加所有新增文件"
 git add -A ${BASE_PATH}/
 
 echo "3. 提交更新"
-git commit -a -m "Auto updated, current time is ${CURRENT_TIME}."
+git commit -a -m "Auto updated on ${CURRENT_TIME}."
 
 echo "4. 推送到远端"
 git push origin master
