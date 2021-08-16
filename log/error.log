@@ -192,3 +192,4 @@ Traceback (most recent call last):
     └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2021-08-16 16:57:07.904 | ERROR    | app_doc.util_upload_img:url_img_upload:288 - 上传URL图片异常：ConnectionError(MaxRetryError("HTTPSConnectionPool(host='cdn.jsdelivr.net', port=443): Max retries exceeded with url: /gh/wliduo/CDN@1.1/2019/11/20191121002.png (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7faa4d755da0>: Failed to establish a new connection: [Errno 110] Connection timed out',))",),)
