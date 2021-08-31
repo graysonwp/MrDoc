@@ -192,3 +192,391 @@ Traceback (most recent call last):
     └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2021-08-31 10:42:33.701 | ERROR    | app_doc.views:doc:1022 - 文集浏览出错
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 884, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7ff067de3378>
+    └ <Thread(Thread-136, started daemon 140670258472704)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7ff067de3158>
+    └ <Thread(Thread-136, started daemon 140670258472704)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-136, started daemon 140670258472704)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-136, started daemon 140670258472704)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>>
+    └ <Thread(Thread-136, started daemon 140670258472704)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 6526)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7ff06199ae18>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+    │    │                   │        └ ('127.0.0.1', 6526)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7ff060a46b70>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7ff0583e47f0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7ff060a46bf8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7ff0583e47f0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7ff060a460d0>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7ff0583e47f0>
+    │       └ <function BaseHandler.run at 0x7ff060a3cd90>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7ff05819e400>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7ff060a43158>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7ff05819e400>
+    │    │        │           │    └ {'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin', 'PWD': '/', 'LANG': 'en_US.UTF-8', 'SHLVL': '1', '_': '/usr/bin...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7ff05819e400>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7ff05819e400>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler.get_response at 0x7ff060bcc840>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe510>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7ff059cadd68>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe488>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7ff059cadd68>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7ff059cba080>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe400>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7ff059cba080>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7ff059cba278>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe378>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7ff059cba278>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7ff05b356c50>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe2f0>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7ff05b356c50>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7ff05a7907f0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe268>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7ff05a7907f0>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7ff05a790908>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe1e0>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7ff05a790908>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7ff05a790860>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe158>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7ff05a790860>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7ff05aa10eb8>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe0d0>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7ff05aa10eb8>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7ff05aa10f98>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 33, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler._get_response at 0x7ff059c62620>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7ff05aa10f98>
+
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 738}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <function doc at 0x7ff05a637048>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 738}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-738/'>
+           └ <function doc at 0x7ff05a634f28>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 949, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 738
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7ff060b4bfd0>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 738, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7ff061a628c8>
+                   └ <django.db.models.manager.Manager object at 0x7ff059dd1630>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2021-08-31 10:52:34.352 | ERROR    | app_doc.views:doc:1022 - 文集浏览出错
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 884, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7ff067de3378>
+    └ <Thread(Thread-138, started daemon 140670258472704)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7ff067de3158>
+    └ <Thread(Thread-138, started daemon 140670258472704)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-138, started daemon 140670258472704)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-138, started daemon 140670258472704)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>>
+    └ <Thread(Thread-138, started daemon 140670258472704)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 6538)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7ff06199ae18>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+    │    │                   │        └ ('127.0.0.1', 6538)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7ff060a46b70>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7ff058d4dbe0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7ff060a46bf8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7ff058d4dbe0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7ff060a460d0>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7ff061e8de80>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7ff058d4dbe0>
+    │       └ <function BaseHandler.run at 0x7ff060a3cd90>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7ff058d4db38>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7ff060a43158>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7ff058d4db38>
+    │    │        │           │    └ {'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin', 'PWD': '/', 'LANG': 'en_US.UTF-8', 'SHLVL': '1', '_': '/usr/bin...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7ff058d4db38>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7ff058d4db38>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler.get_response at 0x7ff060bcc840>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe510>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7ff059cadd68>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe488>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7ff059cadd68>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7ff059cba080>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe400>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7ff059cba080>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7ff059cba278>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe378>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7ff059cba278>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7ff05b356c50>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe2f0>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7ff05b356c50>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7ff05a7907f0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe268>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7ff05a7907f0>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7ff05a790908>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe1e0>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7ff05a790908>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7ff05a790860>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe158>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7ff05a790860>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7ff05aa10eb8>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7ff059bfe0d0>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7ff05aa10eb8>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7ff05aa10f98>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 33, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler._get_response at 0x7ff059c62620>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7ff05aa10f98>
+
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7ff05b419b38>>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 738}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <function doc at 0x7ff05a637048>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 738}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-738/'>
+           └ <function doc at 0x7ff05a634f28>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 949, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 738
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7ff060b4bfd0>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 738, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7ff061a628c8>
+                   └ <django.db.models.manager.Manager object at 0x7ff059dd1630>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
