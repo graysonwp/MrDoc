@@ -7,11 +7,5 @@
         {% if beian_code != None and beian_code != '' %}
             | <a href="http://beian.miit.gov.cn/" target="_blank">{{beian_code}}</a>
         {% endif %}
-	<!-- 统计代码开始 -->
-        {% if debug %}
-        {% else %}
-            | {{ static_code | safe }}
-        {% endif %}
-    <!-- 统计代码结束 -->
     </div>
 </div>
