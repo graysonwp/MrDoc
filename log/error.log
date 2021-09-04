@@ -1,58 +1,58 @@
-2021-09-03 01:18:23.550 | ERROR    | app_doc.views:doc:1022 - 文集浏览出错
+2021-09-04 16:31:37.561 | ERROR    | app_doc.views:doc:1022 - 文集浏览出错
 Traceback (most recent call last):
   File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 884, in _bootstrap
     self._bootstrap_inner()
     │    └ <function Thread._bootstrap_inner at 0x7fbffa508378>
-    └ <Thread(Thread-1625, started daemon 140461750306560)>
+    └ <Thread(Thread-2841, started daemon 140461628958464)>
   File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 916, in _bootstrap_inner
     self.run()
     │    └ <function Thread.run at 0x7fbffa508158>
-    └ <Thread(Thread-1625, started daemon 140461750306560)>
+    └ <Thread(Thread-2841, started daemon 140461628958464)>
   File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 864, in run
     self._target(*self._args, **self._kwargs)
     │    │        │    │        │    └ {}
-    │    │        │    │        └ <Thread(Thread-1625, started daemon 140461750306560)>
-    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
-    │    │        └ <Thread(Thread-1625, started daemon 140461750306560)>
+    │    │        │    │        └ <Thread(Thread-2841, started daemon 140461628958464)>
+    │    │        │    └ (<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-2841, started daemon 140461628958464)>
     │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7fbff45b2e10>>
-    └ <Thread(Thread-1625, started daemon 140461750306560)>
+    └ <Thread(Thread-2841, started daemon 140461628958464)>
   File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
     self.finish_request(request, client_address)
-    │    │              │        └ ('127.0.0.1', 15794)
-    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    │              │        └ ('127.0.0.1', 20422)
+    │    │              └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
     │    └ <function BaseServer.finish_request at 0x7fbff40bfe18>
     └ <django.core.servers.basehttp.WSGIServer object at 0x7fbff45b2e10>
   File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
     self.RequestHandlerClass(request, client_address, self)
     │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7fbff45b2e10>
-    │    │                   │        └ ('127.0.0.1', 15794)
-    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    │                   │        └ ('127.0.0.1', 20422)
+    │    │                   └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
     │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
     └ <django.core.servers.basehttp.WSGIServer object at 0x7fbff45b2e10>
   File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
     self.handle()
     │    └ <function WSGIRequestHandler.handle at 0x7fbff316bb70>
-    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fbff284a828>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fbfe9973d68>
   File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
     self.handle_one_request()
     │    └ <function WSGIRequestHandler.handle_one_request at 0x7fbff316bbf8>
-    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fbff284a828>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fbfe9973d68>
   File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
     handler.run(self.server.get_app())
     │       │   │    │      └ <function WSGIServer.get_app at 0x7fbff316b0d0>
     │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7fbff45b2e10>
-    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fbff284a828>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fbfe9973d68>
     │       └ <function BaseHandler.run at 0x7fbff3162d90>
-    └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfd2db0a90>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfe9443438>
   File "/root/.pyenv/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 137, in run
     self.result = application(self.environ, self.start_response)
     │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7fbff3168158>
-    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfd2db0a90>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfe9443438>
     │    │        │           │    └ {'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin', 'PWD': '/', 'LANG': 'en_US.UTF-8', 'SHLVL': '1', '_': '/usr/bin...
-    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfd2db0a90>
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfe9443438>
     │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fbff1b5f898>
     │    └ None
-    └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfd2db0a90>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fbfe9443438>
   File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
     response = self.get_response(request)
                │    │            └ <WSGIRequest: GET '/project-1/doc-297/'>
