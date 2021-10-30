@@ -63,7 +63,7 @@ def log_in(request):
             require_login_check_code = SysSetting.objects.filter(types="basic",name="enable_login_check_code")
             if (len(require_login_check_code) > 0) and (require_login_check_code[0].value == 'on'):
                 checkcode = request.POST.get("check_code", None)
-                if checkcode != request.session['CheckCode'].lower():
+                if checkcode.lower() != request.session['CheckCode'].lower():
                     errormsg = _('验证码错误！')
                     return render(request, 'login.html', locals())
             if username != '' and pwd != '':
@@ -129,7 +129,7 @@ def register(request):
                     elif len(password) < 6: # 验证密码长度
                         errormsg = _('密码必须大于等于6位！')
                         return render(request, 'register.html', locals())
-                    elif checkcode != request.session['CheckCode'].lower(): # 验证验证码
+                    elif checkcode.lower() != request.session['CheckCode'].lower(): # 验证验证码
                         errormsg = _("验证码错误")
                         return render(request, 'register.html', locals())
                     else:
@@ -196,6 +196,25 @@ def forget_pwd(request):
         new_pwd_confirm = request.POST.get('confirm_password')
         # 查询验证码和邮箱是否匹配
         try:
+            # 验证重试次数
+            if 'ForgetPwdEmailCodeVerifyLock' not in request.session.keys():
+                request.session['ForgetPwdEmailCodeVerifyNum'] = 1 # 重试次数
+                request.session['ForgetPwdEmailCodeVerifyLock'] = False # 是否锁定
+                request.session['ForgetPwdEmailCodeVerifyTime'] = datetime.datetime.now().timestamp() # 解除锁定时间
+            verify_num = request.session['ForgetPwdEmailCodeVerifyNum']
+            if verify_num > 5:
+                request.session['ForgetPwdEmailCodeVerifyLock'] = True
+                request.session['ForgetPwdEmailCodeVerifyTime'] = (datetime.datetime.now() + datetime.timedelta(minutes=10)).timestamp()
+            verify_lock = request.session['ForgetPwdEmailCodeVerifyLock']
+            verify_time = request.session['ForgetPwdEmailCodeVerifyTime']
+
+            # 验证是否锁定
+            # print(datetime.datetime.now().timestamp(),verify_time)
+            if verify_lock is True and datetime.datetime.now().timestamp() < verify_time:
+                errormsg = _("操作过于频繁，请10分钟后再试！")
+                request.session['ForgetPwdEmailCodeVerifyNum'] = 0  # 重试次数清零
+                return render(request, 'forget_pwd.html', locals())
+            # 比对验证码
             data = EmaiVerificationCode.objects.get(email_name=email,verification_code=vcode,verification_type='忘记密码')
             expire_time = data.expire_time
             if expire_time > datetime.datetime.now():
@@ -203,17 +222,22 @@ def forget_pwd(request):
                 user.set_password(new_pwd)
                 user.save()
                 errormsg = _("修改密码成功，请返回登录！")
+                request.session['ForgetPwdEmailCodeVerifyNum'] = 0 # 重试次数
+                request.session['ForgetPwdEmailCodeVerifyLock'] = False # 是否锁定
+                request.session['ForgetPwdEmailCodeVerifyTime'] = datetime.datetime.now().timestamp() # 解除锁定时间
                 return render(request, 'forget_pwd.html', locals())
             else:
-                errormsg = _("验证码已过期")
+                errormsg = _("验证码已过期！")
                 return render(request, 'forget_pwd.html', locals())
         except ObjectDoesNotExist:
-            logger.error(_("邮箱不存在：{}".format(email)))
-            errormsg = _("验证码或邮箱错误")
+            logger.error(_("验证码或邮箱不存在：{}".format(email)))
+            errormsg = _("验证码或邮箱错误！")
+            request.session['ForgetPwdEmailCodeVerifyNum'] += 1
             return render(request, 'forget_pwd.html', locals())
         except Exception as e:
             logger.exception("修改密码异常")
-            errormsg = _("验证码或邮箱错误")
+            errormsg = _("验证码或邮箱错误！")
+            request.session['ForgetPwdEmailCodeVerifyNum'] += 1
             return render(request,'forget_pwd.html',locals())
 
 
@@ -985,9 +1009,13 @@ def admin_register_code(request):
 def change_pwd(request):
     if request.method == 'POST':
         try:
+            old_pwd = request.POST.get('old_pwd', None)
             password = request.POST.get('password',None)
             password2 = request.POST.get('password2',None)
-            print(password, password2)
+            # print(password, password2)
+            user = request.user.check_password(old_pwd)
+            if user is False:
+                return JsonResponse({'status':False,'data':_('密码错误！')})
             if password and password== password2:
                 if len(password) >= 6:
                     user = User.objects.get(id=request.user.id)

@@ -115,6 +115,16 @@ def ice_url_img_upload(url,user):
     r = requests.get(url, headers=header, stream=True)
 
     if r.status_code == 200:
+        # 判断是否为允许上传的图片类型
+        remote_type = r.headers['Content-Type'].split("/")[1]
+        if remote_type not in settings.ALLOWED_IMG:
+            logger.error("上传了不允许的URL图片：{}".format(url))
+            resp_data = {
+                'error': 0,
+                'name': {},
+                'file':{}
+            }
+            return resp_data
         with open(path_file, 'wb') as f:
             f.write(r.content)  # 保存文件
         Image.objects.create(
@@ -228,8 +238,8 @@ def getImageExtensionName(temps):
         #image/png
         temps = temps[0].split('image/')
         if len(temps) == 2:
-            ## 如果文件传了扩展名，就取扩展名的文件类型
-            if  temps[-1] != '':
+            ## 如果文件传了扩展名，就取扩展名的文件类型，判断图片格式是否允许上传
+            if temps[-1] in settings.ALLOWED_IMG:
                 return "." + temps[-1]
     return ".png" 
 
@@ -274,6 +284,16 @@ def url_img_upload(url,dir_name,user):
     try:
         r = requests.get(url, headers=header, stream=True)
         if r.status_code == 200:
+            # 判断是否为允许上传的图片类型
+            remote_type = r.headers['Content-Type'].split("/")[1]
+            if remote_type not in settings.ALLOWED_IMG:
+                logger.error("上传了不允许的URL图片：{}".format(url))
+                resp_data = {
+                    'msg': '',
+                    'code': 1,
+                    'data': {}
+                }
+                return resp_data
             with open(path_file, 'wb') as f:
                 f.write(r.content)  # 保存文件
             Image.objects.create(
