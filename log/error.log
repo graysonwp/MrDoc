@@ -231,3 +231,4 @@ Traceback (most recent call last):
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 2021-11-21 22:40:27.269 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：ConnectionError(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',)),)
+2021-11-21 23:03:41.770 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：ConnectionError(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')),)
