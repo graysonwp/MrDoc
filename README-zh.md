@@ -32,23 +32,24 @@
 
 ## 简介
 
-`MrDoc` 是基于`Python`开发的在线文档系统，适合作为个人和小型团队的私有云文档、云笔记和知识管理工具。致力于成为优秀的私有化在线文档部署方案。
+`MrDoc` 是基于`Python`开发的在线文档系统。
 
-目前涵盖终端：
+MrDoc 适合作为个人和中小型团队的私有云文档、云笔记和知识管理工具，致力于成为优秀的私有化在线文档部署方案。
+
+你可以简单粗暴地将 MrDoc 视为「可私有部署的语雀」和「可在线编辑文档的GitBook」。
+
+MrDoc 目前涵盖终端：
 
 - Web端
 - Chrome扩展：
-    - [MrDoc官方插件](https://gitee.com/zmister/mrdoc-webclipper)：[使用说明](http://mrdoc.zmister.com/project-7/doc-243/)；
-    - [简悦扩展](https://github.com/Kenshin/simpread)：[使用说明](https://github.com/Kenshin/simpread/issues/893)
+    - MrDoc官方插件：[Gitee](https://gitee.com/zmister/mrdoc-webclipper) | [使用说明](http://mrdoc.zmister.com/project-7/doc-243/)；
+    - 简悦扩展：[GitHub](https://github.com/Kenshin/simpread) | [使用说明](https://github.com/Kenshin/simpread/issues/893)
 
 开发中的终端：
 
-- 手机APP
-
-计划中的终端：
-
-- 桌面客户端
-
+- 桌面客户端：[Gitee](https://gitee.com/zmister/mrdoc-desktop)
+- 微信小程序（专业版）
+- 手机速记APP
 
 ## 演示站点
 
