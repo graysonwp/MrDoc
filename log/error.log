@@ -2177,3 +2177,246 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 2021-11-28 10:20:07.581 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_223237_604074.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_223237_604074.png?",)
 2021-11-28 10:20:07.593 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_223618_823817.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_223618_823817.png?",)
 2021-11-28 10:20:07.608 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_094150_265177.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_094150_265177.png?",)
+2021-11-28 11:31:24.173 | ERROR    | app_doc.views:doc:1070 - 文集浏览出错
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 884, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f4f3bd94378>
+    └ <Thread(Thread-811, started daemon 139978030016256)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f4f3bd94158>
+    └ <Thread(Thread-811, started daemon 139978030016256)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-811, started daemon 139978030016256)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-811, started daemon 139978030016256)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f4f35e3fe48>>
+    └ <Thread(Thread-811, started daemon 139978030016256)>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 47790)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f4f3594ce18>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f35e3fe48>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f35e3fe48>
+    │    │                   │        └ ('127.0.0.1', 47790)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f35e3fe48>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f4f349f8b70>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4f2c0ec438>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f4f349f8bf8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4f2c0ec438>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f4f349f80d0>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f35e3fe48>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4f2c0ec438>
+    │       └ <function BaseHandler.run at 0x7f4f349efd90>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f4f26765320>
+  File "/root/.pyenv/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f4f349f5158>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f4f26765320>
+    │    │        │           │    └ {'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin', 'PWD': '/', 'LANG': 'en_US.UTF-8', 'SHLVL': '1', '_': '/usr/bin...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f4f26765320>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4f2f43db00>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f4f26765320>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │    └ <function BaseHandler.get_response at 0x7f4f34b7e840>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4f2f43db00>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dc9ee18>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4f2f43db00>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f4f2dcd1cf8>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dc9ed90>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f4f2dcd1cf8>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f4f2dcdae10>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dc9ed08>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f4f2dcdae10>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f4f2dcdaef0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dc9ec80>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f4f2dcdaef0>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f4f2dcda4a8>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dd320d0>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f4f2dcda4a8>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f4f2e9b0e48>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dd32048>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f4f2e9b0e48>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f4f2e9b0f28>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dda7620>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f4f2e9b0f28>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f4f2e730828>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dda7f28>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f4f2e730828>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f4f2e7308d0>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4f2dda7048>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f4f2e7308d0>
+               └ None
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f4f2e730710>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 33, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               │    └ <function BaseHandler._get_response at 0x7f4f2dd61f28>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f4f2e730710>
+
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f4f2f43db00>>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 1, 'doc_id': 114}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-1/doc-114/'>
+               └ <function doc at 0x7f4f2e650730>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 1, 'doc_id': 114}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-1/doc-114/'>
+           └ <function doc at 0x7f4f2e6506a8>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 997, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 114
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f4f34afdf98>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 114, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f4f35a148c8>
+                   └ <django.db.models.manager.Manager object at 0x7f4f2ddf2e10>
+  File "/usr/local/projects/MrDoc/MrDoc_venv/lib/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2021-11-28 11:31:51.667 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-20_154940_112605.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-20_154940_112605.png?",)
+2021-11-28 11:31:51.682 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_222656_435446.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_222656_435446.png?",)
+2021-11-28 11:31:51.700 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_105129_127181.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_105129_127181.png?",)
+2021-11-28 11:31:51.712 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_103555_468133.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_103555_468133.png?",)
+2021-11-28 11:31:51.722 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_105048_249269.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_105048_249269.png?",)
+2021-11-28 11:31:51.737 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_155207_777294.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_155207_777294.png?",)
+2021-11-28 11:31:51.748 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_155416_457092.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_155416_457092.png?",)
+2021-11-28 11:31:51.764 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_160559_325952.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_160559_325952.png?",)
+2021-11-28 11:31:51.807 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_165235_906558.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_165235_906558.png?",)
+2021-11-28 11:31:51.829 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_170733_849788.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_170733_849788.png?",)
+2021-11-28 11:31:51.896 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_111154_830220.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_111154_830220.png?",)
+2021-11-28 11:31:51.907 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_111413_543487.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_111413_543487.png?",)
+2021-11-28 11:31:51.928 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_112703_818816.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_112703_818816.png?",)
+2021-11-28 11:31:51.941 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_145211_821474.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_145211_821474.png?",)
+2021-11-28 11:31:51.951 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_104928_715190.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_104928_715190.png?",)
+2021-11-28 11:31:51.959 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_160817_175490.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_160817_175490.png?",)
+2021-11-28 11:31:52.710 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_104643_711649.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_104643_711649.png?",)
+2021-11-28 11:31:52.722 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_110540_233546.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_110540_233546.png?",)
+2021-11-28 11:31:52.734 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_160744_603525.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_160744_603525.png?",)
+2021-11-28 11:31:52.748 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_160412_748507.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_160412_748507.png?",)
+2021-11-28 11:31:52.763 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_110640_657066.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_110640_657066.png?",)
+2021-11-28 11:31:52.777 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_121953_691437.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_121953_691437.png?",)
+2021-11-28 11:31:52.793 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_223027_491269.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_223027_491269.png?",)
+2021-11-28 11:31:52.807 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_223237_604074.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_223237_604074.png?",)
+2021-11-28 11:31:52.821 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_223618_823817.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_223618_823817.png?",)
+2021-11-28 11:31:52.830 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_095623_240528.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_095623_240528.png?",)
+2021-11-28 11:31:52.845 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_102724_799099.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_102724_799099.png?",)
+2021-11-28 11:31:52.856 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_112452_412864.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_112452_412864.png?",)
+2021-11-28 11:31:53.713 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-20_155316_501643.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-20_155316_501643.png?",)
+2021-11-28 11:31:53.724 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_112107_404362.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_112107_404362.png?",)
+2021-11-28 11:31:53.734 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_221543_373621.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_221543_373621.png?",)
+2021-11-28 11:31:53.744 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_094933_121734.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_094933_121734.png?",)
+2021-11-28 11:31:53.760 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_095134_309740.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_095134_309740.png?",)
+2021-11-28 11:31:53.772 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-20_173425_700201.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-20_173425_700201.png?",)
+2021-11-28 11:31:53.785 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_203041_280933.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_203041_280933.png?",)
+2021-11-28 11:31:53.796 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_221231_171901.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_221231_171901.png?",)
+2021-11-28 11:31:53.807 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_164606_234345.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_164606_234345.png?",)
+2021-11-28 11:31:53.818 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_155054_445839.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_155054_445839.png?",)
+2021-11-28 11:31:53.831 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_155158_098423.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_155158_098423.png?",)
+2021-11-28 11:31:53.842 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_161016_536566.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_161016_536566.png?",)
+2021-11-28 11:31:53.852 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_165503_187144.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_165503_187144.png?",)
+2021-11-28 11:31:54.715 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_094312_948755.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_094312_948755.png?",)
+2021-11-28 11:31:54.726 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_170106_918674.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_170106_918674.png?",)
+2021-11-28 11:31:54.736 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-21_171205_682996.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-21_171205_682996.png?",)
+2021-11-28 11:31:54.750 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_094150_265177.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_094150_265177.png?",)
+2021-11-28 11:31:54.762 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_095354_224729.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_095354_224729.png?",)
+2021-11-28 11:31:54.775 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_103329_842719.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_103329_842719.png?",)
+2021-11-28 11:31:54.787 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-28_111120_965630.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-28_111120_965630.png?",)
+2021-11-28 11:31:54.799 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202111/2021-11-27_155328_630858.png': No schema supplied. Perhaps you meant http:///media/202111/2021-11-27_155328_630858.png?",)
