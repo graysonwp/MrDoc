@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/MrDoc-v0.7.2-brightgreen.svg" title="Mrdoc" />
+<img src="https://img.shields.io/badge/MrDoc-v0.7.3-brightgreen.svg" title="Mrdoc" />
 <img src="https://img.shields.io/badge/Python-3.5+-blue.svg" title="Python" />
 <img src="https://img.shields.io/badge/Django-v2.2-important.svg" title="Django" />
 </p>
@@ -40,9 +40,9 @@ Current Platform：
 
 - Web，[instructions](http://mrdoc.zmister.com/project-7/)；
 - Chrome Extends:
-    - [instructions](http://mrdoc.zmister.com/project-7/doc-243/)；
+    - MrDoc速记:[MicroSoft Edge](https://microsoftedge.microsoft.com/addons/detail/dihimgafbjljdfanobikhnolpmjjhpic) | [Chrome](https://chrome.google.com/webstore/detail/jefmnpfkhhmmnfbhaegnggffbdplijje)
     - [simpread](https://github.com/Kenshin/simpread)：[instructions](https://github.com/Kenshin/simpread/issues/893)
-- Mobile App(developing)
+- Desktop: supportd Windows,Linux [Download](https://github.com/zmister2016/mrdoc-desktop/releases/)
 
 ## Example Site
 
