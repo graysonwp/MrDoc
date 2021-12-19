@@ -391,3 +391,9 @@ Traceback (most recent call last):
     └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2021-12-19 11:09:55.040 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202112/2021-12-18_170438_469892.png': No schema supplied. Perhaps you meant http:///media/202112/2021-12-18_170438_469892.png?",)
+2021-12-19 11:09:55.045 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202112/2021-12-18_160320_892162.png': No schema supplied. Perhaps you meant http:///media/202112/2021-12-18_160320_892162.png?",)
+2021-12-19 11:09:55.056 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202112/2021-12-19_100611_088200.png': No schema supplied. Perhaps you meant http:///media/202112/2021-12-19_100611_088200.png?",)
+2021-12-19 11:09:55.088 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202112/2021-12-19_105809_127613.png': No schema supplied. Perhaps you meant http:///media/202112/2021-12-19_105809_127613.png?",)
+2021-12-19 11:09:55.098 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202112/2021-12-18_161641_713625.png': No schema supplied. Perhaps you meant http:///media/202112/2021-12-18_161641_713625.png?",)
+2021-12-19 11:09:55.108 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202112/2021-12-18_162137_176474.png': No schema supplied. Perhaps you meant http:///media/202112/2021-12-18_162137_176474.png?",)
