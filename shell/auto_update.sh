@@ -8,7 +8,7 @@ BASE_PATH=/usr/local/projects/MrDoc
 echo "0. 开始更新"
 
 echo "1. 拉取 upstream 更新"
-git fetch upstream/master
+git fetch upstream
 
 echo "2. 合并 upstream 更新"
 git merge upstream/master
