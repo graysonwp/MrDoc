@@ -7,16 +7,19 @@ BASE_PATH=/usr/local/projects/MrDoc
 
 echo "0. 开始更新"
 
-echo "1. 合并 upstream 更新"
+echo "1. 拉取 upstream 更新"
+git fetch upstream/master
+
+echo "2. 合并 upstream 更新"
 git merge upstream/master
 
-echo "2. 添加所有新增文件"
+echo "3. 添加所有新增文件"
 git add -A ${BASE_PATH}/
 
-echo "3. 提交更新"
+echo "4. 提交更新"
 git commit -a -m "Auto updated on ${CURRENT_TIME}."
 
-echo "4. 推送到远端"
+echo "5. 推送到远端"
 git push origin master
 
-echo "5. 更新完成"
+echo "6. 更新完成"
