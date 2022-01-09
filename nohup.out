@@ -267,3 +267,10 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [09/Jan/2022 16:30:22] "POST /modify_doc/724/ HTTP/1.0" 200 52
 [09/Jan/2022 16:30:51] "GET /project-34/doc-529/ HTTP/1.0" 200 72432
 [09/Jan/2022 16:31:09] "GET /project-21/doc-255/ HTTP/1.0" 200 61917
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 09, 2022 - 20:06:27
+Django version 2.2.26, using settings 'MrDoc.settings'
+Starting development server at http://0.0.0.0:9200/
+Quit the server with CONTROL-C.
