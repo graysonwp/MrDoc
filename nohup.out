@@ -8957,3 +8957,27 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [10/Jan/2022 04:59:36] "GET /project-36/doc-712/ HTTP/1.0" 200 3986
 [10/Jan/2022 05:07:06] "GET /project-37/doc-803/ HTTP/1.0" 200 36352
 [10/Jan/2022 05:20:26] "GET /project-21/doc-772/ HTTP/1.0" 200 62931
+[10/Jan/2022 05:31:07] "GET /download_doc_md/699/ HTTP/1.0" 200 3986
+[10/Jan/2022 05:38:19] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Jan/2022 05:38:20] "GET /download_doc_md/880/ HTTP/1.0" 200 3965
+[10/Jan/2022 05:39:02] "GET /project-21/doc-877/ HTTP/1.0" 200 64895
+[10/Jan/2022 05:39:50] "GET /robots.txt HTTP/1.0" 404 3965
+/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/contrib/sitemaps/__init__.py:80: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'app_doc.models.Doc'> QuerySet.
+  return paginator.Paginator(self.items(), self.limit)
+[10/Jan/2022 05:39:50] "GET /sitemap-16.xml HTTP/1.0" 200 648
+[10/Jan/2022 05:41:28] "GET /project-37/doc-726/ HTTP/1.0" 200 42090
+[10/Jan/2022 05:41:38] "GET /download_doc_md/726/ HTTP/1.0" 200 3986
+[10/Jan/2022 05:48:26] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 05:48:29] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 05:48:33] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 05:48:35] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 05:52:21] "GET /project-37/doc-726 HTTP/1.0" 301 0
+[10/Jan/2022 05:52:22] "GET /project-37/doc-726/ HTTP/1.0" 200 42103
+[10/Jan/2022 05:58:40] "GET /project-36/doc-654/ HTTP/1.0" 200 3965
+[10/Jan/2022 06:02:54] "GET /download_doc_md/271/ HTTP/1.0" 200 3986
+[10/Jan/2022 06:08:18] "GET /download_doc_md/785/ HTTP/1.0" 200 3965
+[10/Jan/2022 06:13:32] "GET /download_doc_md/847/ HTTP/1.0" 200 3986
+[10/Jan/2022 06:18:43] "GET / HTTP/1.1" 200 48007
+[10/Jan/2022 06:19:00] "GET /favicon.ico HTTP/1.1" 404 3965
+[10/Jan/2022 06:24:18] "GET /download_doc_md/342/ HTTP/1.0" 200 3986
+[10/Jan/2022 06:24:32] "GET /download_doc_md/316/ HTTP/1.0" 200 3965
