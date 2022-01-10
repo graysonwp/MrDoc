@@ -9086,3 +9086,83 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [10/Jan/2022 11:17:45] "GET /robots.txt HTTP/1.0" 404 3965
 [10/Jan/2022 11:17:48] "GET /download_doc_md/269/ HTTP/1.0" 200 3965
 [10/Jan/2022 11:27:01] "GET /project-26/doc-798/ HTTP/1.0" 200 58926
+[10/Jan/2022 11:37:23] "GET /download_doc_md/814/ HTTP/1.0" 200 3986
+[10/Jan/2022 11:47:41] "GET /project-37/doc-748/ HTTP/1.0" 200 48094
+[10/Jan/2022 11:58:01] "GET /download_doc_md/675/ HTTP/1.0" 200 3986
+[10/Jan/2022 11:59:28] "GET /download_doc_md/766/ HTTP/1.0" 200 3965
+[10/Jan/2022 12:02:04] "GET / HTTP/1.0" 200 48007
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[10/Jan/2022 12:02:04] "GET / HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('165.227.107.139', 61953)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[10/Jan/2022 12:08:35] "GET /project-21/doc-780/ HTTP/1.0" 200 56422
+[10/Jan/2022 12:10:19] "GET /project-34/doc-841/ HTTP/1.0" 200 38147
+[10/Jan/2022 12:13:35] "GET /download_doc_md/761/ HTTP/1.0" 200 3965
+[10/Jan/2022 12:17:02] "GET /download_doc_md/853/ HTTP/1.0" 200 3965
+[10/Jan/2022 12:20:53] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Jan/2022 12:20:56] "GET /project-34/doc-542/ HTTP/1.0" 200 44525
+[10/Jan/2022 12:24:05] "GET /download_doc_md/237/ HTTP/1.0" 200 3986
