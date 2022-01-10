@@ -9198,3 +9198,59 @@ AttributeError: 'NoneType' object has no attribute 'split'
 [10/Jan/2022 14:11:00] "GET /project-21/doc-226/ HTTP/1.0" 200 60421
 [10/Jan/2022 14:17:34] "GET /project-37/doc-806/ HTTP/1.0" 200 49346
 [10/Jan/2022 14:26:10] "GET /project-36/doc-675/ HTTP/1.0" 200 3986
+[10/Jan/2022 14:34:47] "GET /download_doc_md/693/ HTTP/1.0" 200 3986
+[10/Jan/2022 14:37:57] "GET /?kw&page=1&role=-1&sort HTTP/1.0" 200 48007
+[10/Jan/2022 14:43:22] "GET /project-49/doc-850/ HTTP/1.0" 200 27095
+[10/Jan/2022 14:45:17] "GET /project-26/doc-795/ HTTP/1.0" 200 43671
+[10/Jan/2022 14:48:59] "GET /download_doc_md/801/ HTTP/1.0" 200 3965
+[10/Jan/2022 14:51:31] "GET /download_doc_md/222/ HTTP/1.0" 200 3986
+[10/Jan/2022 14:59:17] "GET /project-34/doc-825/ HTTP/1.0" 200 54614
+[10/Jan/2022 14:59:46] "GET / HTTP/1.1" 200 48007
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.43', 42808)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Jan/2022 14:59:48] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03a%8ïm\x0bÂ\x0cr;\x8f\tòuÐèz¡²ý±Àb²cSà\x7fT\x02iû ¹j\x96\rõ5iYK\x17\x03aì¯W\x01\x94¸=\x17ÍT\x05¹\x9f¿\x92ê°\x18\x97\x93\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[10/Jan/2022 14:59:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jan/2022 14:59:49] "GET / HTTP/1.1" 200 48007
+----------------------------------------
+Exception happened during processing of request from ('167.248.133.43', 35954)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Jan/2022 14:59:50] "GET / HTTP/1.1" 200 48007
+[10/Jan/2022 15:06:42] "GET /project-36/doc-703/ HTTP/1.0" 200 3986
+[10/Jan/2022 15:13:58] "GET /download_doc_md/894/ HTTP/1.0" 200 3986
+[10/Jan/2022 15:20:29] "GET /sitemap-home.xml HTTP/1.0" 200 309
+[10/Jan/2022 15:21:00] "GET /project-34/doc-539/ HTTP/1.0" 200 40953
+[10/Jan/2022 15:27:18] "GET /download_doc_md/224/ HTTP/1.0" 200 3986
+[10/Jan/2022 15:29:03] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 15:29:05] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 15:29:08] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 15:29:10] "GET / HTTP/1.0" 200 48066
