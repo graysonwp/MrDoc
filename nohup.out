@@ -9273,3 +9273,22 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [10/Jan/2022 16:21:48] "GET /project-24/doc-265/ HTTP/1.0" 200 42823
 [10/Jan/2022 16:26:53] "GET /project-21/doc-298/ HTTP/1.0" 200 56407
 [10/Jan/2022 16:29:09] "GET /project-34/doc-541/ HTTP/1.0" 200 47699
+[10/Jan/2022 16:36:07] "GET /project-26/doc-310/ HTTP/1.0" 200 38020
+[10/Jan/2022 16:36:28] "GET /download_doc_md/783/ HTTP/1.0" 200 3986
+[10/Jan/2022 16:38:54] "GET /project-26/doc-336/ HTTP/1.0" 200 40631
+[10/Jan/2022 16:41:02] "GET /sitemap-38.xml HTTP/1.0" 404 3965
+[10/Jan/2022 16:43:47] "GET /project-21/doc-84/ HTTP/1.0" 200 56447
+[10/Jan/2022 16:50:56] "GET /download_doc_md/673/ HTTP/1.0" 200 3986
+[10/Jan/2022 16:52:21] "GET /project-24/doc-246/ HTTP/1.0" 200 31794
+[10/Jan/2022 16:54:35] "GET /project-21/doc-223/ HTTP/1.0" 200 56353
+[10/Jan/2022 16:58:15] "GET /project-37/doc-809 HTTP/1.0" 301 0
+[10/Jan/2022 16:58:17] "GET /project-37/doc-809/ HTTP/1.0" 200 55456
+[10/Jan/2022 16:58:42] "GET /sitemap-16.xml HTTP/1.0" 200 648
+[10/Jan/2022 17:12:24] "GET /download_doc_md/238/ HTTP/1.0" 200 3986
+[10/Jan/2022 17:19:34] "GET /project-34/doc-820/ HTTP/1.0" 200 55176
+[10/Jan/2022 17:23:49] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[10/Jan/2022 17:23:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jan/2022 17:26:28] "GET /project-26/doc-322/ HTTP/1.0" 200 37228
+[10/Jan/2022 17:26:29] "GET / HTTP/1.1" 200 48007
+[10/Jan/2022 17:26:53] "GET / HTTP/1.1" 200 48007
