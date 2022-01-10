@@ -9179,3 +9179,22 @@ AttributeError: 'NoneType' object has no attribute 'split'
 [10/Jan/2022 13:03:42] "GET /project-26/doc-331/ HTTP/1.0" 200 41503
 [10/Jan/2022 13:13:12] "GET /project-34/doc-815/ HTTP/1.0" 200 61269
 [10/Jan/2022 13:22:44] "GET /download_doc_md/519/ HTTP/1.0" 200 3986
+[10/Jan/2022 13:31:59] "GET /project-34/doc-522/ HTTP/1.0" 200 39928
+[10/Jan/2022 13:41:24] "GET /download_doc_md/295/ HTTP/1.0" 200 3986
+[10/Jan/2022 13:50:43] "GET /project-47/doc-832/ HTTP/1.0" 200 3986
+[10/Jan/2022 13:59:51] "GET /project-23/doc-67/ HTTP/1.0" 200 3986
+[10/Jan/2022 14:03:15] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Jan/2022 14:03:16] "GET /download_doc_md/305/ HTTP/1.0" 200 3965
+[10/Jan/2022 14:06:43] "GET /project-21/doc-724/ HTTP/1.0" 200 88742
+[10/Jan/2022 14:07:07] "GET / HTTP/1.1" 200 48007
+[10/Jan/2022 14:07:50] code 400, message Bad request version ('À\x14À')
+[10/Jan/2022 14:07:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jan/2022 14:08:05] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03+\x9a\x999\x01V`a\x9dÜ9\x8b\x82ØF0$Fj½w\x01\x99ÜI~a¹cGá\x8d\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[10/Jan/2022 14:08:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jan/2022 14:08:40] "GET /_search HTTP/1.1" 404 3965
+[10/Jan/2022 14:08:46] "GET /project-26/doc-797/ HTTP/1.0" 200 49123
+[10/Jan/2022 14:11:00] "GET /project-21/doc-226/ HTTP/1.0" 200 60421
+[10/Jan/2022 14:17:34] "GET /project-37/doc-806/ HTTP/1.0" 200 49346
+[10/Jan/2022 14:26:10] "GET /project-36/doc-675/ HTTP/1.0" 200 3986
