@@ -9573,3 +9573,7 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [10/Jan/2022 23:26:14] "GET /project-21/doc-276/ HTTP/1.0" 200 61732
 [10/Jan/2022 23:27:57] "GET /static/mrdoc/mrdoc.css HTTP/1.0" 200 21402
 [10/Jan/2022 23:27:57] "GET /static/logo.svg HTTP/1.0" 200 15252
+[10/Jan/2022 23:32:56] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Jan/2022 23:32:58] "GET /project-21/ HTTP/1.0" 200 58336
+[10/Jan/2022 23:45:33] "GET /robots.txt HTTP/1.0" 404 3986
+[10/Jan/2022 23:45:57] "GET /_status HTTP/1.1" 404 3965
