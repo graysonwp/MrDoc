@@ -9340,3 +9340,23 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [10/Jan/2022 20:25:01] code 400, message Bad request version ('À\x14À')
 [10/Jan/2022 20:25:01] You're accessing the development server over HTTPS, but it only supports HTTP.
 
+[10/Jan/2022 20:36:55] code 400, message Bad request version ('À\x14À')
+[10/Jan/2022 20:36:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jan/2022 20:42:59] "GET /_stats/indices HTTP/1.1" 404 3965
+[10/Jan/2022 20:48:39] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
+[10/Jan/2022 21:00:36] "GET /project-53/ HTTP/1.0" 200 22205
+[10/Jan/2022 21:01:02] "POST /get_pro_doc_tree/ HTTP/1.0" 200 427
+[10/Jan/2022 21:02:29] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 21:02:31] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 21:02:34] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 21:02:36] "GET / HTTP/1.0" 200 48066
+[10/Jan/2022 21:02:48] "POST /get_pro_doc_tree/ HTTP/1.0" 200 427
+[10/Jan/2022 21:04:58] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x9cÑ¡ó-\x80\x0fÿ9¥Êq_;\xa0\x16\x1darË\x0cá\x92Î\x93{\x96ÍiB¨ê\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[10/Jan/2022 21:04:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jan/2022 21:11:40] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03ý\x12ãçHÓHÄß\x01Ø{~¿£ïø\x029\x994\x9eº\x90\x96\x01q\x07Vù\x86]\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[10/Jan/2022 21:11:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jan/2022 21:14:26] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Jan/2022 21:14:27] "GET /project-24/doc-246/ HTTP/1.0" 200 31794
