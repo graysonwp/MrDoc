@@ -9912,3 +9912,23 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [11/Jan/2022 21:11:55] "GET /project-46/doc-838/ HTTP/1.0" 302 0
 [11/Jan/2022 21:12:04] "GET /check_viewcode/?to=/project-46/doc-838/ HTTP/1.0" 200 3046
 [11/Jan/2022 21:28:14] "GET /download_doc_md/332/ HTTP/1.0" 200 3986
+----------------------------------------
+Exception happened during processing of request from ('185.219.52.154', 64127)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[11/Jan/2022 21:55:05] "GET /robots.txt HTTP/1.0" 404 3986
+[11/Jan/2022 22:14:49] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[11/Jan/2022 22:16:31] "GET /download_doc_md/518/ HTTP/1.0" 200 3986
