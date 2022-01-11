@@ -10056,3 +10056,42 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [12/Jan/2022 05:17:22] "GET /download_doc_md/334/ HTTP/1.0" 200 3986
 [12/Jan/2022 05:22:38] "GET /project-21/doc-228/ HTTP/1.0" 200 63552
 [12/Jan/2022 05:24:11] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[12/Jan/2022 05:32:04] "GET / HTTP/1.1" 200 48007
+[12/Jan/2022 05:32:11] "GET /project-21/doc-252/ HTTP/1.0" 200 65514
+[12/Jan/2022 05:34:29] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[12/Jan/2022 05:40:12] "GET /download_doc_md/226/ HTTP/1.0" 200 3965
+[12/Jan/2022 05:45:09] "GET /project-21/doc-228/ HTTP/1.0" 200 63552
+[12/Jan/2022 05:45:12] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[12/Jan/2022 05:51:40] "GET /download_doc_md/543/ HTTP/1.0" 200 3986
+[12/Jan/2022 06:01:01] code 400, message Bad request version ('À\x14À')
+[12/Jan/2022 06:01:01] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Jan/2022 06:01:14] "GET / HTTP/1.1" 200 48007
+[12/Jan/2022 06:01:35] "GET /?sort= HTTP/1.1" 200 48007
+[12/Jan/2022 06:01:36] "GET /static/search/mrdoc_logo_300.png HTTP/1.1" 200 1255
+[12/Jan/2022 06:01:36] "GET /robots.txt HTTP/1.1" 404 3965
+[12/Jan/2022 06:01:36] "GET /sitemap.xml HTTP/1.1" 200 950
+----------------------------------------
+Exception happened during processing of request from ('137.220.233.97', 53100)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[12/Jan/2022 06:02:26] "GET /_cat/indices?v HTTP/1.1" 404 3965
+[12/Jan/2022 06:04:15] "GET / HTTP/1.0" 200 48007
+[12/Jan/2022 06:12:15] "GET /project-34/doc-525/ HTTP/1.0" 200 40265
+[12/Jan/2022 06:14:39] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.0" 200 21402
+[12/Jan/2022 06:20:16] "GET /project-21/doc-92/ HTTP/1.0" 200 64553
+[12/Jan/2022 06:21:52] "GET /download_doc_md/245/ HTTP/1.0" 200 3986
+[12/Jan/2022 06:28:21] "GET /project-21/doc-294/ HTTP/1.0" 200 59834
