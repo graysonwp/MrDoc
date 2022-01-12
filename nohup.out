@@ -10313,3 +10313,39 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [12/Jan/2022 08:18:15] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
 [12/Jan/2022 08:23:41] "GET /download_doc_md/855/ HTTP/1.0" 200 3986
 [12/Jan/2022 08:29:45] "GET /download_doc_md/776/ HTTP/1.0" 200 3986
+[12/Jan/2022 08:30:03] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[12/Jan/2022 08:45:13] "GET /project-49/doc-849/ HTTP/1.0" 200 30242
+[12/Jan/2022 08:52:35] "GET /download_doc_md/311/ HTTP/1.0" 200 3965
+[12/Jan/2022 08:53:21] code 400, message Bad request version ('À\x14À')
+[12/Jan/2022 08:53:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Jan/2022 08:53:32] "GET / HTTP/1.1" 200 48007
+[12/Jan/2022 08:53:53] "GET /?sort= HTTP/1.1" 200 48007
+[12/Jan/2022 08:53:54] "GET /static/search/mrdoc_logo_300.png HTTP/1.1" 200 1255
+[12/Jan/2022 08:53:54] "GET /robots.txt HTTP/1.1" 404 3965
+[12/Jan/2022 08:53:54] "GET /sitemap.xml HTTP/1.1" 200 950
+----------------------------------------
+Exception happened during processing of request from ('27.115.124.9', 51129)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[12/Jan/2022 08:54:22] "GET /download_doc_md/795/ HTTP/1.0" 200 3986
+[12/Jan/2022 09:00:30] "GET /project-34/doc-533/ HTTP/1.0" 200 42724
+[12/Jan/2022 09:06:38] "GET /download_doc_md/895/ HTTP/1.0" 200 3986
+[12/Jan/2022 09:09:48] "GET /project-23/doc-76/ HTTP/1.0" 200 3965
+[12/Jan/2022 09:20:03] "GET /project-21/doc-785/ HTTP/1.0" 200 56359
+[12/Jan/2022 09:24:37] "GET /robots.txt HTTP/1.0" 404 3965
+[12/Jan/2022 09:24:38] "GET /download_doc_md/880/ HTTP/1.0" 200 3965
+[12/Jan/2022 09:26:23] "GET /project-23/doc-189/ HTTP/1.0" 200 3986
