@@ -10643,3 +10643,26 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [12/Jan/2022 17:19:11] "GET /download_doc_md/201/ HTTP/1.0" 200 3986
 [12/Jan/2022 17:25:17] "GET /download_doc_md/778/ HTTP/1.0" 200 3986
 [12/Jan/2022 17:26:03] "GET /media/202105/2021-05-06_113753.png HTTP/1.0" 200 16783
+[12/Jan/2022 17:31:17] "GET /project-21/doc-890/ HTTP/1.0" 200 61893
+[12/Jan/2022 17:31:29] "GET /project-21/doc-271/ HTTP/1.0" 200 66303
+[12/Jan/2022 17:36:37] "GET /download_doc_md/335/ HTTP/1.0" 200 3965
+[12/Jan/2022 17:38:31] "GET /project-46/doc-835/ HTTP/1.0" 302 0
+[12/Jan/2022 17:38:31] "GET /check_viewcode/?to=/project-46/doc-835/ HTTP/1.0" 200 3066
+[12/Jan/2022 17:44:34] "GET /project-23/doc-75/ HTTP/1.0" 200 3986
+[12/Jan/2022 17:50:40] "GET /project-37/doc-745/ HTTP/1.0" 200 52845
+[12/Jan/2022 17:56:46] "GET /download_doc_md/664/ HTTP/1.0" 200 3986
+[12/Jan/2022 18:02:45] "GET /download_doc_md/677/ HTTP/1.0" 200 3986
+[12/Jan/2022 18:08:19] "GET /project-21/doc-783/ HTTP/1.0" 200 56320
+[12/Jan/2022 18:08:51] "GET /download_doc_md/516/ HTTP/1.0" 200 3986
+[12/Jan/2022 18:15:01] "GET /project-38/doc-717/ HTTP/1.0" 200 3986
+[12/Jan/2022 18:21:08] "GET /project-34/doc-524/ HTTP/1.0" 200 40736
+[12/Jan/2022 18:25:02] "GET /project-34/doc-529/ HTTP/1.0" 200 72432
+[12/Jan/2022 18:27:03] "GET /download_doc_md/329/ HTTP/1.0" 200 3986
+[12/Jan/2022 18:28:36] "GET / HTTP/1.1" 200 48007
+[12/Jan/2022 18:28:52] "GET /_search HTTP/1.1" 404 3965
+[12/Jan/2022 18:29:32] code 400, message Bad request version ('À\x14À')
+[12/Jan/2022 18:29:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Jan/2022 18:29:51] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03')
+[12/Jan/2022 18:29:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
