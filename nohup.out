@@ -11963,3 +11963,39 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [13/Jan/2022 20:28:45] code 400, message Bad request version ('À\x14À')
 [13/Jan/2022 20:28:45] You're accessing the development server over HTTPS, but it only supports HTTP.
 
+[13/Jan/2022 20:33:04] "GET /robots.txt HTTP/1.0" 404 3965
+[13/Jan/2022 20:33:05] "GET /download_doc_md/719/ HTTP/1.0" 200 3965
+[13/Jan/2022 20:33:37] "GET /project-34/doc-525/ HTTP/1.0" 200 40265
+[13/Jan/2022 20:34:01] "GET /download_doc_md/668/ HTTP/1.0" 200 3986
+[13/Jan/2022 20:38:25] code 400, message Bad request syntax ("\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03½\x82tü]\x1eDFº´À\x1dF_d\x95°ÓTbV\x0b\x07\x8dÌ'ge\x9a@÷\x7f\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[13/Jan/2022 20:38:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[13/Jan/2022 20:39:13] "GET /project-34/doc-816/ HTTP/1.0" 200 55785
+[13/Jan/2022 20:44:55] "GET /project-24/doc-237/ HTTP/1.0" 200 31794
+[13/Jan/2022 20:46:30] "GET /robots.txt HTTP/1.0" 404 3965
+[13/Jan/2022 20:46:31] "GET /project-34/doc-539/ HTTP/1.0" 200 40938
+[13/Jan/2022 20:47:28] "GET /_stats/indices HTTP/1.1" 404 3965
+[13/Jan/2022 20:50:23] "GET /download_doc_md/661/ HTTP/1.0" 200 3986
+[13/Jan/2022 20:51:24] "GET /project-21/doc-782/ HTTP/1.0" 200 56380
+[13/Jan/2022 20:51:41] "GET /project-34/doc-542/ HTTP/1.0" 200 44525
+[13/Jan/2022 20:52:39] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
+[13/Jan/2022 20:55:53] "GET /download_doc_md/326/ HTTP/1.0" 200 3986
+[13/Jan/2022 20:56:38] "GET /project-34/doc-516/ HTTP/1.0" 200 39623
+[13/Jan/2022 21:01:23] "GET /project-37/doc-752/ HTTP/1.0" 200 39413
+[13/Jan/2022 21:01:56] "GET /project-34/doc-517/ HTTP/1.0" 200 39938
+[13/Jan/2022 21:06:54] "GET /project-21/doc-225/ HTTP/1.0" 200 60880
+[13/Jan/2022 21:07:05] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03ÎI\x84\x90\x1c9\x06\x10©ÿ5ô¹ÔØA\x1a2\x87\x0f;95ËÙ\r}\x12g\x83¼n\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[13/Jan/2022 21:07:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[13/Jan/2022 21:12:23] "GET /download_doc_md/653/ HTTP/1.0" 200 3986
+[13/Jan/2022 21:12:31] "GET /project-34/doc-514/ HTTP/1.0" 200 42022
+[13/Jan/2022 21:14:17] "GET /download_doc_md/878/ HTTP/1.0" 200 3965
+[13/Jan/2022 21:17:53] "GET /project-21/doc-894/ HTTP/1.0" 200 59003
+[13/Jan/2022 21:17:57] "GET /project-26/doc-331/ HTTP/1.0" 200 41490
+[13/Jan/2022 21:18:24] "GET /project-34/doc-520/ HTTP/1.0" 200 39792
+[13/Jan/2022 21:22:40] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03 Y\x1eº)à£«\x94¹äúFõÎ\x1a%\x04\x04õÕgòy\x0fçÑ3¤#h;\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[13/Jan/2022 21:22:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[13/Jan/2022 21:23:31] "GET /download_doc_md/845/ HTTP/1.0" 200 3986
+[13/Jan/2022 21:23:58] "GET /project-34/doc-518/ HTTP/1.0" 200 40186
+[13/Jan/2022 21:29:04] "GET /download_doc_md/753/ HTTP/1.0" 200 3986
