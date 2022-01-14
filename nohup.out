@@ -13206,3 +13206,54 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [14/Jan/2022 13:53:25] "GET / HTTP/1.1" 200 48007
 [14/Jan/2022 13:58:24] "GET /project-21/doc-889/ HTTP/1.0" 200 56328
 [14/Jan/2022 14:07:57] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[14/Jan/2022 14:32:11] "GET /robots.txt HTTP/1.0" 404 3965
+[14/Jan/2022 14:32:13] "GET /project-21/doc-90 HTTP/1.0" 301 0
+[14/Jan/2022 14:32:16] "GET /project-21/doc-90/ HTTP/1.0" 200 56401
+[14/Jan/2022 15:03:23] "GET /project-24/doc-245/ HTTP/1.0" 200 40904
+[14/Jan/2022 15:29:53] code 400, message Bad request syntax ("\x16\x03\x01\x01 \x01\x00\x01\x1c\x03\x036\x1dàfùÁ\x0eZ\x10ó\x94\x12¿Ì+¨(¸¥\x8c\xadOõVQ\x8fß;I< Ó \x0cúh¶,\t{\x8a\x82é\x02¢\x91\x10%<á¤Ü\x1d7W\x94\x85îx¹ß+\x0f¼¯\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+[14/Jan/2022 15:29:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Jan/2022 15:29:53] code 400, message Bad request syntax ('\x16\x03\x01\x00½\x01\x00\x00¹\x03\x03k©\x03,ç"¨mIosfJ}î¼$/\x19nò\x19h1þÃ\x07Ì\x07Ø!_\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À\'\x00gÀ')
+[14/Jan/2022 15:29:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Jan/2022 15:29:53] code 400, message Bad request syntax ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x02»\x80ûÖqýâã')
+[14/Jan/2022 15:29:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Jan/2022 15:29:53] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x01ëÞ¢qBî`¥N\x94\x81ó\x10\x97Í7QI\x88Ä\x1bF×')
+[14/Jan/2022 15:29:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 43674)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 32939)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[14/Jan/2022 15:30:00] "GET / HTTP/1.1" 200 48007
