@@ -12657,3 +12657,9 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [14/Jan/2022 07:09:31] "GET /project-26/doc-304/ HTTP/1.0" 200 39708
 [14/Jan/2022 07:10:20] "GET / HTTP/1.0" 200 48007
 [14/Jan/2022 07:25:56] "GET /static/qrcodejs/qrcode.min.js?version=0.7.4 HTTP/1.0" 200 19927
+[14/Jan/2022 07:39:24] "GET / HTTP/1.0" 200 48007
+[14/Jan/2022 07:53:00] "GET /download_doc_md/322/ HTTP/1.0" 200 3986
+[14/Jan/2022 07:58:36] "GET /download_doc_md/771/ HTTP/1.0" 200 3986
+[14/Jan/2022 08:18:58] "GET /project-26/doc-318/ HTTP/1.0" 200 38944
+[14/Jan/2022 08:25:57] "GET /robots.txt HTTP/1.0" 404 3965
+[14/Jan/2022 08:25:58] "GET /download_doc_md/307/ HTTP/1.0" 200 3965
