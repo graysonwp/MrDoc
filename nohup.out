@@ -13528,3 +13528,10 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [15/Jan/2022 14:25:50] "GET /download_doc_md/716/ HTTP/1.0" 200 3965
 [15/Jan/2022 14:27:48] "GET /project-49/doc-849/ HTTP/1.0" 200 30225
 [15/Jan/2022 14:28:52] "GET /project-21/doc-886/ HTTP/1.0" 200 62769
+[15/Jan/2022 14:33:22] "GET /static/logo.svg HTTP/1.0" 200 15252
+[15/Jan/2022 14:33:23] "GET /static/icon_img/viewcode.svg HTTP/1.0" 200 1137
+
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
