@@ -15239,3 +15239,72 @@ Prefix dict has been built successfully.
 <class 'datetime.datetime'>
 >>> unknown type:
 <class 'datetime.datetime'>[15/Jan/2022 16:24:09] "POST /get_pro_doc_tree/ HTTP/1.0" 200 17106
+[15/Jan/2022 16:32:58] "GET /robots.txt HTTP/1.0" 404 3965
+[15/Jan/2022 16:32:59] "GET /download_doc_md/884/ HTTP/1.0" 200 3965
+[15/Jan/2022 16:37:34] "GET /static/viewerjs/viewer.min.js?version=0.7.4 HTTP/1.0" 200 32388
+[15/Jan/2022 16:42:55] "GET /project-37/doc-753/ HTTP/1.0" 200 38822
+[15/Jan/2022 16:43:49] "POST /upload_doc_img/ HTTP/1.0" 200 214
+[15/Jan/2022 16:43:49] "GET /media/202201/2022-01-15_1643490.28884188943836187.png HTTP/1.0" 200 76159
+[15/Jan/2022 16:49:55] "POST /upload_doc_img/ HTTP/1.0" 200 214
+[15/Jan/2022 16:49:55] "GET /media/202201/2022-01-15_1649540.02869624863088882.png HTTP/1.0" 200 16986
+[15/Jan/2022 16:50:07] "POST /upload_doc_img/ HTTP/1.0" 200 213
+[15/Jan/2022 16:50:08] "GET /media/202201/2022-01-15_1650070.6591399192263269.png HTTP/1.0" 200 16123
+[15/Jan/2022 16:50:17] "POST /upload_doc_img/ HTTP/1.0" 200 214
+[15/Jan/2022 16:50:17] "GET /media/202201/2022-01-15_1650170.16949562176053135.png HTTP/1.0" 200 16986
+[15/Jan/2022 16:51:26] "GET /static/vditor/dist/js/mermaid/mermaid.min.js HTTP/1.0" 200 833010
+[15/Jan/2022 16:52:13] "POST /create_doc/ HTTP/1.0" 200 51
+[15/Jan/2022 16:52:15] "GET /modify_doc/902/ HTTP/1.0" 200 66463
+[15/Jan/2022 16:52:15] "POST /get_pro_doc_tree/ HTTP/1.0" 200 17261
+[15/Jan/2022 16:52:17] "GET /media/202201/2022-01-15_1643490.28884188943836187.png HTTP/1.0" 200 76159
+[15/Jan/2022 16:52:17] "GET /media/202201/2022-01-15_1650170.16949562176053135.png HTTP/1.0" 200 16986
+[15/Jan/2022 16:52:17] "GET /media/202201/2022-01-15_1650070.6591399192263269.png HTTP/1.0" 200 16123
+[15/Jan/2022 16:52:42] "POST /modify_doc/902/ HTTP/1.0" 200 52
+[15/Jan/2022 16:52:43] "POST /modify_doc/902/ HTTP/1.0" 200 52
+[15/Jan/2022 16:52:46] "POST /modify_doc/902/ HTTP/1.0" 200 52
+[15/Jan/2022 16:52:47] "POST /modify_doc/902/ HTTP/1.0" 200 52
+[15/Jan/2022 16:55:33] "GET / HTTP/1.0" 200 48014
+[15/Jan/2022 16:55:34] "OPTIONS / HTTP/1.0" 200 48014
+[15/Jan/2022 16:55:34] code 400, message Bad request version ('RTSP/1.0')
+[15/Jan/2022 16:55:34] "OPTIONS / RTSP/1.0" 400 -
+[15/Jan/2022 16:55:39] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[15/Jan/2022 16:55:39] "  (rþ          |                    " 400 -
+[15/Jan/2022 16:55:44] code 400, message Bad HTTP/0.9 request type ('\x00')
+[15/Jan/2022 16:55:44] "          versionbind   " 400 -
+[15/Jan/2022 16:55:49] code 400, message Bad HTTP/0.9 request type ('\x00')
+[15/Jan/2022 16:55:49] "            " 400 -
+[15/Jan/2022 16:55:49] code 400, message Bad request syntax ('HELP')
+[15/Jan/2022 16:55:49] "HELP" 400 -
+[15/Jan/2022 16:55:49] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[15/Jan/2022 16:55:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Jan/2022 16:55:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[15/Jan/2022 16:55:49] "  *%à     Cookie: mstshash=nmap" 400 -
+[15/Jan/2022 16:55:49] code 400, message Bad request version ('\x00/\x00')
+[15/Jan/2022 16:55:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Jan/2022 16:55:49] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[15/Jan/2022 16:55:49] "   qjn0k¡¢" 400 -
+[15/Jan/2022 16:55:54] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[15/Jan/2022 16:55:54] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[15/Jan/2022 16:56:00] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[15/Jan/2022 16:56:00] "l          " 400 -
+[15/Jan/2022 16:56:00] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 404 3965
+[15/Jan/2022 16:56:00] code 400, message Bad request syntax ('\x01default')
+[15/Jan/2022 16:56:00] "default" 400 -
+[15/Jan/2022 16:56:00] code 400, message Bad request syntax ('0\x84\x00\x00\x00-\x02\x01\x07c\x84\x00\x00\x00$\x04\x00')
+[15/Jan/2022 16:56:00] "0   -c   $ " 400 -
+[15/Jan/2022 16:56:05] code 400, message Bad HTTP/0.9 request type ('0')
+[15/Jan/2022 16:56:05] "0`  " 400 -
+[15/Jan/2022 16:56:05] code 400, message Bad request version ('SIP/2.0')
+[15/Jan/2022 16:56:05] "OPTIONS sip:nm SIP/2.0" 400 -
+[15/Jan/2022 16:56:10] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+[15/Jan/2022 16:56:10] "TNMP   TNME   " 400 -
+[15/Jan/2022 16:56:15] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+[15/Jan/2022 16:56:15] "  à     " 400 -
+[15/Jan/2022 16:56:20] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+[15/Jan/2022 16:56:20] "DmdT           ÿÿ" 400 -
+[15/Jan/2022 16:56:25] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+[15/Jan/2022 16:56:25] ":   /     @  =            /         @                 " 400 -
+[15/Jan/2022 16:56:30] code 400, message Bad request syntax ('JRMI\x00\x02K')
+[15/Jan/2022 16:56:30] "JRMI K" 400 -
+[15/Jan/2022 17:13:22] "GET /download_doc_md/222/ HTTP/1.0" 200 3986
