@@ -15857,3 +15857,18 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [15/Jan/2022 23:05:12] "GET /project-26/doc-795/ HTTP/1.0" 200 43686
 [15/Jan/2022 23:20:50] "GET /project-23/doc-77/ HTTP/1.0" 200 3986
 [15/Jan/2022 23:29:29] "GET /project-37/doc-748/ HTTP/1.0" 200 48094
+[15/Jan/2022 23:42:10] "GET /robots.txt HTTP/1.0" 404 3965
+[15/Jan/2022 23:42:12] "GET /project-26/doc-317/ HTTP/1.0" 200 39423
+[15/Jan/2022 23:44:44] "GET /project-23/doc-81/ HTTP/1.0" 200 3965
+[15/Jan/2022 23:46:12] "GET /project-34/doc-842/ HTTP/1.0" 200 45536
+[15/Jan/2022 23:52:08] "GET /project-37/doc-879/ HTTP/1.0" 200 69316
+[16/Jan/2022 00:14:04] "GET / HTTP/1.1" 200 48014
+[16/Jan/2022 00:14:09] code 400, message Bad request version ('À\x14À')
+[16/Jan/2022 00:14:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Jan/2022 00:14:25] "GET /_search HTTP/1.1" 404 3965
+[16/Jan/2022 00:14:39] "GET /project-46/doc-836/ HTTP/1.0" 302 0
+[16/Jan/2022 00:14:39] "GET /check_viewcode/?to=/project-46/doc-836/ HTTP/1.0" 200 3066
+[16/Jan/2022 00:14:55] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03l\x89WlØ]¨¼LÙ+Ê.')
+[16/Jan/2022 00:14:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
