@@ -17407,3 +17407,9 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [17/Jan/2022 00:27:16] code 400, message Bad request version ('À\x14À')
 [17/Jan/2022 00:27:16] You're accessing the development server over HTTPS, but it only supports HTTP.
 
+[17/Jan/2022 00:38:43] "GET /static/editor.md/lib/prettify.min.js HTTP/1.0" 200 17973
+[17/Jan/2022 01:01:27] "GET /project-36/doc-654/ HTTP/1.0" 200 3965
+[17/Jan/2022 01:01:57] "GET /_status HTTP/1.1" 404 3965
+/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/contrib/sitemaps/__init__.py:80: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'app_doc.models.Doc'> QuerySet.
+  return paginator.Paginator(self.items(), self.limit)
+[17/Jan/2022 01:16:32] "GET /sitemap-42.xml HTTP/1.0" 200 1525
