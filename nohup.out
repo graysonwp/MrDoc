@@ -17389,3 +17389,21 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 
 [16/Jan/2022 23:01:25] "GET /project-36/doc-707/ HTTP/1.0" 200 3965
 [16/Jan/2022 23:13:27] "GET / HTTP/1.0" 200 48013
+[16/Jan/2022 23:31:11] "GET /static/viewerjs/viewer.min.css?version=0.7.4 HTTP/1.0" 200 7796
+[16/Jan/2022 23:31:38] "GET /project-23/doc-195/ HTTP/1.0" 200 3965
+[16/Jan/2022 23:35:44] code 400, message Bad request version ('À\x14À')
+[16/Jan/2022 23:35:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Jan/2022 23:50:13] "GET /_stats/indices HTTP/1.1" 404 3965
+[16/Jan/2022 23:58:46] "GET /project-34/doc-529 HTTP/1.0" 301 0
+[16/Jan/2022 23:58:48] "GET /project-34/doc-529/ HTTP/1.0" 200 72432
+[16/Jan/2022 23:59:20] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
+[17/Jan/2022 00:02:39] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.0" 200 291286
+[17/Jan/2022 00:02:43] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[17/Jan/2022 00:07:45] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[17/Jan/2022 00:19:42] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03Ç\x01ZB\x19\t\x10}ãrûð\x92C]e\x8a7¤~Ëº\x15»u\x1b ¨^ØÏb\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Jan/2022 00:19:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Jan/2022 00:27:16] code 400, message Bad request version ('À\x14À')
+[17/Jan/2022 00:27:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
