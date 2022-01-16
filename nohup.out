@@ -17343,3 +17343,7 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [16/Jan/2022 20:21:01] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03§\x8b§\x1c\x89NÆa\xa0êþã\x13èè\x02öß\\Ryä\x9eLGä\x8f \x8c·\x81\x02\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
 [16/Jan/2022 20:21:01] You're accessing the development server over HTTPS, but it only supports HTTP.
 
+[16/Jan/2022 20:36:45] "GET /robots.txt HTTP/1.0" 404 3965
+[16/Jan/2022 20:36:46] "GET /project-26/doc-795/ HTTP/1.0" 200 43671
+[16/Jan/2022 20:49:13] "GET /project-21/doc-298/ HTTP/1.0" 200 56897
+[16/Jan/2022 21:10:55] "GET /project-26/doc-315/ HTTP/1.0" 200 37215
