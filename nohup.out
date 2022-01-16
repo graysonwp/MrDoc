@@ -17379,3 +17379,13 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [16/Jan/2022 22:18:35] "GET /media/202107/comaplogo_1627096542.gif HTTP/1.0" 200 14994
 [16/Jan/2022 22:18:35] "GET /media/202107/jsjdsorg3_1627096131.jpeg HTTP/1.0" 200 163819
 [16/Jan/2022 22:18:57] "GET /download_doc_md/902/ HTTP/1.0" 200 3965
+[16/Jan/2022 22:32:04] "GET /project-24/doc-251/ HTTP/1.0" 200 38294
+[16/Jan/2022 22:36:46] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Jan/2022 22:36:46] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Jan/2022 22:37:08] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[16/Jan/2022 22:38:43] "GET /_aliases HTTP/1.1" 404 3965
+[16/Jan/2022 22:58:11] code 400, message Bad request version ('À\x14À')
+[16/Jan/2022 22:58:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Jan/2022 23:01:25] "GET /project-36/doc-707/ HTTP/1.0" 200 3965
+[16/Jan/2022 23:13:27] "GET / HTTP/1.0" 200 48013
