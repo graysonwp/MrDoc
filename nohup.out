@@ -16449,3 +16449,403 @@ AttributeError: 'NoneType' object has no attribute 'split'
 <class 'datetime.datetime'>
 >>> unknown type:
 <class 'datetime.datetime'>
+[16/Jan/2022 10:43:33] "GET / HTTP/1.1" 200 48014
+[16/Jan/2022 10:43:34] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.1" 200 21402
+[16/Jan/2022 10:43:34] "GET /static/layui/css/layui.css?version=0.7.4 HTTP/1.1" 200 79875
+[16/Jan/2022 10:43:34] "GET /static/iconFont/iconfont.css?version=0.7.4 HTTP/1.1" 200 22891
+[16/Jan/2022 10:43:34] "GET /static/logo.svg HTTP/1.1" 200 15252
+[16/Jan/2022 10:43:34] "GET /static/icon_img/create-doc-icon.svg HTTP/1.1" 200 894
+[16/Jan/2022 10:43:34] "GET /static/icon_img/create-table-icon.svg HTTP/1.1" 200 967
+[16/Jan/2022 10:43:35] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.1" 200 86709
+[16/Jan/2022 10:43:35] "GET /static/iconFont/iconfont.js?version=0.7.4 HTTP/1.1" 200 130522
+[16/Jan/2022 10:43:35] "GET /static/icon_img/viewcode.svg HTTP/1.1" 200 1137
+[16/Jan/2022 10:43:35] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.1" 200 25964
+[16/Jan/2022 10:43:36] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.1" 200 291286
+[16/Jan/2022 10:43:37] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.1" 200 7365
+[16/Jan/2022 10:43:37] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.1" 200 1319
+[16/Jan/2022 10:43:37] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.1" 200 14271
+[16/Jan/2022 10:43:37] "GET /static/search/mrdoc_logo_300.png HTTP/1.1" 200 1255
+[16/Jan/2022 10:43:40] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:43:40] "GET /static/logo.svg HTTP/1.0" 200 15252
+[16/Jan/2022 10:43:40] "GET /static/icon_img/create-doc-icon.svg HTTP/1.0" 200 894
+[16/Jan/2022 10:43:40] "GET /static/icon_img/create-table-icon.svg HTTP/1.0" 200 967
+[16/Jan/2022 10:43:40] "GET /static/iconFont/iconfont.js?version=0.7.4 HTTP/1.0" 200 130522
+[16/Jan/2022 10:43:40] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.0" 200 291286
+[16/Jan/2022 10:43:40] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[16/Jan/2022 10:43:41] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[16/Jan/2022 10:43:41] "GET /static/icon_img/viewcode.svg HTTP/1.0" 200 1137
+[16/Jan/2022 10:44:54] "GET /static/editor.md/editormd.js?version=0.7.4 HTTP/1.0" 200 186919
+[16/Jan/2022 10:44:55] "GET /static/editor.md/lib/underscore.min.js HTTP/1.0" 200 16483
+[16/Jan/2022 10:46:40] "GET /project-51/ HTTP/1.0" 200 3986
+[16/Jan/2022 10:48:59] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Jan/2022 10:48:59] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Jan/2022 10:50:32] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:50:32] "GET /static/layui/css/layui.css?version=0.7.4 HTTP/1.0" 200 79875
+[16/Jan/2022 10:50:32] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.0" 200 21402
+[16/Jan/2022 10:50:32] "GET /static/iconFont/iconfont.css?version=0.7.4 HTTP/1.0" 200 22891
+[16/Jan/2022 10:50:32] "GET /static/iconFont/iconfont.js?version=0.7.4 HTTP/1.0" 200 130522
+[16/Jan/2022 10:50:32] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[16/Jan/2022 10:50:32] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.0" 200 32768
+[16/Jan/2022 10:50:32] "GET /static/logo.svg HTTP/1.0" 200 15252
+[16/Jan/2022 10:50:32] "GET /static/icon_img/create-doc-icon.svg HTTP/1.0" 200 894
+[16/Jan/2022 10:50:32] "GET /static/icon_img/create-table-icon.svg HTTP/1.0" 200 967
+[16/Jan/2022 10:50:32] "GET /static/icon_img/create-pro-icon.svg HTTP/1.0" 200 1821
+[16/Jan/2022 10:50:32] "GET /static/icon_img/simi.svg HTTP/1.0" 200 1798
+[16/Jan/2022 10:50:32] "GET /static/icon_img/viewcode.svg HTTP/1.0" 200 1137
+[16/Jan/2022 10:50:32] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[16/Jan/2022 10:50:32] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[16/Jan/2022 10:50:32] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[16/Jan/2022 10:50:33] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[16/Jan/2022 10:52:11] "GET / HTTP/1.1" 200 48014
+[16/Jan/2022 10:52:12] "GET / HTTP/1.1" 200 48014
+[16/Jan/2022 10:52:17] "GET /login/ HTTP/1.1" 200 4051
+[16/Jan/2022 10:52:18] "GET /static/layui/css/layui.css HTTP/1.1" 200 79875
+[16/Jan/2022 10:52:18] "GET /static/mrdoc_logo_ridus.png HTTP/1.1" 200 17342
+[16/Jan/2022 10:52:20] "GET /download_doc_md/281/ HTTP/1.0" 200 3986
+[16/Jan/2022 10:52:27] "POST /login/ HTTP/1.1" 302 0
+[16/Jan/2022 10:52:27] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:52:28] "GET /static/layui/css/layui.css?version=0.7.4 HTTP/1.1" 200 79875
+[16/Jan/2022 10:52:28] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.1" 200 21402
+[16/Jan/2022 10:52:28] "GET /static/iconFont/iconfont.css?version=0.7.4 HTTP/1.1" 200 22891
+[16/Jan/2022 10:52:28] "GET /static/icon_img/create-pro-icon.svg HTTP/1.1" 200 1821
+[16/Jan/2022 10:52:29] "GET /static/icon_img/simi.svg HTTP/1.1" 200 1798
+[16/Jan/2022 10:52:29] "GET /static/icon_img/viewcode.svg HTTP/1.1" 200 1137
+[16/Jan/2022 10:52:29] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.1" 200 86709
+[16/Jan/2022 10:52:31] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.1" 200 291286
+[16/Jan/2022 10:52:31] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.1" 200 7365
+[16/Jan/2022 10:52:31] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.1" 200 14271
+[16/Jan/2022 10:52:31] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.1" 200 1319
+[16/Jan/2022 10:52:31] "GET /static/search/mrdoc_logo_300.png HTTP/1.1" 200 1255
+[16/Jan/2022 10:52:33] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:52:34] "GET /static/logo.svg HTTP/1.1" 200 15252
+[16/Jan/2022 10:52:34] "GET /static/icon_img/create-doc-icon.svg HTTP/1.1" 200 894
+[16/Jan/2022 10:52:34] "GET /static/icon_img/create-table-icon.svg HTTP/1.1" 200 967
+[16/Jan/2022 10:52:34] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.1" 200 25964
+[16/Jan/2022 10:52:35] "GET /static/iconFont/iconfont.js?version=0.7.4 HTTP/1.1" 200 130522
+[16/Jan/2022 10:52:38] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:52:46] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:52:48] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:52:54] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:52:58] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:53:00] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:53:11] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:53:25] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:53:32] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:53:40] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:53:49] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:54:00] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:54:07] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:54:16] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:54:42] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:54:44] "GET / HTTP/1.1" 200 57768
+[16/Jan/2022 10:55:02] "GET /?page=2&kw=&sort=&role=-1 HTTP/1.0" 200 46356
+[16/Jan/2022 10:55:04] "GET /project-21/doc-902/ HTTP/1.0" 200 61688
+[16/Jan/2022 10:55:05] "GET /static/editor.md/css/editormd.css?version=0.7.4 HTTP/1.0" 200 79072
+[16/Jan/2022 10:55:05] "GET /static/vditor/dist/index.css?version=0.7.4 HTTP/1.0" 200 36867
+[16/Jan/2022 10:55:05] "GET /static/viewerjs/viewer.min.css?version=0.7.4 HTTP/1.0" 200 7796
+[16/Jan/2022 10:55:05] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.4 HTTP/1.0" 200 3546
+[16/Jan/2022 10:55:05] "GET /static/viewerjs/viewer.min.js?version=0.7.4 HTTP/1.0" 200 32388
+[16/Jan/2022 10:55:05] "GET /static/qrcodejs/qrcode.min.js?version=0.7.4 HTTP/1.0" 200 19927
+[16/Jan/2022 10:55:05] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.4 HTTP/1.0" 200 16831
+[16/Jan/2022 10:55:05] "GET /static/editor.md/lib/purify.min.js?version=0.7.4 HTTP/1.0" 200 18018
+[16/Jan/2022 10:55:05] "GET /static/vditor/dist/method.min.js?version=0.7.4 HTTP/1.0" 200 101319
+[16/Jan/2022 10:55:05] "GET /static/toc/doctoc.js?version=0.7.4 HTTP/1.0" 200 11498
+[16/Jan/2022 10:55:05] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[16/Jan/2022 10:55:05] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[16/Jan/2022 10:55:05] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.0" 200 56780
+[16/Jan/2022 10:55:05] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[16/Jan/2022 10:55:05] "GET /static/dashang/dashang_paypal.png HTTP/1.0" 200 6834
+[16/Jan/2022 10:55:05] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 1212416
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[16/Jan/2022 10:55:05] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58792)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[16/Jan/2022 10:55:06] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[16/Jan/2022 10:55:06] "GET /media/202201/2022-01-15_1643490.28884188943836187.png HTTP/1.0" 200 76159
+[16/Jan/2022 10:55:06] "GET /media/202201/2022-01-15_1650070.6591399192263269.png HTTP/1.0" 200 16123
+[16/Jan/2022 10:55:06] "GET /media/202201/2022-01-15_1650170.16949562176053135.png HTTP/1.0" 200 16986
+[16/Jan/2022 10:55:06] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[16/Jan/2022 10:55:06] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7258
+[16/Jan/2022 10:55:06] "GET /static/vditor//dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[16/Jan/2022 10:55:06] "GET /static/vditor//dist/js/katex/katex.min.css HTTP/1.0" 200 22113
+[16/Jan/2022 10:55:06] "GET /static/vditor//dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[16/Jan/2022 10:55:07] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Main-Regular.woff2 HTTP/1.0" 200 32464
+[16/Jan/2022 10:55:07] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Math-Italic.woff2 HTTP/1.0" 200 20096
+[16/Jan/2022 10:55:11] "GET /project-21/doc-222/ HTTP/1.0" 200 69804
+[16/Jan/2022 10:55:11] "GET /media/202103/2021-03-24_151330.png HTTP/1.0" 200 506149
+[16/Jan/2022 10:55:11] "GET /media/202103/2021-03-24_151809.png HTTP/1.0" 200 1170600
+[16/Jan/2022 10:55:11] "GET /media/202103/2021-03-24_152613.png HTTP/1.0" 200 1206501
+[16/Jan/2022 10:55:11] "GET /media/202103/2021-03-24_152911.png HTTP/1.0" 200 1130440
+[16/Jan/2022 10:55:11] "GET /media/202103/2021-03-24_155914.png HTTP/1.0" 200 1188946
+[16/Jan/2022 10:55:11] "GET /media/202103/2021-03-24_160941.png HTTP/1.0" 200 18664
+[16/Jan/2022 10:55:11] "GET /media/202103/2021-03-24_161835.png HTTP/1.0" 200 1061620
+[16/Jan/2022 10:55:55] "GET /project-21/doc-800/ HTTP/1.0" 200 68373
+[16/Jan/2022 10:55:55] "GET /media/202107/2021-07-20_2159340.25846779094837236.png HTTP/1.0" 200 26465
+[16/Jan/2022 10:55:55] "GET /media/202107/2021-07-20_2215560.0730175812392132.png HTTP/1.0" 200 46162
+[16/Jan/2022 10:55:59] "GET /project-21/doc-719/ HTTP/1.0" 200 75623
+[16/Jan/2022 10:57:58] "GET /project-21/doc-781/ HTTP/1.0" 200 56858
+[16/Jan/2022 11:03:35] "GET /download_doc_md/269/ HTTP/1.0" 200 3986
+[16/Jan/2022 11:09:14] "GET /project-23/doc-69/ HTTP/1.0" 200 3986
+[16/Jan/2022 11:13:05] "GET /project-16/doc-735/ HTTP/1.0" 200 26649
+[16/Jan/2022 11:14:50] "GET /project-21/doc-876/ HTTP/1.0" 200 56885
+[16/Jan/2022 11:19:52] "GET /robots.txt HTTP/1.0" 404 3986
+2022-01-16 11:25:26.655 | ERROR    | app_doc.views:doc:1070 - Collection browsing error
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/threading.py", line 884, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7feee6cc2510>
+    └ <Thread(Thread-98, started daemon 140663692437248)>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7feee6cc22f0>
+    └ <Thread(Thread-98, started daemon 140663692437248)>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-98, started daemon 140663692437248)>
+    │    │        │    └ (<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-98, started daemon 140663692437248)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7feee228be80>>
+    └ <Thread(Thread-98, started daemon 140663692437248)>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 58862)
+    │    │              └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7feee1b2fbf8>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7feee228be80>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7feee228be80>
+    │    │                   │        └ ('127.0.0.1', 58862)
+    │    │                   └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7feee228be80>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7feee0b28d08>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7feed37367f0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7feee0b28d90>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7feed37367f0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7feee0b28378>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7feee228be80>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7feed37367f0>
+    │       └ <function BaseHandler.run at 0x7feee0b240d0>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7feed360a7b8>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7feee0b24400>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7feed360a7b8>
+    │    │        │           │    └ {'LC_ALL': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7feed360a7b8>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7feedaa1ea58>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7feed360a7b8>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │    └ <function BaseHandler.get_response at 0x7feee0b6b598>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7feedaa1ea58>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e33b70>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7feedaa1ea58>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7feed9e3fd68>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e33ae8>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7feed9e3fd68>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7feed9e3fe10>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e33a60>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7feed9e3fe10>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7feed9e4fef0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e339d8>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7feed9e4fef0>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7feedaa2eb70>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e33950>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7feedaa2eb70>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7feedaa2eb38>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e338c8>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7feedaa2eb38>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7feedaa2eb00>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e33840>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7feedaa2eb00>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7feedaa2ec18>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e337b8>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7feedaa2ec18>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7feedb5efe10>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7feed9e33730>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7feedb5efe10>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7feed9e56be0>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 35, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               │    └ <function BaseHandler._get_response at 0x7feed9e11c80>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7feed9e56be0>
+
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7feedaa1ea58>>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 343}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-343/'>
+               └ <function doc at 0x7feeda8dd6a8>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 343}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-343/'>
+           └ <function doc at 0x7feeda8dd620>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 997, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 343
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7feee0c2be80>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 343, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7feee1bfbae8>
+                   └ <django.db.models.manager.Manager object at 0x7feed9ed91d0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[16/Jan/2022 11:25:26] "GET /project-21/doc-343/ HTTP/1.0" 200 3986
+[16/Jan/2022 11:26:06] "GET / HTTP/1.1" 200 48014
