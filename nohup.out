@@ -16849,3 +16849,170 @@ Traceback (most recent call last):
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [16/Jan/2022 11:25:26] "GET /project-21/doc-343/ HTTP/1.0" 200 3986
 [16/Jan/2022 11:26:06] "GET / HTTP/1.1" 200 48014
+[16/Jan/2022 11:31:13] "GET /download_doc_md/862/ HTTP/1.0" 200 3986
+[16/Jan/2022 11:32:04] "GET /modify_doc/735/ HTTP/1.0" 200 89196
+[16/Jan/2022 11:32:04] "GET /static/editor.md/css/font-awesome.min.css?version=0.7.4 HTTP/1.0" 200 31000
+[16/Jan/2022 11:32:04] "GET /static/mrdoc/mrdoc-editor.css?version=0.7.4 HTTP/1.0" 200 3092
+[16/Jan/2022 11:32:04] "GET /static/tagsInput/tagsinput.css HTTP/1.0" 200 2171
+[16/Jan/2022 11:32:04] "GET /static/tagsInput/tagsinput.js?version=0.7.4 HTTP/1.0" 200 22471
+[16/Jan/2022 11:32:04] "GET /static/shortcut/shortcut.js?version=0.7.4 HTTP/1.0" 200 5796
+[16/Jan/2022 11:32:04] "GET /static/vditor/dist/index.min.js?version=0.7.4 HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[16/Jan/2022 11:32:04] "GET /static/vditor/dist/index.min.js?version=0.7.4 HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58884)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[16/Jan/2022 11:32:04] "GET /static/mrdoc/mrdoc.editor.js?version=0.7.4 HTTP/1.0" 200 21716
+[16/Jan/2022 11:32:04] "GET /static/mrdoc/mrdoc.js?version=0.7.4 HTTP/1.0" 200 1194
+[16/Jan/2022 11:32:04] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.0" 200 56780
+[16/Jan/2022 11:32:05] "GET /static/layui/css/modules/layer/default/loading-1.gif HTTP/1.0" 200 701
+[16/Jan/2022 11:32:05] "GET /static/vditor/dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[16/Jan/2022 11:32:05] "POST /get_pro_doc_tree/ HTTP/1.0" 200 418
+[16/Jan/2022 11:32:05] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 200 245760
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[16/Jan/2022 11:32:05] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58898)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[16/Jan/2022 11:32:06] "GET /static/vditor/dist/js/icons/ant.js HTTP/1.0" 200 42983
+[16/Jan/2022 11:32:07] "GET /static/vditor/dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7258
+[16/Jan/2022 11:33:30] "POST /modify_doc/735/ HTTP/1.0" 200 52
+[16/Jan/2022 11:33:30] "POST /modify_doc/735/ HTTP/1.0" 200 52
+[16/Jan/2022 11:36:08] "GET /project-21/doc-786/ HTTP/1.0" 200 56896
+[16/Jan/2022 11:36:45] "GET /download_doc_md/853/ HTTP/1.0" 200 3986
+[16/Jan/2022 11:42:24] "GET /create_doc/ HTTP/1.0" 302 0
+[16/Jan/2022 11:42:24] "GET /login/?next=/create_doc/ HTTP/1.0" 200 4076
+[16/Jan/2022 11:55:29] "GET /project-21/doc-902/ HTTP/1.0" 200 60775
+[16/Jan/2022 11:55:58] "GET /download_doc_md/301/ HTTP/1.0" 200 3986
+[16/Jan/2022 12:01:33] "GET /download_doc_md/730/ HTTP/1.0" 200 3986
+[16/Jan/2022 12:06:33] "GET /project-36/doc-658/ HTTP/1.0" 200 3965
+[16/Jan/2022 12:07:13] "GET /project-36/doc-698/ HTTP/1.0" 200 3986
+[16/Jan/2022 12:18:19] "GET /project-23/doc-58/ HTTP/1.0" 200 3986
+[16/Jan/2022 12:23:49] "GET /download_doc_md/305/ HTTP/1.0" 200 3986
+[16/Jan/2022 12:29:16] "GET /download_doc_md/711/ HTTP/1.0" 200 3986
