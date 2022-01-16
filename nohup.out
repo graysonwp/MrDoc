@@ -17334,3 +17334,12 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [16/Jan/2022 19:11:27] "GET /project-34/doc-842/ HTTP/1.0" 200 45536
 [16/Jan/2022 19:19:48] "GET / HTTP/1.1" 200 48013
 [16/Jan/2022 19:27:57] "GET /project-21/doc-784/ HTTP/1.0" 200 56828
+[16/Jan/2022 19:36:13] "GET / HTTP/1.1" 200 48013
+[16/Jan/2022 19:36:14] "GET /_search HTTP/1.1" 404 3965
+[16/Jan/2022 19:37:54] "GET /sitemap-home.xml HTTP/1.0" 200 309
+[16/Jan/2022 20:20:36] code 400, message Bad request version ('À\x14À')
+[16/Jan/2022 20:20:36] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Jan/2022 20:21:01] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03§\x8b§\x1c\x89NÆa\xa0êþã\x13èè\x02öß\\Ryä\x9eLGä\x8f \x8c·\x81\x02\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Jan/2022 20:21:01] You're accessing the development server over HTTPS, but it only supports HTTP.
+
