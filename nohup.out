@@ -16185,3 +16185,267 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [16/Jan/2022 09:21:54] "GET /download_doc_md/811/ HTTP/1.0" 200 3986
 [16/Jan/2022 09:21:55] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
 [16/Jan/2022 09:27:26] "GET /download_doc_md/328/ HTTP/1.0" 200 3986
+[16/Jan/2022 09:38:47] "GET /project-21/doc-829/ HTTP/1.0" 200 60674
+[16/Jan/2022 09:39:36] "GET /download_doc_md/227/ HTTP/1.0" 200 3986
+[16/Jan/2022 09:45:10] "GET /project-34/doc-536/ HTTP/1.0" 200 41632
+[16/Jan/2022 09:59:32] "GET /project-34/doc-529/ HTTP/1.0" 200 72432
+[16/Jan/2022 10:13:11] "GET /project-21/doc-226/ HTTP/1.0" 200 60928
+[16/Jan/2022 10:18:16] "GET / HTTP/1.0" 200 48014
+[16/Jan/2022 10:18:17] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.0" 200 21402
+[16/Jan/2022 10:18:17] "GET /static/iconFont/iconfont.css?version=0.7.4 HTTP/1.0" 200 22891
+[16/Jan/2022 10:18:17] "GET /static/layui/css/layui.css?version=0.7.4 HTTP/1.0" 200 79875
+[16/Jan/2022 10:18:17] "GET /static/icon_img/create-doc-icon.svg HTTP/1.0" 200 894
+[16/Jan/2022 10:18:17] "GET /static/logo.svg HTTP/1.0" 200 15252
+[16/Jan/2022 10:18:17] "GET /static/icon_img/create-table-icon.svg HTTP/1.0" 200 967
+[16/Jan/2022 10:18:17] "GET /static/iconFont/iconfont.js?version=0.7.4 HTTP/1.0" 200 130522
+[16/Jan/2022 10:18:17] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[16/Jan/2022 10:18:17] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.0" 200 65536
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[16/Jan/2022 10:18:17] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 46944)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[16/Jan/2022 10:18:17] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[16/Jan/2022 10:18:17] "GET /static/icon_img/viewcode.svg HTTP/1.0" 200 1137
+[16/Jan/2022 10:18:17] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[16/Jan/2022 10:18:18] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[16/Jan/2022 10:18:18] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[16/Jan/2022 10:18:18] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[16/Jan/2022 10:18:18] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[16/Jan/2022 10:18:21] "GET /login/ HTTP/1.0" 200 4051
+[16/Jan/2022 10:18:22] "GET /static/layui/css/layui.css HTTP/1.0" 200 79875
+[16/Jan/2022 10:18:22] "GET /static/mrdoc_logo_ridus.png HTTP/1.0" 200 17342
+[16/Jan/2022 10:18:22] "GET /static/PearAdminLayui/admin/images/background.svg HTTP/1.0" 200 2332
+[16/Jan/2022 10:18:24] "POST /login/ HTTP/1.0" 302 0
+[16/Jan/2022 10:18:25] "GET / HTTP/1.0" 200 57768
+[16/Jan/2022 10:18:25] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.0" 200 21402
+[16/Jan/2022 10:18:25] "GET /static/layui/css/layui.css?version=0.7.4 HTTP/1.0" 200 79875
+[16/Jan/2022 10:18:25] "GET /static/iconFont/iconfont.css?version=0.7.4 HTTP/1.0" 200 22891
+[16/Jan/2022 10:18:26] "GET /static/icon_img/create-pro-icon.svg HTTP/1.0" 200 1821
+[16/Jan/2022 10:18:26] "GET /static/icon_img/simi.svg HTTP/1.0" 200 1798
+[16/Jan/2022 10:18:26] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[16/Jan/2022 10:18:26] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[16/Jan/2022 10:18:26] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[16/Jan/2022 10:18:26] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[16/Jan/2022 10:18:46] "GET /download_doc_md/820/ HTTP/1.0" 200 3986
+
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
