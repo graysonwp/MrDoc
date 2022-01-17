@@ -17807,3 +17807,17 @@ Traceback (most recent call last):
 ConnectionResetError: [Errno 104] Connection reset by peer
 ----------------------------------------
 [17/Jan/2022 20:29:33] "GET /project-34/doc-816/ HTTP/1.0" 200 55796
+[17/Jan/2022 20:37:44] "GET /download_doc_md/207/ HTTP/1.0" 200 3986
+[17/Jan/2022 20:40:53] "GET /project-21/doc-901/ HTTP/1.0" 200 59306
+[17/Jan/2022 20:41:08] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 20:41:10] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 20:41:12] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 20:41:14] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 20:45:42] "GET /download_doc_md/837/ HTTP/1.0" 200 3986
+[17/Jan/2022 20:53:42] "GET /download_doc_md/641/ HTTP/1.0" 200 3986
+[17/Jan/2022 21:00:03] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Jan/2022 21:00:03] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Jan/2022 21:02:14] "GET /download_doc_md/848/ HTTP/1.0" 200 3986
+[17/Jan/2022 21:05:16] "GET / HTTP/1.1" 200 48013
+[17/Jan/2022 21:17:00] "GET /project-37/doc-803/ HTTP/1.0" 200 36352
+[17/Jan/2022 21:17:02] "GET /project-36/doc-672/ HTTP/1.0" 200 3986
