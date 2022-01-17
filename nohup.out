@@ -18034,3 +18034,33 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [18/Jan/2022 06:15:37] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
 [18/Jan/2022 06:20:31] "GET /project-37/doc-754/ HTTP/1.0" 200 41370
 [18/Jan/2022 06:29:23] "GET /download_doc_md/662/ HTTP/1.0" 200 3986
+[18/Jan/2022 06:37:52] "GET /download_doc_md/239/ HTTP/1.0" 200 3986
+[18/Jan/2022 06:46:37] "GET /download_doc_md/664/ HTTP/1.0" 200 3986
+[18/Jan/2022 06:46:58] "GET /project-37/doc-809/ HTTP/1.0" 200 55441
+[18/Jan/2022 06:55:40] "GET /download_doc_md/241/ HTTP/1.0" 200 3986
+[18/Jan/2022 06:59:47] "GET / HTTP/1.1" 200 48013
+[18/Jan/2022 07:04:13] "GET /project-24/doc-242/ HTTP/1.0" 200 32885
+----------------------------------------
+Exception happened during processing of request from ('45.155.205.150', 60000)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[18/Jan/2022 07:06:15] "GET / HTTP/1.1" 200 48013
+[18/Jan/2022 07:07:34] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[18/Jan/2022 07:13:27] "GET /project-26/doc-310/ HTTP/1.0" 200 38033
+[18/Jan/2022 07:14:27] "GET /download_doc_md/29/ HTTP/1.0" 200 3965
+[18/Jan/2022 07:15:56] "GET /media/202105/2021-05-06_113753.png HTTP/1.0" 200 16783
+[18/Jan/2022 07:22:55] "GET /download_doc_md/266/ HTTP/1.0" 200 3986
+[18/Jan/2022 07:23:36] "GET /project-21/doc-228/ HTTP/1.0" 200 64042
