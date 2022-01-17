@@ -17726,3 +17726,27 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [17/Jan/2022 14:18:49] "GET /download_doc_md/864/ HTTP/1.0" 200 3986
 [17/Jan/2022 14:22:01] "GET /download_doc_md/770/ HTTP/1.0" 200 3965
 [17/Jan/2022 14:26:21] "GET /project-21/doc-819/ HTTP/1.0" 200 62794
+[17/Jan/2022 14:41:44] "GET /project-36/doc-674/ HTTP/1.0" 200 3986
+[17/Jan/2022 14:48:02] "GET /robots.txt HTTP/1.0" 404 3965
+[17/Jan/2022 14:48:04] "GET /login/?next=/create_doc/%3Feid%3D4 HTTP/1.0" 200 4051
+[17/Jan/2022 14:49:11] "GET /download_doc_md/345/ HTTP/1.0" 200 3986
+[17/Jan/2022 14:56:56] "GET /media/202107/2021-07-09_161825.png HTTP/1.0" 200 191485
+[17/Jan/2022 14:57:37] "GET /download_doc_md/311/ HTTP/1.0" 200 3965
+[17/Jan/2022 14:58:47] "GET /project-23/doc-76/ HTTP/1.0" 200 3965
+[17/Jan/2022 15:06:41] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03&¡iZ¹±á\x10á?ð2\x0fÓ')
+[17/Jan/2022 15:06:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Jan/2022 15:06:47] "GET / HTTP/1.1" 200 48013
+[17/Jan/2022 15:06:47] "GET /_search HTTP/1.1" 404 3965
+[17/Jan/2022 15:06:48] code 400, message Bad request syntax ("\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x1e`9\x0c\x80\x8c\x02ß\x90&'}\x144p\x1d+ëm}ú¬©Ü\x17UZý´ñ§o\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[17/Jan/2022 15:06:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Jan/2022 15:11:36] "GET / HTTP/1.0" 200 48013
+[17/Jan/2022 15:11:36] "GET / HTTP/1.0" 200 48013
+[17/Jan/2022 15:11:58] "GET /download_doc_md/294/ HTTP/1.0" 200 3986
+[17/Jan/2022 15:17:25] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 15:17:27] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 15:17:29] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 15:17:31] "GET / HTTP/1.0" 200 48072
+[17/Jan/2022 15:19:47] "GET /download_doc_md/894/ HTTP/1.0" 200 3986
+[17/Jan/2022 15:27:27] "GET /download_doc_md/303/ HTTP/1.0" 200 3986
