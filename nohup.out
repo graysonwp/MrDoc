@@ -17777,3 +17777,33 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [17/Jan/2022 19:09:36] "GET /project-21/doc-228/ HTTP/1.0" 200 64042
 [17/Jan/2022 19:17:57] "GET /download_doc_md/197/ HTTP/1.0" 200 3986
 [17/Jan/2022 19:25:56] "GET /project-42/doc-769/ HTTP/1.0" 200 36020
+[17/Jan/2022 19:33:55] "GET /download_doc_md/806/ HTTP/1.0" 200 3986
+[17/Jan/2022 19:42:03] "GET /download_doc_md/784/ HTTP/1.0" 200 3986
+[17/Jan/2022 19:51:20] "GET /download_doc_md/332/ HTTP/1.0" 200 3965
+[17/Jan/2022 19:57:09] "GET /project-24/doc-269/ HTTP/1.0" 200 45803
+[17/Jan/2022 20:05:02] "GET /project-34/doc-891/ HTTP/1.0" 200 40785
+[17/Jan/2022 20:13:07] "GET /project-24/doc-268/ HTTP/1.0" 200 31773
+[17/Jan/2022 20:16:07] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[17/Jan/2022 20:17:56] "GET /robots.txt HTTP/1.0" 404 3965
+[17/Jan/2022 20:17:57] "GET /download_doc_md/884/ HTTP/1.0" 200 3965
+[17/Jan/2022 20:21:04] "GET /create_doc/ HTTP/1.0" 302 0
+[17/Jan/2022 20:21:12] "GET /login/?next=/create_doc/ HTTP/1.0" 200 4051
+[17/Jan/2022 20:21:33] "GET /download_doc_md/826/ HTTP/1.0" 200 3986
+----------------------------------------
+Exception happened during processing of request from ('104.152.52.155', 42382)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[17/Jan/2022 20:29:33] "GET /project-34/doc-816/ HTTP/1.0" 200 55796
