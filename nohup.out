@@ -18671,3 +18671,6 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [18/Jan/2022 19:23:45] "GET /project-37/doc-884/ HTTP/1.0" 200 80581
 [18/Jan/2022 19:59:59] "GET /project-26/doc-308/ HTTP/1.0" 200 41521
 [18/Jan/2022 20:22:40] "GET /download_doc_md/859/ HTTP/1.0" 200 3965
+[18/Jan/2022 20:56:30] "GET /download_doc_md/765/ HTTP/1.0" 200 3965
+[18/Jan/2022 21:17:29] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[18/Jan/2022 21:17:29] "  /*à     Cookie: mstshash=Administr" 400 -
