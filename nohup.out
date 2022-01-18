@@ -18915,3 +18915,98 @@ Traceback (most recent call last):
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [19/Jan/2022 04:26:54] "GET /project-34/doc-512/ HTTP/1.0" 200 3965
+[19/Jan/2022 04:46:25] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[19/Jan/2022 04:57:24] "GET /project-34/doc-544/ HTTP/1.0" 200 55563
+[19/Jan/2022 04:57:25] "GET /static/editor.md/lib/marked.min.js?version=0.7.4 HTTP/1.0" 200 44927
+[19/Jan/2022 04:57:25] "GET /static/editor.md/editormd.js?version=0.7.4 HTTP/1.0" 200 186919
+[19/Jan/2022 04:57:25] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[19/Jan/2022 04:57:25] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[19/Jan/2022 04:57:25] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[19/Jan/2022 04:57:25] "GET /static/editor.md/lib/raphael.min.js HTTP/1.0" 200 92705
+[19/Jan/2022 04:57:26] "GET /static/editor.md/lib/underscore.min.js HTTP/1.0" 200 16483
+[19/Jan/2022 04:57:26] "GET /static/editor.md/lib/prettify.min.js HTTP/1.0" 200 17973
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9231107.png HTTP/1.0" 200 603895
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9607778.png HTTP/1.0" 200 484538
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9533844.png HTTP/1.0" 200 540345
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9659362.png HTTP/1.0" 200 23759
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9679987.png HTTP/1.0" 200 94280
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9183517.png HTTP/1.0" 200 480578
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.958074.png HTTP/1.0" 200 128859
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9133608.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jan/2022 04:57:26] "GET /media/202105//1621914623.9133608.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 35530)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jan/2022 05:05:54] "GET /download_doc_md/688/ HTTP/1.0" 200 3986
+[19/Jan/2022 05:10:53] "GET /robots.txt HTTP/1.0" 404 3965
+[19/Jan/2022 05:10:57] "GET /project-34/doc-521/ HTTP/1.0" 200 39680
+[19/Jan/2022 05:12:30] "GET /robots.txt HTTP/1.0" 404 3965
+[19/Jan/2022 05:15:52] "GET /download_doc_md/804/ HTTP/1.0" 200 3986
+[19/Jan/2022 05:19:50] "GET /robots.txt HTTP/1.0" 404 3965
+[19/Jan/2022 05:19:52] "GET /download_doc_md/855/ HTTP/1.0" 200 3965
+[19/Jan/2022 05:25:32] "GET / HTTP/1.0" 200 48013
+[19/Jan/2022 05:29:26] "GET /download_doc_md/819/ HTTP/1.0" 200 3986
