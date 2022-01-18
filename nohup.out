@@ -18428,3 +18428,26 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [18/Jan/2022 16:23:51] "GET /download_doc_md/311/ HTTP/1.0" 200 3986
 [18/Jan/2022 16:26:19] "GET /media/202105/2021-05-06_113753.png HTTP/1.0" 200 16783
 [18/Jan/2022 16:29:15] "GET /download_doc_md/278/ HTTP/1.0" 200 3986
+[18/Jan/2022 16:34:38] "GET /download_doc_md/93/ HTTP/1.0" 200 3986
+[18/Jan/2022 16:38:35] "GET /download_doc_md/889/ HTTP/1.0" 200 3965
+[18/Jan/2022 16:39:59] "GET /download_doc_md/874/ HTTP/1.0" 200 3986
+[18/Jan/2022 16:45:26] "GET /project-21/doc-772/ HTTP/1.0" 200 63421
+[18/Jan/2022 16:50:49] "GET /download_doc_md/89/ HTTP/1.0" 200 3986
+[18/Jan/2022 16:56:11] "GET /download_doc_md/517/ HTTP/1.0" 200 3986
+[18/Jan/2022 17:01:29] "GET /project-21/doc-89/ HTTP/1.0" 200 71040
+[18/Jan/2022 17:02:32] "GET /download_doc_md/895/ HTTP/1.0" 200 3965
+[18/Jan/2022 17:06:47] "GET /download_doc_md/73/ HTTP/1.0" 200 3986
+[18/Jan/2022 17:08:16] "GET /project-34/doc-820/ HTTP/1.0" 200 55159
+[18/Jan/2022 17:12:08] "GET /download_doc_md/892/ HTTP/1.0" 200 3986
+[18/Jan/2022 17:17:31] "GET /project-36/doc-649/ HTTP/1.0" 200 3986
+[18/Jan/2022 17:20:43] "GET /project-21/doc-298/ HTTP/1.0" 200 56897
+[18/Jan/2022 17:22:53] "GET /download_doc_md/324/ HTTP/1.0" 200 3986
+[18/Jan/2022 17:25:25] "GET / HTTP/1.1" 200 48013
+[18/Jan/2022 17:25:30] "GET /_search HTTP/1.1" 404 3965
+[18/Jan/2022 17:25:55] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03÷ÆW\x02\\ÑÛ\\eB\x15¿\x04öúeî\x0fhÂTãl]3LÄZ©Y«\x8a\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[18/Jan/2022 17:25:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Jan/2022 17:26:10] code 400, message Bad request version ('À\x14À')
+[18/Jan/2022 17:26:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Jan/2022 17:28:01] "GET /project-26/doc-315/ HTTP/1.0" 200 37228
