@@ -18677,3 +18677,21 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [18/Jan/2022 21:31:10] "GET /login/?next=/create_doc/ HTTP/1.0" 200 4051
 [18/Jan/2022 22:10:29] "GET /project-34/doc-529/ HTTP/1.0" 200 72432
 [18/Jan/2022 22:19:27] "GET / HTTP/1.1" 200 48013
+[18/Jan/2022 22:30:58] "GET /project-21/doc-898/ HTTP/1.0" 200 61286
+[18/Jan/2022 22:39:34] "GET /robots.txt HTTP/1.0" 404 3965
+[18/Jan/2022 22:39:35] "GET /project-21/doc-833/ HTTP/1.0" 200 63370
+[18/Jan/2022 22:45:38] "GET /project-24/doc-244/ HTTP/1.0" 200 35996
+[18/Jan/2022 23:01:48] "GET /project-49/ HTTP/1.0" 200 27476
+[18/Jan/2022 23:06:30] "GET / HTTP/1.1" 200 48013
+[18/Jan/2022 23:06:53] "GET / HTTP/1.1" 200 48013
+[18/Jan/2022 23:06:54] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03û\x0eþ¿Â>ÄM\x8fDxNM«\x91>\x07{\x01\x1f\x06pi¥\x1b\r=#ó\x1c]\x85 ét0,Í\xa0\x9b¦\rý\x96ßÕ®»1EA¼ås=á\x99ÐN|ª>»$\x90\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[18/Jan/2022 23:06:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Jan/2022 23:06:54] "GET /aaa9 HTTP/1.1" 404 3965
+[18/Jan/2022 23:06:55] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x8fz¢Zt\x10âM\x107¨\x86\tÝk¬\x88\x85<ZP\x90\x16U\x9f¾\xadP¢F\x97h 6\x1c;Ä7ñæ[\x1c\x85R\x83\x0b÷Ö\x9bó@\x82²V\x129Éà\x87Ã:x3ê3\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[18/Jan/2022 23:06:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Jan/2022 23:06:55] "GET /aab9 HTTP/1.1" 404 3965
+[18/Jan/2022 23:09:17] "GET /download_doc_md/747/ HTTP/1.0" 200 3965
+[18/Jan/2022 23:19:37] "GET /project-21/doc-751 HTTP/1.0" 301 0
+[18/Jan/2022 23:19:40] "GET /project-21/doc-751/ HTTP/1.0" 200 86784
