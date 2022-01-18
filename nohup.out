@@ -18345,3 +18345,54 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [18/Jan/2022 11:06:52] "GET /download_doc_md/886/ HTTP/1.0" 200 3965
 [18/Jan/2022 11:14:32] "GET /project-21/doc-323/ HTTP/1.0" 200 64271
 [18/Jan/2022 11:23:35] "GET /download_doc_md/329/ HTTP/1.0" 200 3986
+[18/Jan/2022 11:32:42] "GET /project-36/doc-646/ HTTP/1.0" 200 3986
+[18/Jan/2022 11:37:12] "GET /robots.txt HTTP/1.0" 404 3965
+[18/Jan/2022 11:37:13] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[18/Jan/2022 11:42:05] "GET /project-46/doc-835/ HTTP/1.0" 302 0
+[18/Jan/2022 11:42:06] "GET /check_viewcode/?to=/project-46/doc-835/ HTTP/1.0" 200 3066
+[18/Jan/2022 11:53:06] "GET /download_doc_md/530/ HTTP/1.0" 200 3965
+[18/Jan/2022 11:53:41] "GET /download_doc_md/757/ HTTP/1.0" 200 3965
+[18/Jan/2022 11:53:42] "GET /download_doc_md/901/ HTTP/1.0" 200 3965
+[18/Jan/2022 12:00:18] "GET /project-26/doc-303/ HTTP/1.0" 200 38689
+[18/Jan/2022 12:26:56] "GET /download_doc_md/886/ HTTP/1.0" 200 3965
+[18/Jan/2022 12:27:11] "GET /project-34/doc-535/ HTTP/1.0" 200 42275
+[18/Jan/2022 12:29:28] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.193', 44160)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[18/Jan/2022 12:29:30] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ð+ê¹tI\x08¢OZ6Ó§\x05òP\x8cÉ./ò\tÈÒ\x90Fd\x8fOBP± óú\x02!JPºl|ð\x92\x1fÏ\x97ÿoOTÖ!\x12ÜqôQJ\x93]ä\x1c¾¬\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[18/Jan/2022 12:29:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Jan/2022 12:29:31] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.193', 47002)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[18/Jan/2022 12:29:32] "GET / HTTP/1.1" 200 48013
