@@ -18701,3 +18701,8 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [19/Jan/2022 00:05:11] "GET / HTTP/1.0" 200 48013
 [19/Jan/2022 00:06:25] "GET / HTTP/1.0" 200 48013
 [19/Jan/2022 01:09:16] "GET /project-21/doc-900/ HTTP/1.0" 200 69226
+[19/Jan/2022 01:37:33] "GET /download_doc_md/858/ HTTP/1.0" 200 3965
+[19/Jan/2022 01:45:49] "GET /robots.txt HTTP/1.0" 404 3965
+[19/Jan/2022 01:45:52] "GET /project-24/doc-251/ HTTP/1.0" 200 38294
+[19/Jan/2022 01:45:56] "GET /project-21/doc-294/ HTTP/1.0" 200 60324
+[19/Jan/2022 02:03:16] "GET /project-16/doc-735/ HTTP/1.0" 200 25811
