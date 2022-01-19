@@ -19803,3 +19803,19 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [19/Jan/2022 22:03:35] "GET /project-37/doc-713/ HTTP/1.0" 200 36429
 [19/Jan/2022 22:14:25] "GET /project-21/doc-276/ HTTP/1.0" 200 62222
 [19/Jan/2022 22:23:19] "GET /project-37/ HTTP/1.0" 200 38294
+[19/Jan/2022 22:39:23] "GET /_aliases HTTP/1.1" 404 3965
+[19/Jan/2022 22:40:03] "GET /project-24/doc-260/ HTTP/1.0" 200 33217
+[19/Jan/2022 22:41:59] "GET /robots.txt HTTP/1.0" 404 3965
+[19/Jan/2022 22:42:00] "GET /sitemap-16.xml HTTP/1.0" 200 648
+[19/Jan/2022 22:45:29] "GET /project-21/doc-228/ HTTP/1.0" 200 64042
+[19/Jan/2022 22:47:56] "GET /download_doc_md/188/ HTTP/1.0" 200 3986
+[19/Jan/2022 22:55:44] "GET /project-37/doc-805/ HTTP/1.0" 200 87417
+[19/Jan/2022 22:59:03] code 400, message Bad request syntax ("\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03Ù«Ô'È\x8f\x81ù\x04\x17Q\x01\tl\x97\x7f8\x1fç4\x00¢-béÓ,¼æ\x03Ã\x88\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À")
+[19/Jan/2022 22:59:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[19/Jan/2022 23:02:00] "GET /download_doc_md/881/ HTTP/1.0" 200 3965
+[19/Jan/2022 23:03:47] "GET /project-21/doc-87/ HTTP/1.0" 200 57486
+[19/Jan/2022 23:11:21] "GET /project-49/doc-853/ HTTP/1.0" 200 32139
+[19/Jan/2022 23:12:45] "GET /project-26/doc-342/ HTTP/1.0" 200 47336
+[19/Jan/2022 23:21:43] "GET /download_doc_md/322/ HTTP/1.0" 200 3986
+[19/Jan/2022 23:29:12] "GET /download_doc_md/825/ HTTP/1.0" 200 3986
