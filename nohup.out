@@ -21169,3 +21169,29 @@ Quit the server with CONTROL-C.
 [20/Jan/2022 18:39:22] "GET /Public/Mobile/ecshe_css/wapmain.css?v=1545408652 HTTP/1.0" 404 3986
 [20/Jan/2022 19:16:23] "GET /download_doc_md/880/ HTTP/1.0" 200 3965
 [20/Jan/2022 19:29:40] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7258
+[20/Jan/2022 19:32:43] "GET /download_doc_md/342/ HTTP/1.0" 200 3965
+[20/Jan/2022 20:00:48] "GET /download_doc_md/238/ HTTP/1.0" 200 3965
+[20/Jan/2022 20:08:45] "GET /download_doc_md/259/ HTTP/1.0" 200 3965
+[20/Jan/2022 20:16:47] "GET /project-37/doc-807/ HTTP/1.0" 200 53289
+----------------------------------------
+Exception happened during processing of request from ('45.227.254.51', 30627)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[20/Jan/2022 20:21:17] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[20/Jan/2022 20:21:17] "  ,'à     Cookie: mstshash=Domain" 400 -
+[20/Jan/2022 20:21:18] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[20/Jan/2022 20:21:18] "  ,'à     Cookie: mstshash=Domain" 400 -
+[20/Jan/2022 20:25:15] "GET /download_doc_md/801/ HTTP/1.0" 200 3965
