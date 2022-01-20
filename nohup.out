@@ -20509,3 +20509,14 @@ Quit the server with CONTROL-C.
 [20/Jan/2022 11:20:21] "GET /project-51/doc-867/ HTTP/1.0" 200 3986
 [20/Jan/2022 11:24:22] "GET /project-37/doc-806/ HTTP/1.0" 200 49329
 [20/Jan/2022 11:26:51] "GET /download_doc_md/767/ HTTP/1.0" 200 3986
+[20/Jan/2022 11:31:02] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[20/Jan/2022 11:31:02] "  à          " 400 -
+[20/Jan/2022 11:31:35] "GET /download_doc_md/827/ HTTP/1.0" 200 3986
+[20/Jan/2022 11:42:00] "GET /download_doc_md/828/ HTTP/1.0" 200 3986
+[20/Jan/2022 11:42:30] "GET /_cat/indices?format=json&h=index HTTP/1.1" 404 3965
+[20/Jan/2022 11:46:42] "GET /download_doc_md/796/ HTTP/1.0" 200 3986
+[20/Jan/2022 11:48:23] "GET /download_doc_md/534/ HTTP/1.0" 200 3965
+[20/Jan/2022 11:51:17] "GET /download_doc_md/733/ HTTP/1.0" 200 3986
+[20/Jan/2022 12:08:53] "GET /project-36/doc-688/ HTTP/1.0" 200 3986
+[20/Jan/2022 12:19:25] "GET /project-21/doc-760/ HTTP/1.0" 200 63274
+[20/Jan/2022 12:29:52] "GET /download_doc_md/681/ HTTP/1.0" 200 3986
