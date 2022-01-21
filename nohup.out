@@ -22799,3 +22799,458 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [22/Jan/2022 05:24:36] "GET /static/logo.svg HTTP/1.0" 200 15252
 [22/Jan/2022 05:28:31] "GET /download_doc_md/868/ HTTP/1.0" 200 3965
 [22/Jan/2022 05:28:32] "GET /static/logo.svg HTTP/1.0" 200 15252
+[22/Jan/2022 05:30:44] "GET /download_doc_md/69/ HTTP/1.0" 200 3986
+[22/Jan/2022 05:30:47] "GET /project-34/doc-897/ HTTP/1.0" 200 46146
+[22/Jan/2022 05:35:28] "GET /robots.txt HTTP/1.0" 404 3965
+[22/Jan/2022 05:35:30] "GET /project-49/doc-852/ HTTP/1.0" 200 25923
+[22/Jan/2022 05:36:32] "GET /project-37/doc-713/ HTTP/1.0" 200 36416
+[22/Jan/2022 05:40:56] "GET /download_doc_md/531/ HTTP/1.0" 200 3965
+[22/Jan/2022 05:41:54] "GET /download_doc_md/309/ HTTP/1.0" 200 3986
+[22/Jan/2022 05:43:46] "GET /download_doc_md/813/ HTTP/1.0" 200 3965
+[22/Jan/2022 05:43:47] "GET /static/logo.svg HTTP/1.0" 200 15252
+[22/Jan/2022 05:44:11] "GET /project-34/doc-525/ HTTP/1.0" 200 40265
+[22/Jan/2022 05:46:02] "GET /static/editor.md/css/editormd.css?version=0.7.4 HTTP/1.0" 200 79072
+[22/Jan/2022 05:48:35] "GET /download_doc_md/805/ HTTP/1.0" 200 3965
+[22/Jan/2022 05:55:36] "GET / HTTP/1.0" 200 48072
+[22/Jan/2022 05:55:36] "GET /static/layui/css/layui.css?version=0.7.4 HTTP/1.0" 200 79875
+[22/Jan/2022 05:55:36] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.0" 200 21402
+[22/Jan/2022 05:55:36] "GET /static/iconFont/iconfont.css?version=0.7.4 HTTP/1.0" 200 22891
+[22/Jan/2022 05:55:36] "GET /static/logo.svg HTTP/1.0" 200 15252
+[22/Jan/2022 05:55:36] "GET /static/icon_img/create-doc-icon.svg HTTP/1.0" 200 894
+[22/Jan/2022 05:55:36] "GET /static/iconFont/iconfont.js?version=0.7.4 HTTP/1.0" 200 130522
+[22/Jan/2022 05:55:36] "GET /static/icon_img/create-table-icon.svg HTTP/1.0" 200 967
+[22/Jan/2022 05:55:36] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[22/Jan/2022 05:55:37] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.0" 200 291286
+[22/Jan/2022 05:55:37] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[22/Jan/2022 05:55:37] "GET /static/icon_img/viewcode.svg HTTP/1.0" 200 1137
+[22/Jan/2022 05:55:37] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[22/Jan/2022 05:55:37] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[22/Jan/2022 05:55:37] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[22/Jan/2022 05:58:03] "GET /project-49/doc-850 HTTP/1.0" 301 0
+[22/Jan/2022 05:58:03] "GET /project-49/doc-850/ HTTP/1.0" 200 27078
+[22/Jan/2022 05:58:04] "GET /static/layui/css/layui.css?version=0.7.4 HTTP/1.0" 200 79875
+[22/Jan/2022 05:58:04] "GET /static/editor.md/css/editormd.css?version=0.7.4 HTTP/1.0" 200 79072
+[22/Jan/2022 05:58:04] "GET /static/vditor/dist/index.css?version=0.7.4 HTTP/1.0" 200 36867
+[22/Jan/2022 05:58:04] "GET /static/viewerjs/viewer.min.css?version=0.7.4 HTTP/1.0" 200 7796
+[22/Jan/2022 05:58:04] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.0" 200 21402
+[22/Jan/2022 05:58:04] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.4 HTTP/1.0" 200 3546
+[22/Jan/2022 05:58:05] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[22/Jan/2022 05:58:05] "GET /static/iconFont/iconfont.css?version=0.7.4 HTTP/1.0" 200 22891
+[22/Jan/2022 05:58:05] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[22/Jan/2022 05:58:05] "GET /static/layui/layui.js?version=0.7.4 HTTP/1.0" 200 291286
+[22/Jan/2022 05:58:05] "GET /static/viewerjs/viewer.min.js?version=0.7.4 HTTP/1.0" 200 32388
+[22/Jan/2022 05:58:05] "GET /static/qrcodejs/qrcode.min.js?version=0.7.4 HTTP/1.0" 200 19927
+[22/Jan/2022 05:58:05] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.4 HTTP/1.0" 200 16831
+[22/Jan/2022 05:58:05] "GET /static/iconFont/iconfont.js?version=0.7.4 HTTP/1.0" 200 130522
+[22/Jan/2022 05:58:05] "GET /static/vditor/dist/method.min.js?version=0.7.4 HTTP/1.0" 200 101319
+[22/Jan/2022 05:58:05] "GET /static/editor.md/lib/purify.min.js?version=0.7.4 HTTP/1.0" 200 18018
+[22/Jan/2022 05:58:05] "GET /static/toc/doctoc.js?version=0.7.4 HTTP/1.0" 200 11498
+[22/Jan/2022 05:58:05] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[22/Jan/2022 05:58:05] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[22/Jan/2022 05:58:08] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2601416
+[22/Jan/2022 05:58:12] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[22/Jan/2022 05:58:12] "GET /media/202108/2021-08-25_102028_477372.png HTTP/1.0" 200 154704
+[22/Jan/2022 05:58:12] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[22/Jan/2022 05:58:14] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7258
+[22/Jan/2022 05:59:07] "GET /project-37/doc-716/ HTTP/1.0" 200 66826
+[22/Jan/2022 06:02:08] "GET /project-49/doc-848 HTTP/1.0" 301 0
+[22/Jan/2022 06:02:08] "GET /project-49/doc-848/ HTTP/1.0" 200 34297
+[22/Jan/2022 06:02:10] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[22/Jan/2022 06:02:10] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[22/Jan/2022 06:02:10] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[22/Jan/2022 06:02:16] "GET /media/202108/2021-08-24_150034_070629.png HTTP/1.0" 200 267621
+[22/Jan/2022 06:02:16] "GET /media/202108/2021-08-24_145140_169106.png HTTP/1.0" 200 108524
+[22/Jan/2022 06:02:18] "GET /static/vditor//dist/js/katex/katex.min.css HTTP/1.0" 200 22113
+[22/Jan/2022 06:02:19] "GET /static/vditor//dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[22/Jan/2022 06:02:19] "GET /static/vditor//dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[22/Jan/2022 06:03:57] "GET /project-37/doc-809/ HTTP/1.0" 200 55441
+[22/Jan/2022 06:05:45] "GET /download_doc_md/883/ HTTP/1.0" 200 3965
+[22/Jan/2022 06:06:03] "GET /download_doc_md/87/ HTTP/1.0" 200 3965
+[22/Jan/2022 06:06:04] "GET /static/logo.svg HTTP/1.0" 200 15252
+[22/Jan/2022 06:10:04] "GET /project-21/doc-759 HTTP/1.0" 301 0
+[22/Jan/2022 06:10:04] "GET /project-21/doc-759/ HTTP/1.0" 200 59500
+[22/Jan/2022 06:10:06] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[22/Jan/2022 06:10:06] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[22/Jan/2022 06:10:06] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[22/Jan/2022 06:10:10] "GET /project-37/doc-748/ HTTP/1.0" 200 48094
+[22/Jan/2022 06:14:01] "GET /download_doc_md/853/ HTTP/1.0" 200 3965
+[22/Jan/2022 06:14:02] "GET /static/logo.svg HTTP/1.0" 200 15252
+[22/Jan/2022 06:17:57] "GET /robots.txt HTTP/1.0" 404 3965
+[22/Jan/2022 06:19:21] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[22/Jan/2022 06:19:22] "GET /static/vditor/dist/method.min.js?version=0.7.4 HTTP/1.0" 200 101319
+[22/Jan/2022 06:19:22] "GET /static/editor.md/css/editormd.css?version=0.7.4 HTTP/1.0" 200 79072
+[22/Jan/2022 06:22:05] "GET /download_doc_md/852/ HTTP/1.0" 200 3965
+[22/Jan/2022 06:22:05] "GET /static/logo.svg HTTP/1.0" 200 15252
+[22/Jan/2022 06:24:25] "GET /download_doc_md/798/ HTTP/1.0" 200 3965
+[22/Jan/2022 06:26:14] "GET /project-53/doc-891 HTTP/1.0" 301 0
+[22/Jan/2022 06:26:15] "GET /project-53/doc-891/ HTTP/1.0" 200 40770
+[22/Jan/2022 06:26:16] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[22/Jan/2022 06:26:16] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_212645_392347.png HTTP/1.0" 200 80523
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_210952_813615.png HTTP/1.0" 200 328753
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_212550_927430.png HTTP/1.0" 200 44718
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_2127390.1735109556133213.png HTTP/1.0" 200 15329
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211929_029267.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211929_029267.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50828)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_2128310.904806696068503.png HTTP/1.0" 200 15183
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_2127570.5031716318790875.png HTTP/1.0" 200 30023
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211953_944909.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211953_944909.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50836)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_210750_208866.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_210750_208866.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50838)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_212542_780292.png HTTP/1.0" 200 43646
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211204_682570.png HTTP/1.0" 200 62817
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_212652_613813.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_212652_613813.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50844)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_2129220.204914929014143.png HTTP/1.0" 200 16009
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211053_902175.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211053_902175.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50848)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211730_846698.png HTTP/1.0" 200 172032
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[22/Jan/2022 06:26:26] "GET /media/202201/2022-01-09_211730_846698.png HTTP/1.0" 500 59
