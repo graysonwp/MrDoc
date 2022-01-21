@@ -22694,3 +22694,18 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [22/Jan/2022 01:16:23] "GET /download_doc_md/728/ HTTP/1.0" 200 3986
 [22/Jan/2022 01:18:26] "GET / HTTP/1.1" 200 48013
 [22/Jan/2022 01:27:27] "GET /download_doc_md/901/ HTTP/1.0" 200 3986
+[22/Jan/2022 01:31:21] "GET /download_doc_md/762/ HTTP/1.0" 200 3965
+[22/Jan/2022 01:36:48] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[22/Jan/2022 01:36:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/contrib/sitemaps/__init__.py:80: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'app_doc.models.Doc'> QuerySet.
+  return paginator.Paginator(self.items(), self.limit)
+[22/Jan/2022 01:36:57] "GET /sitemap-21.xml HTTP/1.0" 200 14218
+[22/Jan/2022 01:38:38] "GET /project-37/doc-812/ HTTP/1.0" 200 56175
+[22/Jan/2022 01:49:27] "GET /download_doc_md/790/ HTTP/1.0" 200 3986
+[22/Jan/2022 02:00:18] "GET /project-26/doc-317/ HTTP/1.0" 200 39436
+[22/Jan/2022 02:11:14] "GET /project-34/doc-517/ HTTP/1.0" 200 39953
+[22/Jan/2022 02:19:55] "GET /project-34/doc-820/ HTTP/1.0" 200 55159
+[22/Jan/2022 02:19:56] "GET /project-26/doc-328/ HTTP/1.0" 200 52676
+[22/Jan/2022 02:22:21] "GET /project-23/doc-73/ HTTP/1.0" 200 3986
+[22/Jan/2022 02:23:01] "GET /static/vditor/dist/method.min.js?version=0.7.4 HTTP/1.0" 200 101319
