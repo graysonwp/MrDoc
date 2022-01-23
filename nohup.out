@@ -24466,3 +24466,33 @@ Traceback (most recent call last):
 ConnectionResetError: [Errno 104] Connection reset by peer
 ----------------------------------------
 [23/Jan/2022 16:28:37] "GET / HTTP/1.1" 200 48013
+[23/Jan/2022 16:30:33] "GET / HTTP/1.0" 200 48013
+[23/Jan/2022 16:31:32] "GET /project-36/doc-704/ HTTP/1.0" 200 3986
+[23/Jan/2022 16:33:51] "GET /download_doc_md/334/ HTTP/1.0" 200 3965
+[23/Jan/2022 16:39:14] "GET /robots.txt HTTP/1.0" 404 3965
+[23/Jan/2022 16:39:15] "GET /robots.txt HTTP/1.0" 404 3965
+[23/Jan/2022 16:39:21] "GET /project-24/doc-247/ HTTP/1.0" 200 32286
+[23/Jan/2022 16:40:32] "GET /_search HTTP/1.1" 404 3965
+[23/Jan/2022 16:40:34] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03c\x99\\zÈ¿2')
+[23/Jan/2022 16:40:34] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 16:40:34] "GET / HTTP/1.1" 200 48013
+[23/Jan/2022 16:40:36] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03äØ\x9c\x13Ø\x026\x1aWÝ\xad8\x95Í\x96Å\x92æ\x9dÏ:ÐäçÙ®\x038àjAý\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[23/Jan/2022 16:40:36] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 16:41:20] "GET /download_doc_md/340/ HTTP/1.0" 200 3965
+[23/Jan/2022 16:42:37] "GET /project-23/doc-186/ HTTP/1.0" 200 3986
+[23/Jan/2022 16:42:39] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[23/Jan/2022 16:42:39] "  /*à     Cookie: mstshash=Administr" 400 -
+[23/Jan/2022 16:43:53] "GET / HTTP/1.1" 200 48013
+[23/Jan/2022 16:48:55] "GET /download_doc_md/337/ HTTP/1.0" 200 3965
+[23/Jan/2022 16:53:41] "GET /download_doc_md/862/ HTTP/1.0" 200 3986
+[23/Jan/2022 16:56:47] "GET /download_doc_md/341/ HTTP/1.0" 200 3965
+[23/Jan/2022 17:04:31] "GET /download_doc_md/346/ HTTP/1.0" 200 3965
+[23/Jan/2022 17:04:49] "GET /project-34/doc-520/ HTTP/1.0" 200 39807
+[23/Jan/2022 17:12:51] "GET /download_doc_md/795/ HTTP/1.0" 200 3965
+[23/Jan/2022 17:15:58] "GET /project-21/doc-84/ HTTP/1.0" 200 56937
+[23/Jan/2022 17:21:02] "GET /download_doc_md/238/ HTTP/1.0" 200 3965
+[23/Jan/2022 17:21:49] "GET /download_doc_md/333/ HTTP/1.0" 200 3965
+[23/Jan/2022 17:22:05] "GET /project-21/doc-732/ HTTP/1.0" 200 65416
+[23/Jan/2022 17:27:07] "GET /project-36/doc-677/ HTTP/1.0" 200 3986
