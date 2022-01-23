@@ -24336,3 +24336,23 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [23/Jan/2022 11:11:35] "GET /project-49/doc-850/ HTTP/1.0" 200 27078
 [23/Jan/2022 11:12:49] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
 [23/Jan/2022 11:23:31] "GET /download_doc_md/637/ HTTP/1.0" 200 3986
+[23/Jan/2022 11:34:17] "GET /project-21/doc-278/ HTTP/1.0" 200 67388
+[23/Jan/2022 11:38:49] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03¢æ.²|xÁ')
+[23/Jan/2022 11:38:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 11:41:24] "GET /download_doc_md/303/ HTTP/1.0" 200 3965
+[23/Jan/2022 11:45:01] "GET /project-36/doc-693/ HTTP/1.0" 200 3986
+[23/Jan/2022 11:50:35] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03Î-Eâh\x95¿ò¬3)\x1bÁCuÅâ\x05³$+½\x80TÕ\x01þLì\x8dMH\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[23/Jan/2022 11:50:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 11:51:54] "GET /download_doc_md/304/ HTTP/1.0" 200 3965
+[23/Jan/2022 11:55:51] "GET /download_doc_md/670/ HTTP/1.0" 200 3986
+[23/Jan/2022 12:02:47] "GET /download_doc_md/305/ HTTP/1.0" 200 3965
+[23/Jan/2022 12:06:41] "GET /project-36/doc-664/ HTTP/1.0" 200 3986
+[23/Jan/2022 12:12:56] "GET /project-34/doc-537/ HTTP/1.0" 200 40641
+[23/Jan/2022 12:12:57] "GET /static/editor.md/lib/raphael.min.js HTTP/1.0" 200 92705
+[23/Jan/2022 12:13:27] "GET /_status HTTP/1.1" 404 3965
+[23/Jan/2022 12:14:53] "GET /download_doc_md/311/ HTTP/1.0" 200 3965
+[23/Jan/2022 12:17:25] "GET /project-36/doc-637/ HTTP/1.0" 200 3986
+[23/Jan/2022 12:26:52] "GET /download_doc_md/312/ HTTP/1.0" 200 3965
+[23/Jan/2022 12:28:18] "GET /download_doc_md/695/ HTTP/1.0" 200 3986
