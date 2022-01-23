@@ -24316,3 +24316,23 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [23/Jan/2022 10:26:19] "GET /project-36/doc-632/ HTTP/1.0" 200 3986
 [23/Jan/2022 10:28:49] "GET /robots.txt HTTP/1.0" 404 3965
 [23/Jan/2022 10:28:51] "GET /download_doc_md/536/ HTTP/1.0" 200 3965
+[23/Jan/2022 10:33:20] code 400, message Bad request version ('À\x14À')
+[23/Jan/2022 10:33:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 10:34:14] "GET /download_doc_md/260/ HTTP/1.0" 200 3965
+[23/Jan/2022 10:37:10] "GET /project-21/doc-785/ HTTP/1.0" 200 56849
+[23/Jan/2022 10:47:06] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[23/Jan/2022 10:47:08] "GET /static/vditor/dist/method.min.js?version=0.7.4 HTTP/1.0" 200 101319
+[23/Jan/2022 10:47:59] "GET /project-37/doc-726 HTTP/1.0" 301 0
+[23/Jan/2022 10:48:01] "GET /project-37/doc-726/ HTTP/1.0" 200 42103
+[23/Jan/2022 10:49:24] "GET /download_doc_md/299/ HTTP/1.0" 200 3965
+[23/Jan/2022 10:54:02] code 400, message Bad request version ('À\x14À')
+[23/Jan/2022 10:54:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 11:03:11] "GET /_stats/indices HTTP/1.1" 404 3965
+[23/Jan/2022 11:07:50] "GET /robots.txt HTTP/1.0" 404 3965
+[23/Jan/2022 11:07:51] "GET /download_doc_md/842/ HTTP/1.0" 200 3965
+[23/Jan/2022 11:10:00] "GET /download_doc_md/300/ HTTP/1.0" 200 3965
+[23/Jan/2022 11:11:35] "GET /project-49/doc-850/ HTTP/1.0" 200 27078
+[23/Jan/2022 11:12:49] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
+[23/Jan/2022 11:23:31] "GET /download_doc_md/637/ HTTP/1.0" 200 3986
