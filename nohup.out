@@ -24525,3 +24525,22 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [23/Jan/2022 19:13:55] "GET /static/mrdoc/mrdoc.css?version=0.7.4 HTTP/1.0" 200 21402
 [23/Jan/2022 19:13:56] "GET /static/vditor//dist/js/katex/katex.min.css HTTP/1.0" 200 22113
 [23/Jan/2022 19:22:18] "GET /download_doc_md/73/ HTTP/1.0" 200 3986
+[23/Jan/2022 19:33:18] "GET /admin/forget_pwd/ HTTP/1.0" 200 5429
+[23/Jan/2022 19:34:55] "GET / HTTP/1.1" 200 48013
+[23/Jan/2022 19:34:56] "GET /_search HTTP/1.1" 404 3965
+[23/Jan/2022 19:44:27] "GET /download_doc_md/323/ HTTP/1.0" 200 3986
+[23/Jan/2022 19:48:11] "GET /project-34/doc-534/ HTTP/1.0" 200 48932
+[23/Jan/2022 19:48:15] "GET /static/vditor/dist/method.min.js?version=0.7.4 HTTP/1.0" 200 101319
+[23/Jan/2022 19:55:19] "GET /download_doc_md/898/ HTTP/1.0" 200 3986
+[23/Jan/2022 19:56:46] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[23/Jan/2022 20:06:29] "GET /project-21/doc-894/ HTTP/1.0" 200 59494
+[23/Jan/2022 20:13:51] "GET /download_doc_md/731/ HTTP/1.0" 200 3965
+[23/Jan/2022 20:17:29] "GET /project-36/doc-694/ HTTP/1.0" 200 3986
+[23/Jan/2022 20:19:21] code 400, message Bad request version ('À\x14À')
+[23/Jan/2022 20:19:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 20:19:23] code 400, message Bad request version ('À\x14À')
+[23/Jan/2022 20:19:23] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[23/Jan/2022 20:23:11] "GET /project-36/doc-707/ HTTP/1.0" 200 3965
+[23/Jan/2022 20:28:33] "GET /download_doc_md/703/ HTTP/1.0" 200 3986
