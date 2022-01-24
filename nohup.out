@@ -25715,3 +25715,6 @@ Traceback (most recent call last):
 ConnectionResetError: [Errno 104] Connection reset by peer
 ----------------------------------------
 [25/Jan/2022 03:16:45] "GET / HTTP/1.1" 200 48013
+[25/Jan/2022 03:35:17] "GET /media/202201/2022-01-09_2127570.5031716318790875.png HTTP/1.0" 200 30023
+[25/Jan/2022 04:08:50] "GET /robots.txt HTTP/1.0" 404 3986
+[25/Jan/2022 04:16:21] "GET /_cat/indices?format=json&h=index HTTP/1.1" 404 3965
