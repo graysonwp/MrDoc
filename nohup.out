@@ -25100,3 +25100,25 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [24/Jan/2022 15:44:30] "GET /xmlrpc.php HTTP/1.0" 404 3965
 [24/Jan/2022 16:12:18] "GET /download_doc_md/760/ HTTP/1.0" 200 3965
 [24/Jan/2022 16:21:17] "GET /download_doc_md/764/ HTTP/1.0" 200 3965
+[24/Jan/2022 16:30:34] "GET /download_doc_md/837/ HTTP/1.0" 200 3965
+[24/Jan/2022 16:39:29] "GET /download_doc_md/786/ HTTP/1.0" 200 3965
+[24/Jan/2022 16:39:58] "GET / HTTP/1.0" 200 48013
+[24/Jan/2022 16:39:58] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[24/Jan/2022 16:42:57] "GET /media/202106/2017%E5%B9%B4%EF%BC%88%E7%AC%AC10%E5%B1%8A%EF%BC%89%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E5%AE%B6%E4%BA%8C%E7%AD%89%E5%A5%96_1623555245.jpg HTTP/1.0" 200 973119
+[24/Jan/2022 16:48:36] "GET /download_doc_md/270/ HTTP/1.0" 200 3965
+[24/Jan/2022 16:51:05] "GET / HTTP/1.1" 200 48013
+[24/Jan/2022 16:51:10] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03¾\x94Ò\x19ã{EÜ>¾$VÛU©XË,9ÂÓ¯áÔ¼\x80hY&oÔÔ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[24/Jan/2022 16:51:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[24/Jan/2022 16:51:10] code 400, message Bad request version ('À\x14À')
+[24/Jan/2022 16:51:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[24/Jan/2022 16:51:13] "GET /_search HTTP/1.1" 404 3965
+[24/Jan/2022 16:57:38] "GET /download_doc_md/278/ HTTP/1.0" 200 3965
+[24/Jan/2022 17:07:12] "GET /download_doc_md/781/ HTTP/1.0" 200 3965
+[24/Jan/2022 17:08:13] "GET / HTTP/1.0" 200 48072
+[24/Jan/2022 17:08:24] "GET / HTTP/1.0" 200 48072
+[24/Jan/2022 17:08:26] "GET / HTTP/1.0" 200 48072
+[24/Jan/2022 17:08:29] "GET / HTTP/1.0" 200 48072
+[24/Jan/2022 17:18:04] "GET /download_doc_md/224/ HTTP/1.0" 200 3965
+[24/Jan/2022 17:28:05] "GET /download_doc_md/285/ HTTP/1.0" 200 3965
