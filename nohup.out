@@ -25879,3 +25879,17 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [25/Jan/2022 16:14:28] "GET /project-21/doc-323/ HTTP/1.0" 200 64256
 [25/Jan/2022 16:19:17] "GET /download_doc_md/681/ HTTP/1.0" 200 3986
 [25/Jan/2022 16:25:23] "GET /download_doc_md/701/ HTTP/1.0" 200 3986
+[25/Jan/2022 16:40:23] "GET / HTTP/1.1" 200 48013
+[25/Jan/2022 16:55:33] "GET /_search HTTP/1.1" 404 3965
+[25/Jan/2022 16:55:35] "GET / HTTP/1.1" 200 48013
+[25/Jan/2022 16:55:36] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x0cð\rÖï®ôqÖÜæ\x1fÍÆt\x82³sVïºP-¢\x0bÊ.í_g\x97ï\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[25/Jan/2022 16:55:36] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[25/Jan/2022 16:55:37] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03¿\x16Á£3í½\x01§P¤Ï\x8f\\ÙÊWû·V4\x19qêO\x13tçÌrRé\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[25/Jan/2022 16:55:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[25/Jan/2022 17:02:20] "GET /download_doc_md/544/ HTTP/1.0" 200 3986
+[25/Jan/2022 17:18:32] "GET /robots.txt HTTP/1.0" 404 3965
+[25/Jan/2022 17:18:35] "GET /project-34/doc-541/ HTTP/1.0" 200 47684
+[25/Jan/2022 17:20:59] "GET /download_doc_md/211/ HTTP/1.0" 200 3986
+[25/Jan/2022 17:25:24] "GET /project-21/doc-298/ HTTP/1.0" 200 56897
