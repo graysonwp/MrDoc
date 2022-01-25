@@ -25833,3 +25833,16 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [25/Jan/2022 12:16:22] "GET /project-42/doc-769/ HTTP/1.0" 200 36005
 [25/Jan/2022 12:21:06] "GET /download_doc_md/531/ HTTP/1.0" 200 3986
 [25/Jan/2022 12:27:24] "GET /project-36/doc-672/ HTTP/1.0" 200 3986
+[25/Jan/2022 12:33:09] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[25/Jan/2022 12:33:09] "  à          " 400 -
+[25/Jan/2022 12:33:34] "GET /download_doc_md/759/ HTTP/1.0" 200 3986
+[25/Jan/2022 12:35:05] "GET /project-21/doc-894/ HTTP/1.0" 200 59481
+[25/Jan/2022 12:39:54] "GET /project-21/doc-223/ HTTP/1.0" 200 56860
+[25/Jan/2022 12:40:21] "GET /project-26/doc-799/ HTTP/1.0" 200 51978
+[25/Jan/2022 12:42:13] "GET /sitemap-34.xml HTTP/1.0" 200 6635
+[25/Jan/2022 12:46:06] "GET /download_doc_md/302/ HTTP/1.0" 200 3986
+[25/Jan/2022 12:52:25] "GET /project-47/doc-832/ HTTP/1.0" 200 3986
+[25/Jan/2022 12:58:32] "GET /project-36/doc-653/ HTTP/1.0" 200 3986
+[25/Jan/2022 13:04:55] "GET /project-23/doc-196/ HTTP/1.0" 200 3986
+[25/Jan/2022 13:11:04] "GET /download_doc_md/223/ HTTP/1.0" 200 3986
+[25/Jan/2022 13:26:01] "GET /download_doc_md/845/ HTTP/1.0" 200 3986
