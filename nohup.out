@@ -25873,3 +25873,9 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [25/Jan/2022 15:20:17] "GET /project-34/doc-525/ HTTP/1.0" 200 40265
 [25/Jan/2022 15:25:01] "GET /robots.txt HTTP/1.0" 404 3965
 [25/Jan/2022 15:25:04] "GET /project-49/doc-850/ HTTP/1.0" 200 27078
+[25/Jan/2022 15:42:50] "GET /download_doc_md/748/ HTTP/1.0" 200 3965
+[25/Jan/2022 16:03:57] "GET /_cat/indices HTTP/1.1" 404 3965
+[25/Jan/2022 16:06:47] "GET /download_doc_md/635/ HTTP/1.0" 200 3986
+[25/Jan/2022 16:14:28] "GET /project-21/doc-323/ HTTP/1.0" 200 64256
+[25/Jan/2022 16:19:17] "GET /download_doc_md/681/ HTTP/1.0" 200 3986
+[25/Jan/2022 16:25:23] "GET /download_doc_md/701/ HTTP/1.0" 200 3986
