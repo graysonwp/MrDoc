@@ -26108,3 +26108,45 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [26/Jan/2022 08:22:57] "GET /download_doc_md/756/ HTTP/1.0" 200 3965
 [26/Jan/2022 08:25:20] "GET /media/202105/2021-05-18_112000.png HTTP/1.0" 200 38717
 [26/Jan/2022 08:28:24] "GET /project-49/doc-846/ HTTP/1.0" 200 34149
+[26/Jan/2022 08:33:19] "GET /download_doc_md/254/ HTTP/1.0" 200 3986
+[26/Jan/2022 08:33:54] "GET /media/202105/2021-05-18_094617.png HTTP/1.0" 200 45189
+[26/Jan/2022 08:39:24] "GET /project-34/doc-536/ HTTP/1.0" 200 41632
+[26/Jan/2022 08:45:33] "GET /download_doc_md/669/ HTTP/1.0" 200 3986
+[26/Jan/2022 08:47:58] code 400, message Bad request syntax ('\x16\x03\x01\x00²\x01\x00\x00®\x03\x03JP\x01\x9c¡ðX\x8d*ãÖ\x90FT\x85\x0e\x84©9Æ\x90\x05ó\x97V\xa0V \x01U#*\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[26/Jan/2022 08:47:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[26/Jan/2022 08:48:09] "GET / HTTP/1.1" 200 48013
+[26/Jan/2022 08:48:30] "GET /?sort= HTTP/1.1" 200 48013
+[26/Jan/2022 08:48:30] "GET /static/search/mrdoc_logo_300.png HTTP/1.1" 200 1255
+[26/Jan/2022 08:48:30] "GET /robots.txt HTTP/1.1" 404 3965
+[26/Jan/2022 08:48:31] "GET /sitemap.xml HTTP/1.1" 200 950
+----------------------------------------
+Exception happened during processing of request from ('27.115.124.99', 58385)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[26/Jan/2022 08:51:03] "GET /media/202201/2022-01-09_2128570.8714210914954738.png HTTP/1.0" 200 15720
+[26/Jan/2022 08:51:27] "GET /project-24/doc-265/ HTTP/1.0" 200 42823
+[26/Jan/2022 08:57:45] "GET /project-34/doc-533/ HTTP/1.0" 200 42724
+[26/Jan/2022 08:59:38] "GET /media/202106/2017%E5%B9%B4%EF%BC%88%E7%AC%AC10%E5%B1%8A%EF%BC%89%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E5%AE%B6%E4%BA%8C%E7%AD%89%E5%A5%96_1623555245.jpg HTTP/1.0" 200 973119
+[26/Jan/2022 09:09:53] "GET /project-26/doc-305/ HTTP/1.0" 200 39971
+[26/Jan/2022 09:14:06] "GET /robots.txt HTTP/1.0" 404 3965
+[26/Jan/2022 09:14:06] "GET /robots.txt HTTP/1.0" 404 3965
+[26/Jan/2022 09:14:18] "GET /project-26/ HTTP/1.0" 200 38750
+[26/Jan/2022 09:16:06] "GET /download_doc_md/516/ HTTP/1.0" 200 3986
+[26/Jan/2022 09:22:17] "GET /download_doc_md/225/ HTTP/1.0" 200 3986
+[26/Jan/2022 09:25:21] "GET /media/202201/2022-01-09_2128310.904806696068503.png HTTP/1.0" 200 15183
+[26/Jan/2022 09:25:21] "GET /robots.txt HTTP/1.0" 404 3965
+[26/Jan/2022 09:28:43] "GET /download_doc_md/338/ HTTP/1.0" 200 3986
