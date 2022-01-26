@@ -26150,3 +26150,34 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [26/Jan/2022 09:25:21] "GET /media/202201/2022-01-09_2128310.904806696068503.png HTTP/1.0" 200 15183
 [26/Jan/2022 09:25:21] "GET /robots.txt HTTP/1.0" 404 3965
 [26/Jan/2022 09:28:43] "GET /download_doc_md/338/ HTTP/1.0" 200 3986
+[26/Jan/2022 09:34:52] "GET /project-49/doc-850/ HTTP/1.0" 200 27095
+[26/Jan/2022 09:41:03] "GET /project-37/doc-729/ HTTP/1.0" 200 38762
+[26/Jan/2022 09:44:00] "GET /media/202201/2022-01-09_2128310.904806696068503.png HTTP/1.0" 200 15183
+[26/Jan/2022 09:47:11] "GET /project-23/doc-218/ HTTP/1.0" 200 3986
+[26/Jan/2022 09:52:35] "GET /media/202110/2021-10-23_162305_738162.png HTTP/1.0" 200 35373
+[26/Jan/2022 09:53:23] "GET /download_doc_md/824/ HTTP/1.0" 200 3986
+----------------------------------------
+Exception happened during processing of request from ('185.219.52.154', 63742)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[26/Jan/2022 09:59:37] "GET /download_doc_md/640/ HTTP/1.0" 200 3986
+[26/Jan/2022 10:05:46] "GET /project-36/doc-634/ HTTP/1.0" 200 3986
+[26/Jan/2022 10:09:43] "GET /media/202103/2021-03-30_214631.png HTTP/1.0" 200 13466
+[26/Jan/2022 10:11:50] "GET /download_doc_md/646/ HTTP/1.0" 200 3986
+[26/Jan/2022 10:18:08] "GET /project-21/ HTTP/1.0" 200 58802
+[26/Jan/2022 10:22:15] "GET /_aliases HTTP/1.1" 404 3965
+[26/Jan/2022 10:24:44] "GET /download_doc_md/267/ HTTP/1.0" 200 3986
+[26/Jan/2022 10:26:52] "GET /media/202201/2022-01-09_212652_613813.png HTTP/1.0" 200 156167
