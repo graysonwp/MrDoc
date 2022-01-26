@@ -26625,3 +26625,53 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [26/Jan/2022 14:26:17] "GET /media/202106/2021-06-05_172751.png HTTP/1.0" 200 459110
 [26/Jan/2022 14:28:30] "GET /media/202105//1621914601.7804196.png HTTP/1.0" 200 25903
 [26/Jan/2022 14:29:35] "GET /project-21/doc-768/ HTTP/1.0" 200 65238
+[26/Jan/2022 14:36:55] "GET / HTTP/1.0" 200 48013
+[26/Jan/2022 14:36:55] "GET /project-21/doc-829/ HTTP/1.0" 200 60691
+[26/Jan/2022 14:37:58] "GET /media/202105/2021-05-18_091611.png HTTP/1.0" 200 45120
+[26/Jan/2022 14:38:26] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.44', 35052)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[26/Jan/2022 14:38:28] code 400, message Bad request syntax ("\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03m\x8e´\x9dq¨ùöÌ\x1apÞ\x9d\x89ÞõÒ¬ë\x84 §'Q¿cIcîkJL çÑÀÖ\x84\x9e\x93\x07ê~h\x8bÇ\x95^ÛPH´ÁÍ\x9bÞÖo+=+bD\x16\x99\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À")
+[26/Jan/2022 14:38:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[26/Jan/2022 14:38:29] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.44', 39108)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[26/Jan/2022 14:38:30] "GET / HTTP/1.1" 200 48013
+[26/Jan/2022 14:43:44] "GET /media/202105//1621914601.7890062.png HTTP/1.0" 200 51371
+[26/Jan/2022 14:47:25] "GET /download_doc_md/820/ HTTP/1.0" 200 3986
+[26/Jan/2022 14:52:43] "GET /project-26/doc-340/ HTTP/1.0" 200 40246
+[26/Jan/2022 15:05:14] "GET /download_doc_md/330/ HTTP/1.0" 200 3986
+[26/Jan/2022 15:16:39] "GET /project-37/doc-809/ HTTP/1.0" 200 55441
+[26/Jan/2022 15:17:16] "GET /download_doc_md/273/ HTTP/1.0" 200 3986
+[26/Jan/2022 15:23:06] "GET /project-36/doc-679/ HTTP/1.0" 200 3986
