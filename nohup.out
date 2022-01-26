@@ -26275,3 +26275,17 @@ AttributeError: 'NoneType' object has no attribute 'split'
 [26/Jan/2022 11:13:32] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
 [26/Jan/2022 11:21:10] "GET /download_doc_md/777/ HTTP/1.0" 200 3986
 [26/Jan/2022 11:27:26] "GET /download_doc_md/202/ HTTP/1.0" 200 3986
+[26/Jan/2022 11:33:44] "GET /download_doc_md/322/ HTTP/1.0" 200 3986
+[26/Jan/2022 11:39:43] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x1b¾\x13+¦½\rÓéPz\x85\x05(4¼qP\x7fv\rp¯\x9a\x99lÿËò\x9bÑ+\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[26/Jan/2022 11:39:43] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[26/Jan/2022 11:46:21] "GET / HTTP/1.1" 200 48013
+[26/Jan/2022 11:51:50] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x03\x81FnáÙw*wÉY\x93¨³ä\x02ÏÑ\x84ÄÔëyâyÖ¦\x00\x99_\x83\x98\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[26/Jan/2022 11:51:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[26/Jan/2022 11:52:10] "GET /download_doc_md/803/ HTTP/1.0" 200 3986
+[26/Jan/2022 12:12:14] "GET /project-26/doc-799/ HTTP/1.0" 200 51978
+[26/Jan/2022 12:14:59] "GET /_status HTTP/1.1" 404 3965
+[26/Jan/2022 12:18:34] "GET /robots.txt HTTP/1.0" 404 3965
+[26/Jan/2022 12:18:37] "GET /project-34/doc-526/ HTTP/1.0" 200 44740
+[26/Jan/2022 12:22:04] "GET /download_doc_md/812/ HTTP/1.0" 200 3965
