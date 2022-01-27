@@ -27045,3 +27045,11 @@ AttributeError: 'NoneType' object has no attribute 'split'
 [27/Jan/2022 15:13:51] "GET /project-21/doc-92/ HTTP/1.0" 200 65043
 [27/Jan/2022 15:18:19] "GET /project-21/doc-876/ HTTP/1.0" 200 56872
 [27/Jan/2022 15:28:05] "GET /project-21/doc-89/ HTTP/1.0" 200 71023
+[27/Jan/2022 15:43:52] "GET /download_doc_md/806/ HTTP/1.0" 200 3965
+[27/Jan/2022 16:00:34] "GET /project-53/doc-891/ HTTP/1.0" 200 40785
+[27/Jan/2022 16:11:48] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[27/Jan/2022 16:23:02] "GET /download_doc_md/69/ HTTP/1.0" 200 3986
+[27/Jan/2022 16:29:34] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00²\x01\x00\x00®\x03\x03ÄBÁÏXÓf¸§ç1»4&ö\x7föI\x8aE³\x8c":V¯ì³\x18pz\x04\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[27/Jan/2022 16:29:34] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[27/Jan/2022 16:29:44] "GET / HTTP/1.1" 200 48013
