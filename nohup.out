@@ -27588,3 +27588,15 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [28/Jan/2022 14:25:13] code 400, message Bad HTTP/0.9 request type ('\x80\x00\x00(9\x00\x83+\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86')
 [28/Jan/2022 14:25:13] "  (9 +                                " 400 -
 [28/Jan/2022 14:28:36] "GET /project-36/doc-707/ HTTP/1.0" 200 3965
+[28/Jan/2022 14:32:22] "GET /static/PearAdminLayui/admin/images/background.svg HTTP/1.0" 200 2332
+[28/Jan/2022 14:36:09] "GET /robots.txt HTTP/1.0" 404 3965
+[28/Jan/2022 14:36:32] "GET /project-37/doc-757/ HTTP/1.0" 200 60218
+[28/Jan/2022 14:41:46] "GET /project-36/doc-702/ HTTP/1.0" 200 3986
+[28/Jan/2022 14:43:35] "GET /project-21/doc-732/ HTTP/1.0" 200 65416
+[28/Jan/2022 14:49:25] "GET /download_doc_md/277/ HTTP/1.0" 200 3986
+[28/Jan/2022 14:56:21] "GET /static/vditor/dist/index.css?version=0.7.4 HTTP/1.0" 200 36867
+[28/Jan/2022 14:56:22] "GET /static/vditor/dist/method.min.js?version=0.7.4 HTTP/1.0" 200 101319
+[28/Jan/2022 15:01:34] "GET /project-37/doc-810/ HTTP/1.0" 200 36423
+[28/Jan/2022 15:10:51] "GET /project-21/doc-886/ HTTP/1.0" 200 63259
+[28/Jan/2022 15:16:05] "GET /download_doc_md/799/ HTTP/1.0" 200 3986
+[28/Jan/2022 15:23:19] "GET /download_doc_md/859/ HTTP/1.0" 200 3986
