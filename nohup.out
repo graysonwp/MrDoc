@@ -30850,3 +30850,24 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [30/Jan/2022 19:07:51] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
 [30/Jan/2022 19:22:53] "GET /robots.txt HTTP/1.0" 404 3965
 [30/Jan/2022 19:22:54] "GET /project-42/ HTTP/1.0" 200 27040
+[30/Jan/2022 19:30:34] "GET /project-36/doc-707/ HTTP/1.0" 200 3965
+[30/Jan/2022 19:36:18] "GET / HTTP/1.1" 200 48013
+[30/Jan/2022 19:36:19] "GET /_search HTTP/1.1" 404 3965
+[30/Jan/2022 19:50:28] "GET /_search HTTP/1.1" 404 3965
+[30/Jan/2022 19:50:30] code 400, message Bad request version ('À\x14À')
+[30/Jan/2022 19:50:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Jan/2022 19:50:31] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03VhÙWgç.zU\x1e\x17É\x98k\tÉðw¡\xa0\x1am#\x13\x14 ñ®U\xa0$]\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[30/Jan/2022 19:50:31] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Jan/2022 19:50:33] "GET / HTTP/1.1" 200 48013
+[30/Jan/2022 20:12:22] "GET / HTTP/1.1" 200 48013
+[30/Jan/2022 20:13:32] "GET /static/iconFont/iconfont.css?version=0.7.5 HTTP/1.1" 200 22891
+[30/Jan/2022 20:13:33] "GET /static/search/mrdoc_logo_300.png HTTP/1.1" 200 1255
+[30/Jan/2022 20:13:34] "GET /robots.txt HTTP/1.1" 404 3965
+[30/Jan/2022 20:21:09] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03°r\x851d\x92U&ç1¸\x81Ñ)©\x1a*qÕÚo\x8c\x88þ,^Fz\x8c\x8a\rÒ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[30/Jan/2022 20:21:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[30/Jan/2022 20:21:10] code 400, message Bad request version ('À\x14À')
+[30/Jan/2022 20:21:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
