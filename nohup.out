@@ -29616,3 +29616,72 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [30/Jan/2022 09:14:29] "GET /project-21/doc-277/ HTTP/1.0" 200 60679
 [30/Jan/2022 09:17:20] "GET / HTTP/1.1" 200 48013
 [30/Jan/2022 09:26:29] "GET /project-34/doc-543/ HTTP/1.0" 200 40752
+
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+[30/Jan/2022 09:30:53] "GET /download_doc_md/214/ HTTP/1.0" 200 3986
+[30/Jan/2022 09:30:54] "GET /project-26/doc-342/ HTTP/1.0" 200 47336
+[30/Jan/2022 09:33:08] "GET /download_doc_md/514/ HTTP/1.0" 200 3965
+[30/Jan/2022 09:36:40] "GET /project-23/doc-186/ HTTP/1.0" 200 3986
+[30/Jan/2022 09:42:35] "GET /download_doc_md/68/ HTTP/1.0" 200 3986
+[30/Jan/2022 09:47:48] "GET /project-37/doc-763/ HTTP/1.0" 200 51582
+[30/Jan/2022 09:48:20] "GET /project-21/doc-840/ HTTP/1.0" 200 61214
+[30/Jan/2022 09:54:13] "GET /download_doc_md/311/ HTTP/1.0" 200 3986
+[30/Jan/2022 10:00:09] "GET /project-21/doc-227/ HTTP/1.0" 200 62999
+[30/Jan/2022 10:00:15] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[30/Jan/2022 10:00:15] "  /*à     Cookie: mstshash=Administr" 400 -
+[30/Jan/2022 10:04:40] "GET /project-26/doc-801/ HTTP/1.0" 200 42426
+[30/Jan/2022 10:06:02] "GET /download_doc_md/228/ HTTP/1.0" 200 3986
+[30/Jan/2022 10:06:28] "GET /project-37/doc-740 HTTP/1.0" 301 0
+[30/Jan/2022 10:06:29] "GET /project-37/doc-740/ HTTP/1.0" 200 79622
+[30/Jan/2022 10:11:50] "GET /download_doc_md/61/ HTTP/1.0" 200 3986
+[30/Jan/2022 10:17:43] "GET /download_doc_md/854/ HTTP/1.0" 200 3986
+[30/Jan/2022 10:17:57] "GET /robots.txt HTTP/1.0" 404 3965
+[30/Jan/2022 10:18:01] "GET /project-26/doc-339/ HTTP/1.0" 200 37190
+[30/Jan/2022 10:21:56] "GET /download_doc_md/544/ HTTP/1.0" 200 3965
+[30/Jan/2022 10:26:36] "GET /project-37/doc-720/ HTTP/1.0" 200 75391
