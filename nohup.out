@@ -30871,3 +30871,5 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [30/Jan/2022 20:21:10] code 400, message Bad request version ('À\x14À')
 [30/Jan/2022 20:21:10] You're accessing the development server over HTTPS, but it only supports HTTP.
 
+[30/Jan/2022 20:45:35] "GET /robots.txt HTTP/1.0" 404 3965
+[30/Jan/2022 20:45:38] "GET /project-34/doc-541/ HTTP/1.0" 200 47684
