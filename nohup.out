@@ -32262,3 +32262,59 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [01/Feb/2022 05:19:50] "GET /download_doc_md/743/ HTTP/1.0" 200 3986
 [01/Feb/2022 05:26:48] "GET /project-49/doc-850/ HTTP/1.0" 200 27078
 [01/Feb/2022 05:29:20] "GET /project-34/doc-875/ HTTP/1.0" 200 46408
+[01/Feb/2022 05:30:04] "GET /login/ HTTP/1.0" 200 4051
+[01/Feb/2022 05:30:06] "GET /static/PearAdminLayui/admin/images/background.svg HTTP/1.0" 200 2332
+[01/Feb/2022 05:30:53] "GET /admin/forget_pwd/ HTTP/1.0" 200 5429
+[01/Feb/2022 05:36:53] "GET /project-26/doc-799/ HTTP/1.0" 200 51978
+[01/Feb/2022 05:41:57] "GET /download_doc_md/187/ HTTP/1.0" 200 3986
+[01/Feb/2022 05:47:57] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.44', 54770)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[01/Feb/2022 05:47:59] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03û÷\x19\x1c8O"ÑÙgõ ª$ú¦u\x9d\x15ý\r\x17+ncu¶\x06\x96<F7 Ûõ3ür\x1bû\x10úð\x01ëà"N\x1a\x9fJP\x8d±\x18ì4Ç\x86¬CeP\x8bÉ\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[01/Feb/2022 05:47:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 05:48:00] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.44', 41800)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[01/Feb/2022 05:48:01] "GET / HTTP/1.1" 200 48013
+[01/Feb/2022 05:48:08] "GET /project-26/doc-313/ HTTP/1.0" 200 42474
+[01/Feb/2022 05:48:32] "GET /project-34/doc-523/ HTTP/1.0" 200 40318
+[01/Feb/2022 05:52:58] "GET /project-26/doc-336/ HTTP/1.0" 200 40644
+[01/Feb/2022 06:04:01] "GET /robots.txt HTTP/1.0" 404 3965
+[01/Feb/2022 06:04:03] "GET /project-21/doc-874/ HTTP/1.0" 200 56859
+[01/Feb/2022 06:04:05] "GET /project-34/doc-868/ HTTP/1.0" 200 73233
+[01/Feb/2022 06:12:51] "GET /project-26/doc-305/ HTTP/1.0" 200 39958
+[01/Feb/2022 06:15:15] "GET /project-36/doc-698/ HTTP/1.0" 200 3986
+[01/Feb/2022 06:22:28] "GET /project-26/doc-339/ HTTP/1.0" 200 37190
+[01/Feb/2022 06:22:32] "GET /download_doc_md/339/ HTTP/1.0" 200 3965
+[01/Feb/2022 06:26:13] "GET /project-26/doc-798/ HTTP/1.0" 200 58926
