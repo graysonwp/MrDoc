@@ -32437,3 +32437,91 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [01/Feb/2022 11:19:32] "GET / HTTP/1.1" 200 48013
 [01/Feb/2022 11:22:53] "GET /download_doc_md/734/ HTTP/1.0" 200 3986
 [01/Feb/2022 11:28:06] "GET /project-26/doc-801/ HTTP/1.0" 200 42426
+[01/Feb/2022 11:33:39] "GET /project-36/doc-706/ HTTP/1.0" 200 3986
+[01/Feb/2022 11:42:42] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03°S\x1e¨\x91¬\x9bºxk\x14\x1c\x95¯\x8baÿ&wÎ×\x91G¥"\x01UÏ\tã¼n\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[01/Feb/2022 11:42:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 11:42:44] "GET /robots.txt HTTP/1.0" 404 3965
+[01/Feb/2022 11:42:47] "GET /project-34/doc-518/ HTTP/1.0" 200 40186
+[01/Feb/2022 11:44:20] "GET /project-37/doc-749/ HTTP/1.0" 200 56058
+[01/Feb/2022 11:48:09] "GET /project-37/doc-740 HTTP/1.0" 301 0
+[01/Feb/2022 11:48:10] "GET /project-37/doc-740/ HTTP/1.0" 200 79622
+[01/Feb/2022 11:53:38] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x87/\x9bP:3Ibk\x81\x1aÎ»=O\x06u®#FI\x8bÀO\x95\x87Ë\x10ÏtôX\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[01/Feb/2022 11:53:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 11:55:02] "GET /download_doc_md/217/ HTTP/1.0" 200 3986
+[01/Feb/2022 11:57:41] "GET /project-34/doc-820/ HTTP/1.0" 200 55159
+[01/Feb/2022 12:05:43] "GET /download_doc_md/301/ HTTP/1.0" 200 3986
+[01/Feb/2022 12:08:08] "GET /project-21/doc-755/ HTTP/1.0" 200 60628
+[01/Feb/2022 12:13:09] code 400, message Bad request syntax ("\x16\x03\x01\x01 \x01\x00\x01\x1c\x03\x03²\x11X\x9e\x80é\x96\x11\x12°\x8c=ä\x88Mø\x94\x9d»£\xa0ó`®\x06\x1a0»Â*^& \x1bå\x1b\x85\x89W³\x1dHnpb¯íå\x8eÔs\x04yÍ¬§\x82\x93üÁ65Ë/·\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+[01/Feb/2022 12:13:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 12:13:09] code 400, message Bad request version ('9ñ')
+[01/Feb/2022 12:13:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 12:13:09] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x02*')
+[01/Feb/2022 12:13:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 12:13:09] code 400, message Bad request syntax ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x01ª?Ó\x80×aæ¿A}Ó®«7Sø©\x9a\xad=\x90~vâ\x03eB\x84ÏÔ±e\x00\x00\x12À')
+[01/Feb/2022 12:13:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 54904)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 60002)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[01/Feb/2022 12:13:16] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 50579)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[01/Feb/2022 12:15:19] "GET / HTTP/1.0" 200 48013
+[01/Feb/2022 12:16:22] "GET /project-23/doc-76/ HTTP/1.0" 200 3986
+[01/Feb/2022 12:16:43] "GET /project-49/doc-854/ HTTP/1.0" 200 27637
+[01/Feb/2022 12:17:17] "GET /download_doc_md/524/ HTTP/1.0" 200 3965
+[01/Feb/2022 12:19:52] "GET /_status HTTP/1.1" 404 3965
+[01/Feb/2022 12:23:28] "GET /sitemap-home.xml HTTP/1.0" 200 309
+[01/Feb/2022 12:26:40] "GET /project-21/ HTTP/1.0" 200 58802
+[01/Feb/2022 12:28:11] "GET /project-16/doc-758/ HTTP/1.0" 200 23391
