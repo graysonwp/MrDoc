@@ -32615,3 +32615,15 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [01/Feb/2022 19:45:47] "GET /static/editor.md/css/editormd.css?version=0.7.5 HTTP/1.0" 200 79072
 [01/Feb/2022 20:00:43] "GET /project-37/doc-878/ HTTP/1.0" 200 36381
 [01/Feb/2022 20:15:43] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[01/Feb/2022 20:45:43] "GET /project-42/doc-858/ HTTP/1.0" 200 35338
+[01/Feb/2022 20:57:16] "GET /robots.txt HTTP/1.0" 404 3965
+[01/Feb/2022 20:57:19] "GET /project-21/doc-92/ HTTP/1.0" 200 65043
+[01/Feb/2022 21:08:35] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x96Økp\x14')
+[01/Feb/2022 21:08:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 21:08:37] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03Ø\x0c\x93¸6·þf\x06f\x13\x16\x96´Ë\x9a\x0c\x13(\x9bÝW\x88òò\x14=Ê\x1fäÑ\x15\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[01/Feb/2022 21:08:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 21:08:38] "GET / HTTP/1.1" 200 48013
+[01/Feb/2022 21:08:38] "GET /_search HTTP/1.1" 404 3965
+[01/Feb/2022 21:15:43] "GET /download_doc_md/67/ HTTP/1.0" 200 3965
