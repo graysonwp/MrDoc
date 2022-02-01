@@ -32417,3 +32417,23 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [01/Feb/2022 10:21:22] "GET /project-21/doc-800/ HTTP/1.0" 200 67460
 [01/Feb/2022 10:28:45] "GET /_aliases HTTP/1.1" 404 3965
 [01/Feb/2022 10:28:49] "GET /project-34/doc-815/ HTTP/1.0" 200 61269
+[01/Feb/2022 10:30:43] "GET /download_doc_md/341/ HTTP/1.0" 200 3965
+[01/Feb/2022 10:39:38] "GET /project-37/doc-714/ HTTP/1.0" 200 49724
+[01/Feb/2022 10:39:49] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x030ÑÚ*þuâ¯«Ê1Ê\x1c·Ê(\x08\x85ã*\x07Ëpû:\x02\x82rq¾\x83T\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[01/Feb/2022 10:39:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 10:50:32] "GET /download_doc_md/66/ HTTP/1.0" 200 3986
+[01/Feb/2022 10:52:09] "GET /download_doc_md/769/ HTTP/1.0" 200 3965
+[01/Feb/2022 10:53:54] "GET /robots.txt HTTP/1.0" 404 3965
+[01/Feb/2022 10:53:54] "GET /sitemap-41.xml HTTP/1.0" 404 3965
+[01/Feb/2022 10:56:05] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03@Î%\x93\x0föt\x84\x01yåÅ\x18f³Se(ô\xad\x9f\x9e»S\x9aÀáç\x07æ\x84\x02\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[01/Feb/2022 10:56:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Feb/2022 11:00:16] "GET /project-26/ HTTP/1.0" 200 38750
+[01/Feb/2022 11:01:13] "GET /project-36/doc-670/ HTTP/1.0" 200 3986
+[01/Feb/2022 11:07:43] "GET /_stats/indices HTTP/1.1" 404 3965
+[01/Feb/2022 11:12:06] "GET /sitemap.xml HTTP/1.0" 200 890
+[01/Feb/2022 11:16:00] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
+[01/Feb/2022 11:19:32] "GET / HTTP/1.1" 200 48013
+[01/Feb/2022 11:22:53] "GET /download_doc_md/734/ HTTP/1.0" 200 3986
+[01/Feb/2022 11:28:06] "GET /project-26/doc-801/ HTTP/1.0" 200 42426
