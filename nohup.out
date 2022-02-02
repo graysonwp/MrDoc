@@ -33662,3 +33662,58 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [02/Feb/2022 17:24:43] "GET /download_doc_md/703/ HTTP/1.0" 200 3986
 [02/Feb/2022 17:25:17] "GET /robots.txt HTTP/1.0" 404 3965
 [02/Feb/2022 17:25:18] "GET /project-34/doc-543/ HTTP/1.0" 200 40752
+[02/Feb/2022 17:35:32] "GET /download_doc_md/195/ HTTP/1.0" 200 3986
+[02/Feb/2022 17:46:31] "GET /download_doc_md/283/ HTTP/1.0" 200 3986
+[02/Feb/2022 17:47:43] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.210', 53128)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[02/Feb/2022 17:47:45] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ñÈý\x08~"Ýº×(vÕ,GQ2\x8f|ãHf¸iÔ\x9d¼\x9dp\x07\x1b\x80p S?¡Z\t\x850a\x87n«\x1eÞ¹\x08\x9añ[ÜM\x7f.í6\x12íh¸XQ©n\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[02/Feb/2022 17:47:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[02/Feb/2022 17:47:47] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('162.142.125.210', 54638)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[02/Feb/2022 17:47:49] "GET / HTTP/1.1" 200 48013
+[02/Feb/2022 17:47:50] code 505, message Invalid HTTP version (2.0)
+[02/Feb/2022 17:47:50] "PRI * HTTP/2.0" 505 -
+[02/Feb/2022 17:49:58] "GET /project-26/doc-335/ HTTP/1.0" 200 46957
+[02/Feb/2022 17:50:33] "GET /robots.txt HTTP/1.0" 404 3965
+[02/Feb/2022 17:50:37] "GET /project-34/doc-528/ HTTP/1.0" 200 57527
+[02/Feb/2022 17:55:00] "GET /project-26/doc-333/ HTTP/1.0" 200 40065
+[02/Feb/2022 17:57:23] "GET /project-34/doc-540/ HTTP/1.0" 200 40128
+[02/Feb/2022 18:08:15] "GET /download_doc_md/823/ HTTP/1.0" 200 3986
+[02/Feb/2022 18:08:40] "GET /project-21/doc-298/ HTTP/1.0" 200 56897
+[02/Feb/2022 18:08:48] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2601416
+[02/Feb/2022 18:09:33] "GET /create_doc/?eid=4 HTTP/1.0" 302 0
+[02/Feb/2022 18:09:35] "GET /login/?next=%2Fcreate_doc%2F%3Feid%3D4 HTTP/1.0" 200 4051
+[02/Feb/2022 18:19:13] "GET /project-26/doc-316/ HTTP/1.0" 200 39525
