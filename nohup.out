@@ -33614,3 +33614,40 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [02/Feb/2022 15:24:40] "GET /project-21/doc-276 HTTP/1.0" 301 0
 [02/Feb/2022 15:24:41] "GET /project-21/doc-276/ HTTP/1.0" 200 62222
 [02/Feb/2022 15:24:43] "GET /static/editor.md/css/editormd.css?version=0.7.5 HTTP/1.0" 200 79072
+[02/Feb/2022 15:35:06] "GET /project-23/doc-66/ HTTP/1.0" 200 3986
+[02/Feb/2022 15:38:33] "GET /robots.txt HTTP/1.0" 404 3965
+[02/Feb/2022 15:38:35] "GET /project-24/doc-240/ HTTP/1.0" 200 31767
+[02/Feb/2022 15:46:01] "GET /download_doc_md/665/ HTTP/1.0" 200 3986
+[02/Feb/2022 15:47:39] "GET /robots.txt HTTP/1.0" 404 3965
+[02/Feb/2022 15:47:41] "GET / HTTP/1.0" 200 48072
+[02/Feb/2022 15:52:03] "GET /robots.txt HTTP/1.0" 404 3965
+[02/Feb/2022 15:52:04] "GET /download_doc_md/754/ HTTP/1.0" 200 3965
+[02/Feb/2022 15:56:30] "GET /project-34/doc-525/ HTTP/1.0" 200 40265
+[02/Feb/2022 15:57:00] "GET /project-23/doc-197/ HTTP/1.0" 200 3986
+[02/Feb/2022 15:59:50] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('65.49.20.66', 30686)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[02/Feb/2022 16:03:37] "GET /project-26/doc-331/ HTTP/1.0" 200 41490
+[02/Feb/2022 16:03:45] "GET /static/toc/doctoc.js?version=0.7.5 HTTP/1.0" 200 11498
+[02/Feb/2022 16:07:57] "GET /download_doc_md/713/ HTTP/1.0" 200 3986
+[02/Feb/2022 16:09:00] "GET / HTTP/1.0" 200 48013
+[02/Feb/2022 16:10:32] "GET /sitemap-26.xml HTTP/1.0" 200 7219
+[02/Feb/2022 16:19:03] "GET /project-36/doc-665/ HTTP/1.0" 200 3986
+[02/Feb/2022 16:21:37] "GET /project-34/ HTTP/1.0" 200 39664
+[02/Feb/2022 16:21:39] "POST /get_pro_doc_tree/ HTTP/1.0" 200 8734
+[02/Feb/2022 16:30:02] "GET /download_doc_md/710/ HTTP/1.0" 200 3986
