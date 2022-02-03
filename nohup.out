@@ -35271,3 +35271,20 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [03/Feb/2022 12:25:53] "GET /project-37/doc-752/ HTTP/1.0" 200 39413
 [03/Feb/2022 12:27:47] "GET /robots.txt HTTP/1.0" 404 3965
 [03/Feb/2022 12:27:51] "GET /project-37/doc-804/ HTTP/1.0" 200 43290
+[03/Feb/2022 12:32:04] "GET /sitemap-home.xml HTTP/1.0" 200 309
+[03/Feb/2022 12:33:04] "GET /static/viewerjs/viewer.min.js?version=0.7.4 HTTP/1.0" 200 32388
+[03/Feb/2022 12:35:52] "GET /project-34/doc-542/ HTTP/1.0" 200 44540
+[03/Feb/2022 12:37:32] "GET /project-24/doc-245/ HTTP/1.0" 200 40904
+[03/Feb/2022 12:45:50] "GET /project-36/doc-643/ HTTP/1.0" 200 3986
+[03/Feb/2022 12:52:45] "GET /project-49/doc-855/ HTTP/1.0" 200 39685
+[03/Feb/2022 12:55:35] "GET /download_doc_md/219/ HTTP/1.0" 200 3986
+[03/Feb/2022 13:02:00] "GET /sitemap-24.xml HTTP/1.0" 200 3715
+[03/Feb/2022 13:02:48] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x10\x04\x01.\x05\x00\x00\x00\x00\x81I¨À\x00\x0c)\x83z»\x01\x00zÚf\x00\x8d\x16Ò~\x9dU\x05ñ\x1fi»©\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ÃÐ¢|¦v½ó\x1eOÑËÜ®Ëd')
+[03/Feb/2022 13:02:48] "   TZ         .    I¨À )z» zÚf Ò~Uñi»©                ÃÐ¢|¦v½óOÑËÜ®Ëd" 400 -
+[2022-02-03 13:02:48,222] - Broken pipe from ('161.189.134.11', 44246)
+
+[03/Feb/2022 13:07:06] "GET /download_doc_md/238/ HTTP/1.0" 200 3965
+[03/Feb/2022 13:14:30] "GET /sitemap-34.xml HTTP/1.0" 200 6635
+[03/Feb/2022 13:15:38] "GET /project-26/doc-301/ HTTP/1.0" 200 42995
+[03/Feb/2022 13:25:28] "GET /download_doc_md/826/ HTTP/1.0" 200 3986
+[03/Feb/2022 13:26:05] "GET /sitemap-16.xml HTTP/1.0" 200 648
