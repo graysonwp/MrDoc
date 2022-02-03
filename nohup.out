@@ -35361,3 +35361,18 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [03/Feb/2022 20:12:38] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
 [03/Feb/2022 20:12:39] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
 [03/Feb/2022 20:22:19] "GET /project-21/doc-228/ HTTP/1.0" 200 64042
+[03/Feb/2022 20:40:48] "GET /robots.txt HTTP/1.0" 404 3986
+[03/Feb/2022 21:02:48] "GET /project-37/doc-806/ HTTP/1.0" 200 49329
+[03/Feb/2022 21:03:08] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[03/Feb/2022 21:07:08] "GET /robots.txt HTTP/1.0" 404 3965
+[03/Feb/2022 21:07:11] "GET /project-24/ HTTP/1.0" 200 32470
+[03/Feb/2022 21:11:22] "GET /_search HTTP/1.1" 404 3965
+[03/Feb/2022 21:11:27] "GET / HTTP/1.1" 200 48013
+[03/Feb/2022 21:11:40] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03e\x1bRedÁhv#Éü\x07¹\x04°9Ê\x11\x00ð¢K.\x9c÷\x7f\x17\x82(\x03Z¡\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[03/Feb/2022 21:11:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[03/Feb/2022 21:11:43] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x031\x88è«N\x97·ÜG\x10\x84«\x1boJ\x8c\x88Î\x99à\x1c~8\x94²~\xa0f\x9fÈâÇ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[03/Feb/2022 21:11:43] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[03/Feb/2022 21:22:19] "GET /project-21/doc-228/ HTTP/1.0" 200 64042
+[03/Feb/2022 21:24:48] "GET /project-23/doc-203/ HTTP/1.0" 200 3986
