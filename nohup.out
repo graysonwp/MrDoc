@@ -36629,3 +36629,12 @@ Traceback (most recent call last):
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [04/Feb/2022 16:25:05] "GET /project-21/doc-738/ HTTP/1.0" 200 3986
+[04/Feb/2022 16:36:00] "GET /download_doc_md/714/ HTTP/1.0" 200 3986
+[04/Feb/2022 16:44:56] "GET /favicon.ico HTTP/1.0" 404 3965
+[04/Feb/2022 16:47:02] "GET /project-37/doc-747/ HTTP/1.0" 200 36419
+[04/Feb/2022 16:57:57] "GET /project-37/doc-808/ HTTP/1.0" 200 36450
+[04/Feb/2022 17:05:00] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[04/Feb/2022 17:08:52] "GET /project-21/doc-901/ HTTP/1.0" 200 59321
+[04/Feb/2022 17:11:50] "GET /robots.txt HTTP/1.0" 404 3965
+[04/Feb/2022 17:11:51] "GET /download_doc_md/304/ HTTP/1.0" 200 3965
+[04/Feb/2022 17:19:41] "GET /download_doc_md/783/ HTTP/1.0" 200 3986
