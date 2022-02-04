@@ -35976,3 +35976,18 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [04/Feb/2022 11:16:35] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
 [04/Feb/2022 11:16:48] "GET / HTTP/1.0" 200 48013
 [04/Feb/2022 11:22:38] "GET /download_doc_md/764/ HTTP/1.0" 200 3986
+[04/Feb/2022 11:33:19] "GET /project-42/doc-765/ HTTP/1.0" 200 27135
+[04/Feb/2022 11:36:08] "GET /robots.txt HTTP/1.0" 404 3965
+[04/Feb/2022 11:36:09] "GET /project-53/doc-726/ HTTP/1.0" 200 42090
+[04/Feb/2022 11:44:24] "GET /download_doc_md/225/ HTTP/1.0" 200 3986
+[04/Feb/2022 11:44:45] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\xa0\x0eR\x9dh²Û}SÈ"/\x9f$ÎÌ\x94H°\x0bõ\x1e¸Jp¾\x83\x04[l\x14õ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[04/Feb/2022 11:44:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Feb/2022 11:54:17] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x9e\x8fÙÄ79´\x9fccûmÙ\x8f\x183¬½S´9|BÏç1²®Ç4÷;\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[04/Feb/2022 11:54:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Feb/2022 11:54:53] "GET /project-37/doc-740/ HTTP/1.0" 200 79637
+[04/Feb/2022 11:57:06] "GET /download_doc_md/868/ HTTP/1.0" 200 3965
+[04/Feb/2022 12:05:37] "GET /download_doc_md/309/ HTTP/1.0" 200 3986
+[04/Feb/2022 12:16:18] "GET /download_doc_md/212/ HTTP/1.0" 200 3986
+[04/Feb/2022 12:20:22] "GET /_status HTTP/1.1" 404 3965
