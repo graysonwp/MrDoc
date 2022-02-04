@@ -35955,3 +35955,24 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [04/Feb/2022 10:07:17] "GET /download_doc_md/526/ HTTP/1.0" 200 3986
 [04/Feb/2022 10:18:00] "GET /project-37/doc-745/ HTTP/1.0" 200 52845
 [04/Feb/2022 10:28:44] "GET /project-21/doc-715/ HTTP/1.0" 200 60952
+[04/Feb/2022 10:30:18] "GET /_aliases HTTP/1.1" 404 3965
+[04/Feb/2022 10:39:35] "GET /project-36/doc-675/ HTTP/1.0" 200 3986
+[04/Feb/2022 10:41:19] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x92ùªJ`w\x83O¨\x19ZÁIû\x1b\x02\x02ñ}þl&JWþ¡±4Â\x8c\x8dp\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[04/Feb/2022 10:41:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Feb/2022 10:46:29] "GET /project-26/doc-301 HTTP/1.0" 301 0
+[04/Feb/2022 10:46:30] "GET /project-26/doc-301/ HTTP/1.0" 200 42978
+[04/Feb/2022 10:48:38] "GET /download_doc_md/89/ HTTP/1.0" 200 3965
+[04/Feb/2022 10:50:16] "GET /project-21/doc-800/ HTTP/1.0" 200 67477
+[04/Feb/2022 10:57:03] code 400, message Bad request version ('À\x14À')
+[04/Feb/2022 10:57:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Feb/2022 10:59:46] "GET /project-21/doc-276 HTTP/1.0" 301 0
+[04/Feb/2022 10:59:47] "GET /project-21/doc-276/ HTTP/1.0" 200 62222
+[04/Feb/2022 11:00:43] "GET /download_doc_md/818/ HTTP/1.0" 200 3965
+[04/Feb/2022 11:01:06] "GET /project-21/doc-814/ HTTP/1.0" 200 73980
+[04/Feb/2022 11:08:59] "GET /_stats/indices HTTP/1.1" 404 3965
+[04/Feb/2022 11:11:49] "GET /project-42/doc-767/ HTTP/1.0" 200 43929
+[04/Feb/2022 11:16:35] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
+[04/Feb/2022 11:16:48] "GET / HTTP/1.0" 200 48013
+[04/Feb/2022 11:22:38] "GET /download_doc_md/764/ HTTP/1.0" 200 3986
