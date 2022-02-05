@@ -37111,3 +37111,36 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [05/Feb/2022 09:18:01] "GET /project-26/doc-304/ HTTP/1.0" 200 39693
 [05/Feb/2022 09:21:16] "GET /download_doc_md/87/ HTTP/1.0" 200 3965
 [05/Feb/2022 09:28:28] "GET /download_doc_md/247/ HTTP/1.0" 200 3986
+[05/Feb/2022 09:31:20] "GET / HTTP/1.1" 200 48013
+----------------------------------------
+Exception happened during processing of request from ('193.118.53.202', 42468)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[05/Feb/2022 09:33:46] "GET /project-34/doc-818/ HTTP/1.0" 200 74283
+[05/Feb/2022 09:38:15] "GET /download_doc_md/753/ HTTP/1.0" 200 3965
+[05/Feb/2022 09:42:37] "GET /robots.txt HTTP/1.0" 404 3965
+[05/Feb/2022 09:42:39] "GET /project-21/doc-323/ HTTP/1.0" 200 64256
+[05/Feb/2022 09:44:48] "GET /download_doc_md/532/ HTTP/1.0" 200 3986
+[05/Feb/2022 09:53:44] "GET /project-21/doc-298/ HTTP/1.0" 200 56897
+[05/Feb/2022 09:55:50] "GET /project-23/doc-216/ HTTP/1.0" 200 3986
+[05/Feb/2022 10:02:03] "GET /project-21/doc-840/ HTTP/1.0" 200 61197
+[05/Feb/2022 10:06:58] "GET /download_doc_md/690/ HTTP/1.0" 200 3986
+[05/Feb/2022 10:13:44] "GET /project-21/doc-87/ HTTP/1.0" 200 57469
+[05/Feb/2022 10:17:38] "GET / HTTP/1.0" 200 48013
+[05/Feb/2022 10:17:44] "GET /project-37/doc-812/ HTTP/1.0" 200 56175
+[05/Feb/2022 10:23:33] "GET /robots.txt HTTP/1.0" 404 3965
+[05/Feb/2022 10:23:35] "GET /project-21/doc-898/ HTTP/1.0" 200 61286
+[05/Feb/2022 10:28:40] "GET /project-38/doc-717/ HTTP/1.0" 200 3986
