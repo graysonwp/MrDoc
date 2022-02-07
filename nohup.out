@@ -39031,3 +39031,14 @@ Prefix dict has been built successfully.
 [08/Feb/2022 03:17:25] "GET /robots.txt HTTP/1.0" 404 3965
 [08/Feb/2022 03:17:25] "GET /robots.txt HTTP/1.0" 404 3965
 [08/Feb/2022 03:17:29] "GET /project-24/doc-245/ HTTP/1.0" 200 40904
+[08/Feb/2022 03:50:37] "GET / HTTP/1.1" 200 47997
+[08/Feb/2022 03:50:38] "GET /_search HTTP/1.1" 404 3965
+[08/Feb/2022 03:50:39] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03\x92´b®n¼Ñ¼Jßâ¾>£öáÉÈ\x01;å\x18ÿú\x02z\x82Û9\x8f8=\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[08/Feb/2022 03:50:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[08/Feb/2022 03:50:41] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03À\x8fpÅGî\x912Ûÿú\x8eðU\x0eB«HµAêß÷\x05\x12M¿\x9a\x87Îºó\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[08/Feb/2022 03:50:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[08/Feb/2022 04:03:23] "GET /robots.txt HTTP/1.0" 404 3965
+[08/Feb/2022 04:03:24] "GET /project-21/doc-872/ HTTP/1.0" 200 84352
+[08/Feb/2022 04:17:25] "GET /project-24/doc-245/ HTTP/1.0" 200 40904
