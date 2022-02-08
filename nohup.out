@@ -43628,3 +43628,131 @@ AttributeError: 'NoneType' object has no attribute 'split'
 [09/Feb/2022 00:06:05] "GET /download_doc_md/333/ HTTP/1.0" 200 3986
 [09/Feb/2022 00:20:58] "GET /project-24/doc-243/ HTTP/1.0" 200 33147
 [09/Feb/2022 00:26:39] "GET /download_doc_md/88/ HTTP/1.0" 200 3986
+[09/Feb/2022 00:44:05] "GET /robots.txt HTTP/1.0" 404 3965
+[09/Feb/2022 00:44:08] "GET /project-42/doc-765/ HTTP/1.0" 200 27118
+[09/Feb/2022 00:58:14] "GET /download_doc_md/338/ HTTP/1.0" 200 3986
+[09/Feb/2022 01:00:46] "GET /project-21/doc-906/ HTTP/1.0" 200 61733
+[09/Feb/2022 01:03:53] "GET /project-21/doc-776/ HTTP/1.0" 200 69765
+[09/Feb/2022 01:04:35] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[09/Feb/2022 01:09:30] "GET /download_doc_md/866/ HTTP/1.0" 200 3986
+[09/Feb/2022 01:11:41] "GET /_nodes HTTP/1.1" 404 3965
+[09/Feb/2022 01:12:16] code 400, message Bad request syntax ('#ST')
+[09/Feb/2022 01:12:16] "#ST" 400 -
+[09/Feb/2022 01:12:18] code 400, message Bad HTTP/0.9 request type ('\x00')
+[09/Feb/2022 01:12:18] " n    beio" 400 -
+[2022-02-09 01:12:18,868] - Broken pipe from ('45.33.91.81', 49986)
+
+[09/Feb/2022 01:12:20] code 400, message Bad request syntax ('\x00\x00\x07\x00\x08\x00\x03\x00\x04\x00\x05\x00\x06')
+[09/Feb/2022 01:12:20] "       " 400 -
+[2022-02-09 01:12:20,566] - Broken pipe from ('45.33.91.81', 50730)
+
+[09/Feb/2022 01:12:21] "GET / HTTP/1.0" 200 47991
+[09/Feb/2022 01:12:22] "OPTIONS / HTTP/1.0" 200 47991
+[09/Feb/2022 01:12:22] code 400, message Bad request version ('RTSP/1.0')
+[09/Feb/2022 01:12:22] "OPTIONS / RTSP/1.0" 400 -
+[09/Feb/2022 01:12:24] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[09/Feb/2022 01:12:24] "  (rþ          |                    " 400 -
+[2022-02-09 01:12:24,574] - Broken pipe from ('45.33.91.81', 52426)
+
+[09/Feb/2022 01:12:26] code 400, message Bad HTTP/0.9 request type ('\x00')
+[09/Feb/2022 01:12:26] "          versionbind   " 400 -
+[2022-02-09 01:12:26,288] - Broken pipe from ('45.33.91.81', 53194)
+
+[09/Feb/2022 01:12:27] code 400, message Bad HTTP/0.9 request type ('\x00')
+[09/Feb/2022 01:12:27] "            " 400 -
+[2022-02-09 01:12:27,990] - Broken pipe from ('45.33.91.81', 53918)
+
+[09/Feb/2022 01:12:28] code 400, message Bad request syntax ('HELP')
+[09/Feb/2022 01:12:28] "HELP" 400 -
+[09/Feb/2022 01:12:28] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[09/Feb/2022 01:12:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Feb/2022 01:12:29] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[09/Feb/2022 01:12:29] "  *%à     Cookie: mstshash=beio" 400 -
+[09/Feb/2022 01:12:29] code 400, message Bad request version ('\x00/\x00')
+[09/Feb/2022 01:12:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Feb/2022 01:12:29] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[09/Feb/2022 01:12:29] "   qjn0k¡¢" 400 -
+[09/Feb/2022 01:12:31] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[09/Feb/2022 01:12:31] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[2022-02-09 01:12:31,909] - Broken pipe from ('45.33.91.81', 55584)
+
+[09/Feb/2022 01:12:33] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[09/Feb/2022 01:12:33] "l          " 400 -
+[2022-02-09 01:12:33,604] - Broken pipe from ('45.33.91.81', 56350)
+
+[09/Feb/2022 01:12:33] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 404 3965
+[09/Feb/2022 01:12:34] code 400, message Bad request syntax ('\x01default')
+[09/Feb/2022 01:12:34] "default" 400 -
+[09/Feb/2022 01:12:34] code 400, message Bad request syntax ('0\x84\x00\x00\x00-\x02\x01\x07c\x84\x00\x00\x00$\x04\x00')
+[09/Feb/2022 01:12:34] "0   -c   $ " 400 -
+[09/Feb/2022 01:12:36] code 400, message Bad HTTP/0.9 request type ('0')
+[09/Feb/2022 01:12:36] "0`  " 400 -
+[2022-02-09 01:12:36,755] - Broken pipe from ('45.33.91.81', 57652)
+
+[09/Feb/2022 01:12:36] code 400, message Bad request version ('SIP/2.0')
+[09/Feb/2022 01:12:36] "OPTIONS sip:nm SIP/2.0" 400 -
+[09/Feb/2022 01:12:38] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+[09/Feb/2022 01:12:38] "TNMP   TNME   " 400 -
+[2022-02-09 01:12:38,880] - Broken pipe from ('45.33.91.81', 58572)
+
+[09/Feb/2022 01:12:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+[09/Feb/2022 01:12:40] "  à     " 400 -
+[2022-02-09 01:12:40,576] - Broken pipe from ('45.33.91.81', 59404)
+
+[09/Feb/2022 01:12:42] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+[09/Feb/2022 01:12:42] "DmdT           ÿÿ" 400 -
+[2022-02-09 01:12:42,282] - Broken pipe from ('45.33.91.81', 60358)
+
+[09/Feb/2022 01:12:43] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+[09/Feb/2022 01:12:43] ":   /     @  =            /         @                 " 400 -
+[2022-02-09 01:12:43,981] - Broken pipe from ('45.33.91.81', 33056)
+
+[09/Feb/2022 01:12:45] code 400, message Bad request syntax ('JRMI\x00\x02K')
+[09/Feb/2022 01:12:45] "JRMI K" 400 -
+[2022-02-09 01:12:45,685] - Broken pipe from ('45.33.91.81', 34018)
+
+[09/Feb/2022 01:12:47] code 400, message Bad request syntax ('\x01\x00\x00ýÎú\x0b°\xa0\x00\x00\x00MMS\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x03\x00ðððð\x0b\x00\x04\x00\x1c\x00\x03\x00N\x00S\x00P\x00l\x00a\x00y\x00e\x00r\x00/\x009\x00.\x00\x00.\x00\x00.\x02\x009\x008\x00\x00;\x00 \x00{\x00\x00\x00\x00\x00A\x00A\x00\x00\x00-\x00\x00A\x00\x00\x00-\x00\x00\x00a\x00\x00-\x00A\x00A\x00\x00A\x00-\x00\x00\x00\x00\x00A\x00\x00A\x00A\x00\x00A\x00A\x00\x00}\x00\x00\x00àmß_')
+[09/Feb/2022 01:12:47] "  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 .  .  . 9 8  ;   {     A A   -  A   -   a  - A A  A -     A  A A  A A  }   àmß_" 400 -
+[2022-02-09 01:12:47,398] - Broken pipe from ('45.33.91.81', 34974)
+
+[09/Feb/2022 01:12:49] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+[09/Feb/2022 01:12:49] " Z     6,   ÿ      :               æ           (CONNECT_DATA=(COMMAND=version))" 400 -
+[2022-02-09 01:12:49,106] - Broken pipe from ('45.33.91.81', 36208)
+
+[09/Feb/2022 01:12:50] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+[09/Feb/2022 01:12:50] " 4            ( ÿ U   MSSQLServer H  " 400 -
+[2022-02-09 01:12:50,796] - Broken pipe from ('45.33.91.81', 37194)
+
+[09/Feb/2022 01:12:52] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+[09/Feb/2022 01:12:52] "              " 400 -
+[2022-02-09 01:12:52,501] - Broken pipe from ('45.33.91.81', 38074)
+
+[09/Feb/2022 01:12:54] code 400, message Bad request syntax ('GIOP\x01\x00\x01\x00$\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00abcdef\x00\x00\x04\x00\x00\x00get\x00\x00\x00\x00\x00')
+[09/Feb/2022 01:12:54] "GIOP  $                abcdef     get     " 400 -
+[2022-02-09 01:12:54,209] - Broken pipe from ('45.33.91.81', 39120)
+
+[09/Feb/2022 01:12:55] code 400, message Bad request syntax ('\x00\x9c\x00\x01\x1a+<M\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01ÿÿ\x00\x01none\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00beio\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[09/Feb/2022 01:12:55] "  +<M            ÿÿ none                                                            beio                                                            " 400 -
+[2022-02-09 01:12:55,910] - Broken pipe from ('45.33.91.81', 40384)
+
+[09/Feb/2022 01:12:57] code 400, message Bad request syntax ('\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x00')
+[09/Feb/2022 01:12:57] "                   " 400 -
+[09/Feb/2022 01:12:59] code 400, message Bad request syntax ('\x03\x81\x00\x00\x00\x00\x00_@\x00\x017\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00InitiatorName=iqn.1991-05.com.microsoft:beio-iscsi-probe\x00SessionType=Discovery\x00AuthMethod=None\x00\x00')
+[09/Feb/2022 01:12:59] "     _@ 7                                InitiatorName=iqn.1991-05.com.microsoft:beio-iscsi-probe SessionType=Discovery AuthMethod=None  " 400 -
+[2022-02-09 01:12:59,314] - Broken pipe from ('45.33.91.81', 42474)
+
+[09/Feb/2022 01:13:01] code 400, message Bad request syntax ('\x01\x00\x00\x00\x00Í\x00\x01\x00\x00ANY-SCP\x00\x00\x00\x00\x00\x00\x00\x00\x00FINDSCU\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00\x00\x151.2.840.10008.3.1.1.1 \x00\x00.\x01\x00\x00\x000\x00\x00\x111.2.840.10008.1.1@\x00\x00\x111.2.840.10008.1.2P\x00\x00:Q\x00\x00\x04\x00\x00@\x00R\x00\x00\x1e1.2.826.0.1.3680043.2.1396.999U\x00\x00\x0cCharruaVista')
+[09/Feb/2022 01:13:01] "    Í   ANY-SCP         FINDSCU                                           1.2.840.10008.3.1.1.1   .   0  1.2.840.10008.1.1@  1.2.840.10008.1.2P  :Q    @ R  1.2.826.0.1.3680043.2.1396.999U  CharruaVista" 400 -
+[2022-02-09 01:13:01,024] - Broken pipe from ('45.33.91.81', 43484)
+
+[09/Feb/2022 01:13:01] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[09/Feb/2022 01:13:01] "  ,'à     Cookie: mstshash=Administrator" 400 -
+[09/Feb/2022 01:13:03] code 400, message Bad request syntax ('\x00\x00\x00\x00\x00')
+[09/Feb/2022 01:13:03] "     " 400 -
+[2022-02-09 01:13:03,206] - Broken pipe from ('45.33.91.81', 44804)
+
+[09/Feb/2022 01:13:03] code 400, message Bad request syntax ('\x01I20100')
+[09/Feb/2022 01:13:03] "I20100" 400 -
+[09/Feb/2022 01:26:22] "GET /project-21/doc-844/ HTTP/1.0" 200 61809
