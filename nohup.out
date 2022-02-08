@@ -39121,3 +39121,99 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [08/Feb/2022 07:25:08] "GET /project-27/doc-330/ HTTP/1.0" 200 3965
 [08/Feb/2022 07:25:10] "GET /static/logo.svg HTTP/1.0" 200 15252
 [08/Feb/2022 07:29:10] "GET / HTTP/1.0" 200 47997
+[08/Feb/2022 07:30:08] "GET /download_doc_md/92/ HTTP/1.0" 200 3965
+[08/Feb/2022 07:34:58] code 400, message Bad request version ('À\x13À')
+[08/Feb/2022 07:34:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[08/Feb/2022 07:35:09] "GET /project-16/doc-758/ HTTP/1.0" 200 23391
+[08/Feb/2022 07:35:18] "GET / HTTP/1.1" 200 47997
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[08/Feb/2022 07:35:18] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('123.160.221.21', 20876)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[08/Feb/2022 07:38:36] "GET /project-36/doc-645/ HTTP/1.0" 200 3986
+[08/Feb/2022 07:46:15] "GET /download_doc_md/737/ HTTP/1.0" 200 3986
+[08/Feb/2022 07:47:38] "GET /project-34/doc-897/ HTTP/1.0" 200 46146
+[08/Feb/2022 07:53:49] "GET /project-45/doc-827/ HTTP/1.0" 200 3986
+[08/Feb/2022 08:09:09] "GET /download_doc_md/517/ HTTP/1.0" 200 3986
+[08/Feb/2022 08:09:57] "GET /download_doc_md/758/ HTTP/1.0" 200 3965
+[08/Feb/2022 08:17:08] "GET /download_doc_md/543/ HTTP/1.0" 200 3986
+[08/Feb/2022 08:22:35] "GET / HTTP/1.1" 200 48056
+[08/Feb/2022 08:22:36] "GET / HTTP/1.1" 200 48056
+[08/Feb/2022 08:22:37] "GET /static/iconFont/iconfont.js?version=0.7.5 HTTP/1.1" 200 130522
+[08/Feb/2022 08:22:37] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.1" 200 86709
+[08/Feb/2022 08:22:37] "GET /static/layui/layui.js?version=0.7.5 HTTP/1.1" 200 291286
+[08/Feb/2022 08:22:40] "GET /favicon.ico HTTP/1.1" 404 3986
+[08/Feb/2022 08:22:49] "GET / HTTP/1.1" 200 48056
+[08/Feb/2022 08:22:50] "GET / HTTP/1.1" 200 48056
+[08/Feb/2022 08:22:52] "GET /static/layui/layui.js?version=0.7.5 HTTP/1.1" 200 291286
+[08/Feb/2022 08:22:53] "GET /static/iconFont/iconfont.js?version=0.7.5 HTTP/1.1" 200 130522
+[08/Feb/2022 08:22:53] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.1" 200 86709
+[08/Feb/2022 08:22:59] "GET /favicon.ico HTTP/1.1" 404 3986
+[08/Feb/2022 08:25:12] "GET /project-34/doc-539/ HTTP/1.0" 200 40953
+[08/Feb/2022 08:26:59] "GET /project-37/doc-884/ HTTP/1.0" 200 80581
+[08/Feb/2022 08:29:33] "GET / HTTP/1.1" 200 47997
