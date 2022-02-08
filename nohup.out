@@ -43961,3 +43961,35 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [09/Feb/2022 02:20:20] "GET /download_doc_md/841/ HTTP/1.0" 200 3965
 [09/Feb/2022 02:21:42] "GET /download_doc_md/665/ HTTP/1.0" 200 3986
 [09/Feb/2022 02:27:48] "GET /download_doc_md/762/ HTTP/1.0" 200 3986
+[09/Feb/2022 02:33:24] "GET /project-23/doc-81/ HTTP/1.0" 200 3986
+[09/Feb/2022 02:33:52] "GET /sitemap-37.xml HTTP/1.0" 200 5759
+[09/Feb/2022 02:39:22] "GET /download_doc_md/298/ HTTP/1.0" 200 3986
+[09/Feb/2022 02:45:08] "GET /download_doc_md/881/ HTTP/1.0" 200 3986
+[09/Feb/2022 02:47:35] "GET /download_doc_md/904/ HTTP/1.0" 200 3965
+[09/Feb/2022 02:50:52] "GET /project-34/doc-815/ HTTP/1.0" 200 61269
+[09/Feb/2022 02:53:58] "GET /project-21/doc-780/ HTTP/1.0" 200 57769
+[09/Feb/2022 02:56:53] "GET /project-46/doc-838/ HTTP/1.0" 302 0
+[09/Feb/2022 02:56:58] "GET /check_viewcode/?to=/project-46/doc-838/ HTTP/1.0" 200 3066
+[09/Feb/2022 03:02:33] "GET /project-47/doc-831/ HTTP/1.0" 200 3986
+[09/Feb/2022 03:08:23] "GET /project-23/doc-203/ HTTP/1.0" 200 3986
+[09/Feb/2022 03:14:19] "GET /download_doc_md/649/ HTTP/1.0" 200 3986
+[09/Feb/2022 03:19:57] "GET /project-36/doc-647/ HTTP/1.0" 200 3986
+[09/Feb/2022 03:25:44] "GET /project-21/doc-893/ HTTP/1.0" 200 57739
+[09/Feb/2022 03:28:31] code 400, message Bad request version ('(\x08\x10±å~\x87\x08')
+[09/Feb/2022 03:28:31] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Feb/2022 03:28:31] "GET / HTTP/1.1" 400 26
+[09/Feb/2022 03:28:32] "GET / HTTP/1.1" 200 47991
+[09/Feb/2022 03:28:32] "GET /cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/hosts HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:32] "GET /.DS_Store HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:32] "GET /api/geojson?url=file:///etc/hosts HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:32] "GET /.git/config HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:32] "GET /info.php HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:32] "GET /login.action HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:32] "GET /telescope/requests HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:32] "GET /.json HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:33] "GET /s/lkx/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:33] "GET /server-status HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:33] "GET /config.json HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:33] "GET /.env HTTP/1.1" 404 3965
+[09/Feb/2022 03:28:33] "GET /idx_config/ HTTP/1.1" 404 3965
