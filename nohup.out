@@ -54090,3 +54090,67 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [10/Feb/2022 06:17:45] "GET /download_doc_md/847/ HTTP/1.0" 200 3986
 [10/Feb/2022 06:22:51] "GET /project-36/doc-664/ HTTP/1.0" 200 3986
 [10/Feb/2022 06:28:55] "GET /download_doc_md/307/ HTTP/1.0" 200 3986
+[10/Feb/2022 06:34:05] "GET /download_doc_md/213/ HTTP/1.0" 200 3986
+[10/Feb/2022 06:34:36] "GET /download_doc_md/251/ HTTP/1.0" 200 3965
+[10/Feb/2022 06:40:02] "GET /download_doc_md/337/ HTTP/1.0" 200 3986
+[10/Feb/2022 06:41:59] "GET / HTTP/1.1" 200 48024
+[10/Feb/2022 06:42:02] "GET /favicon.ico HTTP/1.1" 404 3965
+[10/Feb/2022 06:44:48] "GET /project-34/doc-531/ HTTP/1.0" 200 67288
+[10/Feb/2022 06:50:00] "GET /project-36/doc-700/ HTTP/1.0" 200 3986
+[10/Feb/2022 06:54:36] "GET /project-49/doc-845/ HTTP/1.0" 200 47113
+[10/Feb/2022 06:55:55] "GET /project-49/doc-847/ HTTP/1.0" 200 25940
+[10/Feb/2022 06:58:53] "GET /project-21/doc-227/ HTTP/1.0" 200 64352
+[10/Feb/2022 06:59:47] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Feb/2022 06:59:49] "GET /download_doc_md/528/ HTTP/1.0" 200 3986
+[10/Feb/2022 06:59:54] "GET /login/?next=/create_doc/ HTTP/1.0" 200 4076
+[10/Feb/2022 06:59:56] "GET /project-38/doc-717/ HTTP/1.0" 200 3986
+[10/Feb/2022 07:00:37] "GET / HTTP/1.1" 200 48024
+----------------------------------------
+Exception happened during processing of request from ('167.94.145.57', 59538)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Feb/2022 07:00:39] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ïîùp\x14âÓa\x8f!\'/x\x8bÇl\x00L8a"ôq\xad\x03}Ï\x81Afùñ I\x95y\x0epï\x8c¾C7}ÜS\x1d\rxOXrs¯ï\x1a·gÅ¿.¯\x1c:\x1d\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[10/Feb/2022 07:00:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Feb/2022 07:00:40] "GET / HTTP/1.1" 200 48024
+----------------------------------------
+Exception happened during processing of request from ('167.94.145.57', 46762)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Feb/2022 07:00:41] "GET / HTTP/1.1" 200 48024
+[10/Feb/2022 07:00:42] code 505, message Invalid HTTP version (2.0)
+[10/Feb/2022 07:00:42] "PRI * HTTP/2.0" 505 -
+[10/Feb/2022 07:07:21] "GET /download_doc_md/334/ HTTP/1.0" 200 3986
+[10/Feb/2022 07:12:43] "GET /project-34/doc-515/ HTTP/1.0" 200 38690
+[10/Feb/2022 07:12:52] "GET /project-34/doc-515/ HTTP/1.0" 200 38690
+[10/Feb/2022 07:18:12] "GET /project-24/ HTTP/1.0" 200 32470
+[10/Feb/2022 07:18:30] "GET /project-21/doc-281/ HTTP/1.0" 200 64537
+[10/Feb/2022 07:27:46] "GET /project-53/doc-891 HTTP/1.0" 301 0
+[10/Feb/2022 07:27:47] "GET /project-53/doc-891/ HTTP/1.0" 200 40770
+[10/Feb/2022 07:29:19] "GET /project-49/doc-845/ HTTP/1.0" 200 47128
