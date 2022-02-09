@@ -54029,3 +54029,39 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [10/Feb/2022 02:54:36] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
 [10/Feb/2022 03:05:42] "GET /download_doc_md/856/ HTTP/1.0" 200 3965
 [10/Feb/2022 03:14:35] "GET /project-24/doc-243/ HTTP/1.0" 200 33130
+[10/Feb/2022 03:34:35] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[10/Feb/2022 03:41:43] code 400, message Bad request syntax ("\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ÔëRá\xa0\x102v\x02ñÎ\x85ìÉg-PVPØ»\x94ÔÕ'\x9dRX\x90y7\x08 -£z9Ñjôù")
+[10/Feb/2022 03:41:43] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Feb/2022 03:41:43] "GET / HTTP/1.1" 400 26
+[10/Feb/2022 03:41:43] "GET / HTTP/1.1" 200 48024
+[10/Feb/2022 03:41:44] "GET /cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/hosts HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:44] "GET /.DS_Store HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:44] "GET /login.action HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:44] "GET /server-status HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:44] "GET /idx_config/ HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:44] "GET /telescope/requests HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:44] "GET /info.php HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:45] "GET /.json HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:45] "GET /s/lkx/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:45] "GET /api/geojson?url=file:///etc/hosts HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:45] "GET /config.json HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:45] "GET /.env HTTP/1.1" 404 3965
+[10/Feb/2022 03:41:45] "GET /.git/config HTTP/1.1" 404 3965
+[10/Feb/2022 03:54:14] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Feb/2022 03:54:15] "GET /project-37/doc-747/ HTTP/1.0" 200 36404
+[10/Feb/2022 03:54:25] code 400, message Bad request version ('À\x14À')
+[10/Feb/2022 03:54:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Feb/2022 03:54:29] "GET /_search HTTP/1.1" 404 3965
+[10/Feb/2022 03:54:34] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03|®¬!(')
+[10/Feb/2022 03:54:34] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Feb/2022 03:54:35] "GET /download_doc_md/781/ HTTP/1.0" 200 3965
+[10/Feb/2022 03:54:46] "GET / HTTP/1.1" 200 48024
+[10/Feb/2022 03:56:42] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Feb/2022 03:56:43] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Feb/2022 03:56:52] "GET /project-37/ HTTP/1.0" 200 38294
+[10/Feb/2022 04:01:06] "GET /download_doc_md/714/ HTTP/1.0" 200 3965
+[10/Feb/2022 04:29:21] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Feb/2022 04:29:31] "GET /login/?next=/create_doc/%3Feid=4 HTTP/1.0" 200 4076
