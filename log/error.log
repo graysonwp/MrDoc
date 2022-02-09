@@ -580,3 +580,9 @@ Traceback (most recent call last):
     └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-02-09 16:23:30.591 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202202/2022-02-09_1609210.5370369541150786.png': No schema supplied. Perhaps you meant http:///media/202202/2022-02-09_1609210.5370369541150786.png?",)
+2022-02-09 16:23:30.603 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202202/2022-02-09_1611220.4709022428185119.png': No schema supplied. Perhaps you meant http:///media/202202/2022-02-09_1611220.4709022428185119.png?",)
+2022-02-09 16:23:30.613 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202202/2022-02-09_1610230.41455634163523025.png': No schema supplied. Perhaps you meant http:///media/202202/2022-02-09_1610230.41455634163523025.png?",)
+2022-02-09 16:23:36.868 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202202/2022-02-09_1609210.5370369541150786.png': No schema supplied. Perhaps you meant http:///media/202202/2022-02-09_1609210.5370369541150786.png?",)
+2022-02-09 16:23:36.881 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202202/2022-02-09_1610230.41455634163523025.png': No schema supplied. Perhaps you meant http:///media/202202/2022-02-09_1610230.41455634163523025.png?",)
+2022-02-09 16:23:36.893 | ERROR    | app_doc.util_upload_img:url_img_upload:321 - 上传URL图片异常：MissingSchema("Invalid URL '/media/202202/2022-02-09_1611220.4709022428185119.png': No schema supplied. Perhaps you meant http:///media/202202/2022-02-09_1611220.4709022428185119.png?",)
