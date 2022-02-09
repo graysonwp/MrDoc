@@ -48951,3 +48951,37 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [09/Feb/2022 18:09:10] "GET /robots.txt HTTP/1.0" 404 3965
 [09/Feb/2022 18:09:11] "GET /download_doc_md/545/ HTTP/1.0" 200 3986
 [09/Feb/2022 18:29:36] "GET /download_doc_md/260/ HTTP/1.0" 200 3965
+[09/Feb/2022 18:49:35] "GET /download_doc_md/242/ HTTP/1.0" 200 3965
+[09/Feb/2022 18:49:50] "GET / HTTP/1.0" 200 48038
+[09/Feb/2022 18:49:51] "OPTIONS / HTTP/1.0" 200 48038
+[09/Feb/2022 18:49:51] code 400, message Bad request version ('RTSP/1.0')
+[09/Feb/2022 18:49:51] "OPTIONS / RTSP/1.0" 400 -
+[09/Feb/2022 18:49:57] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[09/Feb/2022 18:49:57] "  (rþ          |                    " 400 -
+[09/Feb/2022 18:50:02] code 400, message Bad HTTP/0.9 request type ('\x00')
+[09/Feb/2022 18:50:02] "          versionbind   " 400 -
+[09/Feb/2022 18:50:02] code 400, message Bad request syntax ('HELP')
+[09/Feb/2022 18:50:02] "HELP" 400 -
+[09/Feb/2022 18:50:03] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[09/Feb/2022 18:50:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Feb/2022 18:50:03] code 400, message Bad request version ('\x00/\x00')
+[09/Feb/2022 18:50:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Feb/2022 18:50:04] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[09/Feb/2022 18:50:04] "   qjn0k¡¢" 400 -
+[09/Feb/2022 18:50:09] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[09/Feb/2022 18:50:09] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[09/Feb/2022 18:50:14] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[09/Feb/2022 18:50:14] "l          " 400 -
+[09/Feb/2022 18:50:15] code 400, message Bad request version ('SIP/2.0')
+[09/Feb/2022 18:50:15] "OPTIONS sip:nm SIP/2.0" 400 -
+[09/Feb/2022 18:50:17] code 400, message Bad request version ('\x00/\x00')
+[09/Feb/2022 18:50:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Feb/2022 18:50:21] "GET / HTTP/1.1" 200 48038
+[09/Feb/2022 18:50:25] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Lé\x04K}Rdk\x97\x01å¼óÿõèUPQ\x90ô\x8fá\x8ff´s++\x97·r')
+[09/Feb/2022 18:50:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Feb/2022 18:50:26] code 400, message Bad request syntax ('\x0e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bbbb0100000001')
+[09/Feb/2022 18:50:26] "               bbbb0100000001" 400 -
