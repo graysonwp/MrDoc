@@ -54215,3 +54215,42 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [10/Feb/2022 10:13:47] "GET /robots.txt HTTP/1.0" 404 3965
 [10/Feb/2022 10:13:50] "GET /project-37/doc-743/ HTTP/1.0" 200 46815
 [10/Feb/2022 10:21:06] "GET /project-24/doc-238/ HTTP/1.0" 200 34540
+[10/Feb/2022 10:30:36] "GET /project-24/doc-263/ HTTP/1.0" 200 36598
+[10/Feb/2022 10:34:01] "GET /media/202107/2021-07-13_2122200.17211560884560118.png HTTP/1.0" 200 10768
+[10/Feb/2022 10:34:08] "GET /_aliases HTTP/1.1" 404 3965
+[10/Feb/2022 10:34:26] "GET /project-16/doc-735/ HTTP/1.0" 200 25811
+[10/Feb/2022 10:39:42] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Feb/2022 10:39:43] "GET /download_doc_md/735/ HTTP/1.0" 200 3965
+[10/Feb/2022 10:41:06] "GET /project-24/doc-246/ HTTP/1.0" 200 31794
+[10/Feb/2022 10:45:47] code 400, message Bad request version ('À\x14À')
+[10/Feb/2022 10:45:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Feb/2022 10:46:36] "GET /project-26/doc-342/ HTTP/1.0" 200 47336
+[10/Feb/2022 10:47:47] "GET /download_doc_md/515/ HTTP/1.0" 200 3986
+[10/Feb/2022 11:01:06] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
+[10/Feb/2022 11:02:32] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03¡÷M?¼Ãf')
+[10/Feb/2022 11:02:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Feb/2022 11:10:57] "GET /_stats/indices HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:49] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03(QQÖ\x81ÐIò\x19GPí\x8e®\x00MÌM\x9efz\x83\x97¯ÈOgû\x1do\x18( K]±\x87ÉRâáèu\x9c¸´Âä\xad¯Û9ñ\x93!:÷¸±b\x03\x0eá}O\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[10/Feb/2022 11:11:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Feb/2022 11:11:49] "GET / HTTP/1.1" 400 26
+[10/Feb/2022 11:11:49] "GET / HTTP/1.1" 200 48024
+[10/Feb/2022 11:11:49] "GET /cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/hosts HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:49] "GET /.DS_Store HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:49] "GET /.env HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:49] "GET /idx_config/ HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:49] "GET /telescope/requests HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /.json HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /s/lkx/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /server-status HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /config.json HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /login.action HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /api/geojson?url=file:///etc/hosts HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /.git/config HTTP/1.1" 404 3965
+[10/Feb/2022 11:11:50] "GET /info.php HTTP/1.1" 404 3965
+[10/Feb/2022 11:14:56] "GET /robots.txt HTTP/1.0" 404 3965
+[10/Feb/2022 11:14:59] "GET /download_doc_md/529/ HTTP/1.0" 200 3986
+[10/Feb/2022 11:19:05] "GET /_cluster/health?level=indices HTTP/1.1" 404 3965
+[10/Feb/2022 11:25:19] "GET /project-34/doc-530/ HTTP/1.0" 200 46404
