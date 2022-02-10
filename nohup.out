@@ -61031,3 +61031,36 @@ AttributeError: 'NoneType' object has no attribute 'split'
 [11/Feb/2022 05:24:12] "GET /project-26/doc-306/ HTTP/1.0" 200 38192
 [11/Feb/2022 05:27:23] "GET /project-21/doc-908/ HTTP/1.0" 200 63025
 [11/Feb/2022 05:30:02] "GET /download_doc_md/205/ HTTP/1.0" 200 3986
+[11/Feb/2022 05:38:57] "GET /project-21/doc-909/ HTTP/1.0" 200 62293
+[11/Feb/2022 05:41:46] "GET /project-36/doc-650/ HTTP/1.0" 200 3965
+[11/Feb/2022 05:50:04] "GET /project-21/doc-910/ HTTP/1.0" 200 62826
+[11/Feb/2022 05:52:01] "GET /download_doc_md/246/ HTTP/1.0" 200 3965
+[11/Feb/2022 05:54:34] "GET /download_doc_md/829/ HTTP/1.0" 200 3986
+----------------------------------------
+Exception happened during processing of request from ('185.219.52.134', 4457)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[11/Feb/2022 06:00:11] "GET /download_doc_md/709/ HTTP/1.0" 200 3986
+[11/Feb/2022 06:01:31] "GET /robots.txt HTTP/1.0" 404 3965
+[11/Feb/2022 06:01:33] "GET /project-24/doc-246/ HTTP/1.0" 200 31794
+[11/Feb/2022 06:13:01] "GET /project-37/doc-881/ HTTP/1.0" 200 85880
+[11/Feb/2022 06:18:54] "GET /download_doc_md/841/ HTTP/1.0" 200 3965
+[11/Feb/2022 06:23:13] "GET /download_doc_md/865/ HTTP/1.0" 200 3965
+[11/Feb/2022 06:26:36] "GET /robots.txt HTTP/1.0" 404 3965
+[11/Feb/2022 06:26:38] "GET /download_doc_md/518/ HTTP/1.0" 200 3986
+[11/Feb/2022 06:27:05] "GET /download_doc_md/524/ HTTP/1.0" 200 3986
+[11/Feb/2022 06:27:10] "GET /project-16/ HTTP/1.0" 200 21408
+[11/Feb/2022 06:27:42] "GET /project-37/ HTTP/1.0" 200 38351
