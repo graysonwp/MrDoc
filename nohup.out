@@ -74177,3 +74177,22 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [13/Feb/2022 03:12:57] "GET /project-37/doc-809/ HTTP/1.0" 200 55456
 [13/Feb/2022 03:21:00] "GET /download_doc_md/271/ HTTP/1.0" 200 3986
 [13/Feb/2022 03:25:23] "GET /project-37/doc-879/ HTTP/1.0" 200 69316
+[13/Feb/2022 03:30:33] "GET /download_doc_md/797/ HTTP/1.0" 200 3965
+[13/Feb/2022 03:31:13] "GET /robots.txt HTTP/1.0" 404 3986
+[13/Feb/2022 03:36:52] "GET /download_doc_md/659/ HTTP/1.0" 200 3986
+[13/Feb/2022 03:42:31] "GET /project-36/doc-710/ HTTP/1.0" 200 3986
+[13/Feb/2022 03:48:05] "GET /project-16/doc-758/ HTTP/1.0" 200 23408
+[13/Feb/2022 03:51:13] "GET /project-34/doc-897/ HTTP/1.0" 200 46146
+[13/Feb/2022 03:59:26] "GET /project-21/doc-912/ HTTP/1.0" 200 65502
+[13/Feb/2022 03:59:30] "GET /_search HTTP/1.1" 404 3965
+[13/Feb/2022 03:59:30] code 400, message Bad request version ('À\x14À')
+[13/Feb/2022 03:59:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[13/Feb/2022 03:59:30] "GET / HTTP/1.1" 200 48010
+[13/Feb/2022 03:59:42] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8d\x01\x00\x00\x89\x03\x03çbò¨J{ÚßN¨âÎ\x189:0kó\x07µ\x0ehÂãÜ+\x80\x9f\x8f²?Ë\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[13/Feb/2022 03:59:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[13/Feb/2022 04:05:02] "GET /project-21/doc-326/ HTTP/1.0" 200 64509
+[13/Feb/2022 04:19:55] "GET /download_doc_md/783/ HTTP/1.0" 200 3986
+[13/Feb/2022 04:21:13] "GET /project-34/doc-529/ HTTP/1.0" 200 72432
+[13/Feb/2022 04:21:58] "GET /project-37/doc-811/ HTTP/1.0" 200 48171
