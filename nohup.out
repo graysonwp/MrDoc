@@ -68906,3 +68906,1567 @@ AttributeError: 'NoneType' object has no attribute 'split'
 <class 'datetime.datetime'>[12/Feb/2022 19:20:15] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19328
 [12/Feb/2022 19:20:15] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19328
 [12/Feb/2022 19:20:26] "GET /download_doc_md/268/ HTTP/1.0" 200 3965
+2022-02-12 19:42:02.847 | ERROR    | app_doc.views:doc:1070 - 文集浏览出错
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/threading.py", line 884, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f6605632510>
+    └ <Thread(Thread-7025, started daemon 140074402027264)>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f66056322f0>
+    └ <Thread(Thread-7025, started daemon 140074402027264)>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-7025, started daemon 140074402027264)>
+    │    │        │    └ (<socket.socket fd=108, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=...
+    │    │        └ <Thread(Thread-7025, started daemon 140074402027264)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f6600c080b8>>
+    └ <Thread(Thread-7025, started daemon 140074402027264)>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 56448)
+    │    │              └ <socket.socket fd=108, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=(...
+    │    └ <function BaseServer.finish_request at 0x7f66004a1bf8>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f6600c080b8>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f6600c080b8>
+    │    │                   │        └ ('127.0.0.1', 56448)
+    │    │                   └ <socket.socket fd=108, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=(...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f6600c080b8>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f65ff49ebf8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f65f6dd9fd0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f65ff49ec80>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f65f6dd9fd0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f65ff49e268>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f6600c080b8>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f65f6dd9fd0>
+    │       └ <function BaseHandler.run at 0x7f65ff493f28>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f65f57a4c50>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f65ff49b2f0>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f65f57a4c50>
+    │    │        │           │    └ {'LC_ALL': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f65f57a4c50>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f65fd5ef208>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f65f57a4c50>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler.get_response at 0x7f65ff4e2488>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f65fd5ef208>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76dbf8>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f65fd5ef208>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f65fc798470>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76db70>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f65fc798470>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f65fc798eb8>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76dae8>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f65fc798eb8>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f65fc7985c0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76da60>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f65fc7985c0>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f65fd34e320>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76d9d8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f65fd34e320>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f65fd34e1d0>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76d950>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f65fd34e1d0>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f65fd34e278>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76d8c8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f65fd34e278>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f65fd34e2e8>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76d840>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f65fd34e2e8>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f65fc7a2e10>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f65fc76d7b8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f65fc7a2e10>
+               └ None
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f65fc7a2160>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 35, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler._get_response at 0x7f65fc7c9d08>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f65fc7a2160>
+
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f65fd5ef208>>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 738}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <function doc at 0x7f65fd277950>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 738}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-738/'>
+           └ <function doc at 0x7f65fd2778c8>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 997, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 738
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f65ff5a81d0>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 738, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f660056cae8>
+                   └ <django.db.models.manager.Manager object at 0x7f65fc817b00>
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[12/Feb/2022 19:42:02] "GET /project-21/doc-738/ HTTP/1.0" 200 3965
+[12/Feb/2022 19:42:44] "GET /download_doc_md/772/ HTTP/1.0" 200 3965
+[12/Feb/2022 19:42:58] "POST /upload_doc_img/ HTTP/1.0" 200 220
+[12/Feb/2022 19:42:58] "GET /media/202202/2022-02-12_1942570.5515300761805315.png HTTP/1.0" 200 65225
+[12/Feb/2022 19:43:41] "POST /create_doc/ HTTP/1.0" 200 51
+[12/Feb/2022 19:43:43] "GET /modify_doc/916/ HTTP/1.0" 200 65471
+
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>[12/Feb/2022 19:43:43] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19545
+[12/Feb/2022 19:43:44] "GET /media/202202/2022-02-12_1942570.5515300761805315.png HTTP/1.0" 200 65225
+[12/Feb/2022 19:44:23] "POST /modify_doc/916/ HTTP/1.0" 200 52
+[12/Feb/2022 19:44:24] "POST /modify_doc/916/ HTTP/1.0" 200 52
+[12/Feb/2022 19:44:29] "GET /download_doc_md/655/ HTTP/1.0" 200 3986
+[12/Feb/2022 19:46:21] "GET /robots.txt HTTP/1.0" 404 3965
+[12/Feb/2022 19:46:24] "GET /project-34/doc-546/ HTTP/1.0" 200 39829
+[12/Feb/2022 19:50:02] "GET /project-21/doc-782/ HTTP/1.0" 200 59699
+[12/Feb/2022 19:53:09] "GET /download_doc_md/872/ HTTP/1.0" 200 3965
+[12/Feb/2022 19:55:49] "GET /download_doc_md/524/ HTTP/1.0" 200 3986
+[12/Feb/2022 20:01:16] "GET /download_doc_md/832/ HTTP/1.0" 200 3986
+[12/Feb/2022 20:04:19] "GET /project-53/doc-895/ HTTP/1.0" 200 22750
+[12/Feb/2022 20:06:48] "GET /?page=2&kw&sort&role=-1 HTTP/1.0" 200 48086
+[12/Feb/2022 20:12:23] "GET /download_doc_md/315/ HTTP/1.0" 200 3986
+[12/Feb/2022 20:14:36] "GET /create_doc/?pid=21 HTTP/1.0" 200 63393
+[12/Feb/2022 20:14:37] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19545
+[12/Feb/2022 20:14:41] "GET /project-21/doc-913/ HTTP/1.0" 200 65246
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1057170.3733175875882666.png HTTP/1.0" 200 124017
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1106230.40331717078644014.png HTTP/1.0" 200 40960
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1106440.512448934251122.png HTTP/1.0" 200 65113
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1106520.32350363339285904.png HTTP/1.0" 200 70667
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107010.2953053321677126.png HTTP/1.0" 200 32768
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107090.5823211622074699.png HTTP/1.0" 200 72608
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107170.24416546346844548.png HTTP/1.0" 200 72264
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107240.33870643211913043.png HTTP/1.0" 200 72376
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107320.398163178063511.png HTTP/1.0" 200 73355
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107400.6363814827314325.png HTTP/1.0" 200 93332
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107500.07696989614018224.png HTTP/1.0" 200 90112
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[12/Feb/2022 20:14:42] "GET /media/202202/2022-02-12_1107500.07696989614018224.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56528)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[12/Feb/2022 20:14:53] "GET /project-21/doc-912/ HTTP/1.0" 200 66473
+[12/Feb/2022 20:14:54] "GET /media/202202/2022-02-11_2102150.3073819680331591.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[12/Feb/2022 20:14:54] "GET /media/202202/2022-02-11_2102150.3073819680331591.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56532)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[12/Feb/2022 20:14:56] "GET /create_doc/?pid=21 HTTP/1.0" 200 63393
+[12/Feb/2022 20:14:56] "GET /create_doc/?pid=21 HTTP/1.0" 200 63393
+
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>[12/Feb/2022 20:14:57] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19545
+
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:[12/Feb/2022 20:14:57] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19545
+[12/Feb/2022 20:16:45] "GET /robots.txt HTTP/1.0" 404 3965
+[12/Feb/2022 20:16:46] "GET /download_doc_md/743/ HTTP/1.0" 200 3965
+[12/Feb/2022 20:17:04] "GET / HTTP/1.0" 200 48027
+[12/Feb/2022 20:18:13] "GET /project-16/doc-735/ HTTP/1.0" 200 25828
+[12/Feb/2022 20:18:47] "GET /download_doc_md/848/ HTTP/1.0" 200 3965
+[12/Feb/2022 20:19:21] "POST /upload_doc_img/ HTTP/1.0" 200 173
+[12/Feb/2022 20:19:22] "GET /media/202202/2022-02-12_2019200.9463664101953027.png HTTP/1.0" 200 32972
+[12/Feb/2022 20:21:19] "POST /upload_doc_img/ HTTP/1.0" 200 174
+[12/Feb/2022 20:21:19] "GET /media/202202/2022-02-12_2021180.14168149808626918.png HTTP/1.0" 200 32972
+[12/Feb/2022 20:21:23] "POST /upload_doc_img/ HTTP/1.0" 200 173
+[12/Feb/2022 20:23:36] "GET /download_doc_md/812/ HTTP/1.0" 200 3986
+[12/Feb/2022 20:25:24] "POST /upload_doc_img/ HTTP/1.0" 200 173
+[12/Feb/2022 20:25:24] "GET /media/202202/2022-02-12_2025230.5272470853708524.png HTTP/1.0" 200 35389
+[12/Feb/2022 20:25:33] "POST /upload_doc_img/ HTTP/1.0" 200 174
+[12/Feb/2022 20:25:34] "GET /media/202202/2022-02-12_2025320.10326173710311681.png HTTP/1.0" 200 49288
+[12/Feb/2022 20:25:42] "POST /upload_doc_img/ HTTP/1.0" 200 174
+[12/Feb/2022 20:25:42] "GET /media/202202/2022-02-12_2025410.18310975695976917.png HTTP/1.0" 200 49860
+[12/Feb/2022 20:25:56] "POST /upload_doc_img/ HTTP/1.0" 200 173
+[12/Feb/2022 20:25:56] "GET /media/202202/2022-02-12_2025550.7393083412792657.png HTTP/1.0" 200 50606
+[12/Feb/2022 20:26:06] "POST /upload_doc_img/ HTTP/1.0" 200 173
+[12/Feb/2022 20:26:06] "GET /media/202202/2022-02-12_2026050.4833823810572384.png HTTP/1.0" 200 51565
+[12/Feb/2022 20:26:14] "POST /upload_doc_img/ HTTP/1.0" 200 174
+[12/Feb/2022 20:26:14] "GET /media/202202/2022-02-12_2026130.48557956469393615.png HTTP/1.0" 200 55368
+[12/Feb/2022 20:26:21] "POST /upload_doc_img/ HTTP/1.0" 200 173
+[12/Feb/2022 20:26:22] "GET /media/202202/2022-02-12_2026210.7118277981678661.png HTTP/1.0" 200 55965
+[12/Feb/2022 20:26:30] "POST /upload_doc_img/ HTTP/1.0" 200 174
+[12/Feb/2022 20:26:30] "GET /media/202202/2022-02-12_2026280.31684487445222287.png HTTP/1.0" 200 57080
+[12/Feb/2022 20:26:38] "POST /upload_doc_img/ HTTP/1.0" 200 174
+[12/Feb/2022 20:26:38] "GET /media/202202/2022-02-12_2026380.9920881939848459.png HTTP/1.0" 200 58198
+[12/Feb/2022 20:26:47] "POST /upload_doc_img/ HTTP/1.0" 200 174
+[12/Feb/2022 20:26:47] "GET /media/202202/2022-02-12_2026450.7798305326990969.png HTTP/1.0" 200 49761
+[12/Feb/2022 20:27:24] "POST /create_doc/ HTTP/1.0" 200 51
+[12/Feb/2022 20:27:26] "GET /modify_doc/917/ HTTP/1.0" 200 65762
+[12/Feb/2022 20:27:26] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19722
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2025230.5272470853708524.png HTTP/1.0" 200 35389
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2019200.9463664101953027.png HTTP/1.0" 200 32972
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2025320.10326173710311681.png HTTP/1.0" 200 32768
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2025550.7393083412792657.png HTTP/1.0" 200 50606
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2025410.18310975695976917.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2025410.18310975695976917.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56642)
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/www/server/python_manager/versions/3.6.8/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2026050.4833823810572384.png HTTP/1.0" 200 24576
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2026210.7118277981678661.png HTTP/1.0" 200 55965
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2026280.31684487445222287.png HTTP/1.0" 200 57080
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2026130.48557956469393615.png HTTP/1.0" 200 55368
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2026380.9920881939848459.png HTTP/1.0" 200 58198
+[12/Feb/2022 20:27:28] "GET /media/202202/2022-02-12_2026450.7798305326990969.png HTTP/1.0" 200 49761
+[12/Feb/2022 20:27:40] "POST /modify_doc/917/ HTTP/1.0" 200 52
+[12/Feb/2022 20:27:41] "POST /modify_doc/917/ HTTP/1.0" 200 52
