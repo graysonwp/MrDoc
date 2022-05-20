@@ -1,61 +1,61 @@
-2022-05-20 21:54:47.843 | ERROR    | app_doc.views:doc:1073 - 文集浏览出错
+2022-05-19 15:45:26.920 | ERROR    | app_doc.views:doc:1073 - Collection browsing error
 Traceback (most recent call last):
   File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
     self._bootstrap_inner()
     │    └ <function Thread._bootstrap_inner at 0x7f44e89f6ea0>
-    └ <Thread(Thread-1146, started daemon 139933658380032)>
+    └ <Thread(Thread-314, started daemon 139933641594624)>
   File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
     self.run()
     │    └ <function Thread.run at 0x7f44e89f6c80>
-    └ <Thread(Thread-1146, started daemon 139933658380032)>
+    └ <Thread(Thread-314, started daemon 139933641594624)>
   File "/usr/lib64/python3.6/threading.py", line 867, in run
     self._target(*self._args, **self._kwargs)
     │    │        │    │        │    └ {}
-    │    │        │    │        └ <Thread(Thread-1146, started daemon 139933658380032)>
+    │    │        │    │        └ <Thread(Thread-314, started daemon 139933641594624)>
     │    │        │    └ (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
-    │    │        └ <Thread(Thread-1146, started daemon 139933658380032)>
+    │    │        └ <Thread(Thread-314, started daemon 139933641594624)>
     │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f44e20e5da0>>
-    └ <Thread(Thread-1146, started daemon 139933658380032)>
+    └ <Thread(Thread-314, started daemon 139933641594624)>
   File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
     self.finish_request(request, client_address)
-    │    │              │        └ ('127.0.0.1', 46342)
+    │    │              │        └ ('127.0.0.1', 43750)
     │    │              └ <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
     │    └ <function BaseServer.finish_request at 0x7f44e19940d0>
     └ <django.core.servers.basehttp.WSGIServer object at 0x7f44e20e5da0>
   File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
     self.RequestHandlerClass(request, client_address, self)
     │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f44e20e5da0>
-    │    │                   │        └ ('127.0.0.1', 46342)
+    │    │                   │        └ ('127.0.0.1', 43750)
     │    │                   └ <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
     │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
     └ <django.core.servers.basehttp.WSGIServer object at 0x7f44e20e5da0>
   File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
     self.handle()
     │    └ <function WSGIRequestHandler.handle at 0x7f44e0778ea0>
-    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f44e20d7160>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f44dc590f60>
 
   File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
     self.handle_one_request()
     │    └ <function WSGIRequestHandler.handle_one_request at 0x7f44e0778f28>
-    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f44e20d7160>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f44dc590f60>
 
   File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
     handler.run(self.server.get_app())
     │       │   │    │      └ <function WSGIServer.get_app at 0x7f44e0778488>
     │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f44e20e5da0>
-    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f44e20d7160>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f44dc590f60>
     │       └ <function BaseHandler.run at 0x7f44e07751e0>
-    └ <django.core.servers.basehttp.ServerHandler object at 0x7f44e2c0eef0>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f44dda6de10>
 
   File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
     self.result = application(self.environ, self.start_response)
     │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f44e0775510>
-    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f44e2c0eef0>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f44dda6de10>
     │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
-    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f44e2c0eef0>
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f44dda6de10>
     │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f44ddaa7b38>
     │    └ None
-    └ <django.core.servers.basehttp.ServerHandler object at 0x7f44e2c0eef0>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f44dda6de10>
 
   File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
     response = self.get_response(request)
