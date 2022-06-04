@@ -1375,6 +1375,10 @@ def modify_doc(request,doc_id):
                                     if t not in current_doc_tags and current_doc_tags != '':
                                         tag = Tag.objects.get_or_create(name=t, create_user=request.user)
                                         DocTag.objects.get_or_create(tag=tag[0], doc=doc)
+                            # 更新文集修改时间
+                            project = Project.objects.get(id=doc.top_doc)
+                            project.modify_time = datetime.datetime.now()
+                            project.save()
 
                             return JsonResponse({'status': True, 'data': _('修改成功')})
                         except:
