@@ -633,7 +633,7 @@ def manage_project(request):
         limit = request.POST.get('limit', 10)
         # 获取文集列表
         if kw == '':
-            project_list = Project.objects.filter(create_user=request.user).order_by('-`create_time`')
+            project_list = Project.objects.filter(create_user=request.user).order_by('-create_time')
         else:
             project_list = Project.objects.filter(
                 Q(intro__icontains=kw) | Q(name__icontains=kw),
