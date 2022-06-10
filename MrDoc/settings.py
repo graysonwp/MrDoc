@@ -256,6 +256,6 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = None
 # else:
 #     CORS_ALLOWED_ORIGINS = capacitor_origins + cors_str.split(',')
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ORIGIN_WHITELIST = (
-    'googletagmanager.com'
-)
+CORS_ORIGIN_WHITELIST = [
+    'https://www.googletagmanager.com'
+]
