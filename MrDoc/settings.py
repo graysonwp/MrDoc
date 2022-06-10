@@ -259,3 +259,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_WHITELIST = [
     'https://www.googletagmanager.com'
 ]
+CORS_ALLOWED_ORIGINS = [
+    'https://www.googletagmanager.com'
+]
