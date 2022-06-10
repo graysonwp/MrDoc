@@ -250,7 +250,7 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
 # 跨域请求配置
 cors_str = CONFIG.get("cors_origin","allow",fallback=[])
-capacitor_origins = ['http://localhost','capacitor://localhost','https://www.googletagmanager.com`']
+capacitor_origins = ['http://localhost','capacitor://localhost','https://www.googletagmanager.com']
 if cors_str == []:
     CORS_ALLOWED_ORIGINS = capacitor_origins
 else:
