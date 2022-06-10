@@ -249,16 +249,9 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
 # 跨域请求配置
-# cors_str = CONFIG.get("cors_origin","allow",fallback=[])
-# capacitor_origins = ['http://localhost','capacitor://localhost']
-# if cors_str == []:
-#     CORS_ALLOWED_ORIGINS = capacitor_origins
-# else:
-#     CORS_ALLOWED_ORIGINS = capacitor_origins + cors_str.split(',')
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ORIGIN_WHITELIST = [
-    'https://www.googletagmanager.com'
-]
-CORS_ALLOWED_ORIGINS = [
-    'https://www.googletagmanager.com'
-]
+cors_str = CONFIG.get("cors_origin","allow",fallback=[])
+capacitor_origins = ['http://localhost','capacitor://localhost']
+if cors_str == []:
+    CORS_ALLOWED_ORIGINS = capacitor_origins
+else:
+    CORS_ALLOWED_ORIGINS = capacitor_origins + cors_str.split(',')
