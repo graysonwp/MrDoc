@@ -12,6 +12,7 @@ from app_doc.models import Doc,Project
 class HomeSitemap(Sitemap):
     priority = 0.5
     changefreq = 'daily'
+    protocol = 'https'
 
     def items(self):
         return ['pro_list']
@@ -23,6 +24,7 @@ class HomeSitemap(Sitemap):
 class ProjectSitemap(Sitemap):
     changefreq = "daily"
     priority = 0.8
+    protocol = 'https'
 
     def items(self):
         return Project.objects.filter(role=0)
@@ -31,6 +33,7 @@ class ProjectSitemap(Sitemap):
 class DocSitemap(Sitemap):
     changefreq = "daily"
     priority = 0.8
+    protocol = 'https'
 
     def __init__(self,pro):
         self.pro = pro

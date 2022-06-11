@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'haystack', # 全文搜索
     'app_admin', # 管理APP
     'app_doc', # 文档APP
@@ -74,6 +75,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'app_admin.middleware.require_login_middleware.RequiredLoginMiddleware',
 ]
+
+SITE_ID = 1
 
 ROOT_URLCONF = 'MrDoc.urls'
 
