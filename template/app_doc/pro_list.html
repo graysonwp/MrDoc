@@ -11,6 +11,7 @@
     <meta http-equiv="Cache-Control" content="max-age=7200" />
     <meta name="keywords" content="{% if site_keywords != None %}{{site_keywords}}{% endif %}"/>
     <meta name="description" content="{% if site_desc != None %}{{site_desc}}{% endif %}" />
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{% if site_name != None and site_name != '' %}{{site_name}} {% else %}{% trans "站点标题" %}{% endif %} - {% if site_sub_name != None %}{{site_sub_name}} {% else %}{% trans "又一个MrDoc站点" %}{% endif %}</title>
     <link href="{% static 'layui/css/layui.css' %}?version={{mrdoc_version}}" rel="stylesheet">
