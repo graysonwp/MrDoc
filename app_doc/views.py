@@ -2991,7 +2991,7 @@ def download_doc_md(request,doc_id):
 
     response = HttpResponse(content_type='text/plain')
     response['Content-Disposition'] = 'attachment; filename={}.md'.format(doc.name)
-    response.write(doc.pre_content)
+    response.write(doc.pre_content.replace('/media/', 'https://notebook.grayson.top/media/'))
 
     return response
 
