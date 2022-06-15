@@ -277,10 +277,26 @@
                     };
                     */
                     (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://grayson-notebook.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', '//disqus.com/next/config.json?' + new Date().getTime(), true);
+                    xhr.timeout = 3000;
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            // 加载 Disqus 评论框
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://grayson-notebook.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        }
+                    }
+                    xhr.ontimeout = function () {
+                        xhr.abort();
+                        // 加载自制评论框
+                    }
+                    xhr.onerror = function() {
+                        // 加载自制评论框
+                    }
+                    xhr.send(null);
                     })();
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
