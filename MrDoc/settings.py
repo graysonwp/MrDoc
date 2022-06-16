@@ -251,8 +251,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
-SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
-
 # 跨域请求配置
 cors_str = CONFIG.get("cors_origin","allow",fallback=[])
 capacitor_origins = ['http://localhost','capacitor://localhost']

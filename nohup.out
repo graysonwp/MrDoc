@@ -2392,3 +2392,14 @@ Quit the server with CONTROL-C.
 <class 'datetime.datetime'>
 >>> unknown type:
 <class 'datetime.datetime'>
+[16/Jun/2022 10:01:57] "GET /project-21/doc-894/ HTTP/1.0" 200 74291
+[16/Jun/2022 10:01:59] "GET /static/editor.md/lib/purify.min.js.map HTTP/1.0" 404 6092
+[16/Jun/2022 10:05:50] "GET /project-21/doc-894/ HTTP/1.0" 200 74291
+[16/Jun/2022 10:05:51] "GET /static/editor.md/lib/purify.min.js.map HTTP/1.0" 404 6092
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2022 - 10:01:53
+Django version 2.2.28, using settings 'MrDoc.settings'
+Starting development server at http://0.0.0.0:9200/
+Quit the server with CONTROL-C.
