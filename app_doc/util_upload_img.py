@@ -70,7 +70,7 @@ def ice_save_file(file_obj,user):
     path_file = relative_path + file_name
     path_file = settings.MEDIA_ROOT + path_file
     #file_Url 是文件的url下发路径
-    file_url = (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
+    file_url = settings.DOMAIN + (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
     
     with open(path_file, 'wb') as f:
         for chunk in file_obj.chunks():
@@ -107,7 +107,7 @@ def ice_url_img_upload(url,user):
     path_file = os.path.join(relative_path, file_name)
     path_file = settings.MEDIA_ROOT + path_file
     # print('文件路径：', path_file)
-    file_url = (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
+    file_url = settings.DOMAIN + (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
     # print("文件URL：", file_url)
     header = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
@@ -218,7 +218,7 @@ def img_upload(files, dir_name, user, group_id=None):
     path_file=os.path.join(relative_path, file_name)
     path_file = settings.MEDIA_ROOT + path_file
     # print('文件路径：',path_file)
-    file_url = (settings.MEDIA_URL + relative_path + file_name).replace("//",'/')
+    file_url = settings.DOMAIN + (settings.MEDIA_URL + relative_path + file_name).replace("//",'/')
     # print("文件URL：",file_url)
     with open(path_file, 'wb') as f:
         for chunk in files.chunks():
@@ -255,7 +255,7 @@ def base_img_upload(files,dir_name, user):
     path_file = os.path.join(relative_path, file_name)
     path_file = settings.MEDIA_ROOT + path_file
     # print('文件路径：', path_file)
-    file_url = (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
+    file_url = settings.DOMAIN + (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
     # print("文件URL：", file_url)
     with open(path_file, 'wb') as f:
         f.write(files_base)  # 保存文件
@@ -271,58 +271,65 @@ def base_img_upload(files,dir_name, user):
 # url图片上传
 def url_img_upload(url,dir_name,user):
 
-    relative_path = upload_generation_dir(dir_name)
-    file_name = str(datetime.datetime.today()).replace(':', '').replace(' ', '_').split('.')[0] + str(random.random()) + '.png'  # 日期时间
-    path_file = os.path.join(relative_path, file_name)
-    path_file = settings.MEDIA_ROOT + path_file
-    # print('文件路径：', path_file)
-    file_url = (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
-    # print("文件URL：", file_url)
-    header = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
-    }
-    try:
-        r = requests.get(url, headers=header, stream=True)
-        if r.status_code == 200:
-            # 判断是否为允许上传的图片类型
-            remote_type = r.headers['Content-Type'].split("/")[1]
-            if remote_type not in settings.ALLOWED_IMG:
-                logger.error("上传了不允许的URL图片：{}".format(url))
+    if settings.DOMAIN in url:
+        resp_data = {
+                'msg': '',
+                'code': 1,
+                'data': {}
+            }
+    else:
+        relative_path = upload_generation_dir(dir_name)
+        file_name = str(datetime.datetime.today()).replace(':', '').replace(' ', '_').split('.')[0] + str(random.random()) + '.png'  # 日期时间
+        path_file = os.path.join(relative_path, file_name)
+        path_file = settings.MEDIA_ROOT + path_file
+        # print('文件路径：', path_file)
+        file_url = settings.DOMAIN + (settings.MEDIA_URL + relative_path + file_name).replace("//","/")
+        # print("文件URL：", file_url)
+        header = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
+        }
+        try:
+            r = requests.get(url, headers=header, stream=True)
+            if r.status_code == 200:
+                # 判断是否为允许上传的图片类型
+                remote_type = r.headers['Content-Type'].split("/")[1]
+                if remote_type not in settings.ALLOWED_IMG:
+                    logger.error("上传了不允许的URL图片：{}".format(url))
+                    resp_data = {
+                        'msg': '',
+                        'code': 1,
+                        'data': {}
+                    }
+                    return resp_data
+                with open(path_file, 'wb') as f:
+                    f.write(r.content)  # 保存文件
+                Image.objects.create(
+                    user=user,
+                    file_path=file_url,
+                    file_name=file_name,
+                    remark=_('粘贴上传'),
+                )
+
+                resp_data = {
+                    'msg': '',
+                    'code': 0,
+                    'data' : {
+                    'originalURL': url,
+                    'url': file_url
+                    }
+                    }
+            else:
                 resp_data = {
                     'msg': '',
                     'code': 1,
                     'data': {}
                 }
-                return resp_data
-            with open(path_file, 'wb') as f:
-                f.write(r.content)  # 保存文件
-            Image.objects.create(
-                user=user,
-                file_path=file_url,
-                file_name=file_name,
-                remark=_('粘贴上传'),
-            )
-
-            resp_data = {
-                 'msg': '',
-                 'code': 0,
-                 'data' : {
-                   'originalURL': url,
-                   'url': file_url
-                 }
-                }
-        else:
+        except Exception as e:
+            logger.error("上传URL图片异常：{}".format(repr(e)))
             resp_data = {
                 'msg': '',
                 'code': 1,
                 'data': {}
             }
-    except Exception as e:
-        logger.error("上传URL图片异常：{}".format(repr(e)))
-        resp_data = {
-            'msg': '',
-            'code': 1,
-            'data': {}
-        }
     return resp_data
     # return {"success": 1, "url": file_url, 'message': '上传图片成功'}
