@@ -1,0 +1,1206 @@
+4、创建过程
+4、创建过程
+
+3.2 ChannelHandler和ChannelPipeline
+## 1 ChannelHandler
+
+### 1.1 功能说明
+
+1. ChannelHandler**类似于 Servlet 的 Filter 过滤器**，**负责对 I/O 事件或者 I/O 操作进行拦截和处理**。
+2. 他**可以选择性地拦截和处理自己感兴趣的事件**，**也可以透传和终止事件的传递**。
+   
+   &gt; 透传，即透明传输（Pass Through），指的是在通讯中不管传输的业务内容如何，只负责将传输的内容由源地址传输到目的地址，而不对业务数据内容做任何改变。
+3. 基于 ChannelHandler 接口，用户**可以方便地进行业务逻辑定制**，例如打印日志、统一封装异常消息、性能统计和消息编解码等。
+4. ChannelHandler**支持注解**，目前支持的注解有两种：
+   
+   1. `Shareable`：**多个 ChannelPipeline 共用同一个 ChannelHandler**。
+   2. `Skip`：**被 `Skip` 注解的方法不会被调用**，**直接被忽略**。
+5. 对于大多数的 ChannelHandler**会选择性地拦截和处理某个或某些事件**，**其他的事件会忽略**，**由下一个 ChannelHandler 进行拦截和处理**，这就**会导致一个问题**，**用户 ChannelHandler 必须要实现 ChannelHandler 的所有接口**，**包括他不关心的那些事件处理接口**，这**会导致用户代码的冗余和臃肿**，**代码的可维护性也会变差**，为了解决这个问题，Netty 提供了 ChannelHandlerAdapter 基类，他的**所有接口实现都是事件透传**，**如果用户 ChannelHandler 关心某个事件**，**只需要覆盖 ChannelHandlerAdapter 对应的方法即可**，对于不关心的，可以直接继承使用父类的方法，这样子类的代码就会非常简洁和清晰，ChannelHandlerAdapter 部分代码实现如下所示，我们可以发现这些透传方法被 `@Skip` 注解了，这些方法在执行的过程中被忽略，直接跳到下一个 ChannelHandler 中执行对应的方法：
+   
+   ```java
+   @Skip
+   @Override
+   public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+       ctx.fireExceptionCaught(cause);
+   }
+   ```
+
+### 1.2 部分类继承关系
+
+![](/media/202108/2021-08-24_145140_169106.png)
+
+## 2 ChannelPipeline
+
+### 2.1 功能说明
+
+ChannelPipeline**是 ChanelHandler 的容器**，他**负责 ChannelHandler 的管理和事件拦截与调度**。
+
+#### 2.1.1 事件处理
+
+下图展示了**一个消息被 ChannelPipeline 的 ChannelHandler 链拦截和处理的全过程**：
+
+![](/media/202108/2021-08-24_150034_070629.png)
+
+1. 底层的 SocketChannel 的 `read()` 方法**读取 ByteBuf**，**触发 ChannelRead 事件**，**由 IO 线程 NioEventLoop 调用 ChannelPipeline 的 `fireChannelRead()` 方法**，**将消息传到 ChannelPipeline 中**。
+2. **消息依次被 HeadHandler**、**ChannelHandler1**、**ChannelHandler2**、...、**TailHandler 拦截和处理**，在这个过程中，**任何 ChannelHandler 都可以中断当前的流程**，**结束消息的传递**。
+3. **调用 ChannelHandlerContext 的 `write()` 方法发送消息**，**消息从 TailHandler 开始**，**途径 ChannelHandlerN**、...、**ChannelHandler1**、**HeadHandler**，**最终被添加到消息发送缓冲区等待刷新和发送**，在此过程中**也可以中断消息的传递**，例如当编码失败时，就需要中断流程，构造异常的 Future 返回。
+
+#### 2.1.2 事件分类
+
+&gt; 如无特殊说明，以下方法均在 `ChannelHandlerContext` 类中。
+
+Netty 中的事件分为 `inbound`**事件和 `outbound` 事件**：
+
+1. `inbound` 事件通常**由 I/O 线程触发**，例如**TCP 链路建立事件**、**链路关闭事件**、**读事件**、**异常通知事件**等，对应于上图的左半部分，触发 `inbound` 事件的方法如下：
+   1. `fireChannelRegistered()`：**Channel 注册事件**。
+   2. `fireChannelActive()`：**TCP 链路建立成功**，**Channel 激活事件**。
+   3. `fireChannelRead()`：**读事件**。
+   4. `fireChannelReadComplete()`：**读操作完成通知事件**。
+   5. `fireExceptionCaught()`：**异常通知事件**。
+   6. `fireUserEventTriggered()`：**用户自定义事件**。
+   7. `fireChannelWritabilityChanged()`：**Channel 的可写状态变化通知事件**。
+   8. `fireChannelInactive()`：**TCP 连接关闭**，**链路不可用通知事件**。
+2. `outbound` 事件通常是**由用户主动发起的网络 I/O 操作**，例如**用户发起的连接操作**、**绑定操作**、**消息发送等操作**，对应于上图的右半部分，触发 `outbound` 事件的方法如下：
+   1. `bind()`：**绑定本地地址事件**。
+   2. `connect()`：**连接服务端事件**。
+   3. `write()`：**发送事件**。
+   4. `flush()`：**刷新时间**。
+   5. `read()`：**读事件**。
+   6. `disconnect()`：**断开连接事件**。
+   7. `close()`：**关闭当前 Channel 事件**。
+
+#### 2.1.3 自定义拦截器
+
+1. ChannelPipeline**通过 ChannelHandler 接口来实现事件的拦截和处理**，由于 ChannelHandler 中的事件种类繁多，不同的 ChannelHandler 可能只需要关心其中的某一个或者某几个事件，所以，**通常 ChannelHandler 只需要继承相应的 ChannelHandlerAdapter 类覆盖自己关心的方法即可**。
+2. 具体的示例如下：
+   1. **拦截 `Channel Active` 事件**，**打印 TCP 链路建立成功日志**：
+      
+      ```java
+      public class MyInboundHandler extends ChannelInboundHandlerAdapter {
+          @Override
+          public void channelActive(ChannelHandlerContext ctx) throws Exception {
+              System.out.println(&quot;TCP connected!&quot;);
+              ctx.fireChannelActive();
+          }
+      }
+      ```
+   2. **拦截 `Channel Close` 事件**，**在链路关闭时释放资源**：
+      
+      ```
+      public class MyOutboundHandler extends ChannelOutboundHandlerAdapter {
+          @Override
+          public void close(ChannelHandlerContext ctx, ChannelPromise promise) throws Exception {
+              System.out.println(&quot;TCP closing ...&quot;);
+              ctx.close(promise);
+          }
+      }
+      ```
+
+#### 2.1.3 构建 ChannelPipeline
+
+1. 事实上，**用户不需要自己创建 ChannelPipeline**，因为**使用 ServerBootstrap 或者 Bootstrap 启动服务端或者客户端时**，**Netty 会为每个 Channel 连接创建一个独立的 ChannelPipeline**，对于使用者而言，只**需要将自定义的拦截器加入到 ChannelPipeline 中即可**，例如：
+   
+   ```java
+   channelPipeline = ch.pipeline();
+   channelPipeline.addLast(&quot;decoder&quot;, new MyProtocolDecoder());
+   channelPipeline.addLast(&quot;encoder&quot;, new MyProtocolEncoder());
+   ```
+2. 对于类似**编解码**这样的 ChannelHandler，他**存在先后顺序**，例如 `MessageToMessageDecoder`，在这之前往往**需要有 `ByteToMessageDecoder` 将 ByteBuf 解码为对象**，**然后对对象做二次解码得到最终的 POJO 对象**，ChannelPipeline**支持使用 `addBefore()` 和 `addAfter()` 在指定位置添加或者删除拦截器**。
+
+#### 2.1.4 主要特性
+
+1. ChannelPipeline**支持运行态动态的添加或者删除 ChannelHandler**，在某些场景下这个特性非常实用，例如当业务高峰期需要对系统做拥塞保护时，就可以根据当前的系统时间进行判断，如果处于业务高峰期，则动态地将系统拥塞保护 ChannelHandler 添加到当前的 ChannelPipeline 中，当高峰期过去之后，就可以动态删除拥塞保护 ChannelHandler 了。
+2. **ChannelPipeline 是线程安全的**，这意味着 $N$**个业务线程可以并发地操作 ChannelPipeline 而不存在多线程并发问题**，但是**ChannelHandler 不是线程安全的**，这意味着**尽管 ChannelPipeline 是线程安全的**，但是**用户仍然需要自己保证 ChannelHandler 的线程安全**。
+
+## 参考文献
+
+1. 《Netty 权威指南 第 2 版》
+2. [透传](https://baike.baidu.com/item/%E9%80%8F%E4%BC%A0/5630676)。
+
+3.1 Channel
+## 1 功能说明
+
+1. Channel**是 Netty 网络操作抽象类**，**聚合了一组功能**，包括但不限于**网络的读**、**写**，**客户端发起连接**，**主动关闭连接**，**链路关闭**，**获取通信双方的网络地址**等。
+2. 他**也包含了 Netty 框架相关的一些功能**，包括**获取该 Channel 的 EventLoop**，**获取缓冲分配器 ByteBufAllocator 和 ChannelPipeline**等。
+
+### 1.1 工作原理
+
+#### 1.1.1 为什么不使用 JDK NIO 原生的 Channel
+
+1. JDK 的 `SocketChannel` 和 `ServerSocketChannel`**没有统一的 Channel 接口供业务开发者使用**，**对于用户而言**，**没有统一的操作视图**，**使用起来并不方便**。
+2. JDK 的 `SocketChannel` 和 `ServerSocketChannel` 的主要职责是**网络 I/O 操作**，由于他们**是 SPI 类接口**，**由具体的虚拟机厂家来提供**，所以**通过继承 SPI 功能类来扩展其功能的难度很大**，**直接实现 `SocketChannel` 和 `ServerSocketChannel` 抽象类**，**工作量和重新开发一个新的 Channel 功能类是差不多的**。
+
+   &gt; 什么是 SPI，他和 API 有什么区别？
+   &gt;
+   &gt; 1. **SPI**：
+   &gt;    1. SPI 全称为**Service Provider Interface**，是**Java 提供的一套用来被第三方实现或者扩展的接口**，他**可以用来启用框架扩展和替换组件**，主要作用就是**为这些被扩展的 API 寻找服务实现**。
+   &gt;    2. SPI 是**调用方来制定接口规范**，**提供给外部来实现**，**调用方在调用时选择自己需要的外部实现**。
+   &gt;    3. 从使用人员上来说，SPI**被框架扩展人员使用**。
+   &gt; 2. **API**：
+   &gt;    1. API 全称**Application Programming Interface**，大多数情况下都是**实现方制定接口并完成对接口的实现**，**调用方仅仅依赖接口调用**，且**无权选择不同实现**。
+   &gt;    2. 从使用人员上来说，API 直接**被应用开发人员使用**。
+   &gt;
+3. **Netty 的 Channel 需要能够跟 Netty 的整体框架融合在一起**，例如 I/O 模型、基于 ChannelPipeline 的定制模型、以及基于原数据描述配置化的 TCP 参数等，这些**JDK 的 `SocketChannel` 和 `ServerSocketChannel` 都没有提供**，**需要重新封装**。
+4. **自定义的 Channel**，**功能实现更加灵活**。
+
+#### 1.1.2 设计理念
+
+1. **在 Channel 接口层**，**采用 Facade 模式进行统一封装**，**将网络 I/O 操作**、**网络 I/O 相关联的其他操作封装起来**，**统一对外提供**。
+2. **Channel 接口的定义尽量大而全**，**为 `SocketChannel` 和 `ServerSocketChannel` 提供统一的视图**，**由不同子类实现不同的功能**，**公共功能在抽象父类中实现**，**最大程度地实现功能和接口的重用**。
+3. **具体实现采用聚合而非包含的方式**，**将相关的功能类聚合在 Channel 中**，**由 Channel 统一负责分配和调度**，**功能实现更加灵活**。
+
+#### 1.1.3 生命周期
+
+1. Channel 接口中**定义了一组和 `ChannelInboundHandler` 密切相关的简单但功能强大的状态模型**：
+
+   1. `ChannelUnregistered`：Channel**已经被创建**，但**还未注册到 EventLoop**。
+   2. `ChannelRegistered`：Channel**已经被注册到了 EventLoop**。
+   3. `ChannelActive`：Channel**处于活动状态**（已经连接到他的远程节点），**现在可以接收和发送数据了**。
+   4. `ChannelInactive`：Channel**没有连接到远程节点**。
+2. Channel 的生命周期如下图所示，**当这些状态发生变化时**，**就会生成对应的事件**，**这些事件将会被转发给 ChannelPipeline 中的 ChannelHandler**，然后**对他们做出响应**。
+
+   ![](/media/202108/2021-08-24_172420_964676.png)
+
+## 参考文献
+
+1. 《Netty 权威指南 第 2 版》
+2. [Java SPI 详解](https://www.cnblogs.com/jy107600/p/11464985.html)。
+3. 《Netty 实战》
+3.3 EventLoop和EventLoopGroup
+## 1 设计原理
+
+Netty的NioEventLoop并不是一个纯粹的I/O线程，他除了**负责I/O读写**外，还兼顾处理以下两类任务：
+
+1. **系统Task**：
+   1. **通过调用NioEventLoop的 `execute()`方法实现**，Netty有很多系统Task，创建他们的主要原因是**当I/O线程和用户线程同时操作网络资源时**，**为了防止并发操作导致的锁竞争**，**将用户线程的操作封装成Task放入消息队列中**，**由I/O线程负责执行**，这样就**实现了局部无锁化**。
+2. **定时任务**：
+   1. **通过调用NioEventLoop的 `schedule()`方法实现**。
+
+## 2 继承关系
+
+![](/media/202108/2021-08-25_102028_477372.png)
+
+## 参考文献
+
+1. 《Netty 权威指南 第 2 版》
+3.4 Future和Promise
+## 1 Future
+
+### 1.1 功能介绍
+
+1. 由于 Netty 的 Future 都是**与异步 I/O 操作相关**的，因此命名为**ChannelFuture**，代表他**与 Channel 操作相关**。
+2. ChannelFuture 主要**为了解决在异步 I/O 操作中调用者无法获取异步操作的结果而专门设计的**，**有两种状态**，**分别为 `uncompleted` 和 `completed`**：
+   1. 当**开始一个 I/O 操作**时，**一个新的 ChannelFuture 被创建**，此时他**处于**`uncompleted`**状态**，非失败、非成功、非取消，因为**I/O 操作还没有完成**。
+   2. **一旦 I/O 操作完成**，**ChannelFuture 将会被设置成 `completed`**，他的结果有三种可能，分比为操作成功、操作失败、操作被取消。
+3. ChannelFuture**可以同时增加一个或者多个 GenericFutureListener**，**也可以用 `remove()` 方法删除 GenericFutureListener**，**当 I/O 操作完成之后**，**I/O 线程将会回调 ChannelFuture 中 GenericFutureListener 的 `operationComplete()` 方法**，并**把 ChannelFuture 当做方法的入参**，**如果用户需要做上下文相关的操作**，**需要将上下文信息保存到对应的 ChannelFuture 中**。
+4. 需要注意的是，**不要在 ChannelHandler 中调用 ChannelFuture 的 `await()` 方法**，这**会导致死锁**，因为**发起 I/O 操作之后**，**由 I/O 线程负责异步通知发起 I/O 操作的用户线程**，如果**I/O 线程和用户线程是同一个线程**，就**会导致 I/O 线程等待自己通知操作完成**，这**就导致了死锁**。
+   ```java
+   /**
+    * BAD - NEVER DO THIS
+    */
+   @Override
+   public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+       ChannelFuture channelFuture = ctx.channel().close();
+       channelFuture.awaitUninterruptibly();
+       //  Perform post-closure operation
+       //  ...
+   }
+
+   /**
+    * GOOD
+    */
+   @Override
+   public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+       ChannelFuture channelFuture = ctx.channel().close();
+       channelFuture.addListener(new ChannelFutureListener() {
+           @Override
+           public void operationComplete(ChannelFuture future) throws Exception {
+               //  Perform post-closure operation
+               //  ...
+           }
+       })
+   }
+   ```
+
+## 2 Promise
+
+### 2.1 功能介绍
+
+1. Promise 是**可写的 Future**，Future 自身并没有写操作相关的接口，Netty**通过 Promise 对 Future 进行扩展**，**用于设置 I/O 操作的结果**：
+
+   ```java
+   /**
+    * Marks this future as a success and notifies all
+    * listeners.
+    *
+    * If it is success or failed already it will throw an {@link IllegalStateException}.
+    */
+   Promise&lt;V&gt; setSuccess(V result);
+
+   /**
+    * Marks this future as a success and notifies all
+    * listeners.
+    *
+    * @return {@code true} if and only if successfully marked this future as
+    *         a success. Otherwise {@code false} because this future is
+    *         already marked as either a success or a failure.
+    */
+   boolean trySuccess(V result);
+
+   /**
+    * Marks this future as a failure and notifies all
+    * listeners.
+    *
+    * If it is success or failed already it will throw an {@link IllegalStateException}.
+    */
+   Promise&lt;V&gt; setFailure(Throwable cause);
+
+   /**
+    * Marks this future as a failure and notifies all
+    * listeners.
+    *
+    * @return {@code true} if and only if successfully marked this future as
+    *         a failure. Otherwise {@code false} because this future is
+    *         already marked as either a success or a failure.
+    */
+   boolean tryFailure(Throwable cause);
+   ```
+2. Netty**发起 I/O 操作的时候**，**会创建一个新的 Promise 对象**，例如调用 ChannelHandlerCntext 的 `write()` 方法时，会创建一个新的 ChannelPromise：
+
+   ```java
+   @Override
+   public ChannelFuture write(Object msg) {
+       return write(msg, newPromise());
+   }
+   ```
+
+   **当 I/O 操作发生异常或者完成时**，**设置 Promise 的结果**：
+
+   ```java
+   @Override
+   public ChannelFuture write(Object msg, ChannelPromise promise) {
+       Channel channel = channel();
+       if (!channel.isActive()) {
+           //  Mark the write request as failure if the channel is inactive.
+           if (channel.isOpen()) {
+               promise.tryFailure(NOT_YET_CONNECTED_EXCEPTION);
+           } else {
+               promise.tryFailure(CLOSED_CHANNEL_EXCEPTION);
+           }
+           //  Release message now to prevent resource-leak.
+           ReferenceCountUtil.release(msg);
+       } else {
+           outBoundBuffer.addMessage(msg, promise);
+       }
+   }
+   ```
+
+## 参考文献
+
+1. 《Netty 权威指南 第 2 版》
+3、核心组件
+3、核心组件
+
+4.1 概述
+## 1 简介
+
+1. NIO 中的 N 可以理解为 Non-Blocking，是**一种同步非阻塞的 I/O 模型**，**在 JDK 1.4 中引入了 NIO 框架**，**对应于 `java.nio` 包**，**提供了 `Channel`、`Selector`、`Buffer` 等抽象**。
+2. 他**支持面向缓冲的**、**基于通道的 I/O 操作方法**，**提供了与传统 I/O 模型中的 `Socket` 和 `ServerSocket` 相对应的 `SocketChannel` 和 `ServerSocketChannel` 两种不同的套接字通道实现**，这两种通道**都支持阻塞和非阻塞两种模式**：
+   1. 阻塞模式就像传统中的支持一样，比较**简单**，但是**性能和可靠性都不好**，一般**用于低负载**、**低并发的应用程序**，以此来**提升开发速度和可维护性**。
+   2. 非阻塞模式正好与之相反，一般**用于高负载**、**高并发的**（网络）**应用**，以此来**提升高性能和可靠性**。
+
+## 2 BIO、NIO、AIO 的区别
+
+&gt; 底层原理可参考[五种 IO 模型](https://notebook.grayson.top/project-26/doc-335/#3-%E4%BA%94%E7%A7%8D-IO-%E6%A8%A1%E5%9E%8B)，下面介绍的主要是 Java 中 BIO、NIO、AIO 的区别。
+
+### 2.1 BIO 是阻塞的，NIO 是非阻塞的
+
+1. BIO 的各种流是**阻塞的**，这就意味着，**当一个线程调用 `read()` 或 `write()` 时**，**该线程被阻塞**，**直到有一些数据被读取**，**或数据完全写入**，**在此期间**，**该线程不能再干其他任何事**，因此**在任何时候都可能有大量的线程处于休眠状态**，**只是等待输入或者输出就绪**，这**可以算为对资源的一种浪费**，
+2. NIO 使我们可以进行**非阻塞**IO 操作，比如说，**单线程从通道读取数据到 Buffer**，同时**可以继续做别的事**，当**数据读取到 Buffer 中后**，线程**再进行处理数据**，写数据也是一样的，**一个线程请求写入一些数据到某通道**，但**不需要等待他完全写入**，这个线程**可以同时去做别的事情**，这样**可以提高线程的利用效率**。
+
+### 2.2 BIO 是面向流（Stream Oriented）的，NIO 是面向缓冲区（Buffer Oriented）的
+
+1. Buffer 是**一个可以读写数据的内存块**，可以理解成一个**容器对象**（含数组），该对象**提供了一组方法**，**可以更轻松地使用内存块**，缓冲区对象**内置了一些机制**，**能够跟踪和记录缓冲区的状态变化**。
+2. 在 NIO 类库中加入 Buffer 对象，体现了 NIO 与 BIO 的一个重要区别：
+   1. 在面向流的 BIO 中可以**将数据直接写入或者直接读到 Stream 对象中**，**每次从流中读取一个或者多个字节**，**直至读取完所有的字节**。
+   2. 在 NIO 库中，**所有数据都是用缓冲区处理的**，在**读取数据时**，他是**直接读缓冲区中的数据**，在**写入数据时**，也是**直接写到缓冲区中**，**任何时候访问 NIO 中的数据**，**都是通过缓冲区进行操作**，因此**在操作上更加灵活**，**读取速度也更加快**。
+3. NIO 的 Buffer 除了做**缓冲块优化**之外，还**提供了一个可以直接访问物理内存的类 `DirectBuffer`**：
+   1. **普通的 Buffer 分配的是[JVM 堆内存](https://notebook.grayson.top/project-34/doc-541/#1-2-%E5%A0%86%E5%86%85%E5%AD%98)**，而`DirectBuffer`**是直接分配物理内存**。
+   2. **数据要输出到外部设备**，**必须先从用户空间复制到内核空间**，**再复制到输出设备**，而**则是直接将步骤简化为从内核空间复制到外部设备**，**减少了数据拷贝**。
+   3. 但是**由于 `DirectBuffer` 申请的是非 JVM 物理内存**，**所以创建和销毁的代价很高**，**不是直接由 JVM 负责垃圾回收**，而是**通过 Java 引用机制来释放该内存块**。
+
+### 2.3 NIO 通过 Channel 进行读写
+
+1. 传统 IO 的流都是**单向**的，因此他们需要分为`Input Stream` 和`Output Stream`。
+2. 而 NIO 中的 Channel 是**双向**的，**数据可以从 Channel 读到 Buffer 中**（使用`read()` 方法），**也可以从 Buffer 写到 Channel**（使用`write()` 方法）。
+3. Channel 也**可以设置为非阻塞模式**，此时**当 Channel 从 Buffer 中读取数据时**，**如果有待读取的数据**，**则返回该数据**，**如果没有待读取的数据**，**对应的方法也不会被阻塞**，**而是直接返回**。![https://github.com/heibaiying](/media/202108/2021-08-23_1421330.6111752116340494.png)
+
+### 2.4 NIO 有 Selector 实现多路复用，而 BIO 没有
+
+1. Java NIO**实现了 IO 多路复用中的 Reactor 模型**：
+
+   1. **一个线程使用一个 Selector 通过轮询的方式去监听多个 Channel 上的事件**（`accept`、`read`），**如果某个 Channel 上面发生监听事件**，**这个 Channel 就处于就绪状态**，**然后进行 IO 操作**。
+   2. **可以将监听的 Channel 配置为非阻塞**，**这样当 Channel 上的 IO 事件还未到达时**，**就不会进入阻塞状态一直等待**，**而是继续轮询其他 Channel**，**找到 IO 事件已经到达的 Channel 执行**。
+   3. 因为创建和切换线程的开销很大，所以**使用一个线程来处理多个事件**，**减少了线程之间的切换**，**提高了系统的效率**。
+
+      &gt; 需要注意的是：
+      &gt;
+      &gt; 1. **只有 `SocketChannel` 才能配置为非阻塞**，而`FileChannel`**不能**，因为`FileChannel`**配置非阻塞也没有意义**。
+      &gt; 2. **目前操作系统的[IO 多路复用](https://notebook.grayson.top/project-26/doc-335)机制都是用了[epoll](https://notebook.grayson.top/project-26/doc-335/#3-3-2-3-epoll)**，**相比传统的 select 机制**，**epoll 没有最大连接句柄 1024 的限制**，所以**Selector 在理论上可以轮询成千上万的客户端**。
+      &gt;
+
+      ![https://github.com/heibaiying](/media/202108/2021-08-23_1425060.6312594694492627.png)
+
+### 2.5 AIO 是真正意义上的异步 IO
+
+1. AIO 是**一种异步非阻塞的通信模式**，**实现了真正意义上的异步 IO**，**直接将 IO 操作交给操作系统进行异步处理**。
+
+## 3 三种 IO 的适用场景
+
+1. BIO 方式适用于**连接数目少且固定**的架构，**程序直观简单易理解**，是 JDK 1.4 以前的唯一选择。
+2. NIO 方式适用于**连接数目多且连接比较短**（轻操作）的架构，比如聊天服务器，**编程比较复杂**，JDK 1.4 开始支持。
+3. AIO 方式适用于**连接数目多且连接比较长**（重操作）的架构，比如相册服务器，**充分调用操作系统参与并发操作**，**编程比较复杂**，JDK 1.7 开始支持。
+
+## 参考文献
+
+1. [offer 快到碗里来-Netty 核心面试题 15 连问](https://www.nowcoder.com/discuss/648088)。
+2. [Java NIO](https://dunwu.github.io/javacore/io/java-nio.html)。
+3. [Java BIO NIO AIO](https://weikeqin.com/2019/07/08/java-bio-nio-aio)。
+4. [Java NIO 核心组件全解](https://juejin.cn/post/6855129006631550990)。
+2.3.11 最长连续序列
+## 1 题目
+
+给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。
+
+请你设计并实现时间复杂度为 O(n) 的算法解决此问题。
+
+**示例 1：**
+
+```txt
+输入：nums = [100,4,200,1,3,2]
+输出：4
+解释：最长数字连续序列是 [1, 2, 3, 4]。它的长度为 4。
+```
+
+**示例 2：**
+
+```txt
+输入：nums = [0,3,7,2,5,8,4,6,0,1]
+输出：9
+```
+
+**提示：**
+
+* 0 &lt;= nums.length &lt;= 105
+* -109 &lt;= nums[i] &lt;= 109
+
+## 2 解题思路
+
+### 2.1 哈希表
+
+#### 2.1.1 问题分析
+
+1. 有意题目要求的时间复杂度为 $O(n)$，因此我们可以使用**哈希表**来解决这个问题。
+2. 我们使用哈希表来**存储每个端点值对应连续区间的长度**，其中 $key$**为端点值**，$value$**为对应连续区间的长度**。
+3. 然后按以下步骤计算每个端点值对应连续区间的长度：
+   1. 若**该端点已经在哈希表中存在**，则**直接跳过**即可。
+   2. 否则：
+      1. **计算出该端点左右两个相邻端点 $nums[i] - 1$ 和 $nums[i] + 1$ 的连续区间的长度分别为 $left$ 和 $right$**。
+      2. 则**当前端点对应连续区间的长度**$currentLength$**为 $left + right + 1$**，**然后更新最后的结果值 $res$ 为所有已计算端点连续区间长度的最大值**。
+      3. **更新当前端点 $nums[i]$ 及所在连续区间两边端点 $nums[i] - left$ 和 $nums[i] + right$ 的连续区间的长度为当前端点对应连续区间的长度 $currentLength$**。![](/media/202108/128-最长连续序列_1629723804.gif)
+
+#### 2.1.2 参考代码
+
+```java
+/**
+ * 128. 最长连续序列
+ *
+ * @param nums 数组
+ * @return 数组中数字连续的最长序列（不要求序列元素在原数组中连续）的长度
+ */
+public int longestConsecutive(int[] nums) {
+    //  用于记录每个端点值对应连续区间的长度，其中 key 为端点值，value 为对应连续区间的长度
+    Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+    int res = 0, currentLength = 0;
+
+    for (int i = 0; i &lt; nums.length; i++) {
+        /**
+         * 计算每个端点值对应连续区间的长度：
+         *  1. 若该端点已经在哈希表中存在，则直接跳过即可
+         *  2. 否则：
+         *      2.1 计算出该端点左右两个相邻的端点 nums[i] - 1 和 nums[i] + 1 的连续区间的长度分别为 left 和 right
+         *      2.2 则当前端点对应连续区间的长度为 left + right + 1，然后更新最后的结果值为所有已计算端点连续区间长度的最大值。
+         *      2.3 更新当前端点 nums[i] 及所在连续区间两边端点 nums[i] - left 和 nums[i] + right 的连续区间的长度为当前端点对应连续区间的长度
+         */
+        int key = nums[i];
+        if (map.containsKey(key)) {
+            continue;
+        }
+
+        int left = map.getOrDefault(nums[i] - 1, 0);
+        int right = map.getOrDefault(nums[i] + 1, 0);
+        currentLength = left + right + 1;
+        res = Math.max(res, currentLength);
+
+        map.put(key, currentLength);
+        map.put(key - left, currentLength);
+        map.put(key + right, currentLength);
+    }
+
+    return res;
+}
+```
+
+## 参考文献
+
+1. [128. 最长连续序列](https://leetcode-cn.com/problems/longest-consecutive-sequence)。
+2. [ 【动态规划】Python 题解](https://leetcode-cn.com/problems/longest-consecutive-sequence/solution/dong-tai-gui-hua-python-ti-jie-by-jalan)。
+
+1、概述
+## 1 Netty 是什么
+
+Netty 是一款**异步的事件驱动的网络应用程序框架**，**支持快速地开发可维护的高性能的面向协议的服务器和客户端**。
+
+## 2 为什么要使用 Netty（原生 NIO 有什么问题）
+
+1. **NIO 的类库和 API 复杂**，**使用麻烦**，我们需要熟练掌握 Selector、ServerSockerChannel、SocketChannel、ByteBuffer 等。
+2. **需要具备其他的额外技能做铺垫**，例如熟悉 Java 多线程编程，这是因为 NIO 编程涉及到 Reactor 模式，我们必须对多线程和网络编程十分熟悉，才能编写出高质量的 NIO 程序。
+3. **可靠性能力补齐**，**工作量和难度都非常大**，例如客户端面临断连重连、网络闪断、半包读写、失败缓存、网络拥塞和异常码流的处理等问题，NIO 编程的特点是功能开发相对容易，但是可靠性能力补齐的工作量和难度都非常大。
+4. **JDK NIO 的 BUG**，例如臭名昭著的`epoll bug`，他会导致 Selector 空轮询，最终导致 CPU 100%，官方声称在 JDK 1.6 版本的`update18` 修复了该问题，但是直到 JDK 1.7 版本该问题仍旧存在，只不过该 BUG 发生概率低了一些而已，他并没有得到根本性解决。
+5. 因此，**大多数场景下**，**不建议大家直接使用 JDK 的 NIO 类库**，除非我们精通 NIO 处理或者有特殊的需求，在大多数的业务场景中，我们**可以使用 NIO 框架的 Netty 来进行 NIO 编程**，**他既可以作为客户端**，**也可以作为服务端**，**同时支持 UDP 和异步文件传输**，**功能非常强大**。
+
+## 3 优缺点
+
+### 3.1 优点
+
+1. **API 使用简单**，**开发门槛低**。
+2. **功能强大**，**预置了多种编解码功能**，**支持多种主流协议**。
+3. **定制能力强**，**可以通过 `ChannelHandler` 对通信框架进行灵活地扩展**。
+4. **性能高**，**通过与其他业界主流的 NIO 框架对比**，**Netty 的综合性能最优**。
+5. **成熟**、**稳定**，**Netty 修复了已经发现的所有 JDK NIO BUG**，**业务开发任务不需要再为 NIO 的 BUG 而烦恼**。
+6. **社区活跃**，**版本迭代周期短**，**发现的 BUG 可以被及时修复**，**同时**，**更多的新功能会加入**。
+7. **经历了大规模的商业应用考验**，**质量得到验证**，例如 Hadoop 的 RPC 框架 Avro 就使用了 Netty 作为底层通信框架。
+
+## 4 应用场景
+
+1. **互联网行业**：
+   1. 在分布式系统中，各个节点间需要远程服务调用，高性能的[RPC](https://notebook.grayson.top/project-46/doc-836)框架必不可少，Netty 作为异步高性能的通信框架，往往作为**基础通信组件**被这些 RPC 框架使用。
+   2. 阿里分布式服务框架 Dubbo 的 RPC 框架使用 Dubbo 协议进行节点间通信，Dubbo 协议默认使用 Netty 作为基础通信组件，用于**实现个进程节点之间的内部通信**。
+2. **游戏行业**：
+   1. 在手游服务端或者大型的网络游戏中，Netty 作为高性能的基础通信组件，**提供了 TCP/UDP 和 HTTP 协议栈**，**方便定制和开发私有协议栈**，**用于账号登录服务器**。
+   2. 同时，**地图服务器之间可以方便的通过 Netty 进行高性能的通信**。
+3. **大数据领域**：
+   1. Hadoop 的高性能通信和序列化组件**Avro 的 RPC 框架**，**默认采用 Netty 进行跨节点通信**。
+
+## 5 特性
+
+Netty 的高性能主要依赖于以下特性：
+
+1. **异步非阻塞通信**。
+2. **高效的 Reactor 线程模型**。
+3. **无锁化的串行设计**。
+4. **高性能的序列化框架**。
+5. **零拷贝**。
+
+### 5.1 异步非阻塞通信
+
+1. 在 I/O 编程过程中，当需要**同时处理多个客户端接入请求**时，可以**利用多线程或者[I/O 多路复用](https://notebook.grayson.top/project-26/doc-335/#3-3-IO-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8)技术进行处理**。
+2. I/O 多路复用技术通过**把多个 I/O 的阻塞复用到同一个 `select` 的阻塞上**，从而**使得系统在单线程的情况下可以同时处理多个客户端请求**。
+3. 与传统的多线程/多进程模型比，I/O 多路复用的最大优势是**系统开销小**，系统**不需要创建新的额外进程或者线程**，**也不需要维护这些进程和线程的运行**，**降低了系统维护的工作量**，**节省了系统资源**。
+4. Netty 的 I/O 线程[NioEventLoop](https://notebook.grayson.top/project-49/doc-850)由于**聚合了多路复用器 Selector**，**可以同时并发处理成百上千个客户端 SocketChannel**，由于**读写操作都是非阻塞的**，这就**可以充分提升 I/O 线程的运行效率**，**避免由于频繁的 I/O 阻塞导致的线程挂起**。
+5. 同时，Netty**采用了异步通信模式**，**一个 I/O 线程可以并发处理 $N$ 个客户端连接和读写操作**，这**从根本上解决了传统同步阻塞 I/O 一连接一线程模型**，**架构的性能**、**弹性伸缩能力和可靠性都得到了极大的提升**。
+
+### 5.2 高效的 Reactor 线程模型
+
+详见[2、线程模型](https://notebook.grayson.top/project-49/doc-846)。
+
+### 5.3 无锁化的串行设计
+
+1. 在大多数场景下，**并行多线程处理可以提升系统的并发性能**，但是，**如果对于共享资源的并发访问处理不当**，**会带来严重的锁竞争**，这**最终会导致性能的下降**。
+2. **为了尽可能地避免锁竞争带来的性能损耗**，**可以通过串行化设计**，即**消息的处理尽可能在同一个线程内完成**，**期间不进行线程切换**，这样就**避免了多线程竞争和同步锁**。
+3. 从表面上看，**串行化设计似乎 CPU 利用率不高**，**并发度不够**，但是**通过调整 NIO 线程池的线程参数**，**可以同时启动多个串行化的线程并行运行**，这种**局部无锁化的设计相比一个队列来说性能更优**。
+4. **为了尽可能提升性能**，**Netty 采用了串行无锁化设计**，**在 I/O 线程内部进行串行操作**，**避免多线程竞争导致的性能下降**，具体的工作原理如下图所示：
+
+   ![](/media/202108/2021-08-25_172443_021901.png)
+
+   1. Netty 的 NioEventLoop 在**读取到消息之后**，**直接调用[ChannelPipeline](https://notebook.grayson.top/project-49/doc-848/#2-ChannelPipeline)的 `fireChannelRead()`**，**只要用户不主动切换线程**，**一直会由 NioEventLoop 调用到用户的 Handler**，**期间不进行线程切换**，**这种串行化的处理方式避免了多线程操作导致的锁竞争**，**从性能角度看是最优的**。
+
+### 5.4 高性能的序列化框架
+
+1. 影响序列化性能的关键因素总结如下：
+   1. **序列化后的码流大小**（网络带宽的占用）。
+   2. **序列化和反序列化的性能**（CPU 资源占用）。
+   3. **是否支持跨语言**（异构系统的对接和开发语言切换）。
+2. Netty**默认提供了对 Google Protobuf 的支持**，**通过扩展 Netty 的编解码接口**，**用户可以实现其他高性能的框架**。
+3. 关于序列化框架的对比，可参考[4.1 框架设计](https://notebook.grayson.top/project-46/doc-836/#4-1-%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1)。
+
+### 5.5 零拷贝
+
+#### 5.5.1 传统 Linux 中的零拷贝技术
+
+1. 所谓零拷贝，就是**在数据操作时**，**不需要将数据从一个内存位置拷贝到另一个内存位置**，这样**可以减少一次内存拷贝的损耗**，从而**节省了 CPU 时钟周期和内存带宽**。
+2. 例如，从文件中读取数据，然后将数据传输到网络上，传统的数据拷贝过程如下图所示：![Drawing 0.png](/media/202108/2021-08-26_1021550.7890390457065214.png)
+
+   1. **当用户进程发起 `read()` 调用后**，**上下文从用户态切换到内核态**，**DMA 引擎从文件中读取数据**，并**存储到内核态缓冲区**，这是**第一次数据拷贝**。
+   2. **请求的数据从内核态缓冲区拷贝到用户态缓冲区**，然后**返回给用户进程**，**第二次数据拷贝的同时**，**会导致上下文从内核态再次切换到用户态**。
+   3. **用户进程调用 `send()` 方法期望将数据发送到网络中**，此时**会触发第三次线程切换**，**用户态会再次切换到内核态**，**请求的数据从用户态缓冲区被拷贝到 Socket 缓冲区**。
+   4. **最终 `send()` 系统调用结束返回给用户进程**，**发生了第四次上下文切换**，**第四次拷贝会异步执行**，**从 Socket 缓冲区拷贝到协议引擎中**。
+
+   &gt; 1. 什么是 DMA？DMA，全称为 Direct Memory Access，即直接内存读取，是现代大部分硬盘都支持的特性，DMA 接管了数据读写的工作，不需要 CPU 再参与 I/O 中断的处理，从而减轻了 CPU 的负担。
+   &gt; 2. 传统的数据拷贝过程为什么不是将数据直接传输到用户缓冲区呢？
+   &gt;
+   &gt;    其实引入内核缓冲区可以充当缓存的作用，这样就可以实现文件数据的预读，提升 I/O 的性能，但是当请求数据量大于内核缓冲区大小时，在完成一次数据的读取到发送可能要经历数倍次数的数据拷贝，这就造成严重的性能损耗。
+   &gt;
+3. 重新回顾一遍传统数据的拷贝过程，我们可以发现**第二次和第三次的数据拷贝是可以去除的**，**DMA 引擎从文件读取数据后放入到内核缓冲区**，**然后可以直接从内核缓冲区传输到 Socket 缓冲区**，**从而减少内存拷贝的次数**。
+4. 在 Linux 中**系统调用 `sendfile()` 可以实现将数据从一个文件描述符传输到另一个文件描述符**，**从而实现零拷贝技术**。
+5. 在 Java 中也使用了零拷贝技术，他就是 NIO 中**FileChannel 类的 `transferTo()` 方法**，其**底层依赖了操作系统零拷贝的机制**，**可以将数据从 FileChannel 直接传输到另外一个 Channel**，`transferTo()` 方法的定义如下：
+
+   ```java
+   public abstract long transferTo(long position, long count, WritableByteChannel target) throws IOException;
+   ```
+
+   在使用了 `FileChannel.transferTo()` 传输数据之后，数据拷贝流程发生了如下变化：
+
+   ![Drawing 1.png](/media/202108/2021-08-26_1050080.2894047865544457.png)
+
+   比较大的一个变化是**DMA 引擎从文件中读取数据拷贝到内核态缓冲区之后**，**由操作系统直接拷贝到 Socket 缓冲区**，**不再拷贝到用户态缓冲区**，所以**数据拷贝的次数从之前的 4 次减少到 3 次**。
+6. 在**Linux 2.4 版本之后**，**开发者对 Socket Buffer 追加一些 Descripter 信息来进一步减少内核数据的复制**，如下图所示，**DMA 引擎读取文件内容并拷贝到内核缓冲区**，然而并**没有再拷贝到 Socket 缓冲区**，**只是将数据的长度以及位置信息被追加到 Socket 缓冲区**，然后**DMA 引擎根据这些描述信息**，**直接从内核缓冲区读取数据并传输到协议引擎中**，**从而消除最后一次 CPU 拷贝**：
+
+   ![Drawing 2.png](/media/202108/2021-08-26_1057230.4584174677050339.png)
+
+#### 5.5.2 Netty 的零拷贝技术
+
+Netty 中的零拷贝和传统 Linux 的零拷贝不太一样，Netty 中的零拷贝技术**除了操作系统级别的功能封装**，**更多的是面向用户态的数据操作优化**，主要体现在一下 5 个方面：
+
+1. **堆外内存**，**避免 JVM 堆内存到堆外内存的数据拷贝**。
+2. **CompositeByteBuf 类**，**可以组合多个 Buffer 对象合并成一个逻辑上的对象**，**避免通过传统内存拷贝的方式将几个 Buffer 合并成一个大的 Buffer**。
+3. **通过 `Unpooled.wrappedBuffer()` 可以将 `byte` 数组包装成 ByteBuf 对象**，**包装过程中不会产生内存拷贝**。
+4. `ByteBuf.slice()`**操作与 `Unpooled.wrappedBuffer()` 相反**，`slice()`**操作可以将一个 ByteBuf 对象切分成多个 ByteBuf 对象**，**切分过程中不会产生内存拷贝**，**底层共享一个 `byte` 数组的存储空间**。
+5. **Netty 使用 FileRegion 实现文件传输**，**FileRegion 底层封装了 `FileChannel.transferTo()` 方法**，**可以将文件缓冲区的数据直接传输到目标 Channel**，**避免内核缓冲区和用户缓冲区之间的数据拷贝**，这**属于操作系统级别的零拷贝**。
+
+##### 5.5.2.1 堆外内存
+
+1. 如果**在 JVM 内部进行 I/O 操作**时，**必须将数据拷贝到[堆外内存](https://notebook.grayson.top/project-34/doc-541/#3-2-%E5%A0%86%E5%A4%96%E5%86%85%E5%AD%98-No-Heap-Memory-)**，**才能执行系统调用**，这**是所有 VM 语言都会存在的问题**。
+2. 操作系统之所以不能直接使用 JVM 堆内存进行 I/O 读写，主要有两个原因：
+   1. **操作系统并不感知 JVM 的[堆内存](https://notebook.grayson.top/project-34/doc-541/#3-1-%E5%A0%86%E5%86%85%E5%AD%98-Heap-Memory-)**，而且**JVM 的内存布局与操作系统分配的是不一样的**，**操作系统并不会按照 JVM 的行为来读写数据**。
+   2. **同一个对象的内存地址随着 JVM GC 的执行可能会随时发生变化**，例如，JVM GC 的过程会通过压缩来减少内存碎片，这就涉及对象移动的问题了。
+3. **Netty 在进行 I/O 操作时都是使用的堆外内存**，**可以避免数据从 JVM 堆内存到堆外内存的拷贝**。
+
+##### 5.5.2.2 CompositeByteBuf
+
+1. CompositeButeBuf**是 Netty 中实现零拷贝机制非常重要的一个数据结构**，CompositeByteBuf**可以理解为一个虚拟的 Buffer 对象**，他**是由多个 ByteBuf 组合而成**，但是**在 CompositeByteBuf 内部保存着每个 ByteBuf 的引用关系**，**从逻辑上构成一个整体**，例如：
+   1. HTTP 协议数据可以分为头部信息 `header` 和消息体数据 `body`，分别存在两个不同的 ByteBuf 中。
+   2. 通常我们需要将两个 ByteBuf 合并成一个完整的协议数据进行发送：
+
+      ```java
+      ByteBuf httpBuf = Unpooled.buffer(header.readableBytes() + body.readableBytes());
+      httpBuf.writeBytes(header);
+      httpBuf.writeBytes(body);
+      ```
+
+      可以看出，如果**想实现 `header` 和 `body` 这两个 ByteBuf 的合并**，**需要先初始化一个新的 ByteBuf**，然后再**将这 `header` 和 `body` 分别拷贝到新的 ByteBuf**，**合并过程涉及两次 CPU 拷贝**，这**非常浪费性能**。
+   3. 我们可以使用 CompositeByteBuf 来实现类似的需求：
+
+      ```java
+      CompositeByteBuf httpBuf = Unpooled.compositeBuffer();
+      httpBuf.addComponents(header, body);
+      ```
+
+      1. CompositeByteBuf**通过调用 `addComponents()` 方法来添加多个 ByteBuf**，但是**底层的 `byte` 数组是复用的**，**不会发生内存拷贝**，但**对于用户来说**，他**可以当做一个整体进行操作**。
+      2. CompositeByteBuf 的内部结构如下图所示：![Drawing 3.png](/media/202108/2021-08-26_1147340.1636854126291689.png)
+         1. 从图中可以看出，CompositeByteBuf**内部维护了一个 Components 数组**，**在每个 Component 中存放着不同的 ByteBuf**，**各个 ByteBuf 独立维护自己的读写索引**，而**CompositeByteBuf 自身也会单独维护一个读写索引**，由此可见，**Component 是实现 CompositeByteBuf 的关键所在**，其结构定义如下：
+
+            ```java
+            private static final class Component {
+                final ByteBuf srcBuf; // 原始的 ByteBuf
+                final ByteBuf buf; // srcBuf 去包装之后的 ByteBuf
+
+                int srcAdjustment; // CompositeByteBuf 的起始索引相对于 srcBuf 读索引的偏移
+                int adjustment; // CompositeByteBuf 的起始索引相对于 buf 的读索引的偏移
+
+                int offset; // Component 相对于 CompositeByteBuf 的起始索引位置
+                int endOffset; // Component 相对于 CompositeByteBuf 的结束索引位置
+
+                Component(ByteBuf srcBuf, int srcOffset, ByteBuf buf, int bufOffset,
+                    int offset, int len, ByteBuf slice) {
+                this.srcBuf = srcBuf;
+                this.srcAdjustment = srcOffset - offset;
+                this.buf = buf;
+                this.adjustment = bufOffset - offset;
+                this.offset = offset;
+                this.endOffset = offset + len;
+                this.slice = slice;
+                }
+
+                // ... 省略其他代码
+            }
+            ```
+         2. 为了方便理解上述 Component 中的属性含义，我们同样以 HTTP 协议中 `header` 和 `body` 为示例，通过一张图来描述 CompositeByteBuf 组合后其中 Component 的布局情况，如下图所示：
+
+            ![Drawing 4.png](/media/202108/2021-08-26_1159190.558591496462152.png)
+
+            1. 此时从图中可以看出，`header` 和`body` 分别对应两个 ByteBuf，假设 ByteBuf 的内容分别为`header` 和`body`，那么`header` 中的`offset ~ endOffset` 为`0 ~ 6`，`body` 对应的`offset ~ endOffset` 为`6 ~ 10`，由此可见，Component 中的`offset`**和 `endOffset` 可以表示当前 ByteBuf 可以读取的范围**，**通过 `offset` 和 `endOffset` 可以将每一个 Component 所对应的 ByteBuf 连接起来**，**形成一个逻辑整体**。
+            2. 此外，Component 中`srcAdjustment`**和 `adjustment` 表示 CompositeByteBuf 起始索引相对于 ByteBuf 读索引的偏移**，**初始 `adjustment = readerIndex - offset`**，这样**通过 CompositeByteBuf 的起始索引就可以直接定位到 Component 中 ByteBuf 的读索引位置**，例如，当`header` 读取 1 个字节，`body` 读取 2 个字节，此时每个 Component 的属性如下图所示：![Drawing 5.png](/media/202108/2021-08-26_1215200.780559814100105.png)
+
+##### 5.5.2.3 Unpooled.wrappedBuffer
+
+1. Unpooled**提供了一系列用于包装数据源的 `wrappedBuffer` 方法**，该方法**可以将不同的数据源的一个或者多个数据包装成一个更大的 ByteBuf 对象**，**其中数据源的类型包括**`byte[]`、`ByteBuf`、`ByteBuffer`，**包装的过程中不会发生数据拷贝操作**，**包装后生成的 ByteBuf 对象和原始 ByteBuf 对象是共享底层的 `byte` 数组**。
+
+##### 5.5.2.4 ByteBuf.slice 操作
+
+1. `Bytebuf.slice()`**和 `Unpooled.wrappedBuffer()` 的逻辑正好相反**，`ByteBuf.slice()`**是将一个 ByteBuf 对象切分成多个共享同一个底层存储的 ByteBuf 对象**。
+2. 假如我们有一份完整的 HTTP 数据，可以通过 `slice()` 方法切分获得 `header` 和 `body` 两个 ByteBuf 对象，对应的内容分别为 `header` 和 `body`，实现方式如下：
+
+   ```java
+   ByteBuf header = httpBuf.slice(0, 6);
+   ByteBuf body = httpBuf.slice(6, 4);
+   ```
+
+   **通过 `slice()` 切分后都会返回一个新的 ByteBuf 对象**，而且**新的对象有自己独立的 `readerIndex`**、`writerIndex`**索引**，如下图所示，由于**新的 ByteBuf 对象与原始的 ByteBuf 对象数据是共享的**，所以**通过新的 ByteBuf 对象进行数据操作也会对原始 ByteBuf 对象生效**：
+
+   ![图片 8.png](/media/202108/2021-08-26_1437430.3603176784681209.png)
+
+##### 5.5.2.5 文件传输 FileRegion
+
+1. Netty**使用 FileRegion 实现文件传输的零拷贝**，**默认实现类是 DefaultFileRegion**，**通过 DefaultFileRegion 将文件内容写入到 NioSocketChannel**，**FileRegion 其实就是对 FileChannel 的包装**，**并没有什么特殊操作**，**底层使用的是 JDK NIO 中的 `FileChannel.transferTo()` 方法实现文件传输**，所以 FileRegion**是操作系统级别的零拷贝**，**对于传输大文件会很有帮助**：
+
+   ![](/media/202108/2021-08-26_144810_758857.png)
+
+## 参考文献
+
+1. [03 如何自己实现一个 RPC 框架？](https://www.yuque.com/books/share/b7a2512c-6f7a-4afe-9d7e-5936b4c4cab0/hc6nzg)
+2. 《Netty 权威指南 第 2 版》
+3. [阿里大牛总结的 Netty 最全常见面试题，面试再也不怕被问 Netty 了](https://zhuanlan.zhihu.com/p/148726453)。
+4. [offer 快到碗里来-Netty 核心面试题 15 连问](https://www.nowcoder.com/discuss/648088)。
+5. [(卷一) Netty 介绍和应用场景](https://juejin.cn/post/6882545468266512398)。
+6. [16 IO 加速：与众不同的 Netty 零拷贝技术](http://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/Netty%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E5%89%96%E6%9E%90%E4%B8%8E%20RPC%20%E5%AE%9E%E8%B7%B5-%E5%AE%8C/16%20%20IO%20%E5%8A%A0%E9%80%9F%EF%BC%9A%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%20Netty%20%E9%9B%B6%E6%8B%B7%E8%B4%9D%E6%8A%80%E6%9C%AF.md)。
+2、线程模型
+## 1 Reactor 线程模型
+
+1. Reactor 模式是**基于事件驱动开发**的，核心组成部分包括**Reactor**和**线程池**，其中**Reactor 负责监听事件和分配事件**，**线程池负责处理事件**。
+2. 根据**Reactor 的数量**和**线程池的数量**，又将 Reactor 分为三种模型：
+   1. **单 Reactor 单线程**。
+   2. **单 Reactor 多线程**。
+   3. **主从 Reactor 多线程**。
+
+### 1.1 单 Reactor 单线程
+
+#### 1.1.1 原理
+
+![](/media/202201/2022-01-09_2202050.6954022419627751.png)
+
+1. Reactor 内部**通过 Selector 监控连接事件**，**收到事件后通过 dispatch 进行分发**：
+   1. 如果是**连接建立的事件**，则**由 Acceptor 处理**，**通过 `accept` 建立连接**，**并创建一个 Handler 来处理连接后续的各种事件**。
+   2. 如果是**读写事件**，**直接调用连接对应的 Handler 来处理**。
+2. Handler 主要**用来完成 $read \rightarrow (decode \rightarrow compute \rightarrow encode) \rightarrow send$ 的业务处理**。
+
+#### 1.1.2 优缺点
+
+##### 1.1.2.1 优点
+
+1. **模型简单**，**没有多线程**、**进程通信竞争问题**，**全部在一个线程完成**，主要适用于**客户端的数量有限**，**业务处理非常迅速的场景**，例如 Redis 在业务处理的时间复杂度为 $O(1)$ 的情况。
+
+##### 1.1.2.2 缺点
+
+1. **性能问题**，**只有一个线程**，**无法完全发挥多核 CPU 的性能**。
+2. **Handler 在处理某个连接上的业务时**，**整个进程无法处理其他连接事件**，**很容易导致性能瓶颈**。
+3. **可靠性问题**，**线程意外终止**，**或者进入死循环**，**会导致整个系统通信模块不可用**，**不能接受和处理外部消息**，**造成节点故障**。
+
+### 1.2 单 Reactor 多线程
+
+#### 1.2.1 原理
+
+&gt; 为了解决单 Reactor 单线程模型在高并发下的性能问题，就有了单 Reactor 多线程模型。
+
+![](/media/202201/2022-01-09_2202320.8026111727428262.png)
+
+1. **主线程中**，Reactor 对象**通过 Selector 监控连接事件**，**收到事件后通过 dispatch 进行分发**：
+   1. 如果是**连接建立的事件**，则**由 Acceptor 处理**，**通过 `accept` 建立连接**，**并创建一个 Handler 来处理连接后续的各种事件**，而**Handler 只负责响应事件**，**不进行业务操作**，也就是**只进行 `read` 读取数据和 `write` 写出数据**，**业务处理交给一个线程池进行处理**。
+2. **线程池分配一个线程完成真正的业务处理**，**然后将响应结果交给主进程的 Handler 处理**，**Handler 将结果 `send` 给客户端**。
+
+#### 1.2.2 优缺点
+
+##### 1.2.2.1 优点
+
+1. **可以充分利用多核 CPU 的处理能力**。
+
+##### 1.2.2.2 缺点
+
+1. **多线程下会存在数据共享**、**并发安全问题**。
+2. Reactor（这个 Reactor 是单线程的）**承担处理了所有的事件监听和响应**，**当我们的服务端遇到大量的客户端同时进行连接**，**或者在请求连接时执行一些耗时操作**，比如身份验证、权限检查等，**这种瞬时的高并发就容易成为性能瓶颈**。
+
+### 1.3 主从 Reactor 多线程
+
+#### 1.3.1 原理
+
+&gt; 针对单 Reactor 多线程模型中，Reactor 在单线程下运行，高并发场景下容易造成性能瓶颈，可以让 Reactor 在多线程中运行得到下面的主从 Reactor 多线程模型。
+
+![](/media/202201/2022-01-09_2203070.5107936014146105.png)
+
+1. **存在多个 Reactor**，**每个 Reactor 都有自己的 Selector 选择器**、**线程和 dispatch**，**Reactor 主线程可以对应多个 Reactor 子线程**，即**MainReactor 可以关联多个 SubReactor**。
+2. Reactor**主线程 MainReactor 对象通过 Selector 监听连接事件**，**收到事件后**，**通过 Acceptor 处理连接事件**，**当 Acceptor 处理连接事件后**，**MainReactor 将连接分配给 SubReactor**。
+3. **SubReactor 将 MainReactor 分配的连接加入连接队列中**，**然后通过自己的 Selector 进行监听**，**并创建一个 Handler 用于处理后续事件**。
+4. **Handler 完成 $read \rightarrow 业务处理 \rightarrow send$ 的完整业务流程**。
+
+#### 1.3.2 优缺点
+
+##### 1.3.2.1 优点
+
+1. **父线程与子线程的数据交互简单**，**职责明确**，**父线程只需要建立新连接**，**子线程完成后续的业务处理**。
+2. **父线程与子线程的数据交互简单**，**Reactor 主线程只需把新连接传给子线程**，**子线程无需返回数据**。
+3. 这种模型在许多项目中广泛使用，例如 Ngnix 主从 Ngnix 多线程，Memcached 主从多线程，Netty 主从多线程。
+
+##### 1.3.2.2 缺点
+
+1. **编程复杂**。
+
+### 1.4 总结
+
+1. Reactor 模式可以按照如下方式来理解：
+   1. **单 Reactor 单线程**：**前台接待员和服务员是同一个**，**全程为顾客服务**。
+   2. **单 Reactor 多线程**：**1 个前台接待员**，**多个服务员**，**接待员只负责接待**。
+   3. **主从 Reactor 多线程**：**多个前台接待员**，**多个服务员**。
+2. Reactor 模式具有以下优点：
+   1. **响应快**，**不必为单个同步事件阻塞**，虽然 Reactor 本身依然是同步的。
+   2. **可以最大程度的避免复杂的多线程及同步问题**，并且**避免了多线程切换的开销**。
+   3. **拓展性好**，**可以方便的通过增加 Reactor 实例个数来充分利用 CPU 资源**。
+   4. **复用性好**，**Reactor 模型本身与具体事件处理逻辑无关**，**具有很高的复用性**。
+
+## 2 Netty 的线程模型
+
+&gt; Netty 的线程模型并不是一成不变的，他实际取决于用户的启动参数配置，通过设置不同的启动参数，Netty 可以同时支持单 Reactor 单线程模型、单 Reactor 多线程模型、主从 Reactor 多线程模型。
+
+### 2.1 通俗模型
+
+![netty-1.png](/media/202108/2021-08-24_0954110.4100610178097567.png)
+
+![netty-2.png](/media/202108/2021-08-24_0954190.8048430646789609.png)
+
+### 2.2 详细模型
+
+![Netty-model.png](/media/202108/2021-08-24_0954350.5052641593023719.png)
+
+1. **服务端启动的时候**，**创建了两个 NioEventLoopGroup**，他们实际上**是两个独立的 Reactor 线程池**，分别称为**BossGroup**和**WorkerGroup**，其中**BossGroup 主要负责接收客户端的 TCP 连接**，**WorkerGroup 主要负责处理 IO 相关的读写操作**。
+   
+   &gt; 1. NioEventLoopGroup 相当于一个事件循环组，这个组中含有多个事件循环，每一个事件循环都是一个 NioEventLoop。
+   &gt; 2. NioEventLoop 表示一个不断循环的执行处理任务的线程，每个 NioEventLoop 都有一个 Selector，用于监听绑定在其上的 Socket 网络通信。
+2. 每个 BossGroup 下面的 NioEventLoop 执行的步骤有以下三步：
+   
+   1. **轮询 `accept` 事件**。
+   2. **处理 `accept` 事件**，**与客户端建立连接**，**生成一个 NioSocketChannel**，**并将其注册到某个 WorkerGroup 的 NioEventLoop 中的 Selector 上**。
+   3. **处理任务队列中的任务**。
+3. 每个 WorkerGroup 下面的 NioEventLoop 执行的步骤有以下三步：
+   
+   1. **轮询 `read` 或 `write` 事件**。
+   2. **处理 IO 事件**，即 `read` 或 `write` 事件，在**处理业务时**，**会使用 Pipeline**，他**包含了 NioSocketChannel**，即**通过 Pipeline 可以获得对应的 NioSocketChannel**，并且**Channel 中维护了很多的 Handler**，可以**用于业务的处理**。
+   3. **处理任务队列中的任务**。
+
+## 参考文献
+
+1. [Netty 系列文章之 Netty 线程模型](https://juejin.cn/post/6844903974298976270)。
+2. [Netty 网络模型](https://xuzhijie.top/index.php/%E7%BD%91%E7%BB%9C%E4%B8%8EIO/386.html)。
+3. [《Netty 权威指南 第 2 版》]()
+
+4、NIO
+4、NIO
+
+2、服务通信
+2、服务通信
+
+2.1 RPC
+## 1 含义
+
+1. RPC，全称为 Remote Procedure Call，即**远程过程调用**。
+2. 因为**两个不同服务器上的服务提供的方法不在一个内存空间**，所以**需要通过网络编程才能传递方法调用所需的参数**，并且，**方法调用的结果也需要通过网络编程来接收**，如果我们**自己手动网络编程来实现这个调用过程的话工作量是非常大的**，因为我们**需要考虑底层传输方式**（TCP 还是 UDP）、**序列化方式等方面**。
+3. 通过 RPC 可以**帮助我们调用远程计算机上某个服务的方法**，**这个过程就像调用本地方法一样简单**，并且我们**不需要了解底层网络编程的具体细节**，例如，两个不同的额服务 A、B 部署在两台不同的机器上，服务 A 如果想要调用服务 B 中的某个方法的话就可以通过 RPC 来做。
+4. 因此，RPC 的出现就是为了**让我们调用远程方法像调用本地方法一样简单**。
+
+## 2 原理
+
+1. RPC 的核心功能可以看作是下面六个部分实现的：
+   1. **客户端**（服务消费端）：**调用远程方法的一端**。
+   2. **客户端 Stub**（桩）：这其实就**是一个代理类**，主要用于**把我们的调用方法**、**类**、**方法参数等信息传递到服务端**。
+   3. **网络传输**：网络传输就是要**把我们调用方法的信息**（比如参数）**传输到服务端**，然后**服务端执行完之后再把返回结果通过网络传输给我们传输回来**，网络传输的实现方式有很多，比如最基本的 Socket 以及封装更加优秀的 Netty。
+   4. **服务端 Stub**（桩）：这个妆就**不是一个代理类**，主要用于**接收客户端执行方法的请求后**，去**执行对应的方法然后放回结果给客户端**。
+   5. **服务端**（服务提供端）：**提供远程方法的一端**。
+2. 具体的执行过程如下：
+   1. 客户端**以本地调用的方式调用远程服务**。
+   2. 客户端 Stub**接收到调用后**：
+
+      1. **将方法**、**参数等序列化成能够进行网络传输的消息体**（RpcRequest），
+      2. 然后**找到远程服务的地址**，并**将消息发送给服务提供端**。
+   3. 服务端 Stub**收到消息后**：
+
+      1. **将消息反序列化为 Java 对象**（RpcRequest）。
+      2. 然后**根据 RpcRequest 中的类**、**方法**、**方法参数等信息调用本地方法**。
+      3. **得到方法执行结果后将结果序列化为能够进行网络传输的消息体**（RpcResponse），并**将其发送至消费方**。
+   4. 客户端 Stub**接收到消息后**：
+
+      1. **将消息反序列化为 Java 对象**（RpcResponse），这样也**就得到了最终结果**。
+
+      ![](/media/202108/2021-08-17_1723310.42689801856435583.png)
+
+## 3 常见框架
+
+&gt; 我们这里说的 RPC 框架指的是**可以让客户端直接调用服务端方法**，**就向调用本地方法一样简单**的框架，比如 Dubbo、Motan、gRPC 等，如果需要和 HTTP 协议打交道，解析和封装 HTTP 请求和响应，这类框架并不能算是 RPC 框架，比如 Feign。
+
+常见的 RPC 框架主要有 Dubbo、Motan、gRPC、Thrift。
+
+### 3.1 Dubbo
+
+1. Dubbo 是一款**高性能**、**轻量级的开源分布式服务框架**，**致力于提供高性能和透明化的 RPC 远程服务调用方式**，由阿里开源，后来加入了 Apache。
+2. Dubbo 主要提供了**三大核心能力**：
+   1. **面向接口的远程方法调用**。
+   2. **智能容错和负载均衡**。
+   3. **服务自动注册发现**。
+
+### 3.2 Motan
+
+1. Motan 是新浪微博于 2016 年开源的一款 RPC 框架，据说在新浪微博支撑着千亿次调用。
+2. Motan 更像是一个**精简版的 Dubbo**，**设计更加精简**，**功能更加纯粹**。
+
+### 3.3 gRPC
+
+1. gRPC 是 Google 开源的一个**高性能**、**通用的开源 RPC 框架**。
+2. **主要面向移动应用开发**，**基于 HTTP/2 协议标准而设计**，**基于 ProtoBuf 序列化协议开发**，**支持众多开发语言**。
+
+### 3.4 Thrift
+
+1. Thrift 是 Facebook 开源的**跨语言的 RPC 框架**，目前已经捐献给 Apache 基金会管理。
+2. 由于其**跨语言特性**和**出色的性能**，在很多互联网公司得到应用，有能力的公司甚至会基于 Thrift 研发一套分布式服务框架，增加诸如服务注册、服务发现等功能。
+3. Thrift**支持多种不同的编程语言**，包括 C++、Java、Python、PHP、Ruby 等（相比于 gRPC 支持的语言更多）。
+
+### 3.5 总结
+
+1. gRPC 和 Thrift 虽然支持跨语言的 RPC 调用，但是他们**只提供了最基本的 RPC 框架功能**，**缺乏一系列配套的服务化组件和服务治理功能的支撑**。
+2. Dubbo 不论是从功能完善程度、生态系统还是社区活跃度来说都是最优秀的，最重要的是在国内有很多成功的案例，比如当当网、滴滴等，下图展示了 Dubbo 的生态系统：![](/media/202108/2021-08-17_1746170.03768661829669018.png)
+3. 另外，Dubbo 也是 Spring Cloud Alibaba 里面的一个组件：![](/media/202108/2021-08-17_1747150.2327271403953749.png)
+4. 但是，Dubbo 和 Motan 主要是给 Java 语言使用的，虽然 Dubbo 和 Motan 目前也能兼容部分语言，但是不太推荐，如果需要跨语言调用的话，可以考虑一下 Thrift 和 gRPC。
+
+## 参考文献
+
+1. [01 什么是 RPC？原理是什么？](https://www.yuque.com/books/share/b7a2512c-6f7a-4afe-9d7e-5936b4c4cab0/ov6225)
+2. [02 常见 RPC 框架介绍](https://www.yuque.com/books/share/b7a2512c-6f7a-4afe-9d7e-5936b4c4cab0/hedn92)。
+3. [03 如何自己实现一个 RPC 框架？](https://www.yuque.com/books/share/b7a2512c-6f7a-4afe-9d7e-5936b4c4cab0/hc6nzg)
+4. [序列化理解起来很简单](https://zhuanlan.zhihu.com/p/40462507)。
+5. [04 序列化介绍以及序列化协议选择](https://www.yuque.com/books/share/b7a2512c-6f7a-4afe-9d7e-5936b4c4cab0/ibay8y)。
+2.3.10 寻找两个正序数组的中位数
+## 1 题目
+
+给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的 中位数 。
+
+**示例 1：**
+
+```txt
+输入：nums1 = [1,3], nums2 = [2]
+输出：2.00000
+解释：合并数组 = [1,2,3] ，中位数 2
+```
+
+**示例 2：**
+
+```txt
+输入：nums1 = [1,2], nums2 = [3,4]
+输出：2.50000
+解释：合并数组 = [1,2,3,4] ，中位数 (2 + 3) / 2 = 2.5
+```
+
+**示例 3：**
+
+```txt
+输入：nums1 = [0,0], nums2 = [0,0]
+输出：0.00000
+```
+
+**示例 4：**
+
+```txt
+输入：nums1 = [], nums2 = [1]
+输出：1.00000
+```
+
+**示例 5：**
+
+```txt
+输入：nums1 = [2], nums2 = []
+输出：2.00000
+```
+
+**提示：**
+
+* nums1.length == m
+* nums2.length == n
+* 0 &lt;= m &lt;= 1000
+* 0 &lt;= n &lt;= 1000
+* 1 &lt;= m + n &lt;= 2000
+* -106 &lt;= nums1[i], nums2[i] &lt;= 106
+
+**进阶：** 你能设计一个时间复杂度为 O(log (m+n)) 的算法解决此问题吗？
+
+## 2 解题思路
+
+### 2.1 二分查找
+
+#### 2.1.1 问题分析
+
+1. 给定两个有序数组，要求**找到两个有序数组的中位数**，最直观的思路有以下两种：
+   1. 使用**归并**的方式，**合并两个有序数组**，**得到一个大的有序数组**，**大的有序数组的中间位置的元素**，**即为中位数**。
+   2. **不需要合并两个有序数组**，**只要找到中位数的位置即可**，由于两个数组的长度已知，因此中位数对应的两个数组的下标之和也是已知的：
+      1. 维护两个指针，初始时分别指向两个数组的下标 0 的位置，每次将指向较小值的指针后移一位（如果一个指针已经到达数组末尾，则只需要移动另一个数组的指针），直到到达中位数的位置。
+2. 假设两个有序数组的长度分别为 $m$ 和 $n$，上述两种思路的复杂度如下：
+   1. 第一种思路的时间复杂度为 $O(m + n)$，空间复杂度是 $O(m + n)$。
+   2. 第二种思路虽然可以将空间复杂度降到 $O(1)$，但是时间复杂度依然是 $O(m + n)$。
+3. 本题也可以使用二分查找的方法来实现，具体思路如下：
+   1. 根据中位数的定义，**当 $m + n$ 是奇数时**，**中位数是两个有序数组中的第 $(m + n) / 2$ 个元素**，**当 $m + n$ 是偶数时**，**中位数是两个有序数组中的第 $(m + n) / 2$ 个元素和第 $(m + n) / 2 + 1$ 个元素的平均值**，因此，这道题可以转化成**寻找两个有序数组中第 $k$ 小的数**，**其中 $k$ 为 $(m + n) / 2$ 或 $(m + n) / 2 + 1$。**
+   2. 假设两个有序数组分别是 $A$ 和 $B$，要找到第 $k$ 个元素，我们可以**比较 $A[\frac{k}{2} - 1]$ 和 $B[\frac{k}{2} - 1]$**，由于 $A[\frac{k}{2} - 1]$ 的前面分别有 $A[0..\frac{k}{2} - 2]$ 和 $B[0..\frac{k}{2} - 2]$，即 $\frac{k}{2} - 1$ 个元素，对于 $A[\frac{k}{2} - 1]$**和 $B[\frac{k}{2} - 1]$ 中的最小值**，**最多只会有 $(\frac{k}{2} - 1) + (\frac{k}{2} - 1) = k - 2 &lt; k - 1$ 个元素比他小**，**那么他就不能是第 $k$ 小的数了**（第 $k$ 小的数最多有 $k - 1$ 个数比他小）。
+   3. 因此，我们可以归纳出三种情况：
+      1. 如果 $A[\frac{k}{2} - 1] &lt; B[\frac{k}{2} - 1]$，则 $A[0..\frac{k}{2} - 1]$ 不可能是不可能是第 $k$ 个数，可以全部排除。
+      2. 如果 $A[\frac{k}{2} - 1] &gt; B[\frac{k}{2} - 1]$，则 $B[0..\frac{k}{2} - 1]$ 不可能是不可能是第 $k$ 个数，可以全部排除。
+      3. 如果 $A[\frac{k}{2} - 1] = B[\frac{k}{2} - 1]$，归入第一种情况处理。
+         
+         ![fig1](/media/202108/2021-08-18_1941310.9842675918411851.png)
+   4. 可以看到，**比较 $A[\frac{k}{2} - 1]$ 之后**，**可以排除 $\frac{k}{2}$ 个不可能是第 $k$ 小的数**，**查找范围缩小了一半**，同时，**我们将在排除后的新数组上继续二分查找**，并且**根据我们排除数的个数**，**减少 $k$ 的值**，这是**因为我们排除的数都是不大于 $k$ 的数**。
+   5. 有以下三种情况需要特殊处理：
+      1. **如果 $A[\frac{k}{2} - 1]$ 或 $B[\frac{k}{2} - 1]$ 越界**，那么**我们可以选取对应数组中的最后一个元素**，在这种情况下，我们**必须根据排除数的个数减少 $k$ 的值**，而**不能直接将 $k$ 减去 $\frac{k}{2}$**。
+      2. **如果一个数组为空**，**说明该数组中的所有元素都被排除**，**我们可以直接返回另一个数组中第 $k$ 小的元素**。
+      3. **如果 $k = 1$**，**我们只要返回两个数组中的未排除下标范围内的首元素的最小值即可**。
+   6. 具体示例如下：
+      1. 假设两个有序数组如下：
+         
+         ```txt
+         A: 1 3 4 9
+         B: 1 2 3 4 5 6 7 8 9
+         ```
+      2. 两个有序数组的长度分别是 4 和 9，长度之和是 13，中位数是两个有序数组中的第 7 个元素，因此需要找到第 $k = 7$ 的元素。
+      3. 比较两个有序数组中下标为 $\frac{k}{2} - 1 = 2$ 的数，即 $A[2]$ 和 $B[2]$，如下面所示：
+         
+         ```txt
+         A: 1 3 4 9
+                ↑
+         B: 1 2 3 4 5 6 7 8 9
+                ↑
+         ```
+      4. 由于 $A[2] &gt; B[2]$，因此排除 $B[0..2]$，即数组 $B$ 的下标偏移（`offset`）变为 3，同时更新 $k$ 的值 $k = k - \frac{k}{2} = 4$。
+      5. 下一步寻找，比较两个有序数组中下标为 $\frac{k}{2} - 1 = 1$ 的数，即 $A[1]$ 和 $B[4]$，如下面所示，其中，方括号部分表示已经被排除的数：
+         
+         ```txt
+         A: 1 3 4 9
+              ↑
+         B: [1 2 3] 4 5 6 7 8 9
+                      ↑
+         ```
+      6. 由于 $A[1] &lt; B[4]$，因此排除 $A[0..1]$，即数组 $A$ 的下标偏移变为 2，同时更新 $k$ 的值 $k = k - \frac{k}{2} = 2$。
+      7. 下一步寻找，比较两个有序数组中下标为 $\frac{k}{2} - 1 = 0$ 的数，即比较 $A[2]$ 和 $B[3]$，如下面所示：
+         
+         ```
+         A: [1 3] 4 9
+                  ↑
+         B: [1 2 3] 4 5 6 7 8 9
+                    ↑
+         ```
+      8. 由于 $A[2] = B[3]$，根据之前的规则，排除 $A$ 中的元素，因此排除 $A[2]$，即数组 $A$ 的下标偏移变为 3，同时更新 $k$ 的值 $k = k - \frac{k}{2} = 1$，由于 $k$ 的值变为 1，因此比较两个有序数组中的未排除下标范围内的第一个数，其中较小的数即为第 $k$ 个数，由于 $A[3] = 9 &gt; B[3] = 4$，因此第 $k$ 个数是 $B[3] = 4$。
+
+#### 2.1.2 参考代码
+
+```java
+/**
+ * 4. 寻找两个正序数组的中位数
+ * @param nums1 第一个正序数组
+ * @param nums2 第二个正序数组
+ * @return  两个正序数组的中位数
+ */
+public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    int length1 = nums1.length, length2 = nums2.length;
+    int totalLength = length1 + length2;
+
+    if (totalLength % 2 == 1) {
+        //  数组长度之和为奇数，则中位数下标为 totalLength / 2
+        int midIndex = totalLength / 2;
+        double median = getKthElement(nums1, nums2, midIndex + 1);
+        return median;
+    } else {
+        //  数组长度之和为偶数，则中位数下标分别为 totalLength / 2 - 1，totalLength / 2
+        int midIndex1 = totalLength / 2 - 1, midIndex2 = totalLength / 2;
+        double median = (getKthElement(nums1, nums2, midIndex1 + 1)
+                + getKthElement(nums1, nums2, midIndex2 + 1)) / 2.0;
+        return median;
+    }
+}
+
+/**
+ * 获取两个正序数组中第 k 小的元素
+ * @param nums1 第一个正序数组
+ * @param nums2 第二个正序数组
+ * @param k k 值
+ * @return  两个正序数组中第 k 小的元素
+ */
+public int getKthElement(int[] nums1, int[] nums2, int k) {
+    int length1 = nums1.length, length2 = nums2.length;
+    int index1 = 0, index2 = 0;
+
+    while (true) {
+        //  边界情况
+        //  如果其中一个数组到达边界，则另一个数组中原来下标加上 k - 1 对应的下标即为两个数组中位数的下标
+        if (index1 == length1) {return nums2[index2 + k - 1];}
+        if (index2 == length2) {return nums1[index1 + k - 1];}
+        //  如果 k == 1，则两个数组中的较小数即为两个数组的中位数
+        if (k == 1) {return Math.min(nums1[index1], nums2[index2]);}
+
+        //  正常情况
+        int half = k / 2;
+        int newIndex1 = Math.min(index1 + half, length1) - 1;
+        int newIndex2 = Math.min(index2 + half, length2) - 1;
+        int pivot1 = nums1[newIndex1], pivot2 = nums2[newIndex2];
+        if (pivot1 &lt;= pivot2) {
+            //  如果 pivot1 &lt;= pivot2，则 nums1[0, newIndex1] 都不可能是第 k 小的元素，把这些元素全部删除，剩下的作为新的 nums1 数组
+            k -= (newIndex1 - index1 + 1);
+            //  由于我们删除了一些元素（这些元素都比第 k 小的元素小），因此需要修改 k 的值，减去删除的数的个数
+            index1 = newIndex1 + 1;
+        } else {
+            //  如果 pivot1 &gt; pivot2，则 nums2[0, newIndex2] 都不可能是第 k 小的元素，把这些元素全部删除，剩下的作为新的 nums2 数组
+            k -= (newIndex2 - index2 + 1);
+            //  由于我们删除了一些元素（这些元素都比第 k 小的元素小），因此需要修改 k 的值，减去删除的数的个数
+            index2 = newIndex2 + 1;
+        }
+    }
+}
+```
+
+## 参考文献
+
+1. [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays)。
+2. [寻找两个有序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-s-114)。
+
+2.2 Netty
+具体可参考[Netty](https://notebook.grayson.top/project-49)。
+
+1.7.5 多数元素
+## 1 题目
+
+给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
+
+你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+
+**示例 1：**
+
+```txt
+输入：[3,2,3]
+输出：3
+```
+
+**示例 2：**
+
+```txt
+输入：[2,2,1,1,1,2,2]
+输出：2
+```
+
+**进阶：**
+
+* 尝试设计时间复杂度为 O(n)、空间复杂度为 O(1) 的算法解决此问题。
+
+## 2 解题思路
+
+### 2.1 计数
+
+#### 2.1.1 问题分析
+
+1. 最原始的思路是**通过一个 $map$**，其中 $key$**为数组中的元素**，$value$**为对应元素出现的次数**，**添加完元素后**，**如果当前元素的出现次数大于 $\frac{n}{2}$**，则**该元素即为多数元素**，**直接返回即可**。
+
+#### 2.1.2 参考代码
+
+```java
+/**
+ * 169. 多数元素（版本 1：计数）
+ * @param nums  数组
+ * @return  数组中出现次数 大于 ⌊ n/2 ⌋ 的元素
+ */
+public int majorityElementV1(int[] nums) {
+    Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+    int m = nums.length;
+
+    if (m == 1) {return nums[0];}
+
+    for (int i = 0; i &lt; m; i++) {
+        int key = nums[i];
+        if (!map.containsKey(key)) {
+            map.put(key, 1);
+        } else {
+            int value = map.get(key);
+            value++;
+            if (value &gt; m / 2) {
+                return key;
+            } else {
+                map.put(key, value);
+            }
+        }
+    }
+
+    return -1;
+}
+```
+
+### 2.2 排序
+
+#### 2.2.1 问题分析
+
+1. 对数组中的元素进行**升序排序**，因为**多数元素的个数大于 $\frac{n}{2}$**，因此**排序后数组的中间位置的元素即为多数元素**。
+
+#### 2.2.2 参考代码
+
+```java
+/**
+ * 169. 多数元素（版本 2：排序）
+ * @param nums  数组
+ * @return  数组中出现次数 大于 ⌊ n/2 ⌋ 的元素
+ */
+public int majorityElementV2(int[] nums) {
+    Arrays.sort(nums);
+    //  因为多数元素在数组中出现的次数大于 n / 2，因此位于中间位置的元素一定是中位数
+    return nums[nums.length &gt;&gt; 1];
+}
+```
+
+### 2.3 摩尔排序
+
+#### 2.3.1 问题分析
+
+1. **开始时将投票人 $voteItem$ 初始化为 0**，**票数 $voteNum$ 初始化为 0**，然后**对数组 $nums$ 进行遍历**，假设当前遍历到的元素 $nums[i]$ 为
+   1. 如果 $voteNum = 0$：则令 $voteItem = nums[i], voteNum = 1$。
+   2. 如果 $voteItem != nums[i]$，则 $voteNum = voteNum - 1$。
+   3. 如果 $voteItem = nums[i]$，则 $voteNum = voteNum + 1$。
+2. 这种方法之所以行得通是因为**投票法是遇到相同的则票数 +1**，**遇到不同的则票数-1**，且**多数元素的个数 $&gt; ⌊\frac{n}{2}⌋$**，**其余元素的个数总和 $\le ⌊\frac{n}{2}⌋$**，因此**多数元素的个数 - 其余元素的个数总和的结果一定 $\ge1$**，这就**相当于每个多数元素和其他元素的两两相互抵消**，**抵消到最后肯定还剩余至少 1 个多数元素**。
+
+#### 2.3.2 参考代码
+
+```java
+/**
+ * 169. 多数元素（版本 3：摩尔投票）
+ * @param nums  数组
+ * @return  数组中出现次数 大于 ⌊ n/2 ⌋ 的元素
+ */
+public int majorityElementV3(int[] nums) {
+    int voteItem = 0, voteNum = 0;
+
+    for (int i = 0; i &lt; nums.length; i++) {
+        if (voteNum == 0) {
+            voteItem = nums[i];
+            voteNum = 1;
+        }
+        else if (voteItem == nums[i]) {
+            voteNum++;
+        } else {
+            voteNum--;
+        }
+    }
+
+    return voteItem;
+}
+```
+
+## 参考文献
+
+1. [169. 多数元素](https://leetcode-cn.com/problems/majority-element)。
+2. [ Java-3 种方法(计数法/排序法/摩尔投票法)](https://leetcode-cn.com/problems/majority-element/solution/3chong-fang-fa-by-gfu-2)。
+
+ #��� #��Q��  #�&h NH
