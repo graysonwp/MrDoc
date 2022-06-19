@@ -24070,3 +24070,1959 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [19/Jun/2022 00:07:34] "GET /project-37/doc-809 HTTP/1.0" 301 0
 [19/Jun/2022 00:07:47] "GET /project-37/doc-809/ HTTP/1.0" 200 58436
 [19/Jun/2022 00:23:09] "GET /project-38/doc-921/ HTTP/1.0" 200 31822
+[19/Jun/2022 00:47:54] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 00:47:55] "GET /project-37/doc-808/ HTTP/1.0" 200 39420
+[19/Jun/2022 00:47:58] "GET /download_doc_md/895/ HTTP/1.0" 200 4418
+[19/Jun/2022 00:53:56] "GET /login/?next=/create_doc/%3Feid%3D4 HTTP/1.0" 200 4051
+[19/Jun/2022 01:08:27] "GET /project-23/doc-211/ HTTP/1.0" 200 4418
+[19/Jun/2022 01:28:38] "GET /download_doc_md/276/ HTTP/1.0" 200 4418
+[19/Jun/2022 01:29:55] "GET /project-49/doc-846/ HTTP/1.0" 200 37136
+[19/Jun/2022 01:37:03] "GET /download_doc_md/337/ HTTP/1.0" 200 4397
+[19/Jun/2022 01:38:43] "GET /download_doc_md/341/ HTTP/1.0" 200 4418
+[19/Jun/2022 01:48:44] "GET /project-36/doc-695/ HTTP/1.0" 200 4418
+[19/Jun/2022 01:58:41] "GET /download_doc_md/72/ HTTP/1.0" 200 4418
+[19/Jun/2022 02:07:40] "GET /download_doc_md/864/ HTTP/1.0" 200 4418
+[19/Jun/2022 02:08:49] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 02:08:50] "GET /project-34/doc-515/ HTTP/1.0" 200 41662
+[19/Jun/2022 02:13:22] "GET /project-21/doc-772/ HTTP/1.0" 200 69376
+[19/Jun/2022 02:17:07] "GET /download_doc_md/783/ HTTP/1.0" 200 4418
+[19/Jun/2022 02:27:27] "GET /download_doc_md/633/ HTTP/1.0" 200 4418
+[19/Jun/2022 02:46:38] "GET /download_doc_md/190/ HTTP/1.0" 200 4418
+[19/Jun/2022 02:52:48] "GET /project-21/doc-266/ HTTP/1.0" 200 108374
+[19/Jun/2022 02:56:18] "GET /download_doc_md/327/ HTTP/1.0" 200 4418
+[19/Jun/2022 02:57:58] "GET /project-38/doc-921/ HTTP/1.0" 200 31822
+[19/Jun/2022 02:58:11] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[19/Jun/2022 02:58:13] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.0" 200 56780
+[19/Jun/2022 02:58:16] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[19/Jun/2022 02:58:16] "GET /static/editor.md/lib/purify.min.js?version=0.7.9 HTTP/1.0" 200 18018
+[19/Jun/2022 02:58:19] "GET /static/editor.md/fonts/fontawesome-webfont.ttf?v=4.3.0 HTTP/1.0" 200 122092
+[19/Jun/2022 02:58:19] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[19/Jun/2022 02:58:20] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[19/Jun/2022 02:58:21] "GET /static/editor.md/fonts/fontawesome-webfont.woff?v=4.3.0 HTTP/1.0" 200 71508
+[19/Jun/2022 02:58:22] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[19/Jun/2022 02:58:24] "GET /static/viewerjs/viewer.min.js?version=0.7.9 HTTP/1.0" 200 32388
+[19/Jun/2022 03:03:47] "GET /download_doc_md/92/ HTTP/1.0" 200 4418
+[19/Jun/2022 03:05:11] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 03:14:09] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[19/Jun/2022 03:14:09] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[19/Jun/2022 03:14:12] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[19/Jun/2022 03:19:35] "GET /project-21/doc-911/ HTTP/1.0" 200 66338
+[19/Jun/2022 03:24:44] "GET /project-26/ HTTP/1.0" 200 42333
+[19/Jun/2022 03:25:03] "GET /get_pro_doc_tree/ HTTP/1.0" 405 0
+[19/Jun/2022 03:25:05] "GET /static/editor.md/editormd.js?version=0.7.9 HTTP/1.0" 200 185856
+[19/Jun/2022 03:25:08] "GET /static/editor.md/lib/marked.min.js?version=0.7.9 HTTP/1.0" 200 44927
+[19/Jun/2022 03:25:12] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[19/Jun/2022 03:27:44] "GET /download_doc_md/686/ HTTP/1.0" 200 4418
+[19/Jun/2022 03:36:02] "GET /project-23/doc-201/ HTTP/1.0" 200 4418
+[19/Jun/2022 03:37:42] "GET /download_doc_md/744/ HTTP/1.0" 200 4397
+[19/Jun/2022 03:37:44] "GET /static/404.png HTTP/1.0" 200 10595
+[19/Jun/2022 03:37:45] "GET /static/icon_img/create-table-icon.svg HTTP/1.0" 200 967
+[19/Jun/2022 03:37:45] "GET /static/layui/layui.js HTTP/1.0" 200 291286
+[19/Jun/2022 03:37:47] "GET /static/layui/css/layui.css HTTP/1.0" 200 79875
+[19/Jun/2022 03:37:48] "GET /static/logo.svg HTTP/1.0" 200 15252
+[19/Jun/2022 03:37:49] "GET /static/icon_img/create-doc-icon.svg HTTP/1.0" 200 894
+[19/Jun/2022 03:39:15] "GET /project-34/doc-897/ HTTP/1.0" 200 49133
+[19/Jun/2022 03:40:54] "POST /get_pro_doc_tree/ HTTP/1.0" 200 8823
+[19/Jun/2022 03:40:54] "GET /static/editor.md/lib/raphael.min.js HTTP/1.0" 200 92705
+[19/Jun/2022 03:40:54] "GET /static/editor.md/lib/underscore.min.js HTTP/1.0" 200 16483
+[19/Jun/2022 03:40:54] "GET /static/editor.md/lib/prettify.min.js HTTP/1.0" 200 17973
+[19/Jun/2022 03:43:34] "GET /project-23/doc-56/ HTTP/1.0" 200 4418
+[19/Jun/2022 03:51:38] "GET /project-21/doc-764/ HTTP/1.0" 200 66239
+[19/Jun/2022 03:59:11] "GET /project-24/doc-267/ HTTP/1.0" 200 34744
+[19/Jun/2022 04:07:11] "GET /download_doc_md/316/ HTTP/1.0" 200 4418
+[19/Jun/2022 04:11:48] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 04:11:51] "GET /project-21/doc-890/ HTTP/1.0" 200 72490
+[19/Jun/2022 04:13:52] "GET /project-34/doc-544/ HTTP/1.0" 200 58550
+[19/Jun/2022 04:14:27] "GET /project-45/doc-821/ HTTP/1.0" 200 4418
+[19/Jun/2022 04:24:15] "GET /project-26/doc-313/ HTTP/1.0" 200 45732
+[19/Jun/2022 04:29:19] "GET /project-26/doc-337/ HTTP/1.0" 200 47339
+[19/Jun/2022 04:31:57] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[19/Jun/2022 04:31:58] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[19/Jun/2022 04:32:01] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[19/Jun/2022 04:32:08] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[19/Jun/2022 04:43:20] "GET /download_doc_md/202/ HTTP/1.0" 200 4418
+[19/Jun/2022 04:49:37] "GET /download_doc_md/822/ HTTP/1.0" 200 4418
+[19/Jun/2022 04:57:46] "GET /project-36/doc-710/ HTTP/1.0" 200 4418
+[19/Jun/2022 05:06:17] "GET /project-49/ HTTP/1.0" 200 30675
+[19/Jun/2022 05:16:45] "GET /project-42/doc-769/ HTTP/1.0" 200 39000
+[19/Jun/2022 05:35:58] "GET /download_doc_md/804/ HTTP/1.0" 200 4397
+[19/Jun/2022 05:47:43] "GET /download_doc_md/798/ HTTP/1.0" 200 4418
+[19/Jun/2022 05:58:25] "GET /download_doc_md/270/ HTTP/1.0" 200 4418
+[19/Jun/2022 05:58:53] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 05:58:54] "GET /project-24/doc-249/ HTTP/1.0" 200 39337
+[19/Jun/2022 06:03:36] "GET /project-34/doc-522/ HTTP/1.0" 200 42900
+[19/Jun/2022 06:09:12] "GET /project-1/doc-292 HTTP/1.0" 301 0
+2022-06-19 06:09:13.218 | ERROR    | app_doc.views:doc:1075 - Collection browsing error
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f4f08f92ea0>
+    └ <Thread(Thread-2345, started daemon 139977068898048)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f4f08f92c80>
+    └ <Thread(Thread-2345, started daemon 139977068898048)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-2345, started daemon 139977068898048)>
+    │    │        │    └ (<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-2345, started daemon 139977068898048)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f4f0267ff28>>
+    └ <Thread(Thread-2345, started daemon 139977068898048)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 59278)
+    │    │              └ <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f4f01f31158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f0267ff28>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f0267ff28>
+    │    │                   │        └ ('127.0.0.1', 59278)
+    │    │                   └ <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f0267ff28>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f4f00d2b598>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4ef22e9128>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f4f00d2b620>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4ef22e9128>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f4f00d2aae8>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4f0267ff28>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4ef22e9128>
+    │       └ <function BaseHandler.run at 0x7f4f00d27840>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f4ef2301550>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f4f00d27b70>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f4ef2301550>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f4ef2301550>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4efabaab00>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f4ef2301550>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │    └ <function BaseHandler.get_response at 0x7f4f00d5ed08>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4efabaab00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f99b70>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4efabaab00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f4efa03fe48>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f99ae8>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f4efa03fe48>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f4efa04f2b0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f99a60>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f4efa04f2b0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f4efa04fac8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f999d8>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f4efa04fac8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f4ef9fdb940>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f99950>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f4ef9fdb940>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f4efabc06d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f99840>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f4efabc06d8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f4efabc05c0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f997b8>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f4efabc05c0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f4efabc0630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4ef9f998c8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f4efabc0630>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f4efabc05f8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4efa11ad90>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f4efabc05f8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f4efb76dcc0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4efa11ae18>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f4efb76dcc0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f4ef9fe60b8>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               │    └ <function BaseHandler._get_response at 0x7f4efa11abf8>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f4ef9fe60b8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f4efabaab00>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 1, 'doc_id': 292}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-1/doc-292/'>
+               └ <function doc at 0x7f4efaa6b0d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 1, 'doc_id': 292}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-1/doc-292/'>
+           └ <function doc at 0x7f4efaa6b048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 292
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f4f00e317f0>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 292, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f4f01fead08>
+                   └ <django.db.models.manager.Manager object at 0x7f4f00d31ac8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[19/Jun/2022 06:09:13] "GET /project-1/doc-292/ HTTP/1.0" 200 4418
+[19/Jun/2022 06:13:05] "GET /download_doc_md/516/ HTTP/1.0" 200 4397
+[19/Jun/2022 06:22:17] "GET /project-21/doc-298/ HTTP/1.0" 200 62871
+[19/Jun/2022 06:41:08] "GET /download_doc_md/753/ HTTP/1.0" 200 4418
+[19/Jun/2022 06:47:36] "GET /project-21/ HTTP/1.0" 200 64996
+[19/Jun/2022 06:51:48] "GET /download_doc_md/262/ HTTP/1.0" 200 4418
+[19/Jun/2022 07:02:34] "GET /project-36/doc-674/ HTTP/1.0" 200 4418
+[19/Jun/2022 07:13:34] "GET /project-21/doc-751/ HTTP/1.0" 200 95743
+[19/Jun/2022 07:24:16] "GET /download_doc_md/806/ HTTP/1.0" 200 4418
+[19/Jun/2022 07:34:18] "GET /project-23/doc-206/ HTTP/1.0" 200 4418
+[19/Jun/2022 07:45:26] "GET /project-42/doc-770/ HTTP/1.0" 200 52809
+[19/Jun/2022 07:56:26] "GET /project-49/doc-847/ HTTP/1.0" 200 28920
+[19/Jun/2022 08:02:09] "GET /project-49/ HTTP/1.0" 200 30606
+[19/Jun/2022 08:02:57] "GET /robots.txt HTTP/1.0" 404 4418
+[19/Jun/2022 08:39:38] "GET /project-37/doc-879/ HTTP/1.0" 200 72309
+[19/Jun/2022 08:40:21] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 08:40:22] "GET /project-26/doc-345/ HTTP/1.0" 200 48405
+[19/Jun/2022 08:44:35] "GET /project-21/doc-224/ HTTP/1.0" 200 72312
+[19/Jun/2022 08:45:55] "GET /download_doc_md/528/ HTTP/1.0" 200 4418
+[19/Jun/2022 08:53:54] "GET /project-36/doc-638/ HTTP/1.0" 200 4418
+[19/Jun/2022 09:03:17] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 09:03:17] "GET /project-26/doc-311/ HTTP/1.0" 200 43123
+[19/Jun/2022 09:03:34] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[19/Jun/2022 09:04:43] "GET /download_doc_md/245/ HTTP/1.0" 200 4418
+[19/Jun/2022 09:09:53] "GET /project-49/doc-849/ HTTP/1.0" 200 33222
+[19/Jun/2022 09:10:37] "GET /project-23/doc-63/ HTTP/1.0" 200 4397
+[19/Jun/2022 09:20:17] "GET /download_doc_md/731/ HTTP/1.0" 200 4418
+[19/Jun/2022 09:25:34] "GET /project-21/ HTTP/1.0" 200 65044
+[19/Jun/2022 09:26:29] "GET /register/ HTTP/1.0" 200 4506
+[19/Jun/2022 09:36:27] "GET /download_doc_md/88/ HTTP/1.0" 200 4418
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_214149_285267.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_214149_285267.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59420)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_213005_551046.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_213005_551046.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59422)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_214801_676458.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_214801_676458.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59418)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_205955_451550.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_205955_451550.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59424)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_171841_673640.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:39:02] "GET /media/202206/2022-06-17_171841_673640.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59426)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:41:00] "GET /project-38/doc-921/ HTTP/1.0" 200 32750
+[19/Jun/2022 09:41:00] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[19/Jun/2022 09:41:01] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313172332.png HTTP/1.0" 200 587925
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313174741.png HTTP/1.0" 200 408599
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313175022.png HTTP/1.0" 200 432407
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313180114.png HTTP/1.0" 200 830254
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313175543.png HTTP/1.0" 200 493408
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313180211.png HTTP/1.0" 200 882903
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313180328.png HTTP/1.0" 200 441114
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313180605.png HTTP/1.0" 200 438437
+[19/Jun/2022 09:41:02] "GET /media/202203/Pasted%20image%2020220313180747.png HTTP/1.0" 200 423036
+[19/Jun/2022 09:43:30] "GET /project-26/doc-930/ HTTP/1.0" 200 106065
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-16_210554_113489.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-16_210554_113489.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59456)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-16_214711_707989.png HTTP/1.0" 200 161303
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-17_162145_439843.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-17_162145_439843.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59460)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-17_171841_673640.png HTTP/1.0" 200 155054
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-17_205955_451550.png HTTP/1.0" 200 274017
+[19/Jun/2022 09:43:34] "GET /media/202206/2022-06-17_213005_551046.png HTTP/1.0" 200 279754
+[19/Jun/2022 09:43:35] "GET /media/202206/2022-06-17_214149_285267.png HTTP/1.0" 200 135419
+[19/Jun/2022 09:43:35] "GET /media/202206/2022-06-17_214801_676458.png HTTP/1.0" 200 181600
+[19/Jun/2022 09:43:35] "GET /media/202206/2022-06-17_164922_712605.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:43:35] "GET /media/202206/2022-06-17_164922_712605.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59472)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:43:35] "GET /media/202205/2022-05-28_1148300.050953602887815364.png HTTP/1.0" 200 33091
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:43:35] "GET /media/202205/2022-05-28_1148300.050953602887815364.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59474)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:43:35] "GET /media/202205/2022-05-28_1151150.4816085587647606.png HTTP/1.0" 200 53584
+[19/Jun/2022 09:43:35] "GET /media/202205/2022-05-28_1156350.7073084618631299.png HTTP/1.0" 200 15091
+[19/Jun/2022 09:43:35] "GET /media/202205/2022-05-27_102456_404830.png HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 09:43:35] "GET /media/202205/2022-05-27_102456_404830.png HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59480)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 09:43:35] "GET /media/202205/2022-05-27_103001_656451.png HTTP/1.0" 200 173781
+[19/Jun/2022 09:43:35] "GET /media/202206/2022-06-01_2019230.16935938666390438.png HTTP/1.0" 200 167798
+[19/Jun/2022 09:43:36] "GET /media/202206/2022-06-04_213705_225227.png HTTP/1.0" 200 211035
+[19/Jun/2022 09:47:07] "GET /download_doc_md/812/ HTTP/1.0" 200 4418
+[19/Jun/2022 09:52:29] "GET /download_doc_md/294/ HTTP/1.0" 200 4418
+[19/Jun/2022 09:55:04] "GET /modify_doc/930/ HTTP/1.0" 200 139233
+[19/Jun/2022 09:55:05] "GET /static/vditor/dist/index.min.js?version=0.7.9 HTTP/1.0" 200 268049
+
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:[19/Jun/2022 09:55:05] "POST /get_pro_doc_tree/ HTTP/1.0" 200 8823
+[19/Jun/2022 09:55:05] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[19/Jun/2022 09:55:08] "GET /static/vditor/dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[19/Jun/2022 09:55:08] "GET /static/vditor/dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[19/Jun/2022 09:55:08] "GET /static/vditor/dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[19/Jun/2022 09:55:09] "GET /static/vditor/dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[19/Jun/2022 09:55:09] "GET /static/vditor/dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[19/Jun/2022 09:55:09] "GET /static/vditor/dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[19/Jun/2022 09:55:27] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 09:55:51] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 09:55:55] "GET /robots.txt HTTP/1.0" 404 4397
+[19/Jun/2022 09:55:59] "GET /sitemap HTTP/1.0" 404 4397
+[19/Jun/2022 09:56:05] "GET /sitemap HTTP/1.0" 404 4397
+[19/Jun/2022 09:56:10] "GET /sitemap.txt HTTP/1.0" 404 4397
+[19/Jun/2022 09:56:15] "GET /sitemap.txt HTTP/1.0" 404 4397
+[19/Jun/2022 09:56:21] "GET /download_doc_md/929/ HTTP/1.0" 200 4397
+[19/Jun/2022 09:56:25] "GET /project-26/doc-930/ HTTP/1.0" 200 105137
+[19/Jun/2022 09:56:48] "GET /project-26/doc-318/ HTTP/1.0" 200 42202
+[19/Jun/2022 09:57:52] "GET /project-53/doc-895/ HTTP/1.0" 200 25743
+[19/Jun/2022 10:03:42] "GET / HTTP/1.0" 200 60703
+[19/Jun/2022 10:03:48] "GET /project-21/doc-905/ HTTP/1.0" 200 69012
+[19/Jun/2022 10:03:49] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 10:03:49] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59552)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 10:03:49] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 10:03:49] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59554)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 10:03:51] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 172032
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 10:03:51] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59556)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 10:03:53] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[19/Jun/2022 10:03:54] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[19/Jun/2022 10:03:54] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 10:03:54] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59570)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 10:03:54] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[19/Jun/2022 10:05:29] "GET /project-21/doc-908/ HTTP/1.0" 200 68320
+[19/Jun/2022 10:05:29] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[19/Jun/2022 10:05:29] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[19/Jun/2022 10:05:30] "GET /media/202202/2022-02-09_1610230.41455634163523025.png HTTP/1.0" 200 34958
+[19/Jun/2022 10:05:30] "GET /media/202202/2022-02-09_1609210.5370369541150786.png HTTP/1.0" 200 34541
+[19/Jun/2022 10:05:30] "GET /media/202202/2022-02-09_1611220.4709022428185119.png HTTP/1.0" 200 35236
+[19/Jun/2022 10:05:30] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[19/Jun/2022 10:05:30] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[19/Jun/2022 10:05:30] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[19/Jun/2022 10:05:31] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[19/Jun/2022 10:05:35] "GET /project-21/doc-908/ HTTP/1.0" 200 67392
+[19/Jun/2022 10:08:40] "GET /download_doc_md/827/ HTTP/1.0" 200 4418
+[19/Jun/2022 10:14:10] "GET /download_doc_md/215/ HTTP/1.0" 200 4418
+[19/Jun/2022 10:19:38] "GET /project-21/doc-917/ HTTP/1.0" 200 65976
+[19/Jun/2022 10:30:36] "GET /project-21/doc-90 HTTP/1.0" 301 0
+[19/Jun/2022 10:30:45] "GET /project-21/doc-90/ HTTP/1.0" 200 62873
+[19/Jun/2022 10:32:19] "GET /modify_doc/908/ HTTP/1.0" 200 67924
+[19/Jun/2022 10:32:19] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[19/Jun/2022 10:32:19] "GET /static/vditor/dist/index.min.js?version=0.7.9 HTTP/1.0" 200 40960
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 10:32:19] "GET /static/vditor/dist/index.min.js?version=0.7.9 HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59634)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 10:32:19] "POST /get_pro_doc_tree/ HTTP/1.0" 200 19674
+[19/Jun/2022 10:32:19] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 10:32:19] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59638)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 10:32:21] "GET /static/vditor/dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[19/Jun/2022 10:32:21] "GET /media/202202/2022-02-09_1609210.5370369541150786.png HTTP/1.0" 200 34541
+[19/Jun/2022 10:32:21] "GET /media/202202/2022-02-09_1610230.41455634163523025.png HTTP/1.0" 200 34958
+[19/Jun/2022 10:32:21] "GET /media/202202/2022-02-09_1611220.4709022428185119.png HTTP/1.0" 200 35236
+[19/Jun/2022 10:32:21] "GET /static/vditor/dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[19/Jun/2022 10:32:21] "GET /static/vditor/dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Jun/2022 10:32:21] "GET /static/vditor/dist/js/katex/mhchem.min.js HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 59650)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[19/Jun/2022 10:32:21] "GET /static/vditor/dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[19/Jun/2022 10:33:40] "GET / HTTP/1.0" 200 52888
+[19/Jun/2022 10:36:10] "GET /download_doc_md/68/ HTTP/1.0" 200 4418
