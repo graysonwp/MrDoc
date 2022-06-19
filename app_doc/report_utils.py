@@ -65,10 +65,10 @@ class ReportMD():
             os.mkdir(self.project_path)
 
         # 判断是否存在静态文件文件夹
-        self.media_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/media".format(self.project_name)
-        is_media = os.path.exists(self.media_path)
-        if is_media is False:
-            os.mkdir(self.media_path)
+        # self.media_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/media".format(self.project_name)
+        # is_media = os.path.exists(self.media_path)
+        # if is_media is False:
+        #     os.mkdir(self.media_path)
 
     def work(self):
         # 初始化文集YAML数据
@@ -89,16 +89,27 @@ class ReportMD():
             # 文档内容，如果使用Markdown编辑器编写则导出Markdown文本，如果使用富文本编辑器编写则导出HTML文本
             md_content = self.operat_md_media(d.pre_content) \
                 if d.editor_mode in [1,2] else self.operat_md_media(d.content)
+            
+            # 判断是否存在一级文件夹
+            project_first_dir = '{}/{}'.format(self.project_path,md_name)
+            project_first_dir_exists = os.path.exists(project_first_dir)
+            if project_first_dir_exists is False:
+                os.mkdir(project_first_dir)
 
             # 新建MD文件
-            with open('{}/{}.md'.format(self.project_path,md_name),'w',encoding='utf-8') as files:
-                files.write(md_content)
+            with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
+                files.write(md_content.replace('./media/', settings.DOMAIN + '/media/'))
 
             # 查询二级文档
             data_2 = Doc.objects.filter(parent_doc=d.id).order_by("sort")
             if data_2.count() > 0:
                 top_item['children'] = []
                 for d2 in data_2:
+                    # 删除一级文件夹对应的文件
+                    project_first_file = '{}/{}.md'.format(project_first_dir,md_name)
+                    if os.path.exists(project_first_file):
+                        os.remove(project_first_file)
+
                     sec_item = {
                         'name': validate_title(d2.name),
                         'file': validate_title(d2.name)+'.md',
@@ -107,14 +118,25 @@ class ReportMD():
                     md_name_2 = validate_title(d2.name)
                     md_content_2 = self.operat_md_media(d2.pre_content) \
                         if d2.editor_mode in [1,2] else self.operat_md_media(d2.content)
+                    
+                    # 判断是否存在二级文件夹
+                    project_second_dir = '{}/{}/{}'.format(self.project_path,md_name,md_name_2)
+                    project_second_dir_exists = os.path.exists(project_second_dir)
+                    if project_second_dir_exists is False:
+                        os.mkdir(project_second_dir)
 
                     # 新建MD文件
-                    with open('{}/{}.md'.format(self.project_path, md_name_2), 'w', encoding='utf-8') as files:
-                        files.write(md_content_2)
+                    with open('{}/{}.md'.format(project_second_dir, md_name_2), 'w', encoding='utf-8') as files:
+                        files.write(md_content_2.replace('./media/', settings.DOMAIN + '/media/'))
 
                     # 获取第三级文档
                     data_3 = Doc.objects.filter(parent_doc=d2.id).order_by("sort")
                     if data_3.count() > 0:
+                        # 删除二级文件夹对应的文件
+                        os.remove('{}/{}.md'.format(project_second_dir, md_name_2))
+                        project_second_file = '{}/{}.md'.format(project_second_dir,md_name_2)
+                        if os.path.exists(project_second_file):
+                            os.remove(project_second_file)
                         sec_item['children'] = []
                         for d3 in data_3:
                             item = {
@@ -127,14 +149,14 @@ class ReportMD():
                                 if d3.editor_mode in [1,2] else self.operat_md_media(d3.content)
 
                             # 新建MD文件
-                            with open('{}/{}.md'.format(self.project_path, md_name_3), 'w', encoding='utf-8') as files:
-                                files.write(md_content_3)
+                            with open('{}/{}.md'.format(project_second_dir, md_name_3), 'w', encoding='utf-8') as files:
+                                files.write(md_content_3.replace('./media/', settings.DOMAIN + '/media/'))
                     top_item['children'].append(sec_item)
             project_toc_list['toc'].append(top_item)
 
         # 写入层级YAML
-        with open('{}/mrdoc.yaml'.format(self.project_path), 'a+', encoding='utf-8') as toc_yaml:
-            yaml.dump(project_toc_list,toc_yaml,allow_unicode=True)
+        # with open('{}/mrdoc.yaml'.format(self.project_path), 'a+', encoding='utf-8') as toc_yaml:
+        #     yaml.dump(project_toc_list,toc_yaml,allow_unicode=True)
 
         # 压缩文件
         md_file = shutil.make_archive(
@@ -163,19 +185,19 @@ class ReportMD():
                     continue                # 对本地静态文件进行复制
                 if media_filename.startswith("/media"):
                     # print(media_filename)
-                    sub_folder = "/" + media_filename.split("/")[2] # 获取子文件夹的名称
+                    # sub_folder = "/" + media_filename.split("/")[2] # 获取子文件夹的名称
                     # print(sub_folder)
-                    is_sub_folder = os.path.exists(self.media_path+sub_folder)
+                    # is_sub_folder = os.path.exists(self.media_path+sub_folder)
                     # 创建子文件夹
-                    if is_sub_folder is False:
-                        os.mkdir(self.media_path+sub_folder)
+                    # if is_sub_folder is False:
+                    #     os.mkdir(self.media_path+sub_folder)
                     # 替换MD内容的静态文件链接
                     md_content = md_content.replace(media_filename, "." + media_filename)
                     # 复制静态文件到指定文件夹
-                    try:
-                        shutil.copy(settings.BASE_DIR + media_filename, self.media_path+sub_folder)
-                    except FileNotFoundError:
-                        pass
+                    # try:
+                    #     shutil.copy(settings.BASE_DIR + media_filename, self.media_path+sub_folder)
+                    # except FileNotFoundError:
+                    #     pass
 
             return md_content
         # 不存在静态文件，直接返回MD内容
