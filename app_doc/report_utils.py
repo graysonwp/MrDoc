@@ -198,6 +198,8 @@ class ReportMD():
                     #     shutil.copy(settings.BASE_DIR + media_filename, self.media_path+sub_folder)
                     # except FileNotFoundError:
                     #     pass
+                elif settings.DOMAIN in media_filename:
+                    md_content = md_content.replace(settings.DOMAIN, '')
 
             return md_content
         # 不存在静态文件，直接返回MD内容
