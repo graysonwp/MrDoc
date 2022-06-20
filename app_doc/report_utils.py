@@ -175,12 +175,12 @@ class ReportMD():
         # 查找MD内容中的静态文件
         pattern = r"\!\[.*?\]\(.*?\)"
         media_list = re.findall(pattern, md_content)
-        # print(media_list)
         # 存在静态文件,进行遍历
         if len(media_list) > 0:
             for media in media_list:
                 try:
                     media_filename = media.replace('//','/').split("(")[-1].split(")")[0] # 媒体文件的文件名
+                    print(media_filename)
                 except:
                     continue                # 对本地静态文件进行复制
                 if media_filename.startswith("/media"):
@@ -199,7 +199,7 @@ class ReportMD():
                     # except FileNotFoundError:
                     #     pass
                 elif settings.DOMAIN in media_filename:
-                    md_content = md_content.replace(settings.DOMAIN, '')
+                    md_content = md_content.replace(settings.DOMAIN + '/media/', './media/')
 
             return md_content
         # 不存在静态文件，直接返回MD内容
