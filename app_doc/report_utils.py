@@ -188,7 +188,7 @@ class ReportMD():
                     # sub_folder = "/" + media_filename.split("/")[2] # 获取子文件夹的名称
                     # print(sub_folder)
                     # is_sub_folder = os.path.exists(self.media_path+sub_folder)
-                    # 创建子文件夹
+                    # 创建子文件夹``
                     # if is_sub_folder is False:
                     #     os.mkdir(self.media_path+sub_folder)
                     # 替换MD内容的静态文件链接
