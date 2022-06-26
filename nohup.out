@@ -48715,3 +48715,3208 @@ app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
 [26/Jun/2022 00:29:12] "GET /project-21/doc-901/ HTTP/1.0" 200 66363
 [26/Jun/2022 00:29:55] "GET /project-34/doc-509/ HTTP/1.0" 200 41618
 [26/Jun/2022 00:29:59] "GET /project-37/doc-739/ HTTP/1.0" 200 44619
+[26/Jun/2022 00:31:14] "GET /project-49/doc-849/ HTTP/1.0" 200 33212
+[26/Jun/2022 00:38:12] "GET /download_doc_md/847/ HTTP/1.0" 200 4418
+[26/Jun/2022 00:38:26] "GET /download_doc_md/536/ HTTP/1.0" 200 4397
+[26/Jun/2022 00:38:29] "GET /download_doc_md/739/ HTTP/1.0" 200 4397
+[26/Jun/2022 00:38:32] "GET /download_doc_md/761/ HTTP/1.0" 200 4397
+[26/Jun/2022 01:00:20] "GET /download_doc_md/520/ HTTP/1.0" 200 4418
+[26/Jun/2022 01:00:52] "GET /check_viewcode/?to=/project-46/doc-835/ HTTP/1.0" 200 3125
+[26/Jun/2022 01:01:09] "GET /project-38/doc-921/ HTTP/1.0" 200 31822
+[26/Jun/2022 01:01:10] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 01:01:10] "GET /static/editor.md/css/editormd.css?version=0.7.9 HTTP/1.0" 200 79072
+[26/Jun/2022 01:01:10] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 01:01:10] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[26/Jun/2022 01:01:10] "GET /static/mrdoc/mrdoc.css?version=0.7.9 HTTP/1.0" 200 21408
+[26/Jun/2022 01:01:10] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 01:01:10] "GET /static/iconFont/iconfont.css?version=0.7.9 HTTP/1.0" 200 22891
+[26/Jun/2022 01:01:10] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 01:01:10] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[26/Jun/2022 01:01:10] "GET /static/viewerjs/viewer.min.js?version=0.7.9 HTTP/1.0" 200 32388
+[26/Jun/2022 01:01:10] "GET /static/qrcodejs/qrcode.min.js?version=0.7.9 HTTP/1.0" 200 19927
+[26/Jun/2022 01:01:10] "GET /static/toc/doctoc.js?version=0.7.9 HTTP/1.0" 200 11498
+[26/Jun/2022 01:01:10] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 01:01:10] "GET /static/editor.md/lib/purify.min.js?version=0.7.9 HTTP/1.0" 200 18018
+[26/Jun/2022 01:01:10] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[26/Jun/2022 01:01:10] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 01:01:10] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[26/Jun/2022 01:01:10] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[26/Jun/2022 01:01:11] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[26/Jun/2022 01:01:11] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[26/Jun/2022 01:01:11] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[26/Jun/2022 01:01:11] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[26/Jun/2022 01:01:11] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[26/Jun/2022 01:01:11] "GET /static/dashang/dashang_paypal.png HTTP/1.0" 200 6834
+[26/Jun/2022 01:01:11] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.0" 200 56780
+[26/Jun/2022 01:01:11] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313172332.png HTTP/1.0" 200 587925
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313172414.png HTTP/1.0" 200 285778
+[26/Jun/2022 01:01:12] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313180114.png HTTP/1.0" 200 830254
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313175543.png HTTP/1.0" 200 493408
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313180605.png HTTP/1.0" 200 438437
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313175022.png HTTP/1.0" 200 432407
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313174904.png HTTP/1.0" 200 275839
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313174741.png HTTP/1.0" 200 408599
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313180747.png HTTP/1.0" 200 423036
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313180328.png HTTP/1.0" 200 441114
+[26/Jun/2022 01:01:12] "GET /media/202203/Pasted%20image%2020220313180211.png HTTP/1.0" 200 882903
+[26/Jun/2022 01:01:12] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 01:01:14] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 01:01:14] "GET /static/vditor//dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[26/Jun/2022 01:01:15] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 01:01:16] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 01:01:17] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[26/Jun/2022 01:11:29] "GET /download_doc_md/782/ HTTP/1.0" 200 4418
+[26/Jun/2022 01:21:19] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 01:22:39] "GET /project-23/doc-200/ HTTP/1.0" 200 4418
+[26/Jun/2022 01:22:41] "GET /project-34/doc-842/ HTTP/1.0" 200 48523
+[26/Jun/2022 01:23:48] "GET /project-26/doc-334/ HTTP/1.0" 200 49259
+[26/Jun/2022 01:23:53] "GET /project-26/doc-346/ HTTP/1.0" 200 44707
+[26/Jun/2022 01:24:22] "GET /project-26/doc-336/ HTTP/1.0" 200 44136
+[26/Jun/2022 01:31:26] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 01:31:29] "GET /project-21/doc-727/ HTTP/1.0" 200 70323
+[26/Jun/2022 01:31:34] "GET /project-37/doc-740 HTTP/1.0" 301 0
+[26/Jun/2022 01:32:33] "GET /download_doc_md/318/ HTTP/1.0" 200 4397
+[26/Jun/2022 01:32:35] "GET /download_doc_md/878/ HTTP/1.0" 200 4397
+[26/Jun/2022 01:32:36] "GET /download_doc_md/905/ HTTP/1.0" 200 4397
+[26/Jun/2022 01:33:56] "GET /download_doc_md/724/ HTTP/1.0" 200 4418
+[26/Jun/2022 01:35:03] "GET /project-21/doc-741/ HTTP/1.0" 200 70148
+[26/Jun/2022 01:38:13] "GET /media/202107/2021-07-14_101549.png HTTP/1.0" 200 15816
+[26/Jun/2022 01:45:06] "GET /download_doc_md/850/ HTTP/1.0" 200 4418
+[26/Jun/2022 01:46:03] "GET /project-34/doc-813/ HTTP/1.0" 200 100782
+[26/Jun/2022 01:56:16] "GET /download_doc_md/680/ HTTP/1.0" 200 4418
+[26/Jun/2022 02:07:26] "GET /project-37/doc-747/ HTTP/1.0" 200 39399
+[26/Jun/2022 02:11:33] "GET /project-42/doc-770/ HTTP/1.0" 200 52801
+[26/Jun/2022 02:16:38] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 02:18:48] "GET /project-21/doc-819/ HTTP/1.0" 200 69811
+[26/Jun/2022 02:18:54] "GET /project-21/doc-880/ HTTP/1.0" 200 67036
+[26/Jun/2022 02:19:13] "GET /download_doc_md/778/ HTTP/1.0" 200 4397
+[26/Jun/2022 02:19:46] "GET /project-24/doc-243/ HTTP/1.0" 200 36117
+[26/Jun/2022 02:21:34] "GET /project-26/doc-335/ HTTP/1.0" 200 50470
+[26/Jun/2022 02:21:35] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 02:21:35] "GET /static/editor.md/css/editormd.css?version=0.7.9 HTTP/1.0" 200 79072
+[26/Jun/2022 02:21:35] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 02:21:35] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[26/Jun/2022 02:21:35] "GET /static/mrdoc/mrdoc.css?version=0.7.9 HTTP/1.0" 200 21408
+[26/Jun/2022 02:21:35] "GET /static/iconFont/iconfont.css?version=0.7.9 HTTP/1.0" 200 22891
+[26/Jun/2022 02:21:35] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 02:21:35] "GET /static/qrcodejs/qrcode.min.js?version=0.7.9 HTTP/1.0" 200 19927
+[26/Jun/2022 02:21:35] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 02:21:35] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 02:21:35] "GET /static/viewerjs/viewer.min.js?version=0.7.9 HTTP/1.0" 200 32388
+[26/Jun/2022 02:21:35] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[26/Jun/2022 02:21:35] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[26/Jun/2022 02:21:35] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 02:21:35] "GET /static/editor.md/lib/purify.min.js?version=0.7.9 HTTP/1.0" 200 18018
+[26/Jun/2022 02:21:35] "GET /static/toc/doctoc.js?version=0.7.9 HTTP/1.0" 200 11498
+[26/Jun/2022 02:21:36] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[26/Jun/2022 02:21:36] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[26/Jun/2022 02:21:37] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[26/Jun/2022 02:21:37] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 02:21:40] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[26/Jun/2022 02:21:42] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 02:21:42] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 02:27:43] "GET /download_doc_md/715/ HTTP/1.0" 200 4397
+[26/Jun/2022 02:27:47] "GET /download_doc_md/818/ HTTP/1.0" 200 4397
+[26/Jun/2022 02:29:58] "GET /download_doc_md/268/ HTTP/1.0" 200 4418
+[26/Jun/2022 02:37:04] "GET /check_viewcode/?to=/project-46/doc-838/ HTTP/1.0" 200 3125
+[26/Jun/2022 02:39:37] "GET /project-21/doc-934/ HTTP/1.0" 200 68629
+[26/Jun/2022 02:41:05] "GET /download_doc_md/534/ HTTP/1.0" 200 4418
+[26/Jun/2022 02:52:16] "GET /download_doc_md/197/ HTTP/1.0" 200 4418
+[26/Jun/2022 03:03:19] "GET /project-37/doc-812/ HTTP/1.0" 200 59155
+[26/Jun/2022 03:13:01] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 03:14:22] "GET /project-34/doc-509/ HTTP/1.0" 200 41626
+[26/Jun/2022 03:15:10] "GET /project-21/doc-893/ HTTP/1.0" 200 63911
+[26/Jun/2022 03:15:16] "GET /project-21/doc-908/ HTTP/1.0" 200 68477
+[26/Jun/2022 03:16:20] "GET /project-37/doc-807/ HTTP/1.0" 200 56276
+[26/Jun/2022 03:20:27] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 03:20:29] "GET /project-37/doc-739/ HTTP/1.0" 200 44619
+[26/Jun/2022 03:23:43] "GET /download_doc_md/331/ HTTP/1.0" 200 4397
+[26/Jun/2022 03:36:53] "GET /download_doc_md/63/ HTTP/1.0" 200 4418
+[26/Jun/2022 03:55:47] "GET /project-16/doc-735/ HTTP/1.0" 200 28933
+[26/Jun/2022 04:02:22] "GET /check_viewcode/?to=/project-46/ HTTP/1.0" 200 3125
+[26/Jun/2022 04:07:01] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 04:09:11] "GET /project-21/doc-329/ HTTP/1.0" 200 74240
+[26/Jun/2022 04:09:20] "GET /project-21/doc-760/ HTTP/1.0" 200 70316
+[26/Jun/2022 04:09:26] "GET /project-21/doc-876/ HTTP/1.0" 200 63929
+[26/Jun/2022 04:16:28] "GET /project-26/doc-335 HTTP/1.0" 301 0
+[26/Jun/2022 04:18:11] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 04:18:12] "GET /project-26/doc-929/ HTTP/1.0" 200 54758
+[26/Jun/2022 04:25:33] "GET /project-37/ HTTP/1.0" 200 41424
+[26/Jun/2022 04:25:46] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[26/Jun/2022 04:25:47] "GET /static/editor.md/editormd.js?version=0.7.9 HTTP/1.0" 200 185856
+[26/Jun/2022 04:25:49] "GET /static/viewerjs/viewer.min.js?version=0.7.9 HTTP/1.0" 200 32388
+[26/Jun/2022 04:25:49] "GET /static/editor.md/lib/marked.min.js?version=0.7.9 HTTP/1.0" 200 44927
+[26/Jun/2022 04:25:49] "GET /static/editor.md/lib/purify.min.js?version=0.7.9 HTTP/1.0" 200 18018
+[26/Jun/2022 04:25:51] "GET /static/editor.md/css/editormd.css?version=0.7.9 HTTP/1.0" 200 79072
+[26/Jun/2022 04:25:53] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 04:25:54] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 04:25:56] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 04:25:57] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[26/Jun/2022 04:32:44] "GET /project-41/ HTTP/1.0" 200 4418
+[26/Jun/2022 04:33:24] "GET /media/202205/2022-05-27_102456_404830.png HTTP/1.0" 200 88137
+[26/Jun/2022 04:41:45] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[26/Jun/2022 04:41:45] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.0" 200 56780
+[26/Jun/2022 04:41:47] "GET /static/editor.md/lib/underscore.min.js HTTP/1.0" 200 16483
+[26/Jun/2022 04:41:48] "GET /static/editor.md/lib/prettify.min.js HTTP/1.0" 200 17973
+[26/Jun/2022 04:44:01] "GET /download_doc_md/823/ HTTP/1.0" 200 4418
+[26/Jun/2022 04:55:21] "GET /download_doc_md/311/ HTTP/1.0" 200 4418
+[26/Jun/2022 05:03:02] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 05:03:12] "GET /project-34/doc-543/ HTTP/1.0" 200 43739
+[26/Jun/2022 05:05:04] "GET /project-21/doc-724/ HTTP/1.0" 200 108568
+[26/Jun/2022 05:05:14] "GET /project-21/doc-912/ HTTP/1.0" 200 69869
+[26/Jun/2022 05:05:22] "GET /project-21/doc-917/ HTTP/1.0" 200 67051
+[26/Jun/2022 05:06:30] "GET /download_doc_md/714/ HTTP/1.0" 200 4418
+[26/Jun/2022 05:12:02] "GET /project-37/doc-729 HTTP/1.0" 301 0
+[26/Jun/2022 05:15:38] "GET /project-21/doc-877/ HTTP/1.0" 200 71736
+[26/Jun/2022 05:15:52] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 05:15:57] "GET /static/toc/doctoc.js?version=0.7.9 HTTP/1.0" 200 11498
+[26/Jun/2022 05:17:54] "GET /project-36/doc-697/ HTTP/1.0" 200 4418
+[26/Jun/2022 05:29:10] "GET /download_doc_md/228/ HTTP/1.0" 200 4418
+[26/Jun/2022 05:31:49] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 05:31:50] "GET /project-21/doc-877/ HTTP/1.0" 200 71736
+[26/Jun/2022 05:31:53] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[26/Jun/2022 05:31:54] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 05:31:56] "GET /static/vditor//dist/js/katex/katex.min.css HTTP/1.0" 200 22113
+[26/Jun/2022 05:31:56] "GET /static/vditor//dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[26/Jun/2022 05:31:56] "GET /static/vditor//dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[26/Jun/2022 05:31:58] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 05:31:59] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 05:32:00] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Main-Regular.woff2 HTTP/1.0" 200 32464
+[26/Jun/2022 05:32:00] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Math-Italic.woff2 HTTP/1.0" 200 20096
+[26/Jun/2022 05:40:30] "GET /project-23/doc-68/ HTTP/1.0" 200 4418
+[26/Jun/2022 05:48:12] "GET /project-21/doc-886/ HTTP/1.0" 200 70297
+[26/Jun/2022 05:58:39] "GET /robots.txt HTTP/1.0" 404 4397
+2022-06-26 06:01:07.570 | ERROR    | app_doc.views:doc:1075 - 文集浏览出错
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fe4d4679ea0>
+    └ <Thread(Thread-4469, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7fe4d4679c80>
+    └ <Thread(Thread-4469, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4469, started daemon 140620468270848)>
+    │    │        │    └ (<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4469, started daemon 140620468270848)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>>
+    └ <Thread(Thread-4469, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 37622)
+    │    │              └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7fe4cd612158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │    │                   │        └ ('127.0.0.1', 37622)
+    │    │                   └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7fe4cc40e6a8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4b0322710>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7fe4cc40e730>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4b0322710>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7fe4cc40cbf8>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4b0322710>
+    │       └ <function BaseHandler.run at 0x7fe4cc409950>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c8ef98>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7fe4cc409c80>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c8ef98>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c8ef98>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c8ef98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │    └ <function BaseHandler.get_response at 0x7fe4cc440e18>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ec80>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ebf8>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eb70>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eae8>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ea60>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e9d8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e950>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e8c8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e6a8>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e7b8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               │    └ <function BaseHandler._get_response at 0x7fe4c969e730>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 732}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-732/'>
+               └ <function doc at 0x7fe4ca1700d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 732}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-732/'>
+           └ <function doc at 0x7fe4ca170048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 732
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7fe4cc510b00>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 732, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7fe4cd6cbd08>
+                   └ <django.db.models.manager.Manager object at 0x7fe4cc411e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[26/Jun/2022 06:01:07] "GET /project-21/doc-732/ HTTP/1.0" 200 4397
+2022-06-26 06:05:50.590 | ERROR    | app_doc.views:doc:1075 - 文集浏览出错
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fe4d4679ea0>
+    └ <Thread(Thread-4470, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7fe4d4679c80>
+    └ <Thread(Thread-4470, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4470, started daemon 140620468270848)>
+    │    │        │    └ (<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4470, started daemon 140620468270848)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>>
+    └ <Thread(Thread-4470, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 37636)
+    │    │              └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7fe4cd612158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │    │                   │        └ ('127.0.0.1', 37636)
+    │    │                   └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7fe4cc40e6a8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c2c7d208>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7fe4cc40e730>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c2c7d208>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7fe4cc40cbf8>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c2c7d208>
+    │       └ <function BaseHandler.run at 0x7fe4cc409950>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2ca0f60>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7fe4cc409c80>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2ca0f60>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2ca0f60>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2ca0f60>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │    └ <function BaseHandler.get_response at 0x7fe4cc440e18>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ec80>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ebf8>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eb70>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eae8>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ea60>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e9d8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e950>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e8c8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e6a8>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e7b8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               │    └ <function BaseHandler._get_response at 0x7fe4c969e730>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 43, 'doc_id': 775}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-43/doc-775/'>
+               └ <function doc at 0x7fe4ca1700d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 43, 'doc_id': 775}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-43/doc-775/'>
+           └ <function doc at 0x7fe4ca170048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 775
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7fe4cc510b00>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 775, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7fe4cd6cbd08>
+                   └ <django.db.models.manager.Manager object at 0x7fe4cc411e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[26/Jun/2022 06:05:50] "GET /project-43/doc-775/ HTTP/1.0" 200 4397
+[26/Jun/2022 06:07:18] "GET /check_viewcode/?to=/project-46/doc-838/ HTTP/1.0" 200 3125
+[26/Jun/2022 06:08:37] "GET /download_doc_md/807/ HTTP/1.0" 200 4397
+[26/Jun/2022 06:08:40] "GET /download_doc_md/847/ HTTP/1.0" 200 4397
+[26/Jun/2022 06:08:43] "GET /download_doc_md/856/ HTTP/1.0" 200 4397
+[26/Jun/2022 06:25:22] "GET /project-21/doc-893/ HTTP/1.0" 200 63917
+[26/Jun/2022 06:36:34] "GET /download_doc_md/213/ HTTP/1.0" 200 4418
+[26/Jun/2022 06:47:50] "GET /project-36/doc-677/ HTTP/1.0" 200 4418
+[26/Jun/2022 06:49:27] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 06:49:28] "GET /?kw&page=1&role=-1&sort HTTP/1.0" 200 52858
+[26/Jun/2022 06:52:34] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 06:59:10] "GET /download_doc_md/681/ HTTP/1.0" 200 4418
+[26/Jun/2022 07:00:19] "GET /download_doc_md/281/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:25] "GET /download_doc_md/339/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:30] "GET /download_doc_md/341/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:34] "GET /download_doc_md/531/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:37] "GET /download_doc_md/760/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:40] "GET /download_doc_md/767/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:43] "GET /download_doc_md/783/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:46] "GET /download_doc_md/810/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:00:47] "GET /download_doc_md/93/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:02:03] "GET /download_doc_md/714/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:22:04] "GET /download_doc_md/66/ HTTP/1.0" 200 4418
+[26/Jun/2022 07:33:02] "GET /download_doc_md/740/ HTTP/1.0" 200 4418
+[26/Jun/2022 07:33:12] "GET /project-26/doc-333/ HTTP/1.0" 200 43570
+[26/Jun/2022 07:41:55] "GET /download_doc_md/785/ HTTP/1.0" 200 4397
+[26/Jun/2022 07:43:37] "GET /project-21/doc-911/ HTTP/1.0" 200 67421
+[26/Jun/2022 07:46:49] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 07:54:21] "GET /download_doc_md/796/ HTTP/1.0" 200 4397
+[26/Jun/2022 08:06:08] "GET /download_doc_md/717/ HTTP/1.0" 200 4418
+[26/Jun/2022 08:09:00] "GET /media/202205/2022-05-28_1151150.4816085587647606.png HTTP/1.0" 200 53584
+[26/Jun/2022 08:15:02] "GET /download_doc_md/661/ HTTP/1.0" 200 4418
+[26/Jun/2022 08:23:09] "GET /project-26/doc-796/ HTTP/1.0" 200 46450
+[26/Jun/2022 08:24:20] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 08:24:21] "GET /download_doc_md/851/ HTTP/1.0" 200 4397
+[26/Jun/2022 08:30:30] "GET /project-21/doc-840/ HTTP/1.0" 200 68256
+[26/Jun/2022 08:38:41] "GET /project-21/doc-907/ HTTP/1.0" 200 68080
+[26/Jun/2022 08:40:50] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 08:41:59] "GET /project-21/doc-934/ HTTP/1.0" 200 68629
+[26/Jun/2022 08:48:16] "GET /download_doc_md/332/ HTTP/1.0" 200 4397
+[26/Jun/2022 08:48:20] "GET /download_doc_md/541/ HTTP/1.0" 200 4397
+[26/Jun/2022 08:48:25] "GET /download_doc_md/762/ HTTP/1.0" 200 4397
+[26/Jun/2022 08:48:28] "GET /download_doc_md/876/ HTTP/1.0" 200 4397
+[26/Jun/2022 08:54:58] "GET /media/202206/2022-06-25_152942_634827.png HTTP/1.0" 200 435720
+[26/Jun/2022 08:55:28] "GET /project-23/doc-197/ HTTP/1.0" 200 4418
+[26/Jun/2022 09:03:25] "GET /project-49/doc-849/ HTTP/1.0" 200 33222
+[26/Jun/2022 09:08:06] "GET / HTTP/1.0" 200 60673
+[26/Jun/2022 09:09:49] "GET /project-24/doc-248/ HTTP/1.0" 200 36151
+[26/Jun/2022 09:21:40] "GET /download_doc_md/864/ HTTP/1.0" 200 4418
+[26/Jun/2022 09:23:48] "GET /project-36/doc-631/ HTTP/1.0" 200 4397
+[26/Jun/2022 09:23:49] "GET /download_doc_md/312/ HTTP/1.0" 200 4397
+[26/Jun/2022 09:27:36] "GET /download_doc_md/874/ HTTP/1.0" 200 4418
+[26/Jun/2022 09:33:28] "GET /download_doc_md/659/ HTTP/1.0" 200 4418
+[26/Jun/2022 09:34:03] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 09:38:24] "GET / HTTP/1.0" 200 60673
+[26/Jun/2022 09:39:05] "GET /project-21/doc-224/ HTTP/1.0" 200 75197
+[26/Jun/2022 09:39:07] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 09:39:07] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 09:39:07] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 09:39:07] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 09:39:11] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-25_1107180.5052359862891712.png HTTP/1.0" 200 7808
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-25_1107090.8604224978183835.png HTTP/1.0" 200 19131
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-23_162605_029486.gif HTTP/1.0" 200 32367
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-23_193822_198011.png HTTP/1.0" 200 53814
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-23_200107_440593.png HTTP/1.0" 200 118154
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_091709_683306.gif HTTP/1.0" 200 34034
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_092119_624442.gif HTTP/1.0" 200 36225
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_113834_193774.png HTTP/1.0" 200 83432
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_113912_678097.png HTTP/1.0" 200 83864
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_113936_639374.png HTTP/1.0" 200 86820
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_114004_224175.png HTTP/1.0" 200 87716
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_114032_804868.png HTTP/1.0" 200 89568
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_114053_194534.png HTTP/1.0" 200 85615
+[26/Jun/2022 09:39:16] "GET /media/202206/2022-06-24_114258_385866.png HTTP/1.0" 200 64458
+[26/Jun/2022 09:39:17] "GET /media/202206/2022-06-24_114835_395136.gif HTTP/1.0" 200 70569
+[26/Jun/2022 09:39:18] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 09:39:20] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 09:39:20] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 09:39:20] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 09:39:21] "GET /project-23/doc-208/ HTTP/1.0" 200 4418
+[26/Jun/2022 09:40:43] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 09:40:59] "GET /project-26/doc-336 HTTP/1.0" 301 0
+[26/Jun/2022 09:41:36] "GET /download_doc_md/303/ HTTP/1.0" 200 4397
+[26/Jun/2022 09:41:41] "GET /download_doc_md/909/ HTTP/1.0" 200 4397
+[26/Jun/2022 09:45:12] "GET /download_doc_md/89/ HTTP/1.0" 200 4418
+[26/Jun/2022 09:47:42] "GET /project-36/doc-670/ HTTP/1.0" 200 4397
+[26/Jun/2022 09:49:44] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 09:49:44] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 09:49:44] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 09:49:44] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 09:49:47] "GET /media/202105/2021-05-27_202153.png HTTP/1.0" 200 364520
+[26/Jun/2022 09:51:06] "GET /download_doc_md/783/ HTTP/1.0" 200 4418
+[26/Jun/2022 10:03:23] "GET /project-42/ HTTP/1.0" 200 30235
+[26/Jun/2022 10:08:02] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 10:08:05] "GET /project-37/doc-804/ HTTP/1.0" 200 46277
+[26/Jun/2022 10:09:10] "GET /admin/forget_pwd/ HTTP/1.0" 200 5429
+[26/Jun/2022 10:15:21] "GET /download_doc_md/678/ HTTP/1.0" 200 4418
+[26/Jun/2022 10:19:13] "GET /project-34/doc-509/ HTTP/1.0" 200 41618
+[26/Jun/2022 10:20:33] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 10:21:22] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 10:21:22] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 10:21:22] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 10:21:22] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 10:21:22] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 10:21:43] "GET /download_doc_md/663/ HTTP/1.0" 200 4418
+[26/Jun/2022 10:26:47] "GET /project-34/doc-521/ HTTP/1.0" 200 42667
+[26/Jun/2022 10:27:04] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 10:27:05] "GET /static/editor.md/lib/prettify.min.js HTTP/1.0" 200 17973
+[26/Jun/2022 10:27:19] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 10:27:58] "GET /project-24/doc-246/ HTTP/1.0" 200 34793
+[26/Jun/2022 10:28:15] "GET /project-21/doc-907/ HTTP/1.0" 200 68070
+[26/Jun/2022 10:34:12] "GET /project-21/doc-90/ HTTP/1.0" 200 63956
+[26/Jun/2022 10:35:00] "GET /download_doc_md/299/ HTTP/1.0" 200 4397
+[26/Jun/2022 10:35:04] "GET /download_doc_md/786/ HTTP/1.0" 200 4397
+[26/Jun/2022 10:35:08] "GET /download_doc_md/841/ HTTP/1.0" 200 4397
+[26/Jun/2022 10:35:25] "GET /project-26/doc-342/ HTTP/1.0" 200 50851
+[26/Jun/2022 10:35:25] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 10:35:25] "GET /static/editor.md/css/editormd.css?version=0.7.9 HTTP/1.0" 200 79072
+[26/Jun/2022 10:35:25] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 10:35:25] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[26/Jun/2022 10:35:25] "GET /static/mrdoc/mrdoc.css?version=0.7.9 HTTP/1.0" 200 21408
+[26/Jun/2022 10:35:25] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 10:35:25] "GET /static/iconFont/iconfont.css?version=0.7.9 HTTP/1.0" 200 22891
+[26/Jun/2022 10:35:25] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[26/Jun/2022 10:35:25] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 10:35:25] "GET /static/viewerjs/viewer.min.js?version=0.7.9 HTTP/1.0" 200 32388
+[26/Jun/2022 10:35:25] "GET /static/qrcodejs/qrcode.min.js?version=0.7.9 HTTP/1.0" 200 19927
+[26/Jun/2022 10:35:25] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 10:35:25] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[26/Jun/2022 10:35:25] "GET /static/editor.md/lib/purify.min.js?version=0.7.9 HTTP/1.0" 200 18018
+[26/Jun/2022 10:35:25] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 10:35:25] "GET /static/toc/doctoc.js?version=0.7.9 HTTP/1.0" 200 11498
+[26/Jun/2022 10:35:26] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[26/Jun/2022 10:35:26] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.0" 200 56780
+[26/Jun/2022 10:35:26] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[26/Jun/2022 10:35:26] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[26/Jun/2022 10:35:26] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[26/Jun/2022 10:35:26] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 10:35:26] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[26/Jun/2022 10:35:26] "GET /media/202105/2021-05-22_171643.png HTTP/1.0" 200 38267
+[26/Jun/2022 10:35:26] "GET /media/202105/2021-05-22_172143.png HTTP/1.0" 200 27390
+[26/Jun/2022 10:35:26] "GET /media/202107/2021-07-28_1039530.17124614514673764.png HTTP/1.0" 200 47066
+[26/Jun/2022 10:35:26] "GET /media/202107/2021-07-28_1112420.6409522974374684.png HTTP/1.0" 200 67897
+[26/Jun/2022 10:35:26] "GET /media/202105/2021-05-23_162651.png HTTP/1.0" 200 9442
+[26/Jun/2022 10:35:26] "GET /media/202105/2021-05-23_171217.png HTTP/1.0" 200 91806
+[26/Jun/2022 10:35:26] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 10:35:26] "GET /static/dashang/dashang_paypal.png HTTP/1.0" 200 6834
+[26/Jun/2022 10:35:26] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[26/Jun/2022 10:35:26] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[26/Jun/2022 10:35:26] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[26/Jun/2022 10:35:26] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 10:35:26] "GET /static/vditor//dist/js/katex/katex.min.css HTTP/1.0" 200 22113
+[26/Jun/2022 10:35:26] "GET /static/vditor//dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[26/Jun/2022 10:35:27] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 10:35:27] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Math-Italic.woff2 HTTP/1.0" 200 20096
+[26/Jun/2022 10:35:27] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Main-Regular.woff2 HTTP/1.0" 200 32464
+[26/Jun/2022 10:35:28] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[26/Jun/2022 10:40:30] "GET /project-37/doc-803/ HTTP/1.0" 200 39349
+[26/Jun/2022 10:43:20] "GET /media/202206/2022-06-24_171937_030717.png HTTP/1.0" 200 261001
+[26/Jun/2022 10:43:20] "GET /media/202206/2022-06-24_200944_913680.png HTTP/1.0" 200 233526
+[26/Jun/2022 10:43:21] "GET /media/202206/2022-06-24_211730_410202.png HTTP/1.0" 200 236625
+[26/Jun/2022 10:43:21] "GET /media/202206/2022-06-24_203322_567465.png HTTP/1.0" 200 185499
+[26/Jun/2022 10:51:03] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 10:51:04] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 10:51:04] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 10:51:04] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 10:51:04] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 10:55:03] "GET / HTTP/1.0" 200 52858
+2022-06-26 10:59:30.939 | ERROR    | app_doc.views:doc:1075 - Collection browsing error
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fe4d4679ea0>
+    └ <Thread(Thread-4639, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7fe4d4679c80>
+    └ <Thread(Thread-4639, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4639, started daemon 140620468270848)>
+    │    │        │    └ (<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4639, started daemon 140620468270848)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>>
+    └ <Thread(Thread-4639, started daemon 140620468270848)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 39192)
+    │    │              └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7fe4cd612158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │    │                   │        └ ('127.0.0.1', 39192)
+    │    │                   └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7fe4cc40e6a8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4b0314630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7fe4cc40e730>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4b0314630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7fe4cc40cbf8>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4b0314630>
+    │       └ <function BaseHandler.run at 0x7fe4cc409950>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4b0314278>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7fe4cc409c80>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4b0314278>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4b0314278>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4b0314278>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │    └ <function BaseHandler.get_response at 0x7fe4cc440e18>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ec80>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ebf8>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eb70>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eae8>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ea60>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e9d8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e950>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e8c8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e6a8>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e7b8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               │    └ <function BaseHandler._get_response at 0x7fe4c969e730>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 790}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-790/'>
+               └ <function doc at 0x7fe4ca1700d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 790}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-790/'>
+           └ <function doc at 0x7fe4ca170048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 790
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7fe4cc510b00>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 790, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7fe4cd6cbd08>
+                   └ <django.db.models.manager.Manager object at 0x7fe4cc411e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[26/Jun/2022 10:59:31] "GET /project-21/doc-790/ HTTP/1.0" 200 4418
+[26/Jun/2022 11:01:09] "GET /project-16/doc-758/ HTTP/1.0" 200 26531
+[26/Jun/2022 11:01:42] "GET /media/202206/2022-06-24_171937_030717.png HTTP/1.0" 200 261001
+[26/Jun/2022 11:01:42] "GET /media/202206/2022-06-24_200944_913680.png HTTP/1.0" 200 233526
+[26/Jun/2022 11:12:24] "GET /download_doc_md/525/ HTTP/1.0" 200 4418
+[26/Jun/2022 11:18:21] "GET / HTTP/1.0" 200 52858
+[26/Jun/2022 11:18:45] "GET /project-21/doc-890/ HTTP/1.0" 200 73583
+[26/Jun/2022 11:19:33] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 11:21:31] "GET /download_doc_md/323/ HTTP/1.0" 200 4397
+[26/Jun/2022 11:25:00] "GET /download_doc_md/194/ HTTP/1.0" 200 4418
+2022-06-26 11:25:05.472 | ERROR    | app_doc.views:doc:1075 - 文集浏览出错
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fe4d4679ea0>
+    └ <Thread(Thread-4649, started daemon 140620496885504)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7fe4d4679c80>
+    └ <Thread(Thread-4649, started daemon 140620496885504)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4649, started daemon 140620496885504)>
+    │    │        │    └ (<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4649, started daemon 140620496885504)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>>
+    └ <Thread(Thread-4649, started daemon 140620496885504)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 39268)
+    │    │              └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7fe4cd612158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │    │                   │        └ ('127.0.0.1', 39268)
+    │    │                   └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7fe4cc40e6a8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c3604198>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7fe4cc40e730>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c3604198>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7fe4cc40cbf8>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c3604198>
+    │       └ <function BaseHandler.run at 0x7fe4cc409950>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c927f0>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7fe4cc409c80>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c927f0>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c927f0>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c2c927f0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler.get_response at 0x7fe4cc440e18>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ec80>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ebf8>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eb70>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eae8>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ea60>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e9d8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e950>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e8c8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e6a8>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e7b8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               │    └ <function BaseHandler._get_response at 0x7fe4c969e730>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 738}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-738/'>
+               └ <function doc at 0x7fe4ca1700d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 738}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-738/'>
+           └ <function doc at 0x7fe4ca170048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 738
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7fe4cc510b00>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 738, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7fe4cd6cbd08>
+                   └ <django.db.models.manager.Manager object at 0x7fe4cc411e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[26/Jun/2022 11:25:05] "GET /project-21/doc-738/ HTTP/1.0" 200 4397
+[26/Jun/2022 11:26:41] "GET /project-45/doc-824 HTTP/1.0" 301 0
+[26/Jun/2022 11:27:27] "GET /download_doc_md/514/ HTTP/1.0" 200 4397
+[26/Jun/2022 11:27:31] "GET /download_doc_md/545/ HTTP/1.0" 200 4397
+[26/Jun/2022 11:27:34] "GET /download_doc_md/716/ HTTP/1.0" 200 4397
+[26/Jun/2022 11:27:38] "GET /download_doc_md/740/ HTTP/1.0" 200 4397
+[26/Jun/2022 11:27:40] "GET /download_doc_md/795/ HTTP/1.0" 200 4397
+[26/Jun/2022 11:30:54] "GET / HTTP/1.0" 200 52858
+[26/Jun/2022 11:31:16] "GET /project-21/doc-872/ HTTP/1.0" 200 99665
+[26/Jun/2022 11:31:24] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 11:31:26] "GET /project-21/doc-934/ HTTP/1.0" 200 68629
+[26/Jun/2022 11:36:46] "GET / HTTP/1.0" 200 52858
+[26/Jun/2022 11:37:41] "GET /project-46/doc-835/ HTTP/1.0" 302 0
+[26/Jun/2022 11:37:43] "GET /check_viewcode/?to=/project-46/doc-835/ HTTP/1.0" 200 3145
+[26/Jun/2022 11:39:36] "GET /project-21/doc-277/ HTTP/1.0" 200 67736
+[26/Jun/2022 11:44:13] "GET /download_doc_md/758/ HTTP/1.0" 200 4418
+[26/Jun/2022 11:49:49] "GET /project-26/doc-342/ HTTP/1.0" 200 50841
+[26/Jun/2022 11:50:40] "GET /project-34/doc-532/ HTTP/1.0" 200 41580
+[26/Jun/2022 11:57:03] "GET /download_doc_md/730/ HTTP/1.0" 200 4418
+[26/Jun/2022 12:00:48] "GET / HTTP/1.0" 200 52858
+[26/Jun/2022 12:10:11] "GET /project-21/doc-281/ HTTP/1.0" 200 70217
+[26/Jun/2022 12:10:30] "GET /project-26/doc-930/ HTTP/1.0" 200 105356
+[26/Jun/2022 12:12:55] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 12:18:45] "GET /download_doc_md/253/ HTTP/1.0" 200 4397
+[26/Jun/2022 12:21:54] "POST /api/upload_img/?token=2c00d7b5e2425ce8337b098c8077286ac3931103375d5f10b3d5ea8d HTTP/1.0" 200 146
+[26/Jun/2022 12:21:55] "GET /media/202206/2022-06-26_122154_087255.png HTTP/1.0" 200 74721
+[26/Jun/2022 12:21:55] "GET /media/202206/2022-06-26_122154_087255.png HTTP/1.0" 200 74721
+[26/Jun/2022 12:22:30] "GET / HTTP/1.0" 200 52858
+[26/Jun/2022 12:23:21] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 12:23:21] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 12:23:21] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 12:23:25] "GET /project-26/doc-305/ HTTP/1.0" 200 47454
+[26/Jun/2022 12:23:32] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 12:23:32] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 12:24:19] "POST /api/upload_img/?token=2c00d7b5e2425ce8337b098c8077286ac3931103375d5f10b3d5ea8d HTTP/1.0" 200 146
+[26/Jun/2022 12:24:19] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:24:20] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:24:37] "GET /create_doc/?pid=21 HTTP/1.0" 200 63651
+[26/Jun/2022 12:24:37] "GET /create_doc/?pid=21 HTTP/1.0" 200 63651
+[26/Jun/2022 12:24:38] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 12:24:38] "GET /static/mrdoc/mrdoc.editor.js?version=0.7.9 HTTP/1.0" 200 21760
+[26/Jun/2022 12:24:38] "GET /static/vditor/dist/index.min.js?version=0.7.9 HTTP/1.0" 200 268049
+
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>[26/Jun/2022 12:24:39] "POST /get_pro_doc_tree/ HTTP/1.0" 200 20108
+[26/Jun/2022 12:24:40] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 12:25:18] "POST /upload_doc_img/ HTTP/1.0" 200 34
+[26/Jun/2022 12:25:19] "POST /upload_doc_img/ HTTP/1.0" 200 34
+[26/Jun/2022 12:25:19] "POST /upload_doc_img/ HTTP/1.0" 200 34
+[26/Jun/2022 12:25:19] "POST /upload_doc_img/ HTTP/1.0" 200 34
+[26/Jun/2022 12:25:19] "POST /upload_doc_img/ HTTP/1.0" 200 34
+[26/Jun/2022 12:25:19] "POST /upload_doc_img/ HTTP/1.0" 200 34
+[26/Jun/2022 12:25:20] "GET /static/vditor/dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 12:25:20] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 12:25:21] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 12:25:21] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 12:25:21] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 12:25:21] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 12:25:21] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:25:21] "GET /static/vditor/dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 12:25:21] "GET /static/vditor/dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 12:25:21] "GET /static/vditor/dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 12:26:33] "GET /static/layui/css/modules/layer/default/loading-0.gif HTTP/1.0" 200 5793
+[26/Jun/2022 12:26:37] "POST /create_doc/ HTTP/1.0" 200 51
+[26/Jun/2022 12:26:39] "GET /modify_doc/936/ HTTP/1.0" 200 70041
+[26/Jun/2022 12:26:39] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 12:26:40] "POST /get_pro_doc_tree/ HTTP/1.0" 200 20261
+[26/Jun/2022 12:26:42] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:26:44] "GET / HTTP/1.0" 200 60675
+[26/Jun/2022 12:26:51] "GET / HTTP/1.0" 200 60675
+[26/Jun/2022 12:26:51] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 12:26:55] "GET /project-21/doc-936/ HTTP/1.0" 200 72459
+[26/Jun/2022 12:26:58] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 12:27:01] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[26/Jun/2022 12:27:01] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 12:27:01] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 12:27:01] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 12:27:01] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 12:27:01] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 12:27:01] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:27:02] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 12:27:04] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 12:27:04] "GET /static/vditor//dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[26/Jun/2022 12:27:04] "GET /static/vditor//dist/js/katex/katex.min.css HTTP/1.0" 200 22113
+[26/Jun/2022 12:27:04] "GET /static/vditor//dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[26/Jun/2022 12:27:05] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 12:27:06] "GET /project-21/doc-936/ HTTP/1.0" 200 71531
+[26/Jun/2022 12:27:06] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 12:27:07] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 12:27:07] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Main-Regular.woff2 HTTP/1.0" 200 32464
+[26/Jun/2022 12:27:07] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Math-Italic.woff2 HTTP/1.0" 200 20096
+[26/Jun/2022 12:27:16] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[26/Jun/2022 12:27:21] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:27:22] "GET /static/PearAdminLayui/component/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 12:27:27] "GET /admin/admin/center_menu/?fresh=0.7237499074378888 HTTP/1.0" 200 1893
+[26/Jun/2022 12:27:27] "GET /admin/admin_overview/ HTTP/1.0" 200 32647
+[26/Jun/2022 12:27:28] "GET /static/PearAdminLayui/component/pear/css/pear.css?version=0.7.9 HTTP/1.0" 200 933
+[26/Jun/2022 12:27:28] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[26/Jun/2022 12:27:28] "GET /static/xm-select/dist/xm-select.js HTTP/1.0" 200 96208
+[26/Jun/2022 12:27:28] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[26/Jun/2022 12:27:29] "GET /static/PearAdminLayui/component/pear/module/echarts.js?v=3.8.0.Release HTTP/1.0" 200 3143534
+[26/Jun/2022 12:27:31] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:27:49] "GET /user_center/ HTTP/1.0" 200 7656
+[26/Jun/2022 12:27:50] "GET /static/PearAdminLayui/component/layui/layui.js HTTP/1.0" 200 291286
+[26/Jun/2022 12:27:51] "GET /user/center_menu/?fresh=0.7619402299157123 HTTP/1.0" 200 2984
+[26/Jun/2022 12:27:51] "GET /manage_overview/ HTTP/1.0" 200 28960
+[26/Jun/2022 12:27:51] "GET /static/iconFont/iconfont.css?version=0.7.9 HTTP/1.0" 200 22891
+[26/Jun/2022 12:27:54] "GET /manage_project/ HTTP/1.0" 200 16441
+[26/Jun/2022 12:27:54] "POST /manage_project/ HTTP/1.0" 200 2146
+[26/Jun/2022 12:27:59] "POST /manage_project/ HTTP/1.0" 200 4272
+[26/Jun/2022 12:28:08] "GET /manage_pro_doc_sort/21/ HTTP/1.0" 200 46486
+[26/Jun/2022 12:28:08] "GET /static/layui/layui.js HTTP/1.0" 200 291286
+[26/Jun/2022 12:28:08] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[26/Jun/2022 12:28:08] "GET /static/sortablejs/Sortable.js HTTP/1.0" 200 120579
+[26/Jun/2022 12:28:19] "GET /static/PearAdminLayui/component/layui/css/modules/layer/default/loading-1.gif HTTP/1.0" 200 701
+[26/Jun/2022 12:28:20] "POST /manage_pro_doc_sort/21/ HTTP/1.0" 200 30
+[26/Jun/2022 12:28:24] "GET /manage_project/ HTTP/1.0" 200 16441
+[26/Jun/2022 12:28:24] "POST /manage_project/ HTTP/1.0" 200 2146
+[26/Jun/2022 12:28:27] "GET / HTTP/1.0" 200 60675
+[26/Jun/2022 12:28:28] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 12:28:28] "GET /static/mrdoc/mrdoc.css?version=0.7.9 HTTP/1.0" 200 21408
+[26/Jun/2022 12:28:28] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[26/Jun/2022 12:28:28] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 12:28:28] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[26/Jun/2022 12:28:28] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[26/Jun/2022 12:28:28] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[26/Jun/2022 12:28:28] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[26/Jun/2022 12:28:30] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:28:32] "GET /admin/admin/center_menu/?fresh=0.6081653455871641 HTTP/1.0" 200 1893
+[26/Jun/2022 12:28:32] "GET /admin/admin_overview/ HTTP/1.0" 200 32647
+[26/Jun/2022 12:28:33] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:28:35] "GET / HTTP/1.0" 200 60675
+[26/Jun/2022 12:28:38] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:28:40] "GET /admin/admin/center_menu/?fresh=0.36280412170475795 HTTP/1.0" 200 1893
+[26/Jun/2022 12:28:40] "GET /admin/admin_overview/ HTTP/1.0" 200 32647
+[26/Jun/2022 12:28:42] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:28:43] "GET / HTTP/1.0" 200 60675
+[26/Jun/2022 12:28:46] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:28:48] "GET /admin/admin/center_menu/?fresh=0.027479814557153093 HTTP/1.0" 200 1893
+[26/Jun/2022 12:28:48] "GET /admin/admin_overview/ HTTP/1.0" 200 32647
+[26/Jun/2022 12:28:50] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:28:51] "GET / HTTP/1.0" 200 60675
+[26/Jun/2022 12:28:57] "GET /project-21/doc-936/ HTTP/1.0" 200 72459
+[26/Jun/2022 12:28:58] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 12:28:58] "GET /static/editor.md/css/editormd.css?version=0.7.9 HTTP/1.0" 200 79072
+[26/Jun/2022 12:28:58] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 12:28:58] "GET /static/mrdoc/mrdoc.css?version=0.7.9 HTTP/1.0" 200 21408
+[26/Jun/2022 12:28:58] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[26/Jun/2022 12:28:58] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 12:28:58] "GET /static/iconFont/iconfont.css?version=0.7.9 HTTP/1.0" 200 22891
+[26/Jun/2022 12:28:58] "GET /static/jquery/3.1.1/jquery.min.js HTTP/1.0" 200 86709
+[26/Jun/2022 12:28:58] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 12:28:58] "GET /static/viewerjs/viewer.min.js?version=0.7.9 HTTP/1.0" 200 32388
+[26/Jun/2022 12:28:58] "GET /static/qrcodejs/qrcode.min.js?version=0.7.9 HTTP/1.0" 200 19927
+[26/Jun/2022 12:28:58] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 12:28:58] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[26/Jun/2022 12:28:58] "GET /static/editor.md/lib/purify.min.js?version=0.7.9 HTTP/1.0" 200 18018
+[26/Jun/2022 12:28:58] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 12:28:58] "GET /static/toc/doctoc.js?version=0.7.9 HTTP/1.0" 200 11498
+[26/Jun/2022 12:28:58] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[26/Jun/2022 12:28:58] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[26/Jun/2022 12:28:58] "GET /static/dashang/dashang_qq.webp HTTP/1.0" 200 13280
+[26/Jun/2022 12:28:58] "GET /static/dashang/dashang_paypal.png HTTP/1.0" 200 6834
+[26/Jun/2022 12:28:59] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[26/Jun/2022 12:28:59] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.0" 200 56780
+[26/Jun/2022 12:28:59] "GET /static/layui/css/modules/laydate/default/laydate.css?v=5.3.1 HTTP/1.0" 200 7365
+[26/Jun/2022 12:28:59] "GET /static/layui/css/modules/layer/default/layer.css?v=3.5.1 HTTP/1.0" 200 14271
+[26/Jun/2022 12:28:59] "GET /static/layui/css/modules/code.css?v=2 HTTP/1.0" 200 1319
+[26/Jun/2022 12:28:59] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 12:29:00] "GET /static/search/mrdoc_logo_300.png HTTP/1.0" 200 1255
+[26/Jun/2022 12:29:00] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 12:29:00] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[26/Jun/2022 12:29:00] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 12:29:00] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 12:29:00] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 12:29:00] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 12:29:00] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:29:02] "GET /project-21/doc-755/ HTTP/1.0" 200 68824
+[26/Jun/2022 12:29:02] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 12:29:04] "GET /media/202107/2021-07-13_222646.png HTTP/1.0" 200 1253475
+[26/Jun/2022 12:29:05] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 12:29:05] "GET /static/vditor//dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[26/Jun/2022 12:29:05] "GET /static/vditor//dist/js/katex/katex.min.css HTTP/1.0" 200 22113
+[26/Jun/2022 12:29:05] "GET /static/vditor//dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[26/Jun/2022 12:29:05] "GET /project-21/doc-755/ HTTP/1.0" 200 67896
+[26/Jun/2022 12:29:06] "GET /modify_doc/755/ HTTP/1.0" 200 71128
+[26/Jun/2022 12:29:07] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 12:29:07] "GET /static/vditor/dist/index.min.js?version=0.7.9 HTTP/1.0" 200 268049
+[26/Jun/2022 12:29:07] "GET /static/mrdoc/mrdoc.editor.js?version=0.7.9 HTTP/1.0" 200 21760
+[26/Jun/2022 12:29:07] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.0" 200 56780
+
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>[26/Jun/2022 12:29:08] "POST /get_pro_doc_tree/ HTTP/1.0" 200 20261
+[26/Jun/2022 12:29:08] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 12:29:09] "GET /static/vditor/dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/highlight.js/highlight.pack.js HTTP/1.0" 200 326804
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/katex/katex.min.css HTTP/1.0" 200 22113
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/katex/fonts/KaTeX_Math-Italic.woff2 HTTP/1.0" 200 20096
+[26/Jun/2022 12:29:11] "GET /static/vditor/dist/js/katex/fonts/KaTeX_Main-Regular.woff2 HTTP/1.0" 200 32464
+[26/Jun/2022 12:29:12] "POST /modify_doc/755/ HTTP/1.0" 200 52
+[26/Jun/2022 12:29:13] "POST /modify_doc/755/ HTTP/1.0" 200 52
+[26/Jun/2022 12:29:18] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 12:29:18] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 12:29:19] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 12:29:19] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Math-Italic.woff2 HTTP/1.0" 200 20096
+[26/Jun/2022 12:29:19] "GET /static/vditor//dist/js/katex/fonts/KaTeX_Main-Regular.woff2 HTTP/1.0" 200 32464
+[26/Jun/2022 12:29:19] "GET /project-21/doc-898/ HTTP/1.0" 200 69482
+[26/Jun/2022 12:29:21] "GET /media/202201/2022-01-09_2131130.7809220936814016.png HTTP/1.0" 200 36354
+[26/Jun/2022 12:29:21] "GET /media/202201/2022-01-09_2130410.7261368158867781.png HTTP/1.0" 200 62511
+[26/Jun/2022 12:29:21] "GET /media/202201/2022-01-09_2131310.08080883298827601.png HTTP/1.0" 200 48603
+[26/Jun/2022 12:29:21] "GET /media/202201/2022-01-09_2132230.7640217615405901.png HTTP/1.0" 200 77487
+[26/Jun/2022 12:29:21] "GET /media/202201/2022-01-09_2132350.36969955791205567.png HTTP/1.0" 200 103492
+[26/Jun/2022 12:29:21] "GET /media/202201/2022-01-09_2132480.08964373357277822.png HTTP/1.0" 200 78870
+[26/Jun/2022 12:29:23] "GET /modify_doc/898/ HTTP/1.0" 200 68213
+[26/Jun/2022 12:29:24] "POST /get_pro_doc_tree/ HTTP/1.0" 200 20261
+[26/Jun/2022 12:29:28] "POST /modify_doc/898/ HTTP/1.0" 200 52
+[26/Jun/2022 12:29:28] "POST /modify_doc/898/ HTTP/1.0" 200 52
+[26/Jun/2022 12:29:32] "GET /project-21/doc-898/ HTTP/1.0" 200 69482
+[26/Jun/2022 12:29:34] "GET /project-21/doc-898/ HTTP/1.0" 200 69482
+[26/Jun/2022 12:29:37] "GET /project-21/doc-936/ HTTP/1.0" 200 72459
+[26/Jun/2022 12:29:39] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:29:47] "GET /project-36/doc-678/ HTTP/1.0" 200 4418
+[26/Jun/2022 12:29:50] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:29:51] "GET /static/PearAdminLayui/component/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 12:29:53] "GET /admin/admin/center_menu/?fresh=0.8060705713075385 HTTP/1.0" 200 1893
+[26/Jun/2022 12:29:53] "GET /admin/admin_overview/ HTTP/1.0" 200 32636
+[26/Jun/2022 12:29:54] "GET /static/PearAdminLayui/component/pear/css/pear.css?version=0.7.9 HTTP/1.0" 200 933
+[26/Jun/2022 12:29:54] "GET /static/xm-select/dist/xm-select.js HTTP/1.0" 200 96208
+[26/Jun/2022 12:29:54] "GET /static/PearAdminLayui/component/pear/module/echarts.js?v=3.8.0.Release HTTP/1.0" 200 3143534
+[26/Jun/2022 12:29:55] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:29:55] "GET / HTTP/1.0" 200 60685
+[26/Jun/2022 12:29:59] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:30:01] "GET /admin/admin/center_menu/?fresh=0.38479832802686165 HTTP/1.0" 200 1893
+[26/Jun/2022 12:30:01] "GET /admin/admin_overview/ HTTP/1.0" 200 32636
+[26/Jun/2022 12:30:04] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:30:04] "GET / HTTP/1.0" 200 60685
+[26/Jun/2022 12:30:10] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:30:12] "GET /admin/admin/center_menu/?fresh=0.1070614951914719 HTTP/1.0" 200 1893
+[26/Jun/2022 12:30:12] "GET /admin/admin_overview/ HTTP/1.0" 200 32636
+[26/Jun/2022 12:30:14] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:30:14] "GET / HTTP/1.0" 200 60685
+[26/Jun/2022 12:30:19] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:30:20] "GET /admin/admin/center_menu/?fresh=0.1674385050574545 HTTP/1.0" 200 1893
+[26/Jun/2022 12:30:21] "GET /admin/admin_overview/ HTTP/1.0" 200 32636
+[26/Jun/2022 12:30:23] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:30:23] "GET /user_center/ HTTP/1.0" 200 7656
+[26/Jun/2022 12:30:24] "GET /static/PearAdminLayui/component/layui/layui.js HTTP/1.0" 200 291286
+[26/Jun/2022 12:30:25] "GET /user/center_menu/?fresh=0.8867202978146418 HTTP/1.0" 200 2984
+[26/Jun/2022 12:30:25] "GET /manage_overview/ HTTP/1.0" 200 28949
+[26/Jun/2022 12:30:28] "GET /admin/admin_center/ HTTP/1.0" 200 6696
+[26/Jun/2022 12:30:30] "GET /admin/admin/center_menu/?fresh=0.48592663095738 HTTP/1.0" 200 1893
+[26/Jun/2022 12:30:30] "GET /admin/admin_overview/ HTTP/1.0" 200 32636
+[26/Jun/2022 12:30:33] "GET /admin/check_update/ HTTP/1.0" 200 165
+[26/Jun/2022 12:30:33] "GET / HTTP/1.0" 200 60685
+[26/Jun/2022 12:30:40] "GET / HTTP/1.0" 200 60685
+[26/Jun/2022 12:30:41] "GET / HTTP/1.0" 200 60685
+[26/Jun/2022 12:30:43] "GET /project-21/doc-936/ HTTP/1.0" 200 72459
+[26/Jun/2022 12:30:43] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 12:30:43] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 12:30:43] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 12:30:43] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 12:30:44] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 12:30:45] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 12:30:45] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 12:30:45] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 12:30:45] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 12:30:45] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 12:30:45] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 12:30:45] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 12:30:46] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 12:30:46] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 12:30:46] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 12:31:11] "GET /project-49/doc-855/ HTTP/1.0" 200 42672
+[26/Jun/2022 12:36:16] "GET /project-45/doc-826/ HTTP/1.0" 200 4418
+[26/Jun/2022 12:46:20] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 12:46:20] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 12:46:23] "GET /sitemap-16.xml HTTP/1.0" 200 669
+[26/Jun/2022 12:49:24] "GET /project-21/doc-255/ HTTP/1.0" 200 69668
+[26/Jun/2022 12:51:52] "GET /project-34/doc-543/ HTTP/1.0" 200 43739
+[26/Jun/2022 12:51:55] "GET /static/editor.md/lib/marked.min.js?version=0.7.9 HTTP/1.0" 200 44927
+[26/Jun/2022 12:53:13] "GET /sitemap-37.xml HTTP/1.0" 200 6025
+[26/Jun/2022 12:55:02] "GET /sitemap-34.xml HTTP/1.0" 200 6943
+[26/Jun/2022 12:55:48] "GET /download_doc_md/772/ HTTP/1.0" 200 4418
+[26/Jun/2022 13:00:10] "GET /sitemap-home.xml HTTP/1.0" 200 316
+[26/Jun/2022 13:00:37] "GET /sitemap-26.xml HTTP/1.0" 200 7861
+[26/Jun/2022 13:02:22] "GET /sitemap-21.xml HTTP/1.0" 200 17338
+[26/Jun/2022 13:02:24] "GET /download_doc_md/657/ HTTP/1.0" 200 4418
+[26/Jun/2022 13:06:26] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 13:09:02] "GET /download_doc_md/832/ HTTP/1.0" 200 4418
+[26/Jun/2022 13:11:29] "GET /project-42/doc-767 HTTP/1.0" 301 0
+[26/Jun/2022 13:11:59] "GET /download_doc_md/745/ HTTP/1.0" 200 4397
+[26/Jun/2022 13:12:04] "GET /download_doc_md/781/ HTTP/1.0" 200 4397
+[26/Jun/2022 13:12:28] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 13:12:33] "GET /project-21/doc-228/ HTTP/1.0" 200 71310
+[26/Jun/2022 13:15:24] "GET /download_doc_md/739/ HTTP/1.0" 200 4418
+[26/Jun/2022 13:21:18] "GET /sitemap-24.xml HTTP/1.0" 200 3883
+[26/Jun/2022 13:21:58] "GET /project-24/doc-259/ HTTP/1.0" 200 34854
+[26/Jun/2022 13:24:27] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 13:24:28] "GET /project-21/doc-746/ HTTP/1.0" 200 68912
+[26/Jun/2022 13:25:29] "GET /robots.txt HTTP/1.0" 404 4418
+[26/Jun/2022 13:28:29] "GET /download_doc_md/745/ HTTP/1.0" 200 4418
+[26/Jun/2022 13:35:06] "GET /project-23/doc-78/ HTTP/1.0" 200 4418
+[26/Jun/2022 13:38:02] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 13:41:40] "GET /project-21/doc-93/ HTTP/1.0" 200 75301
+[26/Jun/2022 13:48:09] "GET /project-21/doc-223/ HTTP/1.0" 200 64121
+[26/Jun/2022 13:52:16] "GET /download_doc_md/514/ HTTP/1.0" 200 4397
+[26/Jun/2022 14:00:50] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 14:01:47] "GET /project-26/doc-308/ HTTP/1.0" 200 45151
+[26/Jun/2022 14:04:47] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 14:05:50] "GET /robots.txt HTTP/1.0" 404 4397
+2022-06-26 14:05:51.381 | ERROR    | app_doc.views:doc:1075 - 文集浏览出错
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fe4d4679ea0>
+    └ <Thread(Thread-4961, started daemon 140620488492800)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7fe4d4679c80>
+    └ <Thread(Thread-4961, started daemon 140620488492800)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4961, started daemon 140620488492800)>
+    │    │        │    └ (<socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4961, started daemon 140620488492800)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>>
+    └ <Thread(Thread-4961, started daemon 140620488492800)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 40282)
+    │    │              └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7fe4cd612158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │    │                   │        └ ('127.0.0.1', 40282)
+    │    │                   └ <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7fe4cc40e6a8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c3e866d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7fe4cc40e730>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c3e866d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7fe4cc40cbf8>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7fe4cdd60f28>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7fe4c3e866d8>
+    │       └ <function BaseHandler.run at 0x7fe4cc409950>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c3e86208>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7fe4cc409c80>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c3e86208>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c3e86208>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7fe4c3e86208>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │    └ <function BaseHandler.get_response at 0x7fe4cc440e18>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ec80>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ebf8>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7fe4c974c320>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eb70>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7fe4c974c6d8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969eae8>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7fe4c974cb70>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969ea60>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7fe4c96d8630>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e9d8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7fe4c96d84e0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e950>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7fe4ca2c1ac8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e8c8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7fe4ca2c1978>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e6a8>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7fe4ca2c1a20>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7fe4c969e7b8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7fe4cae86908>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               │    └ <function BaseHandler._get_response at 0x7fe4c969e730>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7fe4ca2adb70>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7fe4caf45978>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 1, 'doc_id': 286}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-1/doc-286/'>
+               └ <function doc at 0x7fe4ca1700d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 1, 'doc_id': 286}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-1/doc-286/'>
+           └ <function doc at 0x7fe4ca170048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 286
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7fe4cc510b00>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 286, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7fe4cd6cbd08>
+                   └ <django.db.models.manager.Manager object at 0x7fe4cc411e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 1、算法框架>, <Doc: 1、TDH>, <Doc: 1.1 常用方法>, <Doc: 2、Shell>, <Doc: 2.1 常用命令>, <Doc: 2.2 示例脚本>, <Doc...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+[26/Jun/2022 14:05:51] "GET /project-1/doc-286/ HTTP/1.0" 200 4397
+[26/Jun/2022 14:07:13] "GET /project-37/doc-720 HTTP/1.0" 301 0
+[26/Jun/2022 14:07:16] "GET /project-37/doc-720/ HTTP/1.0" 200 78378
+[26/Jun/2022 14:07:27] "GET /download_doc_md/298/ HTTP/1.0" 200 4397
+[26/Jun/2022 14:07:31] "GET /download_doc_md/785/ HTTP/1.0" 200 4397
+[26/Jun/2022 14:11:27] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 14:15:23] "GET /project-21/doc-771/ HTTP/1.0" 200 68642
+[26/Jun/2022 14:22:48] "GET /media/202105/2021-05-27_202619.png HTTP/1.0" 200 768426
+[26/Jun/2022 14:29:53] "GET /download_doc_md/345/ HTTP/1.0" 200 4418
+[26/Jun/2022 14:36:16] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 14:36:51] "GET /download_doc_md/55/ HTTP/1.0" 200 4418
+[26/Jun/2022 14:44:18] "GET /download_doc_md/790/ HTTP/1.0" 200 4418
+[26/Jun/2022 14:51:57] "GET /project-37/doc-729 HTTP/1.0" 301 0
+[26/Jun/2022 14:52:08] "GET /project-37/doc-729/ HTTP/1.0" 200 41742
+[26/Jun/2022 14:52:36] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 14:52:37] "GET /project-21/doc-880/ HTTP/1.0" 200 67247
+[26/Jun/2022 14:55:46] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 14:57:15] "GET /project-21/doc-776/ HTTP/1.0" 200 76150
+[26/Jun/2022 14:57:30] "GET /project-26/doc-331/ HTTP/1.0" 200 44995
+[26/Jun/2022 14:59:25] "GET /download_doc_md/54/ HTTP/1.0" 200 4418
+[26/Jun/2022 15:02:22] "GET /download_doc_md/321/ HTTP/1.0" 200 4397
+[26/Jun/2022 15:02:26] "GET /download_doc_md/759/ HTTP/1.0" 200 4397
+[26/Jun/2022 15:02:29] "GET /download_doc_md/900/ HTTP/1.0" 200 4397
+[26/Jun/2022 15:06:49] "GET /project-21/doc-800/ HTTP/1.0" 200 74739
+[26/Jun/2022 15:07:00] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 15:10:14] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 15:10:14] "GET /media/202206/2022-06-26_122154_087255.png HTTP/1.0" 200 74721
+[26/Jun/2022 15:14:22] "GET /project-37/doc-763/ HTTP/1.0" 200 54575
+[26/Jun/2022 15:30:48] "GET /project-26/doc-307/ HTTP/1.0" 200 40807
+[26/Jun/2022 15:31:35] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 15:31:37] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 15:31:37] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 15:31:37] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 15:31:37] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 15:35:49] "GET /project-21/doc-886/ HTTP/1.0" 200 70508
+[26/Jun/2022 15:37:53] "GET / HTTP/1.0" 200 60685
+[26/Jun/2022 15:37:57] "GET /project-21/doc-936/ HTTP/1.0" 200 72459
+[26/Jun/2022 15:37:58] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 15:37:58] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 15:37:58] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 15:37:58] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 15:37:59] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 15:38:01] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 15:38:01] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 15:38:01] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 15:38:01] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 15:38:01] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 15:38:01] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 15:38:02] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 15:38:02] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 15:38:02] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 15:38:03] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 15:38:03] "GET /modify_doc/936/ HTTP/1.0" 200 70039
+[26/Jun/2022 15:38:04] "GET /static/vditor/dist/index.css?version=0.7.9 HTTP/1.0" 200 43149
+[26/Jun/2022 15:38:04] "GET /static/vditor/dist/index.min.js?version=0.7.9 HTTP/1.0" 200 268049
+[26/Jun/2022 15:38:04] "GET /static/mrdoc/mrdoc.editor.js?version=0.7.9 HTTP/1.0" 200 21760
+[26/Jun/2022 15:38:05] "GET /static/vditor/dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'datetime.datetime'>
+>>> unknown type:
+<class 'bool'>
+>>> unknown type:
+<class 'datetime.datetime'>[26/Jun/2022 15:38:05] "POST /get_pro_doc_tree/ HTTP/1.0" 200 20261
+[26/Jun/2022 15:38:10] "GET /static/vditor/dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 15:38:10] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 15:38:10] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 15:38:10] "GET /media/202206/2022-06-25_114807_951268.gif HTTP/1.0" 200 24432
+[26/Jun/2022 15:38:10] "GET /media/202206/2022-06-25_115009_838082.gif HTTP/1.0" 200 26440
+[26/Jun/2022 15:38:10] "GET /media/202206/2022-06-25_115347_100070.gif HTTP/1.0" 200 18378
+[26/Jun/2022 15:38:10] "GET /media/202206/2022-06-26_122419_605515.gif HTTP/1.0" 200 52390
+[26/Jun/2022 15:38:11] "GET /static/vditor/dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 15:38:11] "GET /static/vditor/dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 15:38:11] "GET /static/vditor/dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 15:38:26] "GET /project-21/doc-898/ HTTP/1.0" 200 68564
+[26/Jun/2022 15:38:49] "POST /modify_doc/936/ HTTP/1.0" 200 52
+[26/Jun/2022 15:38:49] "POST /modify_doc/936/ HTTP/1.0" 200 52
+[26/Jun/2022 15:38:51] "GET /project-21/doc-936/ HTTP/1.0" 200 73270
+[26/Jun/2022 15:38:52] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 15:38:52] "GET /static/mrdoc/mrdoc-docs.js?version=0.7.9 HTTP/1.0" 200 17003
+[26/Jun/2022 15:38:52] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 15:38:53] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 15:38:53] "GET /project-21/doc-936/ HTTP/1.0" 200 73270
+[26/Jun/2022 15:38:54] "GET /project-21/doc-936/ HTTP/1.0" 200 73270
+[26/Jun/2022 15:38:57] "GET /static/vditor//dist/js/highlight.js/styles/github.css HTTP/1.0" 200 7384
+[26/Jun/2022 15:38:58] "GET /static/vditor//dist/js/highlight.js/solidity.min.js HTTP/1.0" 200 6604
+[26/Jun/2022 15:38:58] "GET /static/vditor//dist/js/katex/mhchem.min.js HTTP/1.0" 200 33767
+[26/Jun/2022 15:38:58] "GET /static/vditor//dist/js/highlight.js/yul.min.js HTTP/1.0" 200 2733
+[26/Jun/2022 15:40:24] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 15:40:46] "GET /project-26/doc-321/ HTTP/1.0" 200 44396
+[26/Jun/2022 15:43:18] "GET /project-21/doc-755/ HTTP/1.0" 200 68824
+[26/Jun/2022 15:43:21] "GET /media/202107/2021-07-13_222646.png HTTP/1.0" 200 1253475
+[26/Jun/2022 15:45:52] "GET /project-36/doc-701/ HTTP/1.0" 200 4418
+[26/Jun/2022 15:50:26] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 15:51:48] "GET /media/202206/2022-06-24_211730_410202.png HTTP/1.0" 200 236625
+[26/Jun/2022 15:53:29] "GET /media/202106/2015%E5%B9%B4%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%8B%B1%E8%AF%AD%E7%AB%9E%E8%B5%9B%E5%9B%BD%E5%AE%B6%E4%BA%8C%E7%AD%89%E5%A5%96_1623555232.jpg HTTP/1.0" 200 1402153
+[26/Jun/2022 15:53:43] "GET /project-21/doc-724/ HTTP/1.0" 200 108787
+[26/Jun/2022 15:54:14] "GET /download_doc_md/929/ HTTP/1.0" 200 4397
+[26/Jun/2022 15:54:44] "GET /project-42/doc-770/ HTTP/1.0" 200 52801
+[26/Jun/2022 15:55:10] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 15:56:15] "GET /project-21/doc-751 HTTP/1.0" 301 0
+[26/Jun/2022 15:57:01] "GET /download_doc_md/530/ HTTP/1.0" 200 4397
+[26/Jun/2022 15:57:28] "GET /project-45/doc-827/ HTTP/1.0" 200 4397
+[26/Jun/2022 16:04:45] "POST /api/upload_img/?token=2c00d7b5e2425ce8337b098c8077286ac3931103375d5f10b3d5ea8d HTTP/1.0" 200 146
+[26/Jun/2022 16:04:46] "GET /media/202206/2022-06-26_160445_018021.png HTTP/1.0" 200 150698
+[26/Jun/2022 16:04:46] "GET /media/202206/2022-06-26_160445_018021.png HTTP/1.0" 200 150698
+[26/Jun/2022 16:08:43] "GET /media/202206/2022-06-24_171937_030717.png HTTP/1.0" 200 261001
+[26/Jun/2022 16:08:43] "GET /media/202206/2022-06-24_200944_913680.png HTTP/1.0" 200 233526
+[26/Jun/2022 16:08:43] "GET /media/202206/2022-06-24_203322_567465.png HTTP/1.0" 200 185499
+[26/Jun/2022 16:12:36] "GET /download_doc_md/848/ HTTP/1.0" 200 4397
+[26/Jun/2022 16:19:37] "GET /project-26/doc-322/ HTTP/1.0" 200 40726
+[26/Jun/2022 16:21:54] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 16:25:15] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 16:25:16] "GET /project-16/doc-29/ HTTP/1.0" 200 31741
+[26/Jun/2022 16:28:06] "GET /project-26/doc-342 HTTP/1.0" 301 0
+[26/Jun/2022 16:28:14] "GET /project-26/doc-342/ HTTP/1.0" 200 50851
+[26/Jun/2022 16:28:32] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 16:28:32] "GET /project-50/ HTTP/1.0" 200 4397
+[26/Jun/2022 16:37:46] "GET /project-21/doc-915/ HTTP/1.0" 200 65599
+[26/Jun/2022 16:44:57] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 16:45:45] "GET /project-37/doc-749/ HTTP/1.0" 200 59038
+[26/Jun/2022 16:46:44] "GET /project-21/doc-252/ HTTP/1.0" 200 73272
+[26/Jun/2022 16:46:50] "GET /project-21/doc-294/ HTTP/1.0" 200 67590
+[26/Jun/2022 16:46:55] "GET /project-21/doc-783/ HTTP/1.0" 200 64078
+[26/Jun/2022 16:47:00] "GET /project-21/doc-814/ HTTP/1.0" 200 81243
+[26/Jun/2022 16:47:05] "GET /project-26/doc-300/ HTTP/1.0" 200 40774
+[26/Jun/2022 16:51:37] "GET /project-37/doc-726 HTTP/1.0" 301 0
+[26/Jun/2022 16:53:10] "POST /api/upload_img/?token=2c00d7b5e2425ce8337b098c8077286ac3931103375d5f10b3d5ea8d HTTP/1.0" 200 146
+[26/Jun/2022 16:53:11] "GET /media/202206/2022-06-26_165310_383555.png HTTP/1.0" 200 160362
+[26/Jun/2022 16:53:16] "GET /media/202206/2022-06-26_165310_383555.png HTTP/1.0" 200 160362
+[26/Jun/2022 16:54:01] "GET /download_doc_md/266/ HTTP/1.0" 200 4397
+[26/Jun/2022 16:54:02] "GET /download_doc_md/804/ HTTP/1.0" 200 4418
+[26/Jun/2022 16:54:04] "GET /download_doc_md/333/ HTTP/1.0" 200 4397
+[26/Jun/2022 16:54:06] "GET /download_doc_md/519/ HTTP/1.0" 200 4397
+[26/Jun/2022 16:54:09] "GET /download_doc_md/885/ HTTP/1.0" 200 4397
+[26/Jun/2022 16:59:44] "GET /media/202108/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0_1629036188.gif HTTP/1.0" 200 1549647
+[26/Jun/2022 17:02:50] "GET /project-37/doc-714/ HTTP/1.0" 200 52704
+[26/Jun/2022 17:06:23] "GET /project-49/doc-852/ HTTP/1.0" 200 28910
+[26/Jun/2022 17:10:06] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 17:13:06] "GET /project-24/doc-269/ HTTP/1.0" 200 48783
+[26/Jun/2022 17:32:15] "GET /download_doc_md/885/ HTTP/1.0" 200 4418
+[26/Jun/2022 17:40:45] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 17:42:18] "GET /project-21/doc-715/ HTTP/1.0" 200 68201
+[26/Jun/2022 17:42:23] "GET /project-21/doc-87/ HTTP/1.0" 200 64737
+[26/Jun/2022 17:42:28] "GET /project-21/doc-90/ HTTP/1.0" 200 64159
+[26/Jun/2022 17:42:35] "GET /project-26/doc-337/ HTTP/1.0" 200 47578
+[26/Jun/2022 17:42:40] "GET /project-26/doc-340/ HTTP/1.0" 200 43738
+[26/Jun/2022 17:50:22] "GET /download_doc_md/909/ HTTP/1.0" 200 4418
+[26/Jun/2022 17:53:44] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 18:08:37] "GET /download_doc_md/826/ HTTP/1.0" 200 4418
+[26/Jun/2022 18:12:58] "GET /project-38/doc-921/ HTTP/1.0" 200 31822
+[26/Jun/2022 18:13:00] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[26/Jun/2022 18:13:02] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 18:17:16] "GET /project-24/doc-254/ HTTP/1.0" 200 40092
+[26/Jun/2022 18:25:50] "GET /project-23/doc-197/ HTTP/1.0" 200 4418
+[26/Jun/2022 18:29:45] "GET /media/202108/2021-08-15_214948.png HTTP/1.0" 200 169707
+[26/Jun/2022 18:34:48] "GET /project-21/doc-252/ HTTP/1.0" 200 73282
+[26/Jun/2022 18:35:12] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 18:36:18] "GET /project-34/doc-813/ HTTP/1.0" 200 100782
+[26/Jun/2022 18:37:11] "GET /project-34/doc-841/ HTTP/1.0" 200 41134
+[26/Jun/2022 18:37:26] "GET /project-24/doc-240/ HTTP/1.0" 200 34754
+[26/Jun/2022 18:43:52] "GET /project-37/doc-809 HTTP/1.0" 301 0
+[26/Jun/2022 18:43:53] "GET /project-37/doc-809/ HTTP/1.0" 200 58436
+[26/Jun/2022 18:52:45] "GET /project-21/doc-776/ HTTP/1.0" 200 76158
+[26/Jun/2022 18:59:55] "GET /project-26/doc-337/ HTTP/1.0" 200 47578
+[26/Jun/2022 19:02:07] "GET /project-36/doc-638/ HTTP/1.0" 200 4418
+[26/Jun/2022 19:10:51] "GET /project-37/doc-731/ HTTP/1.0" 200 44034
+[26/Jun/2022 19:12:09] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 19:14:47] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 19:14:51] "GET /project-37/doc-812/ HTTP/1.0" 200 59147
+[26/Jun/2022 19:28:45] "GET /download_doc_md/192/ HTTP/1.0" 200 4418
+[26/Jun/2022 19:29:22] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 19:30:51] "GET /project-21/doc-278/ HTTP/1.0" 200 74639
+[26/Jun/2022 19:30:58] "GET /project-21/doc-885/ HTTP/1.0" 200 71510
+[26/Jun/2022 19:31:04] "GET /project-21/doc-914/ HTTP/1.0" 200 69402
+[26/Jun/2022 19:31:10] "GET /project-26/doc-317/ HTTP/1.0" 200 42928
+[26/Jun/2022 19:33:55] "GET /?ref=https://githubhelp.com HTTP/1.0" 200 52870
+[26/Jun/2022 19:35:14] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 19:35:16] "GET /static/vditor//dist/js/katex/katex.min.js HTTP/1.0" 200 255613
+[26/Jun/2022 19:37:37] "GET /project-23/doc-68/ HTTP/1.0" 200 4418
+[26/Jun/2022 19:38:43] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 19:39:29] "GET /project-26/doc-930/ HTTP/1.0" 200 105356
+[26/Jun/2022 19:39:31] "GET /project-26/doc-935/ HTTP/1.0" 200 67484
+[26/Jun/2022 19:39:33] "GET /project-21/doc-936/ HTTP/1.0" 200 72342
+[26/Jun/2022 19:39:57] "GET /media/202206/2022-06-03_1537510.057198173806761066.png HTTP/1.0" 200 16071
+[26/Jun/2022 19:39:58] "GET /media/202206/2022-06-04_201702_388188.png HTTP/1.0" 200 77200
+[26/Jun/2022 19:40:00] "GET /media/202205/2022-05-29_1134020.139742301000497.png HTTP/1.0" 200 24171
+[26/Jun/2022 19:40:01] "GET /media/202205/2022-05-27_102456_404830.png HTTP/1.0" 200 88137
+[26/Jun/2022 19:40:03] "GET /media/202206/2022-06-22_203114_640134.png HTTP/1.0" 200 52184
+[26/Jun/2022 19:40:04] "GET /media/202206/2022-06-06_173254_724726.png HTTP/1.0" 200 34756
+[26/Jun/2022 19:40:06] "GET /media/202206/2022-06-22_200442_363582.png HTTP/1.0" 200 85055
+[26/Jun/2022 19:40:07] "GET /media/202206/2022-06-04_213705_225227.png HTTP/1.0" 200 211035
+[26/Jun/2022 19:40:09] "GET /media/202206/2022-06-01_1937230.6582568592635254.png HTTP/1.0" 200 43034
+[26/Jun/2022 19:40:10] "GET /media/202206/2022-06-17_162145_439843.png HTTP/1.0" 200 67623
+[26/Jun/2022 19:40:11] "GET /media/202206/2022-06-22_201158_960011.png HTTP/1.0" 200 42706
+[26/Jun/2022 19:40:13] "GET /media/202206/2022-06-17_164922_712605.png HTTP/1.0" 200 129543
+[26/Jun/2022 19:40:15] "GET /media/202206/2022-06-03_1648060.8472386668425588.png HTTP/1.0" 200 21612
+[26/Jun/2022 19:40:16] "GET /media/202206/2022-06-22_204234_555126.png HTTP/1.0" 200 207073
+[26/Jun/2022 19:40:17] "GET /media/202206/2022-06-22_195703_542613.png HTTP/1.0" 200 214459
+[26/Jun/2022 19:40:19] "GET /media/202206/2022-06-17_214801_676458.png HTTP/1.0" 200 181600
+[26/Jun/2022 19:40:20] "GET /media/202205/2022-05-30_1622060.7070800430543429.png HTTP/1.0" 200 56281
+[26/Jun/2022 19:40:22] "GET /media/202206/2022-06-01_1933440.29035427711482786.png HTTP/1.0" 200 7000
+[26/Jun/2022 19:40:23] "GET /media/202206/2022-06-03_1629530.5397257460978355.png HTTP/1.0" 200 18942
+[26/Jun/2022 19:40:24] "GET /media/202206/2022-06-17_205955_451550.png HTTP/1.0" 200 274017
+[26/Jun/2022 19:40:25] "GET /media/202206/2022-06-16_210554_113489.png HTTP/1.0" 200 117307
+[26/Jun/2022 19:40:27] "GET /media/202206/2022-06-21_204136_235588.png HTTP/1.0" 200 274693
+[26/Jun/2022 19:40:28] "GET /media/202206/2022-06-25_110320_875719.png HTTP/1.0" 200 85469
+[26/Jun/2022 19:40:29] "GET /media/202206/2022-06-03_1618140.28732872641956697.png HTTP/1.0" 200 22484
+[26/Jun/2022 19:40:31] "GET /media/202206/2022-06-03_1648200.6230039278219002.png HTTP/1.0" 200 25037
+[26/Jun/2022 19:40:32] "GET /media/202206/2022-06-03_1647500.6498301969113863.png HTTP/1.0" 200 21397
+[26/Jun/2022 19:40:33] "GET /media/202206/2022-06-17_214149_285267.png HTTP/1.0" 200 135419
+[26/Jun/2022 19:40:34] "GET /media/202206/2022-06-20_210935_514997.png HTTP/1.0" 200 209776
+[26/Jun/2022 19:40:36] "GET /media/202205/2022-05-28_1148300.050953602887815364.png HTTP/1.0" 200 33091
+[26/Jun/2022 19:40:37] "GET /media/202206/2022-06-16_214711_707989.png HTTP/1.0" 200 161303
+[26/Jun/2022 19:40:38] "GET /media/202206/2022-06-03_1622040.18671759779350017.png HTTP/1.0" 200 23643
+[26/Jun/2022 19:40:39] "GET /media/202205/2022-05-29_1647180.7275877842219161.png HTTP/1.0" 200 20040
+[26/Jun/2022 19:40:41] "GET /media/202206/2022-06-03_1647310.7864654018436411.png HTTP/1.0" 200 13297
+[26/Jun/2022 19:40:42] "GET /media/202206/2022-06-01_2019230.16935938666390438.png HTTP/1.0" 200 167798
+[26/Jun/2022 19:40:43] "GET /media/202206/2022-06-19_210707_320980.png HTTP/1.0" 200 279807
+[26/Jun/2022 19:40:45] "GET /media/202206/2022-06-01_1938090.4511449929817345.png HTTP/1.0" 200 39200
+[26/Jun/2022 19:40:46] "GET /media/202206/2022-06-17_213005_551046.png HTTP/1.0" 200 279754
+[26/Jun/2022 19:40:48] "GET /media/202205/2022-05-28_1156350.7073084618631299.png HTTP/1.0" 200 15091
+[26/Jun/2022 19:40:49] "GET /media/202206/2022-06-20_212737_495665.png HTTP/1.0" 200 165755
+[26/Jun/2022 19:40:51] "GET /media/202205/2022-05-29_1610300.1202024267313998.png HTTP/1.0" 200 20703
+[26/Jun/2022 19:40:52] "GET /media/202206/2022-06-01_1709220.7318460992745337.png HTTP/1.0" 200 25124
+[26/Jun/2022 19:40:52] "GET /media/202206/2022-06-17_171841_673640.png HTTP/1.0" 200 155054
+[26/Jun/2022 19:40:54] "GET /media/202206/2022-06-25_114548_778589.png HTTP/1.0" 200 72829
+[26/Jun/2022 19:40:55] "GET /media/202205/2022-05-27_103001_656451.png HTTP/1.0" 200 173781
+[26/Jun/2022 19:40:57] "GET /media/202205/2022-05-28_1151150.4816085587647606.png HTTP/1.0" 200 53584
+[26/Jun/2022 19:50:37] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 19:55:13] "GET /download_doc_md/756/ HTTP/1.0" 200 4418
+[26/Jun/2022 20:04:15] "GET /download_doc_md/334/ HTTP/1.0" 200 4418
+[26/Jun/2022 20:13:49] "GET /project-41/ HTTP/1.0" 200 4418
+[26/Jun/2022 20:19:52] "GET /download_doc_md/912/ HTTP/1.0" 200 4397
+[26/Jun/2022 20:22:55] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 20:24:29] "GET /project-21/doc-253/ HTTP/1.0" 200 70763
+[26/Jun/2022 20:24:37] "GET /project-21/doc-270/ HTTP/1.0" 200 77045
+[26/Jun/2022 20:24:43] "GET /project-21/doc-86/ HTTP/1.0" 200 70562
+[26/Jun/2022 20:25:37] "GET /project-49/doc-850/ HTTP/1.0" 200 30065
+[26/Jun/2022 20:26:36] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 20:26:39] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 20:31:21] "GET /project-26/doc-331/ HTTP/1.0" 200 45001
+[26/Jun/2022 20:38:55] "GET /project-37/doc-726 HTTP/1.0" 301 0
+[26/Jun/2022 20:38:56] "GET /project-37/doc-726/ HTTP/1.0" 200 45077
+[26/Jun/2022 20:41:12] "GET /download_doc_md/864/ HTTP/1.0" 200 4418
+[26/Jun/2022 20:48:24] "GET /project-21/doc-934/ HTTP/1.0" 200 68840
+[26/Jun/2022 20:48:24] "GET /download_doc_md/936/ HTTP/1.0" 200 4397
+[26/Jun/2022 20:48:25] "GET /download_doc_md/935/ HTTP/1.0" 200 4397
+[26/Jun/2022 20:48:25] "GET /project-26/doc-929/ HTTP/1.0" 200 54758
+[26/Jun/2022 20:48:27] "GET /download_doc_md/930/ HTTP/1.0" 200 4397
+[26/Jun/2022 20:48:28] "GET /project-21/doc-933/ HTTP/1.0" 200 64145
+[26/Jun/2022 20:58:43] "GET /project-26/doc-310/ HTTP/1.0" 200 41531
+[26/Jun/2022 21:05:26] "GET /download_doc_md/929/ HTTP/1.0" 200 4397
+[26/Jun/2022 21:05:27] "GET /download_doc_md/933/ HTTP/1.0" 200 4397
+[26/Jun/2022 21:05:27] "GET /download_doc_md/934/ HTTP/1.0" 200 4397
+[26/Jun/2022 21:08:16] "GET /project-36/doc-696/ HTTP/1.0" 200 4418
+[26/Jun/2022 21:17:13] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 21:17:33] "GET /download_doc_md/295/ HTTP/1.0" 200 4418
+[26/Jun/2022 21:19:05] "GET /project-26/doc-797/ HTTP/1.0" 200 52611
+[26/Jun/2022 21:19:47] "GET /project-49/doc-852/ HTTP/1.0" 200 28910
+[26/Jun/2022 21:20:39] "GET /project-38/doc-717/ HTTP/1.0" 200 26276
+[26/Jun/2022 21:20:54] "GET /static/iconFont/iconfont.js?version=0.7.9 HTTP/1.0" 200 130522
+[26/Jun/2022 21:20:55] "GET /static/iconFont/iconfont.css?version=0.7.9 HTTP/1.0" 200 22891
+[26/Jun/2022 21:20:56] "GET /static/viewerjs/viewer.min.js?version=0.7.9 HTTP/1.0" 200 32388
+[26/Jun/2022 21:20:56] "GET /static/dashang/dashang_alipay.webp HTTP/1.0" 200 20156
+[26/Jun/2022 21:20:58] "GET /static/vditor/dist/method.min.js?version=0.7.9 HTTP/1.0" 200 36925
+[26/Jun/2022 21:20:58] "GET /static/editor.md/lib/purify.min.js?version=0.7.9 HTTP/1.0" 200 18018
+[26/Jun/2022 21:20:59] "GET /static/dashang/dashang_wx.webp HTTP/1.0" 200 11276
+[26/Jun/2022 21:21:01] "GET /static/layui/css/layui.css?version=0.7.9 HTTP/1.0" 200 79875
+[26/Jun/2022 21:21:04] "GET /static/mrdoc/mrdoc-docs.css?version=0.7.9 HTTP/1.0" 200 3536
+[26/Jun/2022 21:21:07] "GET /static/toc/doctoc.js?version=0.7.9 HTTP/1.0" 200 11498
+[26/Jun/2022 21:21:33] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 21:25:14] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 21:26:03] "GET /project-21/doc-281/ HTTP/1.0" 200 70428
+[26/Jun/2022 21:34:46] "GET /project-36/doc-663/ HTTP/1.0" 200 4397
+[26/Jun/2022 21:36:10] "GET /project-42/doc-769 HTTP/1.0" 301 0
+[26/Jun/2022 21:36:24] "GET /project-42/doc-769/ HTTP/1.0" 200 39000
+[26/Jun/2022 21:36:49] "GET /static/editor.md/css/editormd.css?version=0.7.9 HTTP/1.0" 200 79072
+[26/Jun/2022 21:36:49] "GET /static/viewerjs/viewer.min.css?version=0.7.9 HTTP/1.0" 200 7796
+[26/Jun/2022 21:36:49] "GET /static/layui/layui.js?version=0.7.9 HTTP/1.0" 200 291286
+[26/Jun/2022 21:36:51] "GET /static/layui/font/iconfont.woff2?v=256 HTTP/1.0" 200 25964
+[26/Jun/2022 21:36:51] "GET /static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.0" 200 56780
+[26/Jun/2022 21:36:51] "GET /static/vditor//dist/js/lute/lute.min.js HTTP/1.0" 200 2593357
+[26/Jun/2022 21:36:55] "GET /static/vditor//dist/js/i18n/zh_CN.js HTTP/1.0" 200 2530
+[26/Jun/2022 21:36:56] "GET /static/vditor//dist/js/icons/ant.js HTTP/1.0" 200 42983
+[26/Jun/2022 21:44:48] "GET /download_doc_md/261/ HTTP/1.0" 200 4418
+[26/Jun/2022 21:52:03] "GET /project-34/doc-543/ HTTP/1.0" 200 43739
+[26/Jun/2022 21:52:53] "GET /download_doc_md/659/ HTTP/1.0" 200 4418
+[26/Jun/2022 22:08:59] "GET / HTTP/1.0" 200 52870
+[26/Jun/2022 22:11:04] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 22:12:54] "GET /project-37/doc-744/ HTTP/1.0" 200 48748
+[26/Jun/2022 22:23:11] "GET /download_doc_md/306/ HTTP/1.0" 200 4418
+[26/Jun/2022 22:50:51] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 22:50:53] "GET /project-24/doc-247/ HTTP/1.0" 200 35273
+[26/Jun/2022 22:54:08] "GET /project-23/doc-207/ HTTP/1.0" 200 4418
+[26/Jun/2022 23:04:33] "GET /download_doc_md/262/ HTTP/1.0" 200 4418
+[26/Jun/2022 23:04:45] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 23:05:58] "GET /project-21/doc-886/ HTTP/1.0" 200 70508
+[26/Jun/2022 23:06:11] "GET /project-34/doc-818/ HTTP/1.0" 200 77270
+[26/Jun/2022 23:07:39] "GET /register/ HTTP/1.0" 200 4506
+[26/Jun/2022 23:16:01] "GET /download_doc_md/886/ HTTP/1.0" 200 4418
+[26/Jun/2022 23:22:11] "GET /project-21/doc-901/ HTTP/1.0" 200 66574
+[26/Jun/2022 23:28:19] "GET /project-26/doc-328/ HTTP/1.0" 200 56181
+[26/Jun/2022 23:36:23] "GET /download_doc_md/730/ HTTP/1.0" 200 4418
+[26/Jun/2022 23:47:13] "GET /project-34/doc-532/ HTTP/1.0" 200 41580
+[26/Jun/2022 23:56:37] "GET /robots.txt HTTP/1.0" 404 4397
+[26/Jun/2022 23:57:04] "GET /project-26/doc-319/ HTTP/1.0" 200 42155
+[26/Jun/2022 23:57:51] "GET /project-21/doc-759/ HTTP/1.0" 200 66768
+[26/Jun/2022 23:57:57] "GET /project-21/doc-787/ HTTP/1.0" 200 64111
+[26/Jun/2022 23:58:12] "GET /project-24/doc-249/ HTTP/1.0" 200 39337
+[27/Jun/2022 00:01:38] "GET /download_doc_md/897/ HTTP/1.0" 200 4397
+[27/Jun/2022 00:06:45] "GET /download_doc_md/755/ HTTP/1.0" 200 4418
+[27/Jun/2022 00:17:39] "GET /download_doc_md/822/ HTTP/1.0" 200 4418
