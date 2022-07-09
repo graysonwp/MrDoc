@@ -80,9 +80,3 @@ def dectry(p):
         temp = chr(int(i) - ord(j)) # 解密字符 = (加密Unicode码字符 - 秘钥字符的Unicode码)的单字节字符
         dec_str = dec_str+temp
     return dec_str
-
-# 解析 cookie 字符串
-def extract_cookies(cookie):
-    """从浏览器或者request headers中拿到cookie字符串，提取为字典格式的cookies"""
-    cookies = dict([l.split("=", 1) for l in cookie.split("; ")])
-    return cookies
