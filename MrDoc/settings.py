@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 配置文件和数据文件目录
 CONFIG_DIR = os.path.join(BASE_DIR, 'config')
-CONFIG = ConfigParser()
+CONFIG = ConfigParser(interpolation=None)
 CONFIG.read(os.path.join(CONFIG_DIR,'config.ini'),encoding='utf-8')
 
 # 日志文件配置
@@ -40,6 +40,7 @@ SECRET_KEY = '5&71mt9@^58zdg*_!t(x6g14q*@84d%ptr%%s6e0l50zs0we3d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = CONFIG.getboolean('site','debug',fallback=False)
 DOMAIN = CONFIG.get('site','domain',fallback=False)
+BILIBILI_COOKIE = CONFIG.get('site','bilibili_cookie',fallback=False)
 
 VERSIONS = '0.8.0'
 
