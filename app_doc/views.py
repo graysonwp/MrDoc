@@ -123,10 +123,10 @@ def get_pro_toc(pro_id):
     # 获取一级文档
     top_docs = Doc.objects.filter(top_doc=pro_id, parent_doc=0, status=1).values('id', 'name','open_children','editor_mode').order_by('sort')
     # 遍历一级文档
-    for doc in top_docs:
+    for index, doc in enumerate(top_docs):
         top_item = {
             'id': doc['id'],
-            'name': doc['name'],
+            'name': "{}、{}".format(index + 1, doc['name']),
             'open_children':doc['open_children'],
             'editor_mode':doc['editor_mode']
             # 'spread': True,
@@ -141,10 +141,10 @@ def get_pro_toc(pro_id):
                 status=1
             ).values('id', 'name','open_children','editor_mode').order_by('sort')
             top_item['children'] = []
-            for doc in sec_docs:
+            for index2, doc in enumerate(sec_docs):
                 sec_item = {
                     'id': doc['id'],
-                    'name': doc['name'],
+                    'name': "{}.{} {}".format(index + 1, index2 + 1, doc['name']),
                     'open_children': doc['open_children'],
                     'editor_mode': doc['editor_mode']
                     # 'level': 2
@@ -158,10 +158,10 @@ def get_pro_toc(pro_id):
                         status=1
                     ).values('id','name','editor_mode').order_by('sort')
                     sec_item['children'] = []
-                    for doc in thr_docs:
+                    for index3, doc in enumerate(thr_docs):
                         item = {
                             'id': doc['id'],
-                            'name': doc['name'],
+                            'name': "{}.{}.{} {}".format(index + 1, index2 + 1, index3 + 1, doc['name']),
                             'editor_mode': doc['editor_mode']
                             # 'level': 3
                         }

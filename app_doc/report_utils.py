@@ -80,9 +80,9 @@ class ReportMD():
         # 读取指定文集的文档数据
         data = Doc.objects.filter(top_doc=self.pro_id, parent_doc=0).order_by("sort")
         # 遍历一级文档
-        for d in data:
+        for index, d in enumerate(data):
             top_item = {
-                'name': validate_title(d.name),
+                'name': '{}、{}'.format(index, validate_title(d.name)),
                 'file': validate_title(d.name)+'.md',
             }
             md_name = validate_title(d.name) # 文档名称
@@ -104,14 +104,14 @@ class ReportMD():
             data_2 = Doc.objects.filter(parent_doc=d.id).order_by("sort")
             if data_2.count() > 0:
                 top_item['children'] = []
-                for d2 in data_2:
+                for index2, d2 in enumerate(data_2):
                     # 删除一级文件夹对应的文件
                     project_first_file = '{}/{}.md'.format(project_first_dir,md_name)
                     if os.path.exists(project_first_file):
                         os.remove(project_first_file)
 
                     sec_item = {
-                        'name': validate_title(d2.name),
+                        'name': '{}.{} {}'.format(index, index2, validate_title(d2.name)),
                         'file': validate_title(d2.name)+'.md',
                     }
 
@@ -138,9 +138,10 @@ class ReportMD():
                         if os.path.exists(project_second_file):
                             os.remove(project_second_file)
                         sec_item['children'] = []
-                        for d3 in data_3:
+                        for index3, d3 in enumerate(data_3):
                             item = {
                                 'name': validate_title(d3.name),
+                                'name': '{}.{}.{} {}'.format(index, index2, index3, validate_title(d3.name)),
                                 'file': validate_title(d3.name)+'.md',
                             }
                             sec_item['children'].append(item)
@@ -346,9 +347,9 @@ class ReportEPUB():
         '''
         spine = '<itemref idref="book_cover" linear="no"/><itemref idref="book_title"/><itemref idref="book_desc"/><itemref idref="toc_summary"/>'
 
-        for d in data:
+        for index, d in enumerate(data):
             # 拼接HTML字符串
-            html_str = "<h1 style='page-break-before: always;'>{}</h1>".format(d.name)
+            html_str = "<h1 style='page-break-before: always;'>{}、{}</h1>".format(index, d.name)
             if d.content is None:
                 d.content = markdown.markdown(
                     d.pre_content,
@@ -361,15 +362,15 @@ class ReportEPUB():
                 'id':d.id,
                 'link':'{}.xhtml'.format(d.id),
                 'pid':d.parent_doc,
-                'title':d.name
+                'title':'{}、{}'.format(index, d.name)
             }
             self.toc_list.append(toc)
 
             # nav
             toc_nav = '''<navPoint id="np_{nav_num}" playOrder="{nav_num}">
-                    <navLabel><text>{title}</text></navLabel>
+                    <navLabel><text>{index}、{title}</text></navLabel>
                     <content src="Text/{file}"/>
-                '''.format(nav_num=nav_num,title=d.name,file=toc['link'])
+                '''.format(nav_num=nav_num, index=index,title=d.name,file=toc['link'])
             nav_str += toc_nav
 
             # toc_summary
@@ -384,8 +385,8 @@ class ReportEPUB():
             data_2 = Doc.objects.filter(parent_doc=d.id,status=1).order_by("sort")
             if data_2.count() > 0:
                 toc_summary_str += '<ul>'
-            for d2 in data_2:
-                html_str = "<h1>{}</h1>".format(d2.name)
+            for index2, d2 in enumerate(data_2):
+                html_str = "<h1>{}.{} {}</h1>".format(index, index2, d2.name)
                 if d2.content is None:
                     d2.content = markdown.markdown(
                         d2.pre_content,
@@ -398,13 +399,13 @@ class ReportEPUB():
                     'id': d2.id,
                     'link': '{}.xhtml'.format(d2.id),
                     'pid': d2.parent_doc,
-                    'title': d2.name
+                    'title': '{}.{} {}'.format(index, index2, d2.name)
                 }
                 self.toc_list.append(toc)
                 toc_nav = '''<navPoint id="np_{nav_num}" playOrder="{nav_num}">
-                                    <navLabel><text>{title}</text></navLabel>
+                                    <navLabel><text>{index}.{index2} {title}</text></navLabel>
                                     <content src="Text/{file}"/>
-                                '''.format(nav_num=nav_num, title=d2.name, file=toc['link'])
+                                '''.format(nav_num=nav_num, index=index, index2=index2, title=d2.name, file=toc['link'])
                 nav_str += toc_nav
 
                 # toc_summary
@@ -419,8 +420,8 @@ class ReportEPUB():
                 data_3 = Doc.objects.filter(parent_doc=d2.id,status=1).order_by("sort")
                 if data_3.count() > 0:
                     toc_summary_str += '<ul>'
-                for d3 in data_3:
-                    html_str = "<h1>{}</h1>".format(d3.name)
+                for index3, d3 in enumerate(data_3):
+                    html_str = "<h1>{}.{}.{} {}</h1>".format(index, index2, index3, d3.name)
                     # 如果文档没有HTML内容，将Markdown转换为HTML
                     if d3.content is None:
                         d3.content = markdown.markdown(
@@ -434,15 +435,15 @@ class ReportEPUB():
                         'id': d3.id,
                         'link': '{}.xhtml'.format(d3.id),
                         'pid': d3.parent_doc,
-                        'title': d3.name
+                        'title': '{}.{}.{} {}'.format(index, index2, index3, d3.name)
                     }
                     self.toc_list.append(toc)
 
                     toc_nav = '''<navPoint id="np_{nav_num}" playOrder="{nav_num}">
-                                    <navLabel><text>{title}</text></navLabel>
+                                    <navLabel><text>{index}.{index2}.{index3} {title}</text></navLabel>
                                     <content src="Text/{file}"/>
                                 </navPoint>
-                        '''.format(nav_num=nav_num, title=d3.name, file=toc['link'])
+                        '''.format(nav_num=nav_num, index=index, index2=index2, index3=index3, title=d3.name, file=toc['link'])
                     nav_str += toc_nav
 
                     # toc_summary
@@ -793,32 +794,32 @@ class ReportPDF():
         # 拼接文档的HTML字符串
         data = Doc.objects.filter(top_doc=self.pro_id,parent_doc=0,status=1).order_by("sort")
         toc_list = {'1':[],'2':[],'3':[]}
-        for d in data:
+        for index, d in enumerate(data):
             self.content_str += "<h1 style='page-break-before: always;'>{}</h1>\n\n".format(d.name)
             if d.editor_mode in [1,2]:
                 self.content_str += d.pre_content + '\n'
             elif d.editor_mode == 3:
                 self.content_str += d.content + '\n'
-            toc_list['1'].append({'id':d.id,'name':d.name})
+            toc_list['1'].append({'id':d.id,'name':'{}、{}'.format(index, d.name)})
             # 获取第二级文档
             data_2 = Doc.objects.filter(parent_doc=d.id,status=1).order_by("sort")
-            for d2 in data_2:
-                self.content_str += "\n\n<h1 style='page-break-before: always;'>{}</h1>\n\n".format(d2.name)
+            for index2, d2 in enumerate(data_2):
+                self.content_str += "\n\n<h1 style='page-break-before: always;'>{}.{} {}</h1>\n\n".format(index, index2, d2.name)
                 if d2.editor_mode in [1, 2]:
                     self.content_str += d2.pre_content + '\n'
                 elif d2.editor_mode == 3:
                     self.content_str += d2.content + '\n'
-                toc_list['2'].append({'id':d2.id,'name':d2.name,'parent':d.id})
+                toc_list['2'].append({'id':d2.id,'name':'{}.{} {}'.format(index, index2, d2.name),'parent':d.id})
                 # 获取第三级文档
                 data_3 = Doc.objects.filter(parent_doc=d2.id,status=1).order_by("sort")
-                for d3 in data_3:
+                for index3, d3 in enumerate(data_3):
                     # print(d3.name,d3.content)
-                    self.content_str += "\n\n<h1 style='page-break-before: always;'>{}</h1>\n\n".format(d3.name)
+                    self.content_str += "\n\n<h1 style='page-break-before: always;'>{}.{}.{} {}</h1>\n\n".format(index, index2, index3, d3.name)
                     if d3.editor_mode in [1, 2]:
                         self.content_str += d3.pre_content + '\n'
                     elif d3.editor_mode == 3:
                         self.content_str += d3.content + '\n'
-                    toc_list['3'].append({'id':d3.id,'name':d3.name,'parent':d2.id})
+                    toc_list['3'].append({'id':d3.id,'name':'{}.{}.{} {}'.format(index, index2, index3, d3.name),'parent':d2.id})
 
         # 替换所有媒体文件链接
         self.content_str = self.content_str.replace('![](/media/','![](../../media/')
