@@ -17,6 +17,9 @@
         <a class="btn pull-left" aria-label="" href="{% url 'create_doc' %}?pid={{project.id}}" target="_blank">
             <i class="fa fa-plus-square"></i> <span class="layui-hide-xs">{% trans "添加" %}</span>
         </a>
+        <a class="btn pull-left" aria-label="" href="{% url 'del_doc' doc_id=doc.id %}">
+            <i class="fa fa-trash"></i> <span class="layui-hide-xs">{% trans "删除" %}</span>
+        </a>
         <a class="btn pull-left" aria-label="" href="{% url 'manage_doc' %}" target="_blank">
             <i class="fa fa-cubes"></i> <span class="layui-hide-xs">{% trans "管理" %}</span>
         </a>
