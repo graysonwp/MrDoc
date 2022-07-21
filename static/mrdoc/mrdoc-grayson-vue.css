@@ -285,6 +285,10 @@ li p.first {
     border-radius: 2px;
 }
 
+.markdown-body p {
+    font-size: 16px;
+}
+
 .vditor-reset pre > code {
     padding: 2px 4px;
     border-radius: 2px;
