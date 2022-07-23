@@ -301,6 +301,19 @@ li p.first {
     color: #34495e;
 }
 
+.doc-body-content-div {
+    max-width: 912px;
+    padding: 15px;
+}
+
+.doc-content {
+    max-width: 912px;
+}
+
+.layui-fluid {
+    padding: 0px;
+}
+
 .doc-header {
     position: fixed;
     background-color: #ffffff;
