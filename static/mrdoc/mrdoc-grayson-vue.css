@@ -310,14 +310,19 @@ li p.first {
     max-width: 912px;
 }
 
+.big-page .doc-header {
+    max-width: 912px;
+}
+
 .big-page .layui-fluid {
     padding: 0px;
 }
 
 .doc-header {
-    position: fixed;
+    position: relative;
     background-color: #ffffff;
-    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .doc-body-content {
