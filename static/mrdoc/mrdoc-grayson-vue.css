@@ -314,6 +314,10 @@ li p.first {
     padding: 0px;
 }
 
+.big-page .doc-header {
+    left: 180px;
+}
+
 .doc-header {
     position: fixed;
     background-color: #ffffff;
