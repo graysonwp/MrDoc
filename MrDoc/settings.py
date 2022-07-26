@@ -260,3 +260,15 @@ if cors_str == []:
     CORS_ALLOWED_ORIGINS = capacitor_origins
 else:
     CORS_ALLOWED_ORIGINS = capacitor_origins + cors_str.split(',')
+
+CACHES = {
+    
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379', # redis所在服务器或容器ip地址
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+             "PASSWORD": "VgG6PWpNaEMLPW", # 你设置的密码
+        },
+    },
+}
