@@ -349,6 +349,7 @@
                 <button id="load-disqus-button" class="disqus-button" onclick="load_disqus();return false;">点击加载评论</button>
                 <div id="disqus_thread" style="padding: 10px;"></div>
                 <script>
+                    var disqus_loaded = false;
                     if (!disqus_loaded) {
                         function load_disqus() {
                             /**
