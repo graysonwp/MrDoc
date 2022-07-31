@@ -59,7 +59,7 @@ class ReportMD():
             os.mkdir(settings.MEDIA_ROOT + "/reportmd_temp")
 
         # 判断文集名称文件夹是否存在
-        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}".format(self.project_name)
+        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}".format(self.project_name, self.project_name)
         is_fold = os.path.exists(self.project_path)
         if is_fold is False:
             os.mkdir(self.project_path)
@@ -165,7 +165,6 @@ class ReportMD():
             format='zip',
             root_dir=self.project_path
         )
-        print(self.project_path)
         # 删除文件夹
         shutil.rmtree(self.project_path)
 
