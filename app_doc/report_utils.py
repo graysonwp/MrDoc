@@ -92,7 +92,6 @@ class ReportMD():
             
             # 判断是否存在一级文件夹
             project_first_dir = '{}/{}'.format(self.project_path,md_name)
-            print(project_first_dir);
             project_first_dir_exists = os.path.exists(project_first_dir)
             if project_first_dir_exists is False:
                 os.mkdir(project_first_dir)
@@ -166,7 +165,7 @@ class ReportMD():
             format='zip',
             root_dir=self.project_path
         )
-        # print(md_file)
+        print(self.project_path)
         # 删除文件夹
         shutil.rmtree(self.project_path)
 
@@ -182,7 +181,6 @@ class ReportMD():
             for media in media_list:
                 try:
                     media_filename = media.replace('//','/').split("(")[-1].split(")")[0] # 媒体文件的文件名
-                    print(media_filename)
                 except:
                     continue                # 对本地静态文件进行复制
                 if media_filename.startswith("/media"):
