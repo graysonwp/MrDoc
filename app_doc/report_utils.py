@@ -48,10 +48,8 @@ class ReportMD():
         self.project_data = Project.objects.get(pk=project_id)
 
         # 文集名称
-        self.project_name = "{0}_{1}_{2}".format(
-            self.project_data.create_user,
-            validate_title(self.project_data.name),
-            str(datetime.date.today())
+        self.project_name = "{}".format(
+            validate_title(self.project_data.name)
         )
 
         # 判断MD导出临时文件夹是否存在
@@ -59,7 +57,7 @@ class ReportMD():
             os.mkdir(settings.MEDIA_ROOT + "/reportmd_temp")
 
         # 判断文集名称文件夹是否存在
-        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}".format(self.project_name, self.project_name)
+        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
         print(self.project_path)
         is_fold = os.path.exists(self.project_path)
         if is_fold is False:
