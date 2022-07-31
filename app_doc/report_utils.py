@@ -244,6 +244,8 @@ class ReportMdBatch():
         # 删除文件夹
         shutil.rmtree(self.report_file_path)
 
+        print(self.report_file_path)
+
         return "{}.zip".format(self.report_file_path)
 
 
