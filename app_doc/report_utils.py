@@ -165,6 +165,7 @@ class ReportMD():
             format='zip',
             base_dir=os.path.dirname(os.path.dirname(self.project_path))
         )
+        print(os.path.dirname(os.path.dirname(self.project_path)))
         # 删除文件夹
         shutil.rmtree(self.project_path)
 
