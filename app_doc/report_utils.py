@@ -95,11 +95,11 @@ class ReportMD():
             print(project_first_dir);
             project_first_dir_exists = os.path.exists(project_first_dir)
             if project_first_dir_exists is False:
-                os.makedirs(project_first_dir)
+                os.mkdir(project_first_dir)
 
             # 新建MD文件
             with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
-                files.write(md_content.replace('./media/', settings.DOMAIN + '/media/'))
+                files.write(md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/'))
 
             # 查询二级文档
             data_2 = Doc.objects.filter(parent_doc=d.id).order_by("sort")
@@ -128,7 +128,7 @@ class ReportMD():
 
                     # 新建MD文件
                     with open('{}/{}.md'.format(project_second_dir, md_name_2), 'w', encoding='utf-8') as files:
-                        files.write(md_content_2.replace('./media/', settings.DOMAIN + '/media/'))
+                        files.write(md_content_2.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/'))
 
                     # 获取第三级文档
                     data_3 = Doc.objects.filter(parent_doc=d2.id).order_by("sort")
@@ -152,7 +152,7 @@ class ReportMD():
 
                             # 新建MD文件
                             with open('{}/{}.md'.format(project_second_dir, md_name_3), 'w', encoding='utf-8') as files:
-                                files.write(md_content_3.replace('./media/', settings.DOMAIN + '/media/'))
+                                files.write(md_content_3.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/'))
                     top_item['children'].append(sec_item)
             project_toc_list['toc'].append(top_item)
 
@@ -201,7 +201,8 @@ class ReportMD():
                     # except FileNotFoundError:
                     #     pass
                 elif settings.DOMAIN in media_filename:
-                    md_content = md_content.replace(settings.DOMAIN + '/media/', './media/')
+                    md_content = md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('/media/', './media/')
+                    
 
             return md_content
         # 不存在静态文件，直接返回MD内容
