@@ -162,7 +162,7 @@ class ReportMD():
         md_file = shutil.make_archive(
             base_name=self.project_path,
             format='zip',
-            root_dir='{}/*'.format(self.project_path)
+            root_dir='{}/'.format(self.project_path)
         )
         # 删除文件夹
         shutil.rmtree(self.project_path)
