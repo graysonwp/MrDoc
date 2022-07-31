@@ -61,7 +61,7 @@ class ReportMD():
         print(self.project_path)
         is_fold = os.path.exists(self.project_path)
         if is_fold is False:
-            os.mkdir(self.project_path)
+            os.makedirs(self.project_path)
 
         # 判断是否存在静态文件文件夹
         # self.media_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/media".format(self.project_name)
