@@ -42,7 +42,7 @@ DEBUG = CONFIG.getboolean('site','debug',fallback=False)
 DOMAIN = CONFIG.get('site','domain',fallback=False)
 BILIBILI_COOKIE = CONFIG.get('site','bilibili_cookie',fallback=False)
 
-VERSIONS = '0.8.0'
+VERSIONS = '0.8.1'
 
 ALLOWED_HOSTS = ['*']
 
