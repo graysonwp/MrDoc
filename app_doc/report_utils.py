@@ -57,7 +57,9 @@ class ReportMD():
             os.mkdir(settings.MEDIA_ROOT + "/reportmd_temp")
 
         # 判断文集名称文件夹是否存在
-        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
+        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/tmp/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
+        self.report_file_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
+        print(self.project_path)
         is_fold = os.path.exists(self.project_path)
         if is_fold is False:
             os.makedirs(self.project_path)
@@ -159,9 +161,9 @@ class ReportMD():
 
         # 压缩文件
         md_file = shutil.make_archive(
-            base_name=self.project_path,
+            base_name=self.report_file_path,
             format='zip',
-            base_dir=self.project_path
+            root_dir=os.path.dirname(self.project_path)
         )
         # 删除文件夹
         shutil.rmtree(self.project_path)
