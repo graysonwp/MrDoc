@@ -2256,7 +2256,9 @@ def report_md(request):
             project_md = ReportMD(
                 project_id=int(pro_id)
             )
-            md_file_path = project_md.work() # 生成并获取MD文件压缩包绝对路径
+            md_file_path = project_md.work() # 生成并获取MD文件压缩包绝对路径)
+            #  self.project_data.create_user, str(datetime.date.today())
+            print(user)
             md_file_filename = os.path.split(md_file_path)[-1] # 提取文件名
             md_file = "/media/reportmd_temp/"+ md_file_filename # 拼接相对链接
             return JsonResponse({'status':True,'data':md_file})
