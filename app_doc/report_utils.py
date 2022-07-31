@@ -95,7 +95,7 @@ class ReportMD():
             print(project_first_dir);
             project_first_dir_exists = os.path.exists(project_first_dir)
             if project_first_dir_exists is False:
-                os.mkdir(project_first_dir)
+                os.makedirs(project_first_dir)
 
             # 新建MD文件
             with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
