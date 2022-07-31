@@ -92,6 +92,7 @@ class ReportMD():
             
             # 判断是否存在一级文件夹
             project_first_dir = '{}/{}'.format(self.project_path,md_name)
+            print(project_first_dir);
             project_first_dir_exists = os.path.exists(project_first_dir)
             if project_first_dir_exists is False:
                 os.mkdir(project_first_dir)
