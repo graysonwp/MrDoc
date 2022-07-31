@@ -215,7 +215,7 @@ class ReportMdBatch():
             os.mkdir(settings.MEDIA_ROOT + "/reportmd_temp")
 
         # 判断用户名+日期文件夹是否存在
-        self.report_file_path = settings.MEDIA_ROOT + "/reportmd_temp/{}_{}".format(
+        self.report_file_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}".format(
             self.username,datetime.datetime.strftime(datetime.datetime.now(),"%y%m%d%H%M%S")
         )
         is_fold = os.path.exists(self.report_file_path)
