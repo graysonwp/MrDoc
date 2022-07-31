@@ -66,7 +66,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.cache.UpdateCacheMiddleware', 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -77,7 +76,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'app_admin.middleware.require_login_middleware.RequiredLoginMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 SITE_ID = 1
@@ -262,15 +260,3 @@ if cors_str == []:
     CORS_ALLOWED_ORIGINS = capacitor_origins
 else:
     CORS_ALLOWED_ORIGINS = capacitor_origins + cors_str.split(',')
-
-CACHES = {
-    
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379', # redis所在服务器或容器ip地址
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-             "PASSWORD": "VgG6PWpNaEMLPW", # 你设置的密码
-        },
-    },
-}
