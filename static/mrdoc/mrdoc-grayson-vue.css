@@ -266,7 +266,7 @@ li p.first {
 }
 
 .vditor-reset code:not(.hljs):not(.highlight-chroma) {
-    /* padding: 2px 4px; */
+    padding: 2px 4px;
     font-family: var(--font-monospace);
     font-size: 0.92rem;
     background-color: #f8f8f8;
