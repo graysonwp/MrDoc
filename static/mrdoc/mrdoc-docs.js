@@ -415,12 +415,11 @@ function initDocRender(mode){
         Vditor.preview(document.getElementById('content'),md_content, 
         {
             "cdn":"/static/vditor/",
-            markdown:{autoSpace:true,fixTermTypo:true,toc:true,mark:true},
+            markdown:{mark:true},
             math:{inlineDigit:true},
             outline:{enable:true},
             speech: {enable: true,},
             anchor: 1,
-            typewriterMode: true,
             after () {
                 var sub_ele = "<div class='markdown-toc editormd-markdown-toc'></div>"
                 $("#toc-container").append(sub_ele)
