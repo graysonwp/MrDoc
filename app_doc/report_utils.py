@@ -57,8 +57,9 @@ class ReportMD():
             os.mkdir(settings.MEDIA_ROOT + "/reportmd_temp")
 
         # 判断文集名称文件夹是否存在
-        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
-        print(self.project_path)
+        self.project_path_temp = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}_temp/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
+        self.project_path = self.project_path_temp
+        self.archive_file_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
         is_fold = os.path.exists(self.project_path)
         if is_fold is False:
             os.makedirs(self.project_path)
@@ -78,6 +79,9 @@ class ReportMD():
         project_toc_list['toc'] = []
         # 读取指定文集的文档数据
         data = Doc.objects.filter(top_doc=self.pro_id, parent_doc=0).order_by("sort")
+        # 判断一级文件夹的个数，如果等于 1，则在项目文件夹的下一层新增一个以项目名为名称的文件夹，保证压缩后的文件解压缩时文件目录正确
+        if len(data) == 1:
+            self.project_path = '{}/{}'.format(self.project_path, self.project_data.name)
         # 遍历一级文档
         for index, d in enumerate(data):
             top_item = {
@@ -93,8 +97,8 @@ class ReportMD():
             project_first_dir = '{}/{}'.format(self.project_path,md_name)
             project_first_dir_exists = os.path.exists(project_first_dir)
             if project_first_dir_exists is False:
-                os.mkdir(project_first_dir)
-
+                os.makedirs(project_first_dir)
+            
             # 新建MD文件
             with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
                 files.write(md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/'))
@@ -160,14 +164,14 @@ class ReportMD():
 
         # 压缩文件
         md_file = shutil.make_archive(
-            base_name=self.project_path,
+            base_name=self.archive_file_path,
             format='zip',
-            root_dir=self.project_path
+            root_dir=self.project_path_temp
         )
         # 删除文件夹
         shutil.rmtree(self.project_path)
 
-        return "{}.zip".format(self.project_path)
+        return "{}.zip".format(self.archive_file_path)
 
     # 处理MD内容中的静态文件
     def operat_md_media(self,md_content):
@@ -244,8 +248,6 @@ class ReportMdBatch():
         # print(md_file)
         # 删除文件夹
         shutil.rmtree(self.report_file_path)
-
-        print(self.report_file_path)
 
         return "{}.zip".format(self.report_file_path)
 
