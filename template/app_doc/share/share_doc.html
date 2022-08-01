@@ -140,6 +140,7 @@
         <!-- 修改文档 -->
         {% if doc.create_user == request.user %}
             <a class="editDoc" href="{% url 'modify_doc' doc_id=doc.id %}" title="{% trans '修改文档' %}"><i class="fa fa-pencil"></i></a>
+            <a id="download_doc" class="editDoc" href="javascript:void(0)" onclick="download_doc()" title="{% trans '下载文档' %}"><i class="fa fa-download"></i></a>
         {% endif %}
         <!-- 目录 -->
         <div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
@@ -147,6 +148,14 @@
     </div>
 </div>
 
+<!-- 下载选项卡模板 -->
+<div id="download_div" style="display: none;">
+    <div class="layui-row" style="margin: 10px;">
+        <a class="layui-btn layui-btn-primary layui-btn-sm" download='{{doc.name}}.md' href="{% url 'download_doc_md' doc.id %}" target="_blank">
+            {% trans "Markdown文件" %}
+        </a>
+    </div>
+</div>
 <!-- 转发选项卡模板 -->
 <div id="share_div" style="display: none;">
     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
@@ -195,6 +204,21 @@
         }else{
             $("body").removeClass("big-page");
         }
+    }
+</script>
+
+<script>
+    // 显示文档下载弹出框
+    function download_doc(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','150px'],
+            shadeClose: true,
+            content: $('#download_div')
+          });
     }
 </script>
 
