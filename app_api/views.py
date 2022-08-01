@@ -236,6 +236,7 @@ def create_project(request):
 def create_doc(request):
     token = request.GET.get('token', '')
     project_id = request.POST.get('pid','')
+    parent_doc = request.POST.get('parent_doc','')
     doc_title = request.POST.get('title','')
     doc_content = request.POST.get('doc','')
     editor_mode = request.POST.get('editor_mode',1)
@@ -250,6 +251,7 @@ def create_doc(request):
                 doc = Doc.objects.create(
                     name=doc_title,  # 文档内容
                     pre_content=doc_content,  # 文档的编辑内容，意即编辑框输入的内容
+                    parent_doc= int(parent_doc) if parent_doc != '' else 0,
                     top_doc=project_id,  # 所属文集
                     editor_mode=editor_mode,  # 编辑器模式
                     create_user=token.user  # 创建的用户
@@ -258,6 +260,7 @@ def create_doc(request):
                 doc = Doc.objects.create(
                     name=doc_title,  # 文档内容
                     content=doc_content,  # 文档的编辑内容，意即编辑框输入的内容
+                    parent_doc= int(parent_doc) if parent_doc != '' else 0,
                     top_doc=project_id,  # 所属文集
                     editor_mode=editor_mode,  # 编辑器模式
                     create_user=token.user  # 创建的用户
