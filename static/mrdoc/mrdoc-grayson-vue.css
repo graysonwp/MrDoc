@@ -272,19 +272,6 @@ li p.first {
     background-color: #f8f8f8;
 }
 
-.markdown-body p code, 
-.markdown-body li code, 
-.markdown-body h1 code, 
-.markdown-body h2 code, 
-.markdown-body h3 code, 
-.markdown-body h4 code, 
-.markdown-body h5 code, 
-.markdown-body h6 code {
-    font-size: inherit !important;
-    color: #e96900 !important;
-    border-radius: 2px;
-}
-
 .vditor-reset pre > code {
     padding: 2px 4px;
     border-radius: 2px;
