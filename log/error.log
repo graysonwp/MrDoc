@@ -229,3 +229,1389 @@ Traceback (most recent call last):
     └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-08-09 02:05:34.539 | ERROR    | app_doc.views:doc:1075 - Collection browsing error
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f0ae8b4eea0>
+    └ <Thread(Thread-4457, started daemon 139683996620544)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f0ae8b4ec80>
+    └ <Thread(Thread-4457, started daemon 139683996620544)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4457, started daemon 139683996620544)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4457, started daemon 139683996620544)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>>
+    └ <Thread(Thread-4457, started daemon 139683996620544)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 50090)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f0ae1879158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │    │                   │        └ ('127.0.0.1', 50090)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f0ae06777b8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0ad5f4af28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f0ae0677840>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0ad5f4af28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f0ae0674d08>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0ad5f4af28>
+    │       └ <function BaseHandler.run at 0x7f0ae066ca60>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad7da50f0>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f0ae066cd90>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad7da50f0>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad7da50f0>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad7da50f0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │    └ <function BaseHandler.get_response at 0x7f0ae06a8f28>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ea0>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5e18>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d90>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d08>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5c80>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5bf8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5b70>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ae8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5a60>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d59d8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               │    └ <function BaseHandler._get_response at 0x7f0add931f28>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 34, 'doc_id': 535}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-34/doc-535/'>
+               └ <function doc at 0x7f0ade3da0d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 34, 'doc_id': 535}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-34/doc-535/'>
+           └ <function doc at 0x7f0ade3da048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 535
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f0ae077e048>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 535, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f0ae1932d08>
+                   └ <django.db.models.manager.Manager object at 0x7f0adfe1b748>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-08-09 05:40:43.958 | ERROR    | app_doc.views:doc:1075 - Collection browsing error
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f0ae8b4eea0>
+    └ <Thread(Thread-4511, started daemon 139683996620544)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f0ae8b4ec80>
+    └ <Thread(Thread-4511, started daemon 139683996620544)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4511, started daemon 139683996620544)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4511, started daemon 139683996620544)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>>
+    └ <Thread(Thread-4511, started daemon 139683996620544)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 50960)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f0ae1879158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │    │                   │        └ ('127.0.0.1', 50960)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f0ae06777b8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0abd9712e8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f0ae0677840>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0abd9712e8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f0ae0674d08>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0abd9712e8>
+    │       └ <function BaseHandler.run at 0x7f0ae066ca60>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad678f630>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f0ae066cd90>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad678f630>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad678f630>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ad678f630>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │    └ <function BaseHandler.get_response at 0x7f0ae06a8f28>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ea0>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5e18>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d90>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d08>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5c80>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5bf8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5b70>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ae8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5a60>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d59d8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               │    └ <function BaseHandler._get_response at 0x7f0add931f28>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 344}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-344/'>
+               └ <function doc at 0x7f0ade3da0d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 344}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-344/'>
+           └ <function doc at 0x7f0ade3da048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 344
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f0ae077e048>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 344, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f0ae1932d08>
+                   └ <django.db.models.manager.Manager object at 0x7f0adfe1b748>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-08-09 07:07:32.997 | ERROR    | app_doc.views:doc:1075 - 文集浏览出错
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f0ae8b4eea0>
+    └ <Thread(Thread-4535, started daemon 139684005013248)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f0ae8b4ec80>
+    └ <Thread(Thread-4535, started daemon 139684005013248)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4535, started daemon 139684005013248)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4535, started daemon 139684005013248)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>>
+    └ <Thread(Thread-4535, started daemon 139684005013248)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 51438)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f0ae1879158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │    │                   │        └ ('127.0.0.1', 51438)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f0ae06777b8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc0aa8d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f0ae0677840>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc0aa8d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f0ae0674d08>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc0aa8d0>
+    │       └ <function BaseHandler.run at 0x7f0ae066ca60>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0abd988748>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f0ae066cd90>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f0abd988748>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f0abd988748>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0abd988748>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │    └ <function BaseHandler.get_response at 0x7f0ae06a8f28>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ea0>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5e18>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d90>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d08>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5c80>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5bf8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5b70>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ae8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5a60>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d59d8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               │    └ <function BaseHandler._get_response at 0x7f0add931f28>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 295}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-295/'>
+               └ <function doc at 0x7f0ade3da0d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 295}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-295/'>
+           └ <function doc at 0x7f0ade3da048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 295
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f0ae077e048>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 295, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f0ae1932d08>
+                   └ <django.db.models.manager.Manager object at 0x7f0adfe1b748>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-08-09 08:13:33.224 | ERROR    | app_doc.views:doc:1075 - 文集浏览出错
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f0ae8b4eea0>
+    └ <Thread(Thread-4558, started daemon 139684005013248)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f0ae8b4ec80>
+    └ <Thread(Thread-4558, started daemon 139684005013248)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4558, started daemon 139684005013248)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4558, started daemon 139684005013248)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>>
+    └ <Thread(Thread-4558, started daemon 139684005013248)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 51638)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f0ae1879158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │    │                   │        └ ('127.0.0.1', 51638)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f0ae06777b8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0abd9258d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f0ae0677840>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0abd9258d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f0ae0674d08>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0abd9258d0>
+    │       └ <function BaseHandler.run at 0x7f0ae066ca60>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc05aa90>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f0ae066cd90>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc05aa90>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc05aa90>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc05aa90>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │    └ <function BaseHandler.get_response at 0x7f0ae06a8f28>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ea0>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5e18>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d90>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d08>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5c80>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5bf8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5b70>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ae8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5a60>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d59d8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               │    └ <function BaseHandler._get_response at 0x7f0add931f28>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 34, 'doc_id': 540}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-34/doc-540/'>
+               └ <function doc at 0x7f0ade3da0d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 34, 'doc_id': 540}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-34/doc-540/'>
+           └ <function doc at 0x7f0ade3da048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 540
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f0ae077e048>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 540, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f0ae1932d08>
+                   └ <django.db.models.manager.Manager object at 0x7f0adfe1b748>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-08-09 09:16:24.617 | ERROR    | app_doc.views:doc:1075 - Collection browsing error
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f0ae8b4eea0>
+    └ <Thread(Thread-4645, started daemon 139684013405952)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f0ae8b4ec80>
+    └ <Thread(Thread-4645, started daemon 139684013405952)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4645, started daemon 139684013405952)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4645, started daemon 139684013405952)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>>
+    └ <Thread(Thread-4645, started daemon 139684013405952)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 52380)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f0ae1879158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │    │                   │        └ ('127.0.0.1', 52380)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f0ae06777b8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc0b52b0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f0ae0677840>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc0b52b0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f0ae0674d08>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc0b52b0>
+    │       └ <function BaseHandler.run at 0x7f0ae066ca60>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc0aa8d0>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f0ae066cd90>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc0aa8d0>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc0aa8d0>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0adc0aa8d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │    └ <function BaseHandler.get_response at 0x7f0ae06a8f28>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ea0>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5e18>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d90>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d08>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5c80>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5bf8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5b70>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ae8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5a60>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d59d8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               │    └ <function BaseHandler._get_response at 0x7f0add931f28>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 34, 'doc_id': 525}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-34/doc-525/'>
+               └ <function doc at 0x7f0ade3da0d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 34, 'doc_id': 525}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-34/doc-525/'>
+           └ <function doc at 0x7f0ade3da048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 525
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f0ae077e048>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 525, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f0ae1932d08>
+                   └ <django.db.models.manager.Manager object at 0x7f0adfe1b748>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-08-09 11:20:33.594 | ERROR    | app_doc.views:doc:1075 - Collection browsing error
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 887, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f0ae8b4eea0>
+    └ <Thread(Thread-4881, started daemon 139684541945600)>
+  File "/usr/lib64/python3.6/threading.py", line 919, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f0ae8b4ec80>
+    └ <Thread(Thread-4881, started daemon 139684541945600)>
+  File "/usr/lib64/python3.6/threading.py", line 867, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-4881, started daemon 139684541945600)>
+    │    │        │    └ (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('...
+    │    │        └ <Thread(Thread-4881, started daemon 139684541945600)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>>
+    └ <Thread(Thread-4881, started daemon 139684541945600)>
+  File "/usr/lib64/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 53488)
+    │    │              └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7f0ae1879158>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │    │                   │        └ ('127.0.0.1', 53488)
+    │    │                   └ <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9200), raddr=('1...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+  File "/usr/lib64/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f0ae06777b8>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc05aa90>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f0ae0677840>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc05aa90>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f0ae0674d08>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f0ae1d490f0>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f0adc05aa90>
+    │       └ <function BaseHandler.run at 0x7f0ae066ca60>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ae1486be0>
+
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f0ae066cd90>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ae1486be0>
+    │    │        │           │    └ {'LS_COLORS': 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ae1486be0>
+    │    │        └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f0ae1486be0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │    └ <function BaseHandler.get_response at 0x7f0ae06a8f28>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ea0>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5e18>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f0add904b00>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d90>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f0add904b38>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5d08>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f0add904f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5c80>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f0add911dd8>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5bf8>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f0ade528e80>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5b70>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f0ade528f28>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5ae8>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f0ade528f98>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d5a60>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f0ade528f60>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f0add8d59d8>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f0adf0eefd0>
+               └ None
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/projects/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               │    └ <function BaseHandler._get_response at 0x7f0add931f28>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f0add91ada0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f0ade521470>>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {'pro_id': 21, 'doc_id': 323}
+               │                │         └ ()
+               │                └ <WSGIRequest: GET '/project-21/doc-323/'>
+               └ <function doc at 0x7f0ade3da0d0>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {'pro_id': 21, 'doc_id': 323}
+           │    │         └ ()
+           │    └ <WSGIRequest: GET '/project-21/doc-323/'>
+           └ <function doc at 0x7f0ade3da048>
+
+> File "/usr/local/projects/MrDoc/app_doc/views.py", line 1002, in doc
+    doc = Doc.objects.get(id=int(doc_id),status__in=[0,1]) # 文档信息
+          │   │                  └ 323
+          │   └ <django.db.models.manager.ManagerDescriptor object at 0x7f0ae077e048>
+          └ <class 'app_doc.models.Doc'>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+                   │    │               │      │       └ {'id': 323, 'status__in': [0, 1]}
+                   │    │               │      └ ()
+                   │    │               └ 'get'
+                   │    └ <function BaseManager.get_queryset at 0x7f0ae1932d08>
+                   └ <django.db.models.manager.Manager object at 0x7f0adfe1b748>
+
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+    │    │     │     └ 'Doc'
+    │    │     └ <Options for Doc>
+    │    └ <class 'app_doc.models.Doc'>
+    └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
+
+app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
