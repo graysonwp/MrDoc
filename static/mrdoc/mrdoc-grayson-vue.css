@@ -272,7 +272,9 @@ li p.first {
     background-color: #f8f8f8;
 }
 
-.markdown-body p code {
+.markdown-body p code, 
+.markdown-body li > code,
+.markdown-body li > strong > code {
     font-size: inherit !important;
     color: #e96900 !important;
     border-radius: 2px;
