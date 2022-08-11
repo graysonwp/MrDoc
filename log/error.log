@@ -3001,3 +3001,640 @@ Traceback (most recent call last):
     └ <QuerySet [<Doc: About>, <Doc: 算法框架>, <Doc: TDH>, <Doc: 常用方法>, <Doc: Shell>, <Doc: 常用命令>, <Doc: 示例脚本>, <Doc: Redis>, <Doc: 常用...
 
 app_doc.models.Doc.DoesNotExist: Doc matching query does not exist.
+2022-08-11 21:25:46.635 | ERROR    | app_doc.views:report_md:2282 - 文集导出异常
+Traceback (most recent call last):
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f38bfdaee50>
+    └ <Thread(Thread-1, started daemon 139881568339712)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f38bfdaeb80>
+    └ <Thread(Thread-1, started daemon 139881568339712)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-1, started daemon 139881568339712)>
+    │    │        │    └ (<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('1...
+    │    │        └ <Thread(Thread-1, started daemon 139881568339712)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f38b75c5820>>
+    └ <Thread(Thread-1, started daemon 139881568339712)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('10.20.156.197', 51572)
+    │    │              └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('10...
+    │    └ <function BaseServer.finish_request at 0x7f38be2f1d30>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f38b75c5820>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f38b75c5820>
+    │    │                   │        └ ('10.20.156.197', 51572)
+    │    │                   └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('10...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f38b75c5820>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f38bdc5f670>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f38b742cf40>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f38bdc5f700>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f38b742cf40>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f38bdc5eaf0>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f38b75c5820>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f38b742cf40>
+    │       └ <function BaseHandler.run at 0x7f38bdc58790>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f38bde50190>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f38bdc58af0>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f38bde50190>
+    │    │        │           │    └ {'PYENV_HOOK_PATH': '/home/gitpod/.gp_pyenv.d:/home/gitpod/.pyenv/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f38bde50190>
+    │    │        └ <django.contrib.staticfiles.handlers.StaticFilesHandler object at 0x7f38b75c5e20>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f38bde50190>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/contrib/staticfiles/handlers.py", line 65, in __call__
+    return self.application(environ, start_response)
+           │    │           │        └ <bound method BaseHandler.start_response of <django.core.servers.basehttp.ServerHandler object at 0x7f38bde50190>>
+           │    │           └ {'PYENV_HOOK_PATH': '/home/gitpod/.gp_pyenv.d:/home/gitpod/.pyenv/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/...
+           │    └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f38bc89a190>
+           └ <django.contrib.staticfiles.handlers.StaticFilesHandler object at 0x7f38b75c5e20>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function BaseHandler.get_response at 0x7f38bdd0a280>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f38bc89a190>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c160>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f38bc89a190>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f38bc89a2e0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c1f0>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f38bc89a2e0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f38bc89a310>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c280>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f38bc89a310>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f38bc89a3d0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c310>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f38bc89a3d0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f38bc89a490>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c3a0>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f38bc89a490>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f38bc89a550>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c430>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f38bc89a550>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f38bc89a610>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c4c0>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f38bc89a610>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f38bc89a700>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c550>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f38bc89a700>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f38bc89a730>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c5e0>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f38bc89a730>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f38bc89a820>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f38bc89c670>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f38bc89a820>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f38bc89a1c0>
+
+  File "/workspace/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function BaseHandler._get_response at 0x7f38bc89c700>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f38bc89a1c0>
+
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f38bc89a190>>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {}
+               │                │         └ ()
+               │                └ <WSGIRequest: POST '/report_project_md/'>
+               └ <function report_md at 0x7f38b7d78dc0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           │         │         │       └ {}
+           │         │         └ ()
+           │         └ <WSGIRequest: POST '/report_project_md/'>
+           └ <function report_md at 0x7f38b7d78ee0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {}
+           │    │         └ ()
+           │    └ <WSGIRequest: POST '/report_project_md/'>
+           └ <function report_md at 0x7f38b7d78e50>
+
+> File "/workspace/MrDoc/app_doc/views.py", line 2280, in report_md
+    md_file_path = project_md.work()  # 生成并获取MD文件压缩包绝对路径
+                   │          └ <function ReportMdBatch.work at 0x7f38b7d67280>
+                   └ <app_doc.report_utils.ReportMdBatch object at 0x7f38b7329340>
+
+  File "/workspace/MrDoc/app_doc/report_utils.py", line 272, in work
+    report_project_zip = report_func.work()
+                         │           └ <function ReportMD.work at 0x7f38b7d67040>
+                         └ <app_doc.report_utils.ReportMD object at 0x7f38b7433e80>
+
+  File "/workspace/MrDoc/app_doc/report_utils.py", line 114, in work
+    with open('{}/_index.md'.format(self.project_first_dir),'w',encoding='utf-8') as files:
+                                    │                                                └ <_io.TextIOWrapper name='/workspace/MrDoc/media/reportmd_temp/grayson/2022-08-11_temp/💻 Computer Basics/_index.md' mode='w' e...
+                                    └ <app_doc.report_utils.ReportMD object at 0x7f38b7433e80>
+
+AttributeError: 'ReportMD' object has no attribute 'project_first_dir'
+2022-08-11 21:40:41.794 | ERROR    | app_doc.views:report_md:2282 - 文集导出异常
+Traceback (most recent call last):
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f4966363e50>
+    └ <Thread(Thread-1, started daemon 139953146103552)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f4966363b80>
+    └ <Thread(Thread-1, started daemon 139953146103552)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-1, started daemon 139953146103552)>
+    │    │        │    └ (<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('1...
+    │    │        └ <Thread(Thread-1, started daemon 139953146103552)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f4961ba1c40>>
+    └ <Thread(Thread-1, started daemon 139953146103552)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('10.20.17.135', 42072)
+    │    │              └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('10...
+    │    └ <function BaseServer.finish_request at 0x7f49648a6d30>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4961ba1c40>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f4961ba1c40>
+    │    │                   │        └ ('10.20.17.135', 42072)
+    │    │                   └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('10...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4961ba1c40>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f4964214670>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4961a13e80>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f4964214700>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4961a13e80>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f4964213af0>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f4961ba1c40>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f4961a13e80>
+    │       └ <function BaseHandler.run at 0x7f496420d790>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f4961a138e0>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f496420daf0>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f4961a138e0>
+    │    │        │           │    └ {'PYENV_HOOK_PATH': '/home/gitpod/.gp_pyenv.d:/home/gitpod/.pyenv/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f4961a138e0>
+    │    │        └ <django.contrib.staticfiles.handlers.StaticFilesHandler object at 0x7f4961b502b0>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f4961a138e0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/contrib/staticfiles/handlers.py", line 65, in __call__
+    return self.application(environ, start_response)
+           │    │           │        └ <bound method BaseHandler.start_response of <django.core.servers.basehttp.ServerHandler object at 0x7f4961a138e0>>
+           │    │           └ {'PYENV_HOOK_PATH': '/home/gitpod/.gp_pyenv.d:/home/gitpod/.pyenv/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/...
+           │    └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4962e913a0>
+           └ <django.contrib.staticfiles.handlers.StaticFilesHandler object at 0x7f4961b502b0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function BaseHandler.get_response at 0x7f49642bf280>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4962e913a0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e13160>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f4962e913a0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f4962e914f0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e131f0>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f4962e914f0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f4962e91520>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e13280>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f4962e91520>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f4962e915e0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e13310>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f4962e915e0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f4962e916a0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e133a0>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f4962e916a0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f4962e91760>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e13430>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f4962e91760>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f4962e91820>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e134c0>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f4962e91820>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f4962e91910>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e13550>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f4962e91910>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f4962e91940>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e135e0>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f4962e91940>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f4962e91a30>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f4962e13670>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f4962e91a30>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f4962e913d0>
+
+  File "/workspace/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function BaseHandler._get_response at 0x7f4962e13700>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f4962e913d0>
+
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f4962e913a0>>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {}
+               │                │         └ ()
+               │                └ <WSGIRequest: POST '/report_project_md/'>
+               └ <function report_md at 0x7f4962357dc0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           │         │         │       └ {}
+           │         │         └ ()
+           │         └ <WSGIRequest: POST '/report_project_md/'>
+           └ <function report_md at 0x7f4962357ee0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {}
+           │    │         └ ()
+           │    └ <WSGIRequest: POST '/report_project_md/'>
+           └ <function report_md at 0x7f4962357e50>
+
+> File "/workspace/MrDoc/app_doc/views.py", line 2280, in report_md
+    md_file_path = project_md.work()  # 生成并获取MD文件压缩包绝对路径
+                   │          └ <function ReportMdBatch.work at 0x7f4962346280>
+                   └ <app_doc.report_utils.ReportMdBatch object at 0x7f49619e1490>
+
+  File "/workspace/MrDoc/app_doc/report_utils.py", line 282, in work
+    report_project_zip = report_func.work()
+                         │           └ <function ReportMD.work at 0x7f4962346040>
+                         └ <app_doc.report_utils.ReportMD object at 0x7f49619ea940>
+
+  File "/workspace/MrDoc/app_doc/report_utils.py", line 130, in work
+    '''.format(index1+1)
+
+NameError: name 'index1' is not defined
+2022-08-11 21:40:56.995 | ERROR    | app_doc.views:report_md:2282 - 文集导出异常
+Traceback (most recent call last):
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f3c22783e50>
+    └ <Thread(Thread-1, started daemon 139896175003392)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f3c22783b80>
+    └ <Thread(Thread-1, started daemon 139896175003392)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-1, started daemon 139896175003392)>
+    │    │        │    └ (<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('1...
+    │    │        └ <Thread(Thread-1, started daemon 139896175003392)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <django.core.servers.basehttp.WSGIServer object at 0x7f3c1f2b0820>>
+    └ <Thread(Thread-1, started daemon 139896175003392)>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('10.20.17.135', 42074)
+    │    │              └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('10...
+    │    └ <function BaseServer.finish_request at 0x7f3c20cc6d30>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f3c1f2b0820>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <django.core.servers.basehttp.WSGIServer object at 0x7f3c1f2b0820>
+    │    │                   │        └ ('10.20.17.135', 42074)
+    │    │                   └ <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.0.5.2', 9200), raddr=('10...
+    │    └ <class 'django.core.servers.basehttp.WSGIRequestHandler'>
+    └ <django.core.servers.basehttp.WSGIServer object at 0x7f3c1f2b0820>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7f3c20634670>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f3c1de28a90>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+    │    └ <function WSGIRequestHandler.handle_one_request at 0x7f3c20634700>
+    └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f3c1de28a90>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+    │       │   │    │      └ <function WSGIServer.get_app at 0x7f3c20633af0>
+    │       │   │    └ <django.core.servers.basehttp.WSGIServer object at 0x7f3c1f2b0820>
+    │       │   └ <django.core.servers.basehttp.WSGIRequestHandler object at 0x7f3c1de28a90>
+    │       └ <function BaseHandler.run at 0x7f3c2062d790>
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f3c1de28370>
+  File "/home/gitpod/.pyenv/versions/3.8.13/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+    │    │        │           │    │        │    └ <function BaseHandler.start_response at 0x7f3c2062daf0>
+    │    │        │           │    │        └ <django.core.servers.basehttp.ServerHandler object at 0x7f3c1de28370>
+    │    │        │           │    └ {'PYENV_HOOK_PATH': '/home/gitpod/.gp_pyenv.d:/home/gitpod/.pyenv/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/...
+    │    │        │           └ <django.core.servers.basehttp.ServerHandler object at 0x7f3c1de28370>
+    │    │        └ <django.contrib.staticfiles.handlers.StaticFilesHandler object at 0x7f3c1f2b0df0>
+    │    └ None
+    └ <django.core.servers.basehttp.ServerHandler object at 0x7f3c1de28370>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/contrib/staticfiles/handlers.py", line 65, in __call__
+    return self.application(environ, start_response)
+           │    │           │        └ <bound method BaseHandler.start_response of <django.core.servers.basehttp.ServerHandler object at 0x7f3c1de28370>>
+           │    │           └ {'PYENV_HOOK_PATH': '/home/gitpod/.gp_pyenv.d:/home/gitpod/.pyenv/pyenv.d:/usr/local/etc/pyenv.d:/etc/pyenv.d:/usr/lib/pyenv/...
+           │    └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f3c1f2b0640>
+           └ <django.contrib.staticfiles.handlers.StaticFilesHandler object at 0x7f3c1f2b0df0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function BaseHandler.get_response at 0x7f3c206df280>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f3c1f2b0640>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+               │    │                 └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f232160>
+               └ <django.core.handlers.wsgi.WSGIHandler object at 0x7f3c1f2b0640>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.security.SecurityMiddleware object at 0x7f3c1f2b08e0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f2321f0>
+               │           └ <django.middleware.security.SecurityMiddleware object at 0x7f3c1f2b08e0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f3c1f2b0910>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f232280>
+               │           └ <django.contrib.sessions.middleware.SessionMiddleware object at 0x7f3c1f2b0910>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.locale.LocaleMiddleware object at 0x7f3c1f2b09d0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f232310>
+               │           └ <django.middleware.locale.LocaleMiddleware object at 0x7f3c1f2b09d0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <corsheaders.middleware.CorsMiddleware object at 0x7f3c1f2b0a90>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f2323a0>
+               │           └ <corsheaders.middleware.CorsMiddleware object at 0x7f3c1f2b0a90>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.common.CommonMiddleware object at 0x7f3c1f2b0b50>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f232430>
+               │           └ <django.middleware.common.CommonMiddleware object at 0x7f3c1f2b0b50>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f3c1f2b0c10>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f2324c0>
+               │           └ <django.middleware.csrf.CsrfViewMiddleware object at 0x7f3c1f2b0c10>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f3c1f2b0d00>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f232550>
+               │           └ <django.contrib.auth.middleware.AuthenticationMiddleware object at 0x7f3c1f2b0d00>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f3c1f2b0d30>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f2325e0>
+               │           └ <django.contrib.messages.middleware.MessageMiddleware object at 0x7f3c1f2b0d30>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f3c1f2b07c0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+               │           │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │           │    └ <function convert_exception_to_response.<locals>.inner at 0x7f3c1f232670>
+               │           └ <django.middleware.clickjacking.XFrameOptionsMiddleware object at 0x7f3c1f2b07c0>
+               └ None
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f3c1f2b0e20>
+
+  File "/workspace/MrDoc/app_admin/middleware/require_login_middleware.py", line 36, in __call__
+    response = self.get_response(request)
+               │    │            └ <WSGIRequest: POST '/report_project_md/'>
+               │    └ <function BaseHandler._get_response at 0x7f3c1f232700>
+               └ <app_admin.middleware.require_login_middleware.RequiredLoginMiddleware object at 0x7f3c1f2b0e20>
+
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+               │            └ <WSGIRequest: POST '/report_project_md/'>
+               └ <bound method BaseHandler._get_response of <django.core.handlers.wsgi.WSGIHandler object at 0x7f3c1f2b0640>>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               │                │         │                └ {}
+               │                │         └ ()
+               │                └ <WSGIRequest: POST '/report_project_md/'>
+               └ <function report_md at 0x7f3c1e778dc0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           │         │         │       └ {}
+           │         │         └ ()
+           │         └ <WSGIRequest: POST '/report_project_md/'>
+           └ <function report_md at 0x7f3c1e778ee0>
+  File "/workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+           │    │         │       └ {}
+           │    │         └ ()
+           │    └ <WSGIRequest: POST '/report_project_md/'>
+           └ <function report_md at 0x7f3c1e778e50>
+
+> File "/workspace/MrDoc/app_doc/views.py", line 2280, in report_md
+    md_file_path = project_md.work()  # 生成并获取MD文件压缩包绝对路径
+                   │          └ <function ReportMdBatch.work at 0x7f3c1e768280>
+                   └ <app_doc.report_utils.ReportMdBatch object at 0x7f3c1de41ac0>
+
+  File "/workspace/MrDoc/app_doc/report_utils.py", line 282, in work
+    report_project_zip = report_func.work()
+                         │           └ <function ReportMD.work at 0x7f3c1e768040>
+                         └ <app_doc.report_utils.ReportMD object at 0x7f3c1dddaf70>
+
+  File "/workspace/MrDoc/app_doc/report_utils.py", line 131, in work
+    files.write('{}\n{}'.format(md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
+    │     │                     │          │       │        │                                                                                │        └ 'https://notebook.grayson.top'
+    │     │                     │          │       │        │                                                                                └ <LazySettings "MrDoc.settings">
+    │     │                     │          │       │        └ 'https://notebook.grayson.top'
+    │     │                     │          │       └ <LazySettings "MrDoc.settings">
+    │     │                     │          └ <method 'replace' of 'str' objects>
+    │     │                     └ '1、计算机网络\n\n'
+    │     └ <method 'write' of '_io.TextIOWrapper' objects>
+    └ <_io.TextIOWrapper name='/workspace/MrDoc/media/reportmd_temp/grayson/2022-08-11_temp/💻 Computer Basics/计算机网络/计算机网络.md' mode=...
+
+IndexError: Replacement index 1 out of range for positional args tuple

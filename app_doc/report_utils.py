@@ -78,10 +78,15 @@ class ReportMD():
         project_toc_list['project_role'] = self.project_data.role
         project_toc_list['toc'] = []
         # 读取指定文集的文档数据
-        data = Doc.objects.filter(top_doc=self.pro_id, parent_doc=0).order_by("sort")
+        data = Doc.objects.filter(top_doc=self.pro_id, parent_doc=0, status=1).order_by("sort")
         # 判断一级文件夹的个数，如果等于 1，则在项目文件夹的下一层新增一个以项目名为名称的文件夹，保证压缩后的文件解压缩时文件目录正确
         if len(data) == 1:
             self.project_path = '{}/{}'.format(self.project_path, self.project_data.name)
+        
+        # 添加 _index.md 文件，便于书籍整理
+        with open('{}/_index.md'.format(self.project_path),'w',encoding='utf-8') as files:
+            files.write('---\nbookCollapseSection: true\nweight: 1\ntitle: ""\n---\n'
+            )
         # 遍历一级文档
         for index, d in enumerate(data):
             top_item = {
@@ -99,12 +104,17 @@ class ReportMD():
             if project_first_dir_exists is False:
                 os.makedirs(project_first_dir)
             
+            # 添加 _index.md 文件，便于书籍整理
+            with open('{}/_index.md'.format(project_first_dir),'w',encoding='utf-8') as files:
+                files.write('---\nbookCollapseSection: true\nweight: {}\n---'.format(index+1))
+            
             # 新建MD文件
             with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
-                files.write(md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/'))
+                extra_info = '---\nweight: {}\n---\n'.format(index+1)
+                files.write('{}\n{}'.format(extra_info, md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
             # 查询二级文档
-            data_2 = Doc.objects.filter(parent_doc=d.id).order_by("sort")
+            data_2 = Doc.objects.filter(parent_doc=d.id, status=1).order_by("sort")
             if data_2.count() > 0:
                 top_item['children'] = []
                 for index2, d2 in enumerate(data_2):
@@ -127,13 +137,19 @@ class ReportMD():
                     project_second_dir_exists = os.path.exists(project_second_dir)
                     if project_second_dir_exists is False:
                         os.mkdir(project_second_dir)
+                    
+                    # 添加 _index.md 文件，便于书籍整理
+                    with open('{}/_index.md'.format(project_second_dir),'w',encoding='utf-8') as files:
+                        files.write('---\nbookCollapseSection: true\nweight: {}\n---\n'.format(index2+1)
+                        )
 
                     # 新建MD文件
                     with open('{}/{}.md'.format(project_second_dir, md_name_2), 'w', encoding='utf-8') as files:
-                        files.write(md_content_2.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/'))
+                        extra_info = '---\nweight: {}\n---\n'.format(index2+1)
+                        files.write('{}\n{}'.format(extra_info, md_content_2.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
                     # 获取第三级文档
-                    data_3 = Doc.objects.filter(parent_doc=d2.id).order_by("sort")
+                    data_3 = Doc.objects.filter(parent_doc=d2.id, status=1).order_by("sort")
                     if data_3.count() > 0:
                         # 删除二级文件夹对应的文件
                         os.remove('{}/{}.md'.format(project_second_dir, md_name_2))
@@ -154,7 +170,8 @@ class ReportMD():
 
                             # 新建MD文件
                             with open('{}/{}.md'.format(project_second_dir, md_name_3), 'w', encoding='utf-8') as files:
-                                files.write(md_content_3.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/'))
+                                extra_info = '---\nweight: {}\n---\n'.format(index3+1)
+                                files.write('{}\n{}'.format(extra_info, md_content_3.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
                     top_item['children'].append(sec_item)
             project_toc_list['toc'].append(top_item)
 
@@ -225,7 +242,7 @@ class ReportMdBatch():
         )
         is_fold = os.path.exists(self.report_file_path)
         if is_fold is False:
-            os.mkdir(self.report_file_path)
+            os.makedirs(self.report_file_path)
 
     def work(self):
         # 遍历文集列表，打包每一个文集
