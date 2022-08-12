@@ -83,10 +83,6 @@ class ReportMD():
         if len(data) == 1:
             self.project_path = '{}/{}'.format(self.project_path, self.project_data.name)
         
-        # 添加 _index.md 文件，便于书籍整理
-        with open('{}/_index.md'.format(self.project_path),'w',encoding='utf-8') as files:
-            files.write('---\nbookCollapseSection: true\nweight: 1\ntitle: ""\n---\n'
-            )
         # 遍历一级文档
         for index, d in enumerate(data):
             top_item = {
@@ -104,13 +100,9 @@ class ReportMD():
             if project_first_dir_exists is False:
                 os.makedirs(project_first_dir)
             
-            # 添加 _index.md 文件，便于书籍整理
-            with open('{}/_index.md'.format(project_first_dir),'w',encoding='utf-8') as files:
-                files.write('---\nbookCollapseSection: true\nweight: {}\n---'.format(index+1))
-            
             # 新建MD文件
             with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
-                extra_info = '---\nweight: {}\n---\n'.format(index+1)
+                extra_info = '---\nsidebar_position: {}\n---\n'.format(index+1)
                 files.write('{}\n{}'.format(extra_info, md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
             # 查询二级文档
@@ -137,15 +129,10 @@ class ReportMD():
                     project_second_dir_exists = os.path.exists(project_second_dir)
                     if project_second_dir_exists is False:
                         os.mkdir(project_second_dir)
-                    
-                    # 添加 _index.md 文件，便于书籍整理
-                    with open('{}/_index.md'.format(project_second_dir),'w',encoding='utf-8') as files:
-                        files.write('---\nbookCollapseSection: true\nweight: {}\n---\n'.format(index2+1)
-                        )
 
                     # 新建MD文件
                     with open('{}/{}.md'.format(project_second_dir, md_name_2), 'w', encoding='utf-8') as files:
-                        extra_info = '---\nweight: {}\n---\n'.format(index2+1)
+                        extra_info = '---\nsidebar_position: {}\n---\n'.format(index2+1)
                         files.write('{}\n{}'.format(extra_info, md_content_2.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
                     # 获取第三级文档
@@ -170,7 +157,7 @@ class ReportMD():
 
                             # 新建MD文件
                             with open('{}/{}.md'.format(project_second_dir, md_name_3), 'w', encoding='utf-8') as files:
-                                extra_info = '---\nweight: {}\n---\n'.format(index3+1)
+                                extra_info = '---\nsidebar_position: {}\n---\n'.format(index3+1)
                                 files.write('{}\n{}'.format(extra_info, md_content_3.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
                     top_item['children'].append(sec_item)
             project_toc_list['toc'].append(top_item)
