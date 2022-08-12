@@ -83,6 +83,18 @@ class ReportMD():
         if len(data) == 1:
             self.project_path = '{}/{}'.format(self.project_path, self.project_data.name)
         
+        # 添加 _category_.json 文件，便于书籍整理
+        with open('{}/_category_.json'.format(self.project_path),'w',encoding='utf-8') as files:
+            extra_info = \
+            '{' \
+                '  "label": "'+self.project_data.name+'",' \
+                '  "position": 1,' \
+                '  "link": {' \
+                '  "type": "generated-index",' \
+                '  "description": ""' \
+                '}' \
+            '}'
+            files.write(extra_info + "\n")
         # 遍历一级文档
         for index, d in enumerate(data):
             top_item = {
@@ -99,6 +111,19 @@ class ReportMD():
             project_first_dir_exists = os.path.exists(project_first_dir)
             if project_first_dir_exists is False:
                 os.makedirs(project_first_dir)
+            
+            # 添加 _category_.json 文件，便于书籍整理
+            with open('{}/_category_.json'.format(project_first_dir),'w',encoding='utf-8') as files:
+                extra_info = \
+                '{' \
+                    '  "label": "'+md_name+'",' \
+                    '  "position": '+str(index+1)+',' \
+                    '  "link": {' \
+                    '  "type": "generated-index",' \
+                    '  "description": ""' \
+                    '}' \
+                '}'
+                files.write(extra_info + "\n")
             
             # 新建MD文件
             with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
@@ -129,6 +154,19 @@ class ReportMD():
                     project_second_dir_exists = os.path.exists(project_second_dir)
                     if project_second_dir_exists is False:
                         os.mkdir(project_second_dir)
+                    
+                    # 添加 _category_.json 文件，便于书籍整理
+                    with open('{}/_category_.json'.format(project_second_dir),'w',encoding='utf-8') as files:
+                        extra_info = \
+                        '{' \
+                            '  "label": "'+md_name_2+'",' \
+                            '  "position": '+str(index2+1)+',' \
+                            '  "link": {' \
+                            '  "type": "generated-index",' \
+                            '  "description": ""' \
+                            '}' \
+                        '}'
+                        files.write(extra_info + "\n")
 
                     # 新建MD文件
                     with open('{}/{}.md'.format(project_second_dir, md_name_2), 'w', encoding='utf-8') as files:
