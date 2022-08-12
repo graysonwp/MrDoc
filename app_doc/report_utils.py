@@ -90,8 +90,7 @@ class ReportMD():
                 '  "label": "'+self.project_data.name+'",' \
                 '  "position": 1,' \
                 '  "link": {' \
-                '  "type": "generated-index",' \
-                '  "description": ""' \
+                '  "type": "generated-index"' \
                 '}' \
             '}'
             files.write(extra_info + "\n")
@@ -119,8 +118,7 @@ class ReportMD():
                     '  "label": "'+md_name+'",' \
                     '  "position": '+str(index+1)+',' \
                     '  "link": {' \
-                    '  "type": "generated-index",' \
-                    '  "description": ""' \
+                    '  "type": "generated-index"' \
                     '}' \
                 '}'
                 files.write(extra_info + "\n")
@@ -162,8 +160,7 @@ class ReportMD():
                             '  "label": "'+md_name_2+'",' \
                             '  "position": '+str(index2+1)+',' \
                             '  "link": {' \
-                            '  "type": "generated-index",' \
-                            '  "description": ""' \
+                            '  "type": "generated-index"' \
                             '}' \
                         '}'
                         files.write(extra_info + "\n")
