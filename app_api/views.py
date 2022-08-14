@@ -312,6 +312,10 @@ def modify_doc(request):
                 )
             elif doc.editor_mode == 4: # 在线表格
                 pass
+            # 更新文集修改时间
+            project = Project.objects.get(id=doc.top_doc)
+            project.modify_time = datetime.datetime.now()
+            project.save()
             return JsonResponse({'status': True, 'data': 'ok'})
         else:
             return JsonResponse({'status':False,'data':'非法请求'})
