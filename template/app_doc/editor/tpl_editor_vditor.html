@@ -7,8 +7,8 @@
         var vditor_mode = 'ir'
         var vditor_height = window.innerHeight / 2
         var vditor_toolbar = [
-            "emoji","headings","bold","italic","strike","link","|",
-            "list","ordered-list","check","outdent","indent","|",
+            "emoji","headings","bold","strike","link","|",
+            "list","ordered-list","check","|",
             "quote","line","code","inline-code","|",
             {
                 name: 'insert-img',
@@ -205,6 +205,16 @@
         },
         "cache": {
             "enable": false, // 禁用缓存
+        },
+        "preview": {
+            "markdown": {
+                "autoSpace": true,// 自动空格
+                "chinesePunct": true,// 矫正标点
+                "mark": true,//Mark标记
+            },
+            "hljs":{
+                "lineNumber":true,//代码行号
+            }
         },
         "after":function(){
             layer.closeAll('loading');
