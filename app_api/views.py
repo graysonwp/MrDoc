@@ -315,6 +315,7 @@ def modify_doc(request):
             # 更新文集修改时间
             project = Project.objects.get(id=doc.top_doc)
             project.modify_time = datetime.datetime.now()
+            print(project.name,project.modify_time)
             project.save()
             return JsonResponse({'status': True, 'data': 'ok'})
         else:
