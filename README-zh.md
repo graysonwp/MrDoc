@@ -9,7 +9,7 @@
 
 
 <p align="center">
-<img src="https://img.shields.io/badge/MrDoc-v0.8.1-brightgreen.svg" title="Mrdoc" />
+<img src="https://img.shields.io/badge/MrDoc-v0.8.2-brightgreen.svg" title="Mrdoc" />
 <img src="https://img.shields.io/badge/Python-3.6+-blue.svg" title="Python" />
 <img src="https://img.shields.io/badge/Django-v2.2-important.svg" title="Django" />
 </p>
@@ -160,6 +160,10 @@ python manage.py runserver
 - [Linux 一键部署脚本 By jonnyan404](https://gitee.com/jonnyan404/oh-my-mrdoc)
 - [Windows 部署面板 By 小肥羊](https://gitee.com/debj031634/win-django)
 - [VirtualBox/VmWare 虚拟机镜像 By 无名](https://gitee.com/nicktf/tinycore-mrdoc)
+
+## 其他工具
+
+- [本地文档同步工具 By Atyin](https://gitee.com/atyin/mrdocTools)
 
 ## 交流
 
