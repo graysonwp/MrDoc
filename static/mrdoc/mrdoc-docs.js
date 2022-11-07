@@ -415,7 +415,7 @@ function initDocRender(mode){
         Vditor.preview(document.getElementById('content'),md_content, 
         {
             "cdn":"/static/vditor/",
-            markdown:{mark:true},
+            markdown:{mark:true,toc: true},
             math:{inlineDigit:true},
             outline:{enable:true},
             speech: {enable: true,},
