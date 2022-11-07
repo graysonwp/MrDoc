@@ -41,7 +41,7 @@ SECRET_KEY = '5&71mt9@^58zdg*_!t(x6g14q*@84d%ptr%%s6e0l50zs0we3d'
 DEBUG = CONFIG.getboolean('site','debug',fallback=False)
 DOMAIN = CONFIG.get('site','domain',fallback=False)
 
-VERSIONS = '0.8.3'
+VERSIONS = '0.8.4'
 
 ALLOWED_HOSTS = ['*']
 
@@ -248,7 +248,7 @@ try:
 except ImportError:
     pass
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = CONFIG.get("x_frame","option",fallback='SAMEORIGIN')
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
