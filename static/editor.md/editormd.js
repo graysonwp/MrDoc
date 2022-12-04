@@ -3624,26 +3624,10 @@
                 // console.log(text)
                 switch(text){
                     case '=video':
-                        if(href.match(/^.+.(mp4|m4v|ogg|ogv|webm)$/)){
-                            return "<video src='"+ href + "' controls='controls' preload width=500></video>"
-                        }else{
-                            for(var i = 0; i< iframe_whitelist.length; i++){
-                                if(href.match(iframe_whitelist[i])){
-                                    return "<video src='"+ href + "' controls='controls' preload width=500></video>"
-                                }
-                            }
-                        }
+                        return "<video src='"+ href + "' controls='controls' preload width=500></video>"
                         break;
                     case '=audio':
-                        if(href.match(/^.+.(mp3|wav|flac|m4a)$/)){
-                            return "<audio src='"+ href + "' controls='controls'></audio>"
-                        }else{
-                            for(var i = 0; i< iframe_whitelist.length; i++){
-                                if(href.match(iframe_whitelist[i])){
-                                    return "<audio src='"+ href + "' controls='controls'></audio>"
-                                }
-                            }
-                        }
+                        return "<audio src='"+ href + "' controls='controls'></audio>"
                         break;
                     case '=video_iframe':                      
                         const youtubeMatch = href.match(/\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w|-]{11})(?:(?:[\?&]t=)(\S+))?/);
@@ -3672,16 +3656,7 @@
                         } else if (tedMatch && tedMatch[1]) {
                             return `<iframe height=400 width=500 frameborder=0 allowfullscreen src="//embed.ted.com/talks/${tedMatch[1]}"></iframe>`
                         }else{
-                            if(iframe_whitelist.length == 1 && iframe_whitelist[0] == ""){
-                                return href
-                            }else{
-                                for(var i = 0; i< iframe_whitelist.length; i++){
-                                    if(href.match(iframe_whitelist[i])){
-                                        return '<iframe height=400 width=500 src="' + href +'" frameborder=0 allowfullscreen />'
-                                    }
-                                }
-                            }
-
+                            return '<iframe height=400 width=500 src="' + href +'" frameborder=0 allowfullscreen />'
                         }
                         break;
                 }
@@ -4021,8 +3996,10 @@
                 return hr;
             }
             else if(/^card/i.test(lang)){ // 卡片面板
-                var color = lang.split(' ')[1];
-                var ccolor = custom_color(color);
+                var color1 = lang.split(' ')[1];
+                var ccolor = custom_color(color1);
+                var color2 = lang.split(' ')[2];
+                var dcolor = custom_color(color2);
                 var card = '<div class="layui-card">'
                 // console.log(code)
                 var card_code = code.split(/[(\r\n)\r\n]+/);
@@ -4033,13 +4010,13 @@
                         card += '<div class="layui-card-header ' + ccolor + '">'
                         card += item.replace('# ','')
                         card += '</div>'
-                        card += '<div class="layui-card-body">'
+                        card += '<div class="layui-card-body ' + dcolor + '">'
                     }else{
                         card += marked(item)
                     }
                 })
 
-                card += '</div>'
+                card += '</div><br>'
                 return card;
             }
             else 

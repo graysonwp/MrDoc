@@ -297,6 +297,47 @@ def send_email_vcode(request):
         return JsonResponse({'status':False,'data':_('方法错误')})
 
 
+# 测试电子邮箱配置
+@superuser_only
+@require_http_methods(['POST'])
+def send_email_test(request):
+    smtp_host = request.POST.get('smtp_host','')
+    send_emailer = request.POST.get('send_emailer','')
+    smtp_port = request.POST.get('smtp_port','')
+    username = request.POST.get('smtp_username','')
+    pwd = request.POST.get('smtp_pwd','')
+    ssl = True if request.POST.get('smtp_ssl','') == 'on' else False
+    # print(smtp_host,smtp_port,send_emailer,username,pwd)
+
+    msg_from = send_emailer  # 发件人邮箱
+    msg_to = send_emailer  # 收件人邮箱
+    try:
+        sitename = SysSetting.objects.get(types="basic", name="site_name").value
+    except:
+        sitename = "MrDoc"
+    subject = "{sitename} - 邮箱配置测试".format(sitename=sitename)
+    content = "此邮件由管理员配置【{sitename}】邮箱信息时发出！".format(sitename=sitename)
+    msg = MIMEText(content, _subtype='html', _charset='utf-8')
+    msg['Subject'] = subject
+    msg['From'] = '{}[{}]'.format(sitename, msg_from)
+    msg['To'] = msg_to
+    try:
+        # print(smtp_host,smtp_port)
+        if ssl:
+            s = smtplib.SMTP_SSL(smtp_host, int(smtp_port))  # 发件箱邮件服务器及端口号
+        else:
+            s = smtplib.SMTP(smtp_host, int(smtp_port))
+        s.login(username, pwd)
+        s.sendmail(from_addr=msg_from, to_addrs=msg_to, msg=msg.as_string())
+        s.quit()
+        return JsonResponse({'status':True,'data':_('发送成功')})
+    except smtplib.SMTPException as e:
+        logger.error("邮件发送异常:{}".format(repr(e)))
+        return JsonResponse({'status':False,'data':repr(e)})
+    except Exception as e:
+        logger.error("邮件发送异常:{}".format(repr(e)))
+        return JsonResponse({'status':False,'data':repr(e)})
+
 # 后台管理 - 仪表盘
 @superuser_only
 def admin_overview(request):
@@ -1153,6 +1194,7 @@ def admin_setting(request):
             close_register = request.POST.get('close_register',None) # 禁止注册
             require_login = request.POST.get('require_login',None) # 全站登录
             long_code = request.POST.get('long_code', None)  # 长代码显示
+            disable_update_check = request.POST.get('disable_update_check', None)  # 关闭更新检测
             static_code = request.POST.get('static_code',None) # 统计代码
             ad_code = request.POST.get('ad_code',None) # 广告位1
             ad_code_2 = request.POST.get('ad_code_2',None) # 广告位2
@@ -1237,6 +1279,11 @@ def admin_setting(request):
                 name='long_code',
                 defaults={'value': long_code, 'types': 'basic'}
             )
+            # 更新关闭更新检测状态
+            SysSetting.objects.update_or_create(
+                name='disable_update_check',
+                defaults={'value': disable_update_check, 'types': 'basic'}
+            )
             # 更新邮箱启用状态
             SysSetting.objects.update_or_create(
                 name='enable_email',
@@ -1316,12 +1363,6 @@ def admin_setting(request):
             return render(request, 'app_admin/admin_setting.html',locals())
         # 文档全局设置
         elif types == 'doc':
-            # iframe白名单
-            iframe_whitelist = request.POST.get('iframe_whitelist','')
-            SysSetting.objects.update_or_create(
-                name = 'iframe_whitelist',
-                defaults = {'value':iframe_whitelist,'types':'doc'}
-            )
             # 上传图片大小
             img_size = request.POST.get('img_size', 10)
             try:
