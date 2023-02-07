@@ -253,10 +253,10 @@ class ReportMD():
         # 不存在静态文件，直接返回MD内容
         else:
             return md_content
-                try:
-                    new_file_path = pathlib.Path(settings.BASE_DIR,unquote(media_filename)[1:])
-                    shutil.copy(new_file_path, self.media_path + sub_folder)
-                except FileNotFoundError:
+            try:
+                new_file_path = pathlib.Path(settings.BASE_DIR,unquote(media_filename)[1:])
+                shutil.copy(new_file_path, self.media_path + sub_folder)
+            except FileNotFoundError:
                         pass
         if len(img_list) > 0:
             for media in img_list:
