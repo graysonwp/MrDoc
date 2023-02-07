@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="Cache-Control" content="max-age=7200" />
-    <!-- <meta name="referrer" content="no-referrer"> -->
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="{% block keyword %}{% endblock %}{{site_keywords}}"/>
     <meta name="description" content="{% block description %}{% endblock %}" />
@@ -40,6 +40,7 @@
     <link href="{% static 'mrdoc/mrdoc.css' %}?version={{mrdoc_version}}" rel="stylesheet">
     <link href="{% static 'mrdoc/mrdoc-docs.css' %}?version={{mrdoc_version}}" rel="stylesheet">
     <link href="{% static 'iconFont/iconfont.css' %}?version={{mrdoc_version}}" rel="stylesheet">
+    <link href="{% static 'mrdoc/mrdoc-grayson-vue.css' %}?version={{mrdoc_version}}" rel="stylesheet">
     <link href="{% static 'prismjs/prism.css' %}?version={{mrdoc_version}}" rel="stylesheet">
     <style>
         {% if img_scale %}
@@ -173,10 +174,8 @@
             {% endfor %}
             </ul>
         </nav>
+        <hr>
         {% endif %}
-        <div class="bq">
-            <a href="https://mrdoc.pro" class="mrdoc-link" target="_blank">{% trans "本文档使用 MrDoc 发布" %}</a>
-        </div>
         <!-- 右下角广告块 -->
         <!-- 广告代码开始 -->
         {% if debug %}
@@ -211,9 +210,91 @@
             <!-- 顶部工具栏 -->
             {% block head_toolbar %}
             {% endblock %}
-            <a class="btn pull-right" aria-label="" href="{% url 'pro_list' %}">
+            <!-- <a class="btn pull-right" aria-label="" href="{% url 'pro_list' %}" style="position: fixed;right: 0px;">
                 <i class="layui-icon layui-icon-home"></i> <span class="layui-hide-xs">{% trans "首页" %}</span>
-            </a>
+            </a> -->
+            <!-- 用户菜单 -->
+        <div class="">
+            <ul class="layui-nav layui-layout-right">
+                {% if request.user.is_authenticated %}
+            <li class="layui-nav-item">
+                <a href="javascript:void(0);">
+                    <i class="layui-icon layui-icon-friends"></i> 
+                    <span class="layui-hide-xs">{% if request.user.first_name != '' %} {{request.user.first_name}} {% else %} {{request.user.username}}{% endif %}</span>
+                </a>
+                <dl class="layui-nav-child">
+                    {% if request.user.is_superuser %}
+                    <dd>
+                        <a href="{% url 'admin_center' %}" title="进入站点后台管理">
+                            <i class="layui-icon layui-icon-console layui-hide-md"></i>
+                            <span class="layui-hide-xs">{% trans "进入后台" %}</span>
+                        </a>
+                    </dd>
+                    {% endif %}
+                    <dd class="layui-hide-md layui-hide-sm layui-hide-lg">
+                        <a href="{% url 'create_doc' %}" title="新建文档">
+                            <i class="layui-icon layui-icon-add-1 layui-hide-md"></i>
+                            <span class="layui-hide-xs">{% trans "新建文档" %}</span>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="{% url 'user_center' %}" title="个人中心">
+                            <i class="layui-icon layui-icon-app layui-hide-md"></i>
+                            <span class="layui-hide-xs">{% trans "个人中心" %}</span>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);" onclick="changePwd('{{ request.user.id }}','{{ request.user.username }}' )" title="修改登录密码">
+                            <i class="layui-icon layui-icon-password layui-hide-md"></i>
+                            <span class="layui-hide-xs">{% trans "修改密码" %}</span>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/" title="返回首页">
+                            <i class="layui-icon layui-icon-app layui-hide-md"></i>
+                            <span class="layui-hide-xs">{% trans "返回首页" %}</span>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0)" title="退出登录" onclick="Logout()">
+                            <i class="layui-icon layui-icon-logout layui-hide-md"></i>
+                            <span class="layui-hide-xs">{% trans "退出登录" %}</span>
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+                {% else %}
+                <li class="layui-nav-item">
+                <a href="javascript:void(0);">
+                <i class="layui-icon layui-icon-username"></i> {% trans "游客" %}
+                </a>
+                <dl class="layui-nav-child">
+                    {% if close_register == 'on' %}
+                    <dd>
+                        <a href="{% url 'login' %}">
+                            <i class="iconfont mrdoc-icon-denglu"></i>
+                            {% trans "登录" %}
+                        </a>
+                    </dd>
+                    {% else %}
+                    <dd>
+                        <a href="{% url 'register' %}">
+                            <i class="iconfont mrdoc-icon-zhuce"></i>
+                            {% trans "注册" %}
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="{% url 'login' %}">
+                            <i class="iconfont mrdoc-icon-denglu"></i>
+                            {% trans "登录" %}
+                        </a>
+                    </dd>
+                    {% endif %}
+                </dl>
+            </li>
+                {% endif %}
+            </ul>
+        </div>
         </div>
         <!-- 文档主体 -->
         <div class="doc-body-content">
@@ -252,7 +333,7 @@
                 </div>
                 <hr>
                 <!-- 分享栏 -->
-                <div style="color: rgba(0,0,0,.65);padding-bottom: 10px;margin-top: 10px;">
+                <div style="padding-bottom: 10px;margin-top: 10px;">
                 {% block doc_bottom_block %}
                 {% endblock %}
                 </div>
@@ -265,8 +346,46 @@
                     {% endif %}
                 {% endif %}
                 <!-- 广告代码结束 -->
-
+                
                 {% block doc_previous_next %}{% endblock %}
+
+                <!-- Disqus Comments Start -->
+                <!-- <div id="disqus_thread" style="padding: 10px;"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', '//disqus.com/next/config.json?' + new Date().getTime(), true);
+                    xhr.timeout = 3000;
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            // 加载 Disqus 评论框
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://grayson-notebook.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        }
+                    }
+                    xhr.ontimeout = function () {
+                        xhr.abort();
+                        // 加载自制评论框
+                    }
+                    xhr.onerror = function() {
+                        // 加载自制评论框
+                    }
+                    xhr.send(null);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
+                <!-- Disqus Comments End -->
             </div>
         </div>
     </div>

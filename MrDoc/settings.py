@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 配置文件和数据文件目录
 CONFIG_DIR = os.path.join(BASE_DIR, 'config')
-CONFIG = ConfigParser()
+CONFIG = ConfigParser(interpolation=None)
 CONFIG.read(os.path.join(CONFIG_DIR,'config.ini'),encoding='utf-8')
 
 # 日志文件配置
@@ -40,6 +40,7 @@ SECRET_KEY = '5&71mt9@^58zdg*_!t(x6g14q*@84d%ptr%%s6e0l50zs0we3d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = CONFIG.getboolean('site','debug',fallback=False)
+DOMAIN = CONFIG.get('site','domain',fallback=False)
 
 VERSIONS = '0.8.6'
 
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'haystack', # 全文搜索
     'app_admin', # 管理APP
     'app_doc', # 文档APP
@@ -67,14 +69,16 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'app_admin.middleware.require_login_middleware.RequiredLoginMiddleware',
 ]
+
+SITE_ID = 1
 
 ROOT_URLCONF = 'MrDoc.urls'
 

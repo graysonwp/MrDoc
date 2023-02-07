@@ -238,6 +238,7 @@ def create_project(request):
 def create_doc(request):
     token = request.GET.get('token', '')
     project_id = request.POST.get('pid','')
+    parent_doc = request.POST.get('parent_doc','')
     doc_title = request.POST.get('title','')
     doc_content = request.POST.get('doc','')
     editor_mode = request.POST.get('editor_mode',1)
@@ -252,6 +253,7 @@ def create_doc(request):
                 doc = Doc.objects.create(
                     name=doc_title,  # 文档内容
                     pre_content=doc_content,  # 文档的编辑内容，意即编辑框输入的内容
+                    parent_doc= int(parent_doc) if parent_doc != '' else 0,
                     top_doc=project_id,  # 所属文集
                     editor_mode=editor_mode,  # 编辑器模式
                     create_user=token.user  # 创建的用户
@@ -260,6 +262,7 @@ def create_doc(request):
                 doc = Doc.objects.create(
                     name=doc_title,  # 文档内容
                     content=doc_content,  # 文档的编辑内容，意即编辑框输入的内容
+                    parent_doc= int(parent_doc) if parent_doc != '' else 0,
                     top_doc=project_id,  # 所属文集
                     editor_mode=editor_mode,  # 编辑器模式
                     create_user=token.user  # 创建的用户
@@ -311,6 +314,11 @@ def modify_doc(request):
                 )
             elif doc.editor_mode == 4: # 在线表格
                 pass
+            # 更新文集修改时间
+            project = Project.objects.get(id=doc.top_doc)
+            project.modify_time = datetime.datetime.now()
+            print(project.name,project.modify_time)
+            project.save()
             return JsonResponse({'status': True, 'data': 'ok'})
         else:
             return JsonResponse({'status':False,'data':'非法请求'})

@@ -575,7 +575,7 @@ def admin_project(request):
                 'id': project.id,
                 'name': project.name,
                 'intro': project.intro,
-                'doc_total': Doc.objects.filter(top_doc=project.id).count(),
+                'doc_total': Doc.objects.filter(top_doc=project.id, status=1).count(),
                 'role': project.role,
                 'role_value': project.role_value,
                 'colla_total': ProjectCollaborator.objects.filter(project=project).count(),

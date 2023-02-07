@@ -123,10 +123,10 @@ def get_pro_toc(pro_id):
     # 获取一级文档
     top_docs = Doc.objects.filter(top_doc=pro_id, parent_doc=0, status=1).values('id', 'name','open_children','editor_mode').order_by('sort')
     # 遍历一级文档
-    for doc in top_docs:
+    for index, doc in enumerate(top_docs):
         top_item = {
             'id': doc['id'],
-            'name': doc['name'],
+            'name': "{}、{}".format(index + 1, doc['name']),
             'open_children':doc['open_children'],
             'editor_mode':doc['editor_mode']
             # 'spread': True,
@@ -141,10 +141,10 @@ def get_pro_toc(pro_id):
                 status=1
             ).values('id', 'name','open_children','editor_mode').order_by('sort')
             top_item['children'] = []
-            for doc in sec_docs:
+            for index2, doc in enumerate(sec_docs):
                 sec_item = {
                     'id': doc['id'],
-                    'name': doc['name'],
+                    'name': "{}.{} {}".format(index + 1, index2 + 1, doc['name']),
                     'open_children': doc['open_children'],
                     'editor_mode': doc['editor_mode']
                     # 'level': 2
@@ -158,10 +158,10 @@ def get_pro_toc(pro_id):
                         status=1
                     ).values('id','name','editor_mode').order_by('sort')
                     sec_item['children'] = []
-                    for doc in thr_docs:
+                    for index3, doc in enumerate(thr_docs):
                         item = {
                             'id': doc['id'],
-                            'name': doc['name'],
+                            'name': "{}.{}.{} {}".format(index + 1, index2 + 1, index3 + 1, doc['name']),
                             'editor_mode': doc['editor_mode']
                             # 'level': 3
                         }
@@ -239,36 +239,36 @@ def project_list(request):
             Q(role=2,role_value__contains=str(request.user.username)) | \
             Q(create_user=request.user) | \
             Q(id__in=colla_list)
-        ).order_by('-is_top',"{}create_time".format(sort_str))
+        ).order_by('-is_top',"{}modify_time".format(sort_str))
 
     # 没有搜索 and 认证用户 and 有筛选
     elif (is_kw is False ) and (is_auth) and (is_role):
         if role in ['0',0]:
-            project_list = Project.objects.filter(role=0).order_by('-is_top',"{}create_time".format(sort_str))
+            project_list = Project.objects.filter(role=0).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['1',1]:
             project_list = Project.objects.filter(create_user=request.user,role=1).order_by(
-                '-is_top',"{}create_time".format(sort_str))
+                '-is_top',"{}modify_time".format(sort_str))
         elif role in ['2',2]:
             project_list = Project.objects.filter(role=2,role_value__contains=str(request.user.username)).order_by(
-                '-is_top',"{}create_time".format(sort_str))
+                '-is_top',"{}modify_time".format(sort_str))
         elif role in ['3',3]:
-            project_list = Project.objects.filter(role=3).order_by('-is_top',"{}create_time".format(sort_str))
+            project_list = Project.objects.filter(role=3).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['99',99]:
             colla_list = [i.project.id for i in ProjectCollaborator.objects.filter(user=request.user)] # 用户的协作文集列表
-            project_list = Project.objects.filter(id__in=colla_list).order_by('-is_top',"{}create_time".format(sort_str))
+            project_list = Project.objects.filter(id__in=colla_list).order_by('-is_top',"{}modify_time".format(sort_str))
         else:
             return render(request,'404.html')
 
     # 没有搜索 and 游客 and 没有筛选
     elif (is_kw is False) and (is_auth is False) and (is_role is False):
-        project_list = Project.objects.filter(role__in=[0,3]).order_by('-is_top',"{}create_time".format(sort_str))
+        project_list = Project.objects.filter(role__in=[0,3]).order_by('-is_top',"{}modify_time".format(sort_str))
 
     # 没有搜索 and 游客 and 有筛选
     elif (is_kw is False) and (is_auth is False) and (is_role):
         if role in ['0',0]:
-            project_list = Project.objects.filter(role=0).order_by('-is_top',"{}create_time".format(sort_str))
+            project_list = Project.objects.filter(role=0).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['3',3]:
-            project_list = Project.objects.filter(role=3).order_by('-is_top',"{}create_time".format(sort_str))
+            project_list = Project.objects.filter(role=3).order_by('-is_top',"{}modify_time".format(sort_str))
         else:
             return render(request,'404.html')
 
@@ -282,7 +282,7 @@ def project_list(request):
             Q(create_user=request.user) | \
             Q(id__in=colla_list),
             Q(name__icontains=kw) | Q(intro__icontains=kw)
-        ).order_by('-is_top','{}create_time'.format(sort_str))
+        ).order_by('-is_top','{}modify_time'.format(sort_str))
 
     # 有搜索 and 认证用户 and 有筛选
     elif (is_kw) and (is_auth) and (is_role):
@@ -290,29 +290,29 @@ def project_list(request):
             project_list = Project.objects.filter(
                 Q(name__icontains=kw)|Q(intro__icontains=kw),
                 role=0
-            ).order_by('-is_top',"{}create_time".format(sort_str))
+            ).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['1',1]:
             project_list = Project.objects.filter(
                 Q(name__icontains=kw) | Q(intro__icontains=kw),
                 create_user=request.user
-            ).order_by('-is_top',"{}create_time".format(sort_str))
+            ).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['2',2]:
             project_list = Project.objects.filter(
                 Q(name__icontains=kw) | Q(intro__icontains=kw),
                 role=2,
                 role_value__contains=str(request.user.username)
-            ).order_by('-is_top',"{}create_time".format(sort_str))
+            ).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['3',3]:
             project_list = Project.objects.filter(
                 Q(name__icontains=kw) | Q(intro__icontains=kw),
                 role=3
-            ).order_by('-is_top',"{}create_time".format(sort_str))
+            ).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['99',99]:
             colla_list = [i.project.id for i in ProjectCollaborator.objects.filter(user=request.user)] # 用户的协作文集列表
             project_list = Project.objects.filter(
                 Q(name__icontains=kw) | Q(intro__icontains=kw),
                 id__in=colla_list
-            ).order_by('-is_top',"{}create_time".format(sort_str))
+            ).order_by('-is_top',"{}modify_time".format(sort_str))
         else:
             return render(request,'404.html')
 
@@ -321,7 +321,7 @@ def project_list(request):
         project_list = Project.objects.filter(
             Q(name__icontains=kw) | Q(intro__icontains=kw),
             role__in=[0, 3]
-        ).order_by('-is_top',"{}create_time".format(sort_str))
+        ).order_by('-is_top',"{}modify_time".format(sort_str))
 
     # 有搜索 and 游客 and 有筛选
     elif (is_kw) and (is_auth is False) and (is_role):
@@ -329,12 +329,12 @@ def project_list(request):
             project_list = Project.objects.filter(
                 Q(name__icontains=kw) | Q(intro__icontains=kw),
                 role=0
-            ).order_by('-is_top',"{}create_time".format(sort_str))
+            ).order_by('-is_top',"{}modify_time".format(sort_str))
         elif role in ['3',3]:
             project_list = Project.objects.filter(
                 Q(name__icontains=kw) | Q(intro__icontains=kw),
                 role=3
-            ).order_by('-is_top',"{}create_time".format(sort_str))
+            ).order_by('-is_top',"{}modify_time".format(sort_str))
         else:
             return render(request,'404.html')
 
@@ -1375,6 +1375,10 @@ def modify_doc(request,doc_id):
                                     if t not in current_doc_tags and current_doc_tags != '':
                                         tag = Tag.objects.get_or_create(name=t, create_user=request.user)
                                         DocTag.objects.get_or_create(tag=tag[0], doc=doc)
+                            # 更新文集修改时间
+                            project = Project.objects.get(id=doc.top_doc)
+                            project.modify_time = datetime.datetime.now()
+                            project.save()
 
                             return JsonResponse({'status': True, 'data': _('修改成功')})
                         except:
@@ -2252,9 +2256,9 @@ def report_md(request):
             project_md = ReportMD(
                 project_id=int(pro_id)
             )
-            md_file_path = project_md.work() # 生成并获取MD文件压缩包绝对路径
+            md_file_path = project_md.work() # 生成并获取MD文件压缩包绝对路径)
             md_file_filename = os.path.split(md_file_path)[-1] # 提取文件名
-            md_file = "/media/reportmd_temp/"+ md_file_filename # 拼接相对链接
+            md_file = "/media/reportmd_temp/{}/{}/{}".format(user, str(datetime.date.today()), md_file_filename) # 拼接相对链接
             return JsonResponse({'status':True,'data':md_file})
         except ObjectDoesNotExist as e:
             return JsonResponse({'status': False, 'data': _('文集不存在')})
@@ -2278,7 +2282,7 @@ def report_md(request):
             logger.exception("文集导出异常")
             return JsonResponse({'status': False, 'data': _('文集导出异常')})
         md_file_filename = os.path.split(md_file_path)[-1]  # 提取文件名
-        md_file = "/media/reportmd_temp/" + md_file_filename  # 拼接相对链接
+        md_file = "/media/reportmd_temp/{}/{}/{}".format(user, str(datetime.date.today()), md_file_filename) # 拼接相对链接
         return JsonResponse({'status': True, 'data': md_file})
 
     else:
@@ -2990,7 +2994,7 @@ def download_doc_md(request,doc_id):
 
     response = HttpResponse(content_type='text/plain')
     response['Content-Disposition'] = 'attachment; filename={}.md'.format(doc.name)
-    response.write(doc.pre_content)
+    response.write("> 文档来源：[{}](https://notebook.grayson.top/project-{}/doc-{})。 \n\n {}".format(doc.name, doc.top_doc, doc_id, doc.pre_content.replace(settings.DOMAIN + '/media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
     return response
 

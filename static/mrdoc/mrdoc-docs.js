@@ -459,6 +459,8 @@ function initDocRender(mode){
         {
             "cdn":"/static/vditor/",
             markdown:{mark:true},
+            math:{inlineDigit:true},
+            outline:{enable:true},
             speech: {enable: true,},
             anchor: 1,
             after () {

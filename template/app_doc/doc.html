@@ -90,6 +90,9 @@
     <span tooltip="{% trans '更新于:' %}{{doc.modify_time}}" class="doc-bottom-icon">
         <i class="layui-icon layui-icon-log"></i> {{ doc.modify_time }}
     </span>
+    <span tooltip="本作品采用『知识署名-非商业性使用-禁止演绎（BY-NC-ND）4.0』国际许可协议进行许可" class="doc-bottom-icon">
+        <i class="layui-icon">©</i> BY-NC-ND(4.0)
+    </span>
 
     <button id="share" class="doc-bottom-btn" tooltip="{% trans '转发本文档' %}">
         <i class="layui-icon layui-icon-share" ></i> {% trans "转发文档" %}
@@ -107,8 +110,13 @@
         {% endif %}
     </span>
 
+<<<<<<< HEAD
+    {% if request.user == doc.create_user or request.user.is_superuser %}
+    <button class="doc-bottom-btn" tooltip="{% trans '下载文档' %}" id="download_doc" onclick="download_doc()">
+=======
     {% if request.user == doc.create_user or request.user.is_superuser or request.user == project.create_user %}
     <button class="doc-bottom-btn" tooltip="{% trans '下载文档' %}" id="download_doc">
+>>>>>>> f5080583161619d5e8b6a7d440bf33c5dc22c8ac
         <i class="fa fa-download"></i> {% trans "下载文档" %}
     </button>
     {% endif %}
@@ -141,7 +149,10 @@
 <!-- 修改文档 -->
 {% if doc.create_user == request.user %}
     <a class="editDoc" href="{% url 'modify_doc' doc_id=doc.id %}" title="{% trans '修改文档' %}"><i class="fa fa-pencil"></i></a>
+    <a id="download_doc" class="editDoc" href="javascript:void(0)" onclick="download_doc()" title="{% trans '下载文档' %}"><i class="fa fa-download"></i></a>
 {% endif %}
+<!-- 切换侧边栏 -->
+<div class="js-toolbar-action"><i class="layui-icon layui-icon-slider"></i></div>
 <!-- 目录 -->
 <div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
 <!-- 分享按钮 -->
@@ -255,7 +266,7 @@
     //     e.target.target = '_blank';
     // });
     // 显示文档下载弹出框
-    $("#download_doc").click(function(r){
+    function download_doc() {
         var layer = layui.layer;
         layer.open({
             type: 1,
@@ -265,7 +276,7 @@
             shadeClose: true,
             content: $('#download_div')
           });
-    });
+    }
     
     // 生成随机分享码
     function randomWord(randomFlag, min, max){

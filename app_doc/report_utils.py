@@ -48,10 +48,8 @@ class ReportMD():
         self.project_data = Project.objects.get(pk=project_id)
 
         # 文集名称
-        self.project_name = "{0}_{1}_{2}".format(
-            self.project_data.create_user,
-            validate_title(self.project_data.name),
-            str(datetime.date.today())
+        self.project_name = "{}".format(
+            validate_title(self.project_data.name)
         )
 
         # 判断MD导出临时文件夹是否存在
@@ -59,16 +57,18 @@ class ReportMD():
             os.mkdir(settings.MEDIA_ROOT + "/reportmd_temp")
 
         # 判断文集名称文件夹是否存在
-        self.project_path = settings.MEDIA_ROOT + "/reportmd_temp/{}".format(self.project_name)
+        self.project_path_temp = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}_temp/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
+        self.project_path = self.project_path_temp
+        self.archive_file_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/{}".format(self.project_data.create_user, str(datetime.date.today()), self.project_data.name)
         is_fold = os.path.exists(self.project_path)
         if is_fold is False:
-            os.mkdir(self.project_path)
+            os.makedirs(self.project_path)
 
         # 判断是否存在静态文件文件夹
-        self.media_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/media".format(self.project_name)
-        is_media = os.path.exists(self.media_path)
-        if is_media is False:
-            os.mkdir(self.media_path)
+        # self.media_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/media".format(self.project_name)
+        # is_media = os.path.exists(self.media_path)
+        # if is_media is False:
+        #     os.mkdir(self.media_path)
 
     def work(self):
         # 初始化文集YAML数据
@@ -78,47 +78,111 @@ class ReportMD():
         project_toc_list['project_role'] = self.project_data.role
         project_toc_list['toc'] = []
         # 读取指定文集的文档数据
-        data = Doc.objects.filter(top_doc=self.pro_id, parent_doc=0).order_by("sort")
+        data = Doc.objects.filter(top_doc=self.pro_id, parent_doc=0, status=1).order_by("sort")
+        # 判断一级文件夹的个数，如果等于 1，则在项目文件夹的下一层新增一个以项目名为名称的文件夹，保证压缩后的文件解压缩时文件目录正确
+        if len(data) == 1:
+            self.project_path = '{}/{}'.format(self.project_path, self.project_data.name)
+        
+        # 添加 _category_.json 文件，便于书籍整理
+        with open('{}/_category_.json'.format(self.project_path),'w',encoding='utf-8') as files:
+            extra_info = \
+            '{' \
+                '  "label": "'+self.project_data.name+'",' \
+                '  "position": 1,' \
+                '  "link": {' \
+                '  "type": "generated-index"' \
+                '}' \
+            '}'
+            files.write(extra_info + "\n")
         # 遍历一级文档
-        for d in data:
+        for index, d in enumerate(data):
             top_item = {
-                'name': validate_title(d.name),
+                'name': '{}、{}'.format(index, validate_title(d.name)),
                 'file': validate_title(d.name)+'.md',
             }
             md_name = validate_title(d.name) # 文档名称
             # 文档内容，如果使用Markdown编辑器编写则导出Markdown文本，如果使用富文本编辑器编写则导出HTML文本
             md_content = self.operat_md_media(d.pre_content) \
                 if d.editor_mode in [1,2] else self.operat_md_media(d.content)
-
+            
+            # 判断是否存在一级文件夹
+            project_first_dir = '{}/{}'.format(self.project_path,md_name)
+            project_first_dir_exists = os.path.exists(project_first_dir)
+            if project_first_dir_exists is False:
+                os.makedirs(project_first_dir)
+            
+            # 添加 _category_.json 文件，便于书籍整理
+            with open('{}/_category_.json'.format(project_first_dir),'w',encoding='utf-8') as files:
+                extra_info = \
+                '{' \
+                    '  "label": "'+md_name+'",' \
+                    '  "position": '+str(index+1)+',' \
+                    '  "link": {' \
+                    '  "type": "generated-index"' \
+                    '}' \
+                '}'
+                files.write(extra_info + "\n")
+            
             # 新建MD文件
-            with open('{}/{}.md'.format(self.project_path,md_name),'w',encoding='utf-8') as files:
-                files.write(md_content)
+            with open('{}/{}.md'.format(project_first_dir,md_name),'w',encoding='utf-8') as files:
+                extra_info = '---\nsidebar_position: {}\n---\n'.format(index+1)
+                files.write('{}\n{}'.format(extra_info, md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
             # 查询二级文档
-            data_2 = Doc.objects.filter(parent_doc=d.id).order_by("sort")
+            data_2 = Doc.objects.filter(parent_doc=d.id, status=1).order_by("sort")
             if data_2.count() > 0:
                 top_item['children'] = []
-                for d2 in data_2:
+                for index2, d2 in enumerate(data_2):
+                    # 删除一级文件夹对应的文件
+                    project_first_file = '{}/{}.md'.format(project_first_dir,md_name)
+                    if os.path.exists(project_first_file):
+                        os.remove(project_first_file)
+
                     sec_item = {
-                        'name': validate_title(d2.name),
+                        'name': '{}.{} {}'.format(index, index2, validate_title(d2.name)),
                         'file': validate_title(d2.name)+'.md',
                     }
 
                     md_name_2 = validate_title(d2.name)
                     md_content_2 = self.operat_md_media(d2.pre_content) \
                         if d2.editor_mode in [1,2] else self.operat_md_media(d2.content)
+                    
+                    # 判断是否存在二级文件夹
+                    project_second_dir = '{}/{}/{}'.format(self.project_path,md_name,md_name_2)
+                    project_second_dir_exists = os.path.exists(project_second_dir)
+                    if project_second_dir_exists is False:
+                        os.mkdir(project_second_dir)
+                    
+                    # 添加 _category_.json 文件，便于书籍整理
+                    with open('{}/_category_.json'.format(project_second_dir),'w',encoding='utf-8') as files:
+                        extra_info = \
+                        '{' \
+                            '  "label": "'+md_name_2+'",' \
+                            '  "position": '+str(index2+1)+',' \
+                            '  "link": {' \
+                            '  "type": "generated-index"' \
+                            '}' \
+                        '}'
+                        files.write(extra_info + "\n")
 
                     # 新建MD文件
-                    with open('{}/{}.md'.format(self.project_path, md_name_2), 'w', encoding='utf-8') as files:
-                        files.write(md_content_2)
+                    with open('{}/{}.md'.format(project_second_dir, md_name_2), 'w', encoding='utf-8') as files:
+                        extra_info = '---\nsidebar_position: {}\n---\n'.format(index2+1)
+                        files.write('{}\n{}'.format(extra_info, md_content_2.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
                     # 获取第三级文档
-                    data_3 = Doc.objects.filter(parent_doc=d2.id).order_by("sort")
+                    data_3 = Doc.objects.filter(parent_doc=d2.id, status=1).order_by("sort")
                     if data_3.count() > 0:
+                        # 删除二级文件夹对应的文件
+                        os.remove('{}/{}.md'.format(project_second_dir, md_name_2))
+                        project_second_file = '{}/{}.md'.format(project_second_dir,md_name_2)
+                        if os.path.exists(project_second_file):
+                            os.remove(project_second_file)
                         sec_item['children'] = []
-                        for d3 in data_3:
+                        for index3, d3 in enumerate(data_3):
                             item = {
                                 'name': validate_title(d3.name),
+                                'name': '{}.{}.{} {}'.format(index, index2, index3, validate_title(d3.name)),
                                 'file': validate_title(d3.name)+'.md',
                             }
                             sec_item['children'].append(item)
@@ -127,36 +191,39 @@ class ReportMD():
                                 if d3.editor_mode in [1,2] else self.operat_md_media(d3.content)
 
                             # 新建MD文件
-                            with open('{}/{}.md'.format(self.project_path, md_name_3), 'w', encoding='utf-8') as files:
-                                files.write(md_content_3)
+                            with open('{}/{}.md'.format(project_second_dir, md_name_3), 'w', encoding='utf-8') as files:
+                                extra_info = '---\nsidebar_position: {}\n---\n'.format(index3+1)
+                                files.write('{}\n{}'.format(extra_info, md_content_3.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
                     top_item['children'].append(sec_item)
             project_toc_list['toc'].append(top_item)
 
         # 写入层级YAML
-        with open('{}/mrdoc.yaml'.format(self.project_path), 'a+', encoding='utf-8') as toc_yaml:
-            yaml.dump(project_toc_list,toc_yaml,allow_unicode=True)
+        # with open('{}/mrdoc.yaml'.format(self.project_path), 'a+', encoding='utf-8') as toc_yaml:
+        #     yaml.dump(project_toc_list,toc_yaml,allow_unicode=True)
 
         # 压缩文件
         md_file = shutil.make_archive(
-            base_name=self.project_path,
+            base_name=self.archive_file_path,
             format='zip',
-            root_dir=self.project_path
+            root_dir=self.project_path_temp
         )
-        # print(md_file)
         # 删除文件夹
         shutil.rmtree(self.project_path)
 
-        return "{}.zip".format(self.project_path)
+        return "{}.zip".format(self.archive_file_path)
 
     # 处理MD内容中的静态文件
     def operat_md_media(self,md_content):
         # 查找MD内容中的静态文件
         pattern = r"\!\[.*?\]\(.*?\)"
         media_list = re.findall(pattern, md_content)
+<<<<<<< HEAD
+=======
         # print(media_list)
         # 查找<img>标签形式的静态图片
         img_pattern = r'<img[^>]*/>'
         img_list = re.findall(img_pattern, md_content)
+>>>>>>> f5080583161619d5e8b6a7d440bf33c5dc22c8ac
         # 存在静态文件,进行遍历
         if len(media_list) > 0:
             for media in media_list:
@@ -167,15 +234,29 @@ class ReportMD():
                 # 对本地静态文件进行复制
                 if media_filename.startswith("/media"):
                     # print(media_filename)
-                    sub_folder = "/" + media_filename.split("/")[2] # 获取子文件夹的名称
+                    # sub_folder = "/" + media_filename.split("/")[2] # 获取子文件夹的名称
                     # print(sub_folder)
-                    is_sub_folder = os.path.exists(self.media_path+sub_folder)
-                    # 创建子文件夹
-                    if is_sub_folder is False:
-                        os.mkdir(self.media_path+sub_folder)
+                    # is_sub_folder = os.path.exists(self.media_path+sub_folder)
+                    # 创建子文件夹``
+                    # if is_sub_folder is False:
+                    #     os.mkdir(self.media_path+sub_folder)
                     # 替换MD内容的静态文件链接
                     md_content = md_content.replace(media_filename, "." + media_filename)
                     # 复制静态文件到指定文件夹
+<<<<<<< HEAD
+                    # try:
+                    #     shutil.copy(settings.BASE_DIR + media_filename, self.media_path+sub_folder)
+                    # except FileNotFoundError:
+                    #     pass
+                elif settings.DOMAIN in media_filename:
+                    md_content = md_content.replace(settings.DOMAIN + '/media/', '/media/').replace('/media/', './media/')
+                    
+
+            return md_content
+        # 不存在静态文件，直接返回MD内容
+        else:
+            return md_content
+=======
                     try:
                         new_file_path = pathlib.Path(settings.BASE_DIR,unquote(media_filename)[1:])
                         shutil.copy(new_file_path, self.media_path + sub_folder)
@@ -205,6 +286,7 @@ class ReportMD():
                     except FileNotFoundError:
                         pass
         return md_content
+>>>>>>> f5080583161619d5e8b6a7d440bf33c5dc22c8ac
 
 
 # 批量导出文集Markdown压缩包
@@ -217,12 +299,12 @@ class ReportMdBatch():
             os.mkdir(settings.MEDIA_ROOT + "/reportmd_temp")
 
         # 判断用户名+日期文件夹是否存在
-        self.report_file_path = settings.MEDIA_ROOT + "/reportmd_temp/{}_{}".format(
-            self.username,datetime.datetime.strftime(datetime.datetime.now(),"%y%m%d%H%M%S")
+        self.report_file_path = settings.MEDIA_ROOT + "/reportmd_temp/{}/{}/{}".format(
+            self.username,str(datetime.date.today()),datetime.datetime.strftime(datetime.datetime.now(),"%y%m%d%H%M%S")
         )
         is_fold = os.path.exists(self.report_file_path)
         if is_fold is False:
-            os.mkdir(self.report_file_path)
+            os.makedirs(self.report_file_path)
 
     def work(self):
         # 遍历文集列表，打包每一个文集
@@ -346,9 +428,9 @@ class ReportEPUB():
         '''
         spine = '<itemref idref="book_cover" linear="no"/><itemref idref="book_title"/><itemref idref="book_desc"/><itemref idref="toc_summary"/>'
 
-        for d in data:
+        for index, d in enumerate(data):
             # 拼接HTML字符串
-            html_str = "<h1 style='page-break-before: always;'>{}</h1>".format(d.name)
+            html_str = "<h1 style='page-break-before: always;'>{}、{}</h1>".format(index, d.name)
             if d.content is None:
                 d.content = markdown.markdown(
                     d.pre_content,
@@ -361,15 +443,15 @@ class ReportEPUB():
                 'id':d.id,
                 'link':'{}.xhtml'.format(d.id),
                 'pid':d.parent_doc,
-                'title':d.name
+                'title':'{}、{}'.format(index, d.name)
             }
             self.toc_list.append(toc)
 
             # nav
             toc_nav = '''<navPoint id="np_{nav_num}" playOrder="{nav_num}">
-                    <navLabel><text>{title}</text></navLabel>
+                    <navLabel><text>{index}、{title}</text></navLabel>
                     <content src="Text/{file}"/>
-                '''.format(nav_num=nav_num,title=d.name,file=toc['link'])
+                '''.format(nav_num=nav_num, index=index,title=d.name,file=toc['link'])
             nav_str += toc_nav
 
             # toc_summary
@@ -384,8 +466,8 @@ class ReportEPUB():
             data_2 = Doc.objects.filter(parent_doc=d.id,status=1).order_by("sort")
             if data_2.count() > 0:
                 toc_summary_str += '<ul>'
-            for d2 in data_2:
-                html_str = "<h1>{}</h1>".format(d2.name)
+            for index2, d2 in enumerate(data_2):
+                html_str = "<h1>{}.{} {}</h1>".format(index, index2, d2.name)
                 if d2.content is None:
                     d2.content = markdown.markdown(
                         d2.pre_content,
@@ -398,13 +480,13 @@ class ReportEPUB():
                     'id': d2.id,
                     'link': '{}.xhtml'.format(d2.id),
                     'pid': d2.parent_doc,
-                    'title': d2.name
+                    'title': '{}.{} {}'.format(index, index2, d2.name)
                 }
                 self.toc_list.append(toc)
                 toc_nav = '''<navPoint id="np_{nav_num}" playOrder="{nav_num}">
-                                    <navLabel><text>{title}</text></navLabel>
+                                    <navLabel><text>{index}.{index2} {title}</text></navLabel>
                                     <content src="Text/{file}"/>
-                                '''.format(nav_num=nav_num, title=d2.name, file=toc['link'])
+                                '''.format(nav_num=nav_num, index=index, index2=index2, title=d2.name, file=toc['link'])
                 nav_str += toc_nav
 
                 # toc_summary
@@ -419,8 +501,8 @@ class ReportEPUB():
                 data_3 = Doc.objects.filter(parent_doc=d2.id,status=1).order_by("sort")
                 if data_3.count() > 0:
                     toc_summary_str += '<ul>'
-                for d3 in data_3:
-                    html_str = "<h1>{}</h1>".format(d3.name)
+                for index3, d3 in enumerate(data_3):
+                    html_str = "<h1>{}.{}.{} {}</h1>".format(index, index2, index3, d3.name)
                     # 如果文档没有HTML内容，将Markdown转换为HTML
                     if d3.content is None:
                         d3.content = markdown.markdown(
@@ -434,15 +516,15 @@ class ReportEPUB():
                         'id': d3.id,
                         'link': '{}.xhtml'.format(d3.id),
                         'pid': d3.parent_doc,
-                        'title': d3.name
+                        'title': '{}.{}.{} {}'.format(index, index2, index3, d3.name)
                     }
                     self.toc_list.append(toc)
 
                     toc_nav = '''<navPoint id="np_{nav_num}" playOrder="{nav_num}">
-                                    <navLabel><text>{title}</text></navLabel>
+                                    <navLabel><text>{index}.{index2}.{index3} {title}</text></navLabel>
                                     <content src="Text/{file}"/>
                                 </navPoint>
-                        '''.format(nav_num=nav_num, title=d3.name, file=toc['link'])
+                        '''.format(nav_num=nav_num, index=index, index2=index2, index3=index3, title=d3.name, file=toc['link'])
                     nav_str += toc_nav
 
                     # toc_summary
@@ -793,32 +875,32 @@ class ReportPDF():
         # 拼接文档的HTML字符串
         data = Doc.objects.filter(top_doc=self.pro_id,parent_doc=0,status=1).order_by("sort")
         toc_list = {'1':[],'2':[],'3':[]}
-        for d in data:
+        for index, d in enumerate(data):
             self.content_str += "<h1 style='page-break-before: always;'>{}</h1>\n\n".format(d.name)
             if d.editor_mode in [1,2]:
                 self.content_str += d.pre_content + '\n'
             elif d.editor_mode == 3:
                 self.content_str += d.content + '\n'
-            toc_list['1'].append({'id':d.id,'name':d.name})
+            toc_list['1'].append({'id':d.id,'name':'{}、{}'.format(index, d.name)})
             # 获取第二级文档
             data_2 = Doc.objects.filter(parent_doc=d.id,status=1).order_by("sort")
-            for d2 in data_2:
-                self.content_str += "\n\n<h1 style='page-break-before: always;'>{}</h1>\n\n".format(d2.name)
+            for index2, d2 in enumerate(data_2):
+                self.content_str += "\n\n<h1 style='page-break-before: always;'>{}.{} {}</h1>\n\n".format(index, index2, d2.name)
                 if d2.editor_mode in [1, 2]:
                     self.content_str += d2.pre_content + '\n'
                 elif d2.editor_mode == 3:
                     self.content_str += d2.content + '\n'
-                toc_list['2'].append({'id':d2.id,'name':d2.name,'parent':d.id})
+                toc_list['2'].append({'id':d2.id,'name':'{}.{} {}'.format(index, index2, d2.name),'parent':d.id})
                 # 获取第三级文档
                 data_3 = Doc.objects.filter(parent_doc=d2.id,status=1).order_by("sort")
-                for d3 in data_3:
+                for index3, d3 in enumerate(data_3):
                     # print(d3.name,d3.content)
-                    self.content_str += "\n\n<h1 style='page-break-before: always;'>{}</h1>\n\n".format(d3.name)
+                    self.content_str += "\n\n<h1 style='page-break-before: always;'>{}.{}.{} {}</h1>\n\n".format(index, index2, index3, d3.name)
                     if d3.editor_mode in [1, 2]:
                         self.content_str += d3.pre_content + '\n'
                     elif d3.editor_mode == 3:
                         self.content_str += d3.content + '\n'
-                    toc_list['3'].append({'id':d3.id,'name':d3.name,'parent':d2.id})
+                    toc_list['3'].append({'id':d3.id,'name':'{}.{}.{} {}'.format(index, index2, index3, d3.name),'parent':d2.id})
 
         # 替换所有媒体文件链接
         self.content_str = self.content_str.replace('![](/media/','![](../../media/')
