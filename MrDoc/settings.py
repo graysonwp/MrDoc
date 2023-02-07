@@ -259,9 +259,6 @@ if cors_str == []:
     CORS_ALLOWED_ORIGINS = capacitor_origins
 else:
     CORS_ALLOWED_ORIGINS = capacitor_origins + cors_str.split(',')
-<<<<<<< HEAD
-=======
 
 # sitemap 站点地图
 SITEMAP = CONFIG.getboolean('sitemap','status',fallback=True)
->>>>>>> f5080583161619d5e8b6a7d440bf33c5dc22c8ac
