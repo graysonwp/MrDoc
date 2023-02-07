@@ -217,13 +217,7 @@ class ReportMD():
         # 查找MD内容中的静态文件
         pattern = r"\!\[.*?\]\(.*?\)"
         media_list = re.findall(pattern, md_content)
-<<<<<<< HEAD
-=======
         # print(media_list)
-        # 查找<img>标签形式的静态图片
-        img_pattern = r'<img[^>]*/>'
-        img_list = re.findall(img_pattern, md_content)
->>>>>>> f5080583161619d5e8b6a7d440bf33c5dc22c8ac
         # 存在静态文件,进行遍历
         if len(media_list) > 0:
             for media in media_list:
@@ -243,7 +237,6 @@ class ReportMD():
                     # 替换MD内容的静态文件链接
                     md_content = md_content.replace(media_filename, "." + media_filename)
                     # 复制静态文件到指定文件夹
-<<<<<<< HEAD
                     # try:
                     #     shutil.copy(settings.BASE_DIR + media_filename, self.media_path+sub_folder)
                     # except FileNotFoundError:
