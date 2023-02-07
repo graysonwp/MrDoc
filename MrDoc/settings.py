@@ -41,7 +41,7 @@ SECRET_KEY = '5&71mt9@^58zdg*_!t(x6g14q*@84d%ptr%%s6e0l50zs0we3d'
 DEBUG = CONFIG.getboolean('site','debug',fallback=False)
 DOMAIN = CONFIG.get('site','domain',fallback=False)
 
-VERSIONS = '0.8.5'
+VERSIONS = '0.8.6'
 
 ALLOWED_HOSTS = ['*']
 
@@ -259,3 +259,9 @@ if cors_str == []:
     CORS_ALLOWED_ORIGINS = capacitor_origins
 else:
     CORS_ALLOWED_ORIGINS = capacitor_origins + cors_str.split(',')
+<<<<<<< HEAD
+=======
+
+# sitemap 站点地图
+SITEMAP = CONFIG.getboolean('sitemap','status',fallback=True)
+>>>>>>> f5080583161619d5e8b6a7d440bf33c5dc22c8ac
