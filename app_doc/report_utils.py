@@ -221,7 +221,6 @@ class ReportMD():
         # 查找<img>标签形式的静态图片
         img_pattern = r'<img[^>]*/>'
         img_list = re.findall(img_pattern, md_content)
->>>>>>> f5080583161619d5e8b6a7d440bf33c5dc22c8ac
         # 存在静态文件,进行遍历
         if len(media_list) > 0:
             for media in media_list:
