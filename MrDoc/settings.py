@@ -42,7 +42,7 @@ SECRET_KEY = '5&71mt9@^58zdg*_!t(x6g14q*@84d%ptr%%s6e0l50zs0we3d'
 DEBUG = CONFIG.getboolean('site','debug',fallback=False)
 DOMAIN = CONFIG.get('site','domain',fallback=False)
 
-VERSIONS = '0.8.6'
+VERSIONS = '0.8.7'
 
 ALLOWED_HOSTS = ['*']
 
@@ -252,6 +252,13 @@ except ImportError:
 X_FRAME_OPTIONS = CONFIG.get("x_frame","option",fallback='SAMEORIGIN')
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
+
+# CSRF 可信来源
+csrf_str = CONFIG.get("csrf_origin","allow",fallback=[])
+if csrf_str == []:
+    CSRF_TRUSTED_ORIGINS = csrf_str
+else:
+    CSRF_TRUSTED_ORIGINS = csrf_str.split(',')
 
 # 跨域请求配置
 cors_str = CONFIG.get("cors_origin","allow",fallback=[])
