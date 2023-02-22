@@ -257,7 +257,6 @@ def create_doc(request):
                     parent_doc= int(parent_doc) if parent_doc != '' else 0,
                     top_doc=project_id,  # 所属文集
                     editor_mode=editor_mode,  # 编辑器模式
-                    parent_doc=parent_doc,  # 上级文档
                     create_user=token.user  # 创建的用户
                 )
             elif int(editor_mode) == 3:
@@ -267,7 +266,6 @@ def create_doc(request):
                     parent_doc= int(parent_doc) if parent_doc != '' else 0,
                     top_doc=project_id,  # 所属文集
                     editor_mode=editor_mode,  # 编辑器模式
-                    parent_doc=parent_doc,  # 上级文档
                     create_user=token.user  # 创建的用户
                 )
             return JsonResponse({'status': True, 'data': doc.id})
