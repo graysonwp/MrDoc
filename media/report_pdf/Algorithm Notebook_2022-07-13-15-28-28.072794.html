@@ -261,7 +261,7 @@ int fib(int N) {
 
 * 递归树
 
-![](https://notebook.grayson.top/media/202103/2021-03-01_094618.png)
+![](https://www.ricear.com/media/202103/2021-03-01_094618.png)
 
 ### 2.2 带备忘录的递归解法
 
@@ -288,9 +288,9 @@ int helper(vector<int>& memo, int n) {
 
 * 递归树
 
-![](https://notebook.grayson.top/media/202103/2021-03-01_095518.png)
+![](https://www.ricear.com/media/202103/2021-03-01_095518.png)
 
-![](https://notebook.grayson.top/media/202103/2021-03-01_102418.png)
+![](https://www.ricear.com/media/202103/2021-03-01_102418.png)
 
 此时本算法不存在冗余计算，子问题就是 `f(1)、f(2)`...`f(20)`，所以子问题个数为 o(n)，解决一个子问题的时间为 o(1)，因此本算法的时间复杂度为 o(n)。
 
@@ -307,13 +307,13 @@ int fib(int N) {
 }
 ```
 
-![](https://notebook.grayson.top/media/202103/2021-03-01_103126.png)
+![](https://www.ricear.com/media/202103/2021-03-01_103126.png)
 
 ### 2.4 细节优化
 
 斐波那契数列的状态转移方程如下：
 
-![](https://notebook.grayson.top/media/202103/2021-03-01_104211.png)
+![](https://www.ricear.com/media/202103/2021-03-01_104211.png)
 
 根据斐波那契数列的状态转移方程可知，当前状态只和之前的两个状态有关，其实并不需要那么长的一个 DP table 来存储所有的状态，只要想办法存储之前的两个状态就行。所以，可以进一步优化，把空间复杂度降为 o(1)。
 
@@ -1226,13 +1226,13 @@ public static int jump(int[] nums) {
 
 1. **定义 $dp$ 数组：$dp[i]$ 表示以 $nums[i]$ 这个数结尾的最长递增子序列的长度。** 根据这个定义，**我们的最终结果（子序列的最大长度）应该是 $dp$ 数组中的最大值**。
 
-![](https://notebook.grayson.top/media/202104/2021-04-04_202723.png)
+![](https://www.ricear.com/media/202104/2021-04-04_202723.png)
 
-![](https://notebook.grayson.top/media/202104/2021-04-04_202743.png)
+![](https://www.ricear.com/media/202104/2021-04-04_202743.png)
 
 2. 刚在这个过程中每个 $dp[i]$ 的结果是我们肉眼看出来的，我们应该怎么设计算法逻辑来正确计算每个 $dp[i]$ 呢？这就是动态规划中关键的部分了，要思考如何进行**状态转移**，这里就可以使用**数学归纳**的思想了。
 
-![](https://notebook.grayson.top/media/202104/2021-04-04_203956.png)
+![](https://www.ricear.com/media/202104/2021-04-04_203956.png)
 
 * 假设此时我们已经知道了 $dp[0...4]$ 的所有结果，现在需要求 $dp[5]$ 值，也就是相求以 $nums[5]$ 结尾的最长递增子序列。
 * $nums[5]=3$，既然是递增子序列，我们只要**找到前面那些结尾比 3 小的子序列，然后把 3 接到最后**，就可以形成一个新的递增子序列，而且这个新的子序列长度加 1。
@@ -1317,7 +1317,7 @@ for (int i = 0; i < nums.length; i++) {
 
 1. 首先，给我们一副扑克牌，我们想遍历数组那样从左到右一张一张处理这些扑克牌，最终要把这些牌分成若干堆。
 
-![](https://notebook.grayson.top/media/202104/2021-04-04_210817.png)
+![](https://www.ricear.com/media/202104/2021-04-04_210817.png)
 
 2. 处理这些扑克牌要遵循以下规则：
    1. **只能把点数小的牌压到点数比他大的牌上。**
@@ -1325,11 +1325,11 @@ for (int i = 0; i < nums.length; i++) {
    3. 如果当前牌**有多个堆可供选择**，则选择**最左边的堆**放置（保证牌堆顶的牌有序）。
 3. 比如说上述的扑克牌最终会被分成这样 5 堆（我们认为 $A$ 的值最大，而不是 1）。
 
-![](https://notebook.grayson.top/media/202104/2021-04-04_211338.png)
+![](https://www.ricear.com/media/202104/2021-04-04_211338.png)
 
 4. 按照上述规则执行，可以算出最长递增子序列，**牌的堆数就是最长递增子序列的长度**。
 
-![](https://notebook.grayson.top/media/202104/2021-04-04_211739.png)
+![](https://www.ricear.com/media/202104/2021-04-04_211739.png)
 
 5. 我们只要把**处理扑克牌的过程**编程写出来即可。每次处理一张扑克牌不是要找到一个合适的牌堆顶来放吗，牌堆顶的牌不是有序吗，这就能用到[二分查找]()了：用**寻找左侧边界的二分查找法来搜索当前牌应放置的位置**。
 
@@ -1431,7 +1431,7 @@ dp 数组的定义主要有两种方式，一种是定义一个**一维数组**�
 
 ###### 1.2.2.1.1 一维 dp 数组
 
-例如，在[最长递增子序列](http://notebook.grayson.top/project-21/doc-266)中，我们就是定义了一个一维数组，其含义为：**在子数组 $array[0..i]$ 中，我们要求的子序列（最长递增子序列）的长度是 $dp[i]$。**
+例如，在[最长递增子序列](http://www.ricear.com/project-21/doc-266)中，我们就是定义了一个一维数组，其含义为：**在子数组 $array[0..i]$ 中，我们要求的子序列（最长递增子序列）的长度是 $dp[i]$。**
 
 ```java
 int n = array.length;
@@ -1452,7 +1452,7 @@ for (int i = 1; i < n; i++) {
 
 ##### 1.2.2.2 问题分析
 
-![](https://notebook.grayson.top/media/202104/2021-04-08_163717.png)
+![](https://www.ricear.com/media/202104/2021-04-08_163717.png)
 
 dp 函数的定义为：**在子串 $s[i..j]$ 中，最长回文子序列的长度为 $dp[i][j]$**。
 
@@ -1460,11 +1460,11 @@ dp 函数的定义为：**在子串 $s[i..j]$ 中，最长回文子序列的长�
 
 1. **如果 $s[i]==s[j]$：** 则他俩加上 $s[i+1..j-1]$ 中的最长回文子序列就是 $s[i..j]$ 的最长回文子序列。
 
-![](https://notebook.grayson.top/media/202104/2021-04-08_164936.png)
+![](https://www.ricear.com/media/202104/2021-04-08_164936.png)
 
 2. **如果 $s[i]!=s[j]$：** 说明他俩不可能同时出现在 $s[i..j]$ 的最长回文子序列中，那么把他俩分别加入 $s[i+1..j-1]$ 中，看看哪个子串产生的回文子序列更长即可。
 
-![](https://notebook.grayson.top/media/202104/2021-04-08_165224.png)
+![](https://www.ricear.com/media/202104/2021-04-08_165224.png)
 
 代码模板如下：
 
@@ -1485,11 +1485,11 @@ else
 2. 因为 $i$ 肯定小于 $j$，所以对于那些 $i>j$ 的位置，根本不存在什么子序列，应该初始化为 0。
 3. 根据我们刚才的状态转移方程，想求 $dp[i][j]$ 需要知道 $dp[i+1][j-1]$，$dp[i+1][j]$，$dp[i][i-1]$ 这三个位置，将其填入 dp 数组后是这样：
 
-![](https://notebook.grayson.top/media/202104/2021-04-08_173451.png)
+![](https://www.ricear.com/media/202104/2021-04-08_173451.png)
 
 **为了保证每次计算 $dp[i][j]$，左、下、右方向的位置已经被计算出来了，只能斜着遍历或者反着遍历。**
 
-![](https://notebook.grayson.top/media/202104/2021-04-09_152953.png)
+![](https://www.ricear.com/media/202104/2021-04-09_152953.png)
 
 我选择**反着遍历**，参考代码如下：
 
@@ -1554,7 +1554,7 @@ public class L516 {
 * **如果 $nums1[i] = nums2[j]$**，**则 $dp[i][j] = dp[i + 1][j + 1] + 1$**。
 * **否则**，$dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])$。
 
-![](https://notebook.grayson.top/media/202107/2021-07-17_205353.png)
+![](https://www.ricear.com/media/202107/2021-07-17_205353.png)
 
 ###### 1.3.1.1.2 参考代码
 
@@ -1649,7 +1649,7 @@ public int longestCommonSubsequence(String text1, String text2) {
 
 1. 依次遍历单个元素、两个元素、...、N 个元素，然后从中选取最大子序和。
 
-![](https://notebook.grayson.top/media/202105/2021-05-22_193233.png)
+![](https://www.ricear.com/media/202105/2021-05-22_193233.png)
 
 ###### 2.1.2.1.2 参考代码
 
@@ -1689,7 +1689,7 @@ public int maxSubArrayV1(int[] nums) {
    dp[i] = max(dp[i-1] + nums[i], nums[i])
    $$
 
-![](https://notebook.grayson.top/media/202105/2021-05-22_194007.png)
+![](https://www.ricear.com/media/202105/2021-05-22_194007.png)
 
 ###### 2.1.2.2.2 参考代码
 
@@ -1722,7 +1722,7 @@ public int maxSubArrayV2(int[] nums) {
 1. 如果 sum 小于 0，说明他对于下一个 sum 起副作用，所以将 sum 重置为当前元素。
 2. 否则的话，直接将当前元素累加到 sum 上。
 
-![](https://notebook.grayson.top/media/202105/2021-05-22_194238.png)
+![](https://www.ricear.com/media/202105/2021-05-22_194238.png)
 
 ###### 2.1.2.3.2 参考代码
 
@@ -2036,7 +2036,7 @@ public int minimumTotal(List<List<Integer>> triangle) {
 1. 动态规划中：
    
    1. 对于**一维 $dp$ 数组**一般**有两种思路**，**一种是以 $nums[i]$ 开头**，**另一种是以 $nums[i]$ 结尾**，我们在定义 $dp$ 数组时可以**从这两个方面去考虑**即可。
-   2. 对于**二维 $dp$ 数组**一般**可以从中间进行截取**，例如[1.1.7 最长回文子序列](https://notebook.grayson.top/project-21/doc-273)中 $dp$ 数组的定义为 $dp[i][j]$ 表示 $s[i...j]$ 中包含的最长回文子序列的长度。
+   2. 对于**二维 $dp$ 数组**一般**可以从中间进行截取**，例如[1.1.7 最长回文子序列](https://www.ricear.com/project-21/doc-273)中 $dp$ 数组的定义为 $dp[i][j]$ 表示 $s[i...j]$ 中包含的最长回文子序列的长度。
 2. 该题目中 $dp$ 数组的含义为 $dp[i]$ 表示以 $s.charAt(i)$ 开头的字符串的解码方法的总数，且：
    
    $$
@@ -2276,7 +2276,7 @@ public int findLengthV1(int[] nums1, int[] nums2) {
    2. **否则**，$dp[i][j] = 0$。
       > 该题目类似于[最长公共子序列](#1-3-最长公共子序列)，不同的是在最长公共子序列中当 $nums1[i] \ne nums2[j]$ 时，$dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])$，而在最长重复子数组中当 $nums1[i] \ne nums2[j]$ 时，$dp[i][j] = 0$，这是因为**序列不要求连续**，而**数组要求连续**。
    
-   ![](https://notebook.grayson.top/media/202107/2021-07-16_212026.png)
+   ![](https://www.ricear.com/media/202107/2021-07-16_212026.png)
 
 ###### 2.7.1.2.2 参考代码
 
@@ -2317,7 +2317,7 @@ public int findLengthV2(int[] nums1, int[] nums2) {
 3. 然后**把 $nums2$ 放在上面**，$nums1$**放在下面**，并且**把 $nums2$ 的第一个元素和 $nums1$ 的第一个元素对齐**，然后**把 $nums1$ 从右往左滑动**，**直到 $nums2$ 的第一个元素和 $nums1$ 的最后一个元素对齐**，且**每滑动一次**，**都对两个数组滑块内部相同区域的元素进行比较**。
 4. 其实**第三步可以合到第二步里面**，即**在第二步中一直把 $nums2$ 滑动到第一个元素和 $nums1$ 的第一个元素对齐**，但这样**不太好实现**，因此**后面一步拆分成等价的第四步来实现**。
    
-   ![](https://notebook.grayson.top/media/202107/718-最长重复子数组（解法三：滑动窗口）_1626441966.gif)
+   ![](https://www.ricear.com/media/202107/718-最长重复子数组（解法三：滑动窗口）_1626441966.gif)
 
 ###### 2.7.1.3.2 参考代码
 
@@ -4274,7 +4274,7 @@ public int searchV2(int[] nums, int target) {
 
 **示例 1：**
 
-![](https://notebook.grayson.top/media/202206/2022-06-25_1107090.8604224978183835.png)
+![](https://www.ricear.com/media/202206/2022-06-25_1107090.8604224978183835.png)
 
 ```txt
 输入：head = [1,2,3,4,5]
@@ -4283,7 +4283,7 @@ public int searchV2(int[] nums, int target) {
 
 **示例 2：**
 
-![](https://notebook.grayson.top/media/202206/2022-06-25_1107180.5052359862891712.png)
+![](https://www.ricear.com/media/202206/2022-06-25_1107180.5052359862891712.png)
 
 ```txt
 输入：head = [1,2]
@@ -4319,7 +4319,7 @@ public int searchV2(int[] nums, int target) {
       > 上面两个判断条件可以合并为 `if (head == null || head.next == null) {return head;}`
       >
    5. 详细的步骤如下图所示。
-      ![](https://notebook.grayson.top/media/202206/2022-06-23_162605_029486.gif)
+      ![](https://www.ricear.com/media/202206/2022-06-23_162605_029486.gif)
 
 ### 1.3 参考代码
 
@@ -4343,7 +4343,7 @@ public ListNode reverseList(ListNode head) {
 
 **示例 1：**
 
-![](https://notebook.grayson.top/media/202206/2022-06-23_193822_198011.png)
+![](https://www.ricear.com/media/202206/2022-06-23_193822_198011.png)
 
 ```txt
 输入：head = [1,2,3,4,5], left = 2, right = 4
@@ -4371,15 +4371,15 @@ public ListNode reverseList(ListNode head) {
 1. 假设**以 `head` 为基点**，反转链表的一部分对应的函数为 `reverseBetween(head, m, n)`，则如果**以 `head.next` 为基点的话**，反转链表的一部分对应的函数为 `reverseBetween(head.next, m - 1, n - 1)`，因此当**m 减小到 1**时，可以转化为**反转链表的前 $N$ 个节点**，假设其对应的函数为 `reverseN(head, n)`，因此当我们**求出反转链表的前 $N$ 个节点后的链表**，然后**与开始反转的节点之前的一部分链表进行拼接便可得到最后的结果**，因此我们现在的重点就是求**反转链表的前 $N$ 个节点**：
 
    1. 反转前 $N$ 个节点与反转整个链表类似，不同的是**反转整个链表中最后作为尾节点的 $head$ 节点指向空节点**，而**反转链表前 $N$ 个节点最后作为局部尾节点的 $head$ 节点需要指向 $N + 1$ 个节点**。
-      ![](https://notebook.grayson.top/media/202206/2022-06-23_200107_440593.png)
+      ![](https://www.ricear.com/media/202206/2022-06-23_200107_440593.png)
    2. 当 `reverse(head, n)` 中的 `n = 1` 时，此时 `head` 指向要**反转节点的最后一个节点**（这里指的是 4），因此后继节点 `sucessor` 等于 `head.next`，此时直接返回 `head` 即可。
 
       > 需要注意的是 `sucessor` 需要定义为**全局变量**，而不能放在 `reverseN()` 方法内部。
       >
    3. 反转链表的前 $N$ 个节点的详细解法如下图所示。
-      ![](https://notebook.grayson.top/media/202206/2022-06-24_091709_683306.gif)
+      ![](https://www.ricear.com/media/202206/2022-06-24_091709_683306.gif)
 2. 反转链表的一部分的详细解法如下图所示。
-   ![](https://notebook.grayson.top/media/202206/2022-06-24_092119_624442.gif)
+   ![](https://www.ricear.com/media/202206/2022-06-24_092119_624442.gif)
 
 ### 2.3 参考代码
 
@@ -4471,25 +4471,25 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
       >
 
       1. 第一组反转前：
-         ![](https://notebook.grayson.top/media/202206/2022-06-24_113834_193774.png)
+         ![](https://www.ricear.com/media/202206/2022-06-24_113834_193774.png)
       2. 第一组反转后：
-         ![](https://notebook.grayson.top/media/202206/2022-06-24_113912_678097.png)
+         ![](https://www.ricear.com/media/202206/2022-06-24_113912_678097.png)
       3. 第二组反转前：
-         ![](https://notebook.grayson.top/media/202206/2022-06-24_113936_639374.png)
+         ![](https://www.ricear.com/media/202206/2022-06-24_113936_639374.png)
       4. 第二组反转后：
-         ![](https://notebook.grayson.top/media/202206/2022-06-24_114004_224175.png)
+         ![](https://www.ricear.com/media/202206/2022-06-24_114004_224175.png)
       5. 第三组反转前：
-         ![](https://notebook.grayson.top/media/202206/2022-06-24_114032_804868.png)
+         ![](https://www.ricear.com/media/202206/2022-06-24_114032_804868.png)
       6. 第三组反转后：
-         ![](https://notebook.grayson.top/media/202206/2022-06-24_114053_194534.png)
+         ![](https://www.ricear.com/media/202206/2022-06-24_114053_194534.png)
       7. 最终结果：
 
          > 最终结果返回第一层的 $target$，即 $target_1$。
          >
 
-         ![](https://notebook.grayson.top/media/202206/2022-06-24_114258_385866.png)
+         ![](https://www.ricear.com/media/202206/2022-06-24_114258_385866.png)
    4. 反转的详细步骤如下图所示。
-      ![](https://notebook.grayson.top/media/202206/2022-06-24_114835_395136.gif)
+      ![](https://www.ricear.com/media/202206/2022-06-24_114835_395136.gif)
 
 ### 3.3 参考代码
 
@@ -4715,7 +4715,7 @@ public ListNode getIntersectionNodeV2(ListNode headA, ListNode headB) {
 
 **示例 1：**
 
-![](https://notebook.grayson.top/media/202206/2022-06-25_110320_875719.png)
+![](https://www.ricear.com/media/202206/2022-06-25_110320_875719.png)
 
 ```txt
 输入：l1 = [1,2,4], l2 = [1,3,4]
@@ -4745,14 +4745,14 @@ public ListNode getIntersectionNodeV2(ListNode headA, ListNode headB) {
 ### 1.2 问题解析
 
 1. 解答此题时可以定义一个**头结点** `head`，头结点对应的 `val`**可以自定义**，因为后面返回最后结果时是从头结点的下一个节点开始，即 `head.next`，因此头结点的值对最终结果没有影响，同时定义一个**临时指针** `p`，用来**连接后面的节点**，其中 `p` 开始的时候**指向** `head`，即 `p = head`。
-   ![](https://notebook.grayson.top/media/202206/2022-06-25_114548_778589.png)
+   ![](https://www.ricear.com/media/202206/2022-06-25_114548_778589.png)
 2. 然后比较两个链表各自当前节点的值 `list1.val` 和 `list2.val`：
    1. 如果 `list1.val`**小于等于** `list2.val`，则**将 `p` 指向节点的指针指向** `list1`，同时**将 `p` 指向** `list1`，然后**将 `list1` 指向下一个节点**，即 `p.next = list1; p = list1; list1 = list1.next; `
-      ![](https://notebook.grayson.top/media/202206/2022-06-25_114807_951268.gif)
+      ![](https://www.ricear.com/media/202206/2022-06-25_114807_951268.gif)
    2. 如果 `list1.val`**大于** `list2.val`，则**将 `p` 指向节点的指针指向** `list2`，同时**将 `p` 指向** `list2`，然后**将 `list2` 指向下一个节点**，即 `p.next = list2; p = list2; list2 = list2.next; `
-      ![](https://notebook.grayson.top/media/202206/2022-06-25_115009_838082.gif)
+      ![](https://www.ricear.com/media/202206/2022-06-25_115009_838082.gif)
 3. 最后将 `list1` 和 `list2` 中**不为空的部分链接到前面已经合并后的链表**：
-   ![](https://notebook.grayson.top/media/202206/2022-06-25_115347_100070.gif)
+   ![](https://www.ricear.com/media/202206/2022-06-25_115347_100070.gif)
 
 ### 1.3 参考代码
 
@@ -4848,7 +4848,7 @@ public ListNode merge(ListNode list1,ListNode list2) {
    1. 从链表数组的**首**和**尾**开始，每次划分**从中间开始划分**，**划分成两半**，得到**左边**$\frac{n}{2}$**个链表**和**右边**$\frac{n}{2}$**个链表**。
    2. 继续不断**递归划分**，直到**每部分链表数为 1**。
    3. **将划分好的相邻两部分链表**，**按照合并两个有序链表的方式合并**，**合并好的两部分继续往上合并**，**直到最终合并成一个链表**。
-      ![](https://notebook.grayson.top/media/202206/2022-06-26_122419_605515.gif)
+      ![](https://www.ricear.com/media/202206/2022-06-26_122419_605515.gif)
 
 ### 2.3 参考代码
 
@@ -5156,7 +5156,7 @@ public class SimpleSelectionSort {
 
 1. 冒泡排序的基本思想是**对相邻的元素进行两两比较，顺序相反则进行交换，这样，每一趟会将最小（最大）的元素浮到顶端，最终达到完全有序**。
 
-![](https://notebook.grayson.top/media/202105/2021-05-04_183505.png)
+![](https://www.ricear.com/media/202105/2021-05-04_183505.png)
 
 ### 2.2 参考代码
 
@@ -5207,7 +5207,7 @@ public class BubbleSort {
 
 1. 直接插入排序算法的基本思想是**每一步将一个待排序的记录，插入到前面已经排好序的有序序列中去，直到插完所有元素为止**。
 
-![](https://notebook.grayson.top/media/202105/2021-05-04_195701.png)
+![](https://www.ricear.com/media/202105/2021-05-04_195701.png)
 
 ### 3.2 参考代码
 
@@ -5342,7 +5342,7 @@ public class ShellSort {
    3. **对左右两个分区重复以上的步骤直到所有元素都是有序的**。
 3. 快速排序算法的具体过程如下图：
    
-   ![](https://notebook.grayson.top/media/202206/2022-06-27_110211_290113.gif)
+   ![](https://www.ricear.com/media/202206/2022-06-27_110211_290113.gif)
 
 ### 5.2 参考代码
 
@@ -5416,7 +5416,7 @@ public class QuickSort {
 1. 快速排序的思想就是**找一个 `pivot`**，**把小于 `pivot` 分在一边**，**大于等于 `pivot` 的分在另一边**。
 2. 这个过程也叫做 `partition` 分区，数组的分区很好做，左右两个指针，不断交换就可以了，链表因为只能单向遍历，所以要换一种 `partition` 方法，目的是**使得左边的值都小于 `pivot`**，**右边的值都不小于 `pivot`**，所以**用一个索引记录左边的坐标**，**遍历过程中**，**每次碰到比 `pivot` 小的**，**都要交换一下**，**放到左边**，**遍历完成后**，**再把 `pivot` 放到中间来**，**这样就达成了目的**。
    
-   ![](https://notebook.grayson.top/media/202206/2022-06-27_170430_826067.gif)
+   ![](https://www.ricear.com/media/202206/2022-06-27_170430_826067.gif)
 
 ###### 5.5.1.1.2 参考代码
 
@@ -5549,7 +5549,7 @@ public class QuickSort {
 1. 堆是具有以下性质的完全二叉树：
    1. **每个节点的值都大于或等于其左右孩子节点的值，称为大顶堆**。
    2. **每个节点的值都小于或等于其左右孩子节点的值，称为小顶堆**。
-      ![](https://notebook.grayson.top/media/202105/2021-05-05_203837.png)
+      ![](https://www.ricear.com/media/202105/2021-05-05_203837.png)
 2. 堆排序的基本思想为：
    1. **将待排序序列构造成一个大顶堆**（构造大顶堆的时候选取的初始值为**最后一个非叶子节点**），此时，整个序列的**最大**值就是**堆顶的根节点**。
    2. 将**堆顶的根节点与末尾元素进行交换**，此时**末尾元素就是最大值**。
@@ -5697,7 +5697,7 @@ public int findKthLargestV2(int[] nums, int k) {
    2. **$B$ 保存较小的一半**，**长度为 $\frac{N}2$**（$N$ 为偶数）**或 $\frac{N - 1}2$**（$N$ 为奇数）。
 2. 随后，**中位数可仅根据 $A、B$ 的堆顶元素计算得到**：
    
-   ![Picture1.png](https://notebook.grayson.top/media/202202/2022-02-09_1419550.3791480604271996.png)
+   ![Picture1.png](https://www.ricear.com/media/202202/2022-02-09_1419550.3791480604271996.png)
 3. 算法流程如下：
    
    1. **设元素总数为 $N = m + n$**，**其中 $m$ 和 $n$ 分别为 $A$ 和 $B$ 中的元素个数**。
@@ -5754,13 +5754,13 @@ class MedianFinder {
 2. 该算法是采用**分治法**（Divide and Conquer）的一种非常典型的应用，且各层递归可以同时进行。
 3. 归并算法的具体过程如下（**分而治之**）：
 
-![](https://notebook.grayson.top/media/202105/2021-05-05_212356.png)
+![](https://www.ricear.com/media/202105/2021-05-05_212356.png)
 
 4. **合并相邻有序子序列**的方法：
 
-![](https://notebook.grayson.top/media/202105/2021-05-05_212635.png)
+![](https://www.ricear.com/media/202105/2021-05-05_212635.png)
 
-![](https://notebook.grayson.top/media/202105/2021-05-05_212646.png)
+![](https://www.ricear.com/media/202105/2021-05-05_212646.png)
 
 ### 7.2 参考代码
 
@@ -5837,7 +5837,7 @@ public class MergeSort {
 }
 ```
 
-### ![](https://notebook.grayson.top/media/202105/2021-05-06_191525.png)7.3 算法分析
+### ![](https://www.ricear.com/media/202105/2021-05-06_191525.png)7.3 算法分析
 
 1. 归并排序算法**在最好情况下和最坏情况下的时间复杂度均为 $O(nlog_2n)$，空间复杂度为 $O(n)$。**
 2. 归并排序算法是一种**稳定排序算法**，同时也是一种十分高效的排序算法，其速度仅次于快速排序。
@@ -5860,7 +5860,7 @@ public class MergeSort {
 2. **合并阶段本质上是合并两个排序数组的过程**，**而每当遇到 $ 左子数组当前元素 \gt 右子数组当前元素 $ 时**，**意味着 $ 左子数组当前元素至末尾元素 $ 与 $ 右子数组当前元素 $ 构成了若干逆序对**。
 3. **因此**，**考虑在归并排序的合并阶段统计逆序对数量**，**完成归并排序时**，**也随之完成所有逆序对的统计**。
    
-   ![Picture2.png](https://notebook.grayson.top/media/202202/2022-02-10_1954210.9101305560938778.png)
+   ![Picture2.png](https://www.ricear.com/media/202202/2022-02-10_1954210.9101305560938778.png)
 
 ##### 7.5.1.2 参考代码
 
@@ -5947,7 +5947,7 @@ public int merge(int[] arr, int left, int mid, int right, int[] temp, int res) {
 * **比较类排序：** 通过**比较**来决定**元素间的相对次序**，由于其**时间复杂度不能突破 $O(nlogn)$**，因此也称为**非线性时间比较类排序**。
 * **非比较类排序：不通过比较**来决定**元素间的相对次序**，他**可以突破基于比较排序的时间下界**，以线性时间运行，因此也称为**线性时间非比较类排序**。
 
-![](https://notebook.grayson.top/media/202105/2021-05-06_184235.png)
+![](https://www.ricear.com/media/202105/2021-05-06_184235.png)
 
 ### 8.2 算法复杂度
 
@@ -5956,7 +5956,7 @@ public int merge(int[] arr, int left, int mid, int right, int[] temp, int res) {
 * **时间复杂度：** 对排序数据的**总的操作次数**，反映当 `n` 变化时呈现什么规律。
 * **空间复杂度：** 指**算法在计算机内执行时所需存储空间的度量**，他也是数据规模 `n` 的函数。
 
-![](https://notebook.grayson.top/media/202105/2021-05-06_191453.png)
+![](https://www.ricear.com/media/202105/2021-05-06_191453.png)
 
 #### 8.2.1 稳定性
 
@@ -6097,7 +6097,7 @@ public void postOrderRecur(TreeNode head) {
    2. 如果 $node$ 的右子树不为空，则将其对应的右子树 $node.right$ 入栈。
    3. 如果 $node$ 的左子树不为空，则将其对应的左子树 $node.right$ 入栈。
 
-![](https://notebook.grayson.top/media/202106/前序遍历（迭代解法）_1623760901.gif)
+![](https://www.ricear.com/media/202106/前序遍历（迭代解法）_1623760901.gif)
 
 ```java
 /**
@@ -6141,7 +6141,7 @@ public void preOrderInter(TreeNode head) {
    2. 弹出栈中的节点 $node$，并输出弹出节点的值 $node.val$。
    3. 如果 $node$ 的右子树不为空，则令 $cur=cur.right$。
 
-![](https://notebook.grayson.top/media/202106/中序遍历（迭代解法）_1623761272.gif)
+![](https://www.ricear.com/media/202106/中序遍历（迭代解法）_1623761272.gif)
 
 ```java
 /**
@@ -6263,7 +6263,7 @@ public void levelOrderInterV1(TreeNode head) {
       3. 如果 $node$ 的左子树不为空，则将其对应的左子树 $node.left$ 加入队列。
    2. 将 $tempRes$ 添加到中 $res$。
 
-![](https://notebook.grayson.top/media/202106/层序遍历（迭代解法：输出二维数组）_1623762105.gif)
+![](https://www.ricear.com/media/202106/层序遍历（迭代解法：输出二维数组）_1623762105.gif)
 
 ```java
 /**
@@ -6459,7 +6459,7 @@ public TreeNode invertTreeV2(TreeNode root) {
    2. **随后 $left$ 左移时**，$right$**右移**，$left$**右移时**，**$right$ 左移**。
    3. **每次检查当前 $left$ 和 $right$ 节点的值是否相等**，**如果相等再判断左右子树是否对称**。
 
-   ![](https://notebook.grayson.top/media/202108/2021-08-05_223219.png)
+   ![](https://www.ricear.com/media/202108/2021-08-05_223219.png)
 
 #### 2.2.2 参考代码
 
@@ -6683,8 +6683,8 @@ public int kthLargest(TreeNode root, int k) {
 
 #### 2.6.1 问题分析
 
-1. 这一类问题是**在一棵隐式的树上求解**，**一般用**[深度优先遍历](https://notebook.grayson.top/project-21/doc-724/#1-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)**来解决**。
-2. 我们以 $n = 2$ 为例，画树形结构图，方法是**做减法**。![](https://notebook.grayson.top/media/202111/2021-11-13_2156250.32776863153577696.png)
+1. 这一类问题是**在一棵隐式的树上求解**，**一般用**[深度优先遍历](https://www.ricear.com/project-21/doc-724/#1-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)**来解决**。
+2. 我们以 $n = 2$ 为例，画树形结构图，方法是**做减法**。![](https://www.ricear.com/media/202111/2021-11-13_2156250.32776863153577696.png)
    通过上图，我们可以得出如下结论：
    1. **当前左右括号的剩余个数都大于 0 时**，**才会产生分支**。
    2. **产生左分支的时候**，**只看当前是否还有左括号可以使用**。
@@ -6838,18 +6838,18 @@ public int widthOfBinaryTree(TreeNode root) {
 
 #### 2.9.1 问题分析
 
-1. 这道题目可以采用[深度优先遍历](https://notebook.grayson.top/project-21/doc-724/#1-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)的方法来求解：
+1. 这道题目可以采用[深度优先遍历](https://www.ricear.com/project-21/doc-724/#1-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)的方法来求解：
    1. **序列化**：
       1. **递归遍历一棵树**，**重点关注当前节点**，**他的子树的遍历交给递归来完成**，即 `serialize`**函数**，**你帮我分别序列化我的左右子树**，**我等你返回的结果**，**再拼接一下**。
       2. **选择前序遍历**，**是因为 $ 根 \rightarrow 左 \rightarrow 右 $ 的打印顺序**，**在反序列化时更容易定位出根节点的值**。
-      3. **遇到 `null` 节点也要翻译成特定符号**，**反序列化时才知道这里是 `null`**。![image.png](https://notebook.grayson.top/media/202201/2022-01-09_1736130.3886432153851599.png)
+      3. **遇到 `null` 节点也要翻译成特定符号**，**反序列化时才知道这里是 `null`**。![image.png](https://www.ricear.com/media/202201/2022-01-09_1736130.3886432153851599.png)
    2. **反序列化**：
       1. **反序列化一样**，**也是递归**。
-      2. **前序遍历的序列化字符串**，**如下图所示**：![image.png](https://notebook.grayson.top/media/202201/2022-01-09_1738130.8641382032786079.png)
+      2. **前序遍历的序列化字符串**，**如下图所示**：![image.png](https://www.ricear.com/media/202201/2022-01-09_1738130.8641382032786079.png)
       3. **我们可以定义函数 `buildTree()` 用于还原二叉树**，**传入由序列化字符串转成的数组 $arr$**。
       4. **然后逐个遍历 $arr$ 中的元素**，**构建当前子树的根节点**，**顺着 $arr$**，**构建顺序是根节点**、**左子树**、**右子树**：
          1. **如果当前遍历的字符为 `X`**，**则返回 `null` 节点**。
-         2. **如果弹出的字符是数字**，**则创建 `root` 节点**，**并递归构建 `root` 的左右子树**，**最后返回 `root`**。![image.png](https://notebook.grayson.top/media/202201/2022-01-09_1743510.06430358234861278.png)
+         2. **如果弹出的字符是数字**，**则创建 `root` 节点**，**并递归构建 `root` 的左右子树**，**最后返回 `root`**。![image.png](https://www.ricear.com/media/202201/2022-01-09_1743510.06430358234861278.png)
 
 #### 2.9.2 参考代码
 
@@ -6915,7 +6915,7 @@ public TreeNode deserialize(String data) {
 
 #### 2.10.1 问题分析
 
-1. 这道题目可以采用[深度优先遍历](https://notebook.grayson.top/project-21/doc-724/#1-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)的方法来求解：
+1. 这道题目可以采用[深度优先遍历](https://www.ricear.com/project-21/doc-724/#1-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)的方法来求解：
    1. 如果**两棵树的顶点相同**，则**分别判断两棵树对应的左子树和右子树是否相同**。
    2. 如果**两棵树的顶点不相同**，则**分别判断 $B$ 是否为 $A$ 的左子树或右子树的子结构**。
 
@@ -7024,7 +7024,7 @@ public int height(TreeNode root) {
       1. 如果 $res$ 中第 $i$ 个元素等于 $res2$ 中第 $res2.size()-size+i$ 个元素，则返回 $res$ 的第 $i$ 个元素。
 5. 如果上面的条件都不成立，则最后返回 $null$。
 
-![](https://notebook.grayson.top/media/202106/236-二叉树的最近公共祖先（解法一：前序遍历）_1624369019.gif)
+![](https://www.ricear.com/media/202106/236-二叉树的最近公共祖先（解法一：前序遍历）_1624369019.gif)
 
 #### 2.12.2 参考代码
 
@@ -7155,7 +7155,7 @@ public void dfs (TreeNode root, int num1, int num2, ArrayList<TreeNode> list1, A
 
 ### 3.1 基本结构
 
-1. 网格结构要比二叉树结构稍微复杂一些，他其实是一种**简化版的图结构**，要写好网格上的 DFS 遍历，我们首先要理解二叉树上的 DFS 遍历方法，再类比写出网格结构上的 DFS 遍历，我们写的[二叉树 DFS 遍历](https://notebook.grayson.top/project-21/doc-724/#1-1-1-%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86)一般是这样的：
+1. 网格结构要比二叉树结构稍微复杂一些，他其实是一种**简化版的图结构**，要写好网格上的 DFS 遍历，我们首先要理解二叉树上的 DFS 遍历方法，再类比写出网格结构上的 DFS 遍历，我们写的[二叉树 DFS 遍历](https://www.ricear.com/project-21/doc-724/#1-1-1-%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86)一般是这样的：
 
    ```java
    void traverse(TreeNode root) {
@@ -8027,12 +8027,12 @@ public int movingCount(int m, int n, int k) {
 #### 1.1.1 概述
 
 1. 自顶向下就是**从某一个节点**（不一定是根节点）**出发**，**从上向下寻找路径**，**到某一个节点**（不一定是叶节点）**结束**，继续细分的话，还可以分为**一般路径**和**定和路径**。
-2. 这类题**通常用**[**深度优先搜索**](https://notebook.grayson.top/project-21/doc-724/#1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)（DFS）和[**广度优先搜索**](https://notebook.grayson.top/project-21/doc-724/#2-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)（BFS）解决，BFS 一般比 DFS 更为繁琐，这里为了简洁只展现 DFS 代码。
+2. 这类题**通常用**[**深度优先搜索**](https://www.ricear.com/project-21/doc-724/#1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)（DFS）和[**广度优先搜索**](https://www.ricear.com/project-21/doc-724/#2-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95)（BFS）解决，BFS 一般比 DFS 更为繁琐，这里为了简洁只展现 DFS 代码。
 3. 这类题型需要注意以下几点：
    1. 如果是**找路径和等于给定 $target$ 的路径**的，那么**可以不用新增一个临时变量来判断当前路径和**，**只需要用给定和 $target$ 减去节点值**，**最终结束条件判断 $target == 0$ 即可**。
    2. **二叉树的问题大部分是不需要回溯的**，因为：
       1. **二叉树的递归部分**（`dfs(root -> left)`、`dfs(root -> right)`）**已经把可能的路径穷尽了**，因此**到任意节点的路径只可能有一条**，绝对**不可能出现另外的路径也到这个满足条件的叶节点的**。
-      2. **而对比二维数组**（例如[岛屿问题](https://notebook.grayson.top/project-21/doc-751)）**的 DFS**，`for`**循环向四个方向查找每次只能朝向一个方向**，并**没有穷尽路径**，因此**某一个满足条件的点可能是多条路径到该点的**，并且 `visited`**数组标记已经走过的路径是会受到另外路径是否访问的影响**，这时候**必须回溯**。
+      2. **而对比二维数组**（例如[岛屿问题](https://www.ricear.com/project-21/doc-751)）**的 DFS**，`for`**循环向四个方向查找每次只能朝向一个方向**，并**没有穷尽路径**，因此**某一个满足条件的点可能是多条路径到该点的**，并且 `visited`**数组标记已经走过的路径是会受到另外路径是否访问的影响**，这时候**必须回溯**。
    3. **至于找到路径后是否需要 `return`**，这**取决于是否要求找到叶节点满足条件的路径**：
       1. 如果**必须找到叶节点**，那么**就要 `return`**。
       2. 如果是**到任意节点都可以**，那么必**不能 `return`**，因为**这条路径下面还可能有更深的路径满足条件**，**还要在此基础上继续递归**。
@@ -9356,7 +9356,7 @@ n 皇后问题 研究的是如何将 n 个皇后放置在 n×n 的棋盘上，�
 
 #### 2.1.1 问题分析
 
-1. N 皇后的问题本质上跟[全排列](https://notebook.grayson.top/project-21/doc-738)问题差不多，决策树的每一层表示棋盘的每一行，每个节点可以做出的选择是在该行的任意一列放置一个皇后。
+1. N 皇后的问题本质上跟[全排列](https://www.ricear.com/project-21/doc-738)问题差不多，决策树的每一层表示棋盘的每一行，每个节点可以做出的选择是在该行的任意一列放置一个皇后。
 2. 函数 `backtrack` 依然像个在决策树上游走的指针，通过 `row` 和 `col` 就可以表示函数遍历到的位置，通过 `isValid` 函数可以将不符合条件的情况进行剪枝。![](../../media/202106/2021-06-27_195120.png)
 
 #### 2.1.2 参考代码
@@ -11743,7 +11743,7 @@ public String removeDuplicateLetters(String s) {
    3. 以题目中的 $nums_1 = [3, 4, 5, 6] \space nums_2 = [9, 1, 2, 5, 8, 3] \space k = 5$ 为例：
       1. 假如我们从 $nums_1$ 中取出 1 个数字，那么就要从 $nums_2$ 中取出 4 个数字。
       2. 运用[移掉 K 位数字](#2-问题分析)中的方法，我们计算出应该取 $nums_1$ 中的 $[6]$，并取 $nums_2$ 中的 $[9, 5, 8, 3]$。
-      3. 如何将 $[6]$ 和 $[9, 5, 8, 3]$ 合并，使得数字尽可能大，并且保持相对位置不变呢，实际上这个过程有点类似[归并排序](https://notebook.grayson.top/project-21/doc-872/#7-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)中的治，而上面我们分别计算 $nums_1$ 和 $nums_2$ 的最大数的过程类似[归并排序](https://notebook.grayson.top/project-21/doc-872/#7-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)中的分。
+      3. 如何将 $[6]$ 和 $[9, 5, 8, 3]$ 合并，使得数字尽可能大，并且保持相对位置不变呢，实际上这个过程有点类似[归并排序](https://www.ricear.com/project-21/doc-872/#7-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)中的治，而上面我们分别计算 $nums_1$ 和 $nums_2$ 的最大数的过程类似[归并排序](https://www.ricear.com/project-21/doc-872/#7-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)中的分。
 
          ![](../../media/202202/2022-02-07_2219140.1347819552753512.png)
 
@@ -12954,18 +12954,18 @@ public int singleNumber(int[] nums) {
 5. 具体的算法流程如下：
    1. **先对所有数字进行一次异或**，**得到两个出现一次的数字的异或值**。
 
-      ![](https://notebook.grayson.top/media/202206/2022-06-17_1244000.7151189598650409.png)
+      ![](https://www.ricear.com/media/202206/2022-06-17_1244000.7151189598650409.png)
    2. **在异或结果中找到任意为 1 的位**。
 
-      ![](https://notebook.grayson.top/media/202206/2022-06-17_1244000.7409195606915164.png)
+      ![](https://www.ricear.com/media/202206/2022-06-17_1244000.7409195606915164.png)
    3. **根据这一位对所有的数字进行分组**。
 
-      ![](https://notebook.grayson.top/media/202206/2022-06-17_1244000.43883575248146134.png)
+      ![](https://www.ricear.com/media/202206/2022-06-17_1244000.43883575248146134.png)
    4. **在每个组内进行异或操作**，**得到两个数字**。
 
-      ![](https://notebook.grayson.top/media/202206/2022-06-17_1244000.07782610698793824.png)
+      ![](https://www.ricear.com/media/202206/2022-06-17_1244000.07782610698793824.png)
 
-      ![](https://notebook.grayson.top/media/202206/2022-06-17_1244000.14969172472009196.png)
+      ![](https://www.ricear.com/media/202206/2022-06-17_1244000.14969172472009196.png)
 
 #### 4.1.2 参考代码
 
@@ -13002,7 +13002,7 @@ public int[] singleNumbers(int[] nums) {
 
 1. 如下图所示，考虑数字的二进制形式，**对于出现三次的数字**，**各二进制位出现的次数都是 3 的倍数**，因此，**统计所有数字的各二进制位中 1 的出现次数**，**并对 3 求余**，**结果则为只出现一次的数字**。
 
-   ![Picture1.png](https://notebook.grayson.top/media/202206/2022-06-17_1244000.9936426449792627.png)
+   ![Picture1.png](https://www.ricear.com/media/202206/2022-06-17_1244000.9936426449792627.png)
 2. **各二进制位的位运算规则相同**，因此**只需考虑一位即可**，如下图所示，**对于所有数字中的某二进制位 1 的个数**，**存在 3 种状态**，**即对 3 余数为 0**、**1**、**2**：
 
    1. 若**输入二进制位为 0**，则**状态不变**。
@@ -13012,14 +13012,14 @@ public int[] singleNumbers(int[] nums) {
       0 \rightarrow 1 \rightarrow 2 \rightarrow 0 \rightarrow \cdots
       $$
 
-      ![Picture2.png](https://notebook.grayson.top/media/202206/2022-06-17_1244000.01575213023832789.png)
+      ![Picture2.png](https://www.ricear.com/media/202206/2022-06-17_1244000.01575213023832789.png)
 3. **由于二进制只能表示 0**、**1**，**因此需要使用两个二进制位来表示 3 个状态**，**设此两位分别为 $two$**、$one$，**则状态转换变为**：
 
    $$
    00 \rightarrow 01 \rightarrow 10 \rightarrow 00 \rightarrow \cdots
    $$
 
-   ![Picture3.png](https://notebook.grayson.top/media/202206/2022-06-17_1244000.0067849883704458325.png)
+   ![Picture3.png](https://www.ricear.com/media/202206/2022-06-17_1244000.0067849883704458325.png)
 4. 接下来，**需要通过状态转换表导出状态转换的计算公式**：
 
    1. 首先回忆一下位运算特点，**对于任意二进制位 $x$**，有：
@@ -13056,14 +13056,14 @@ public int[] singleNumbers(int[] nums) {
          one = one\; \wedge\; n\; \&\; ~two
          $$
 
-         ![Picture4.png](https://notebook.grayson.top/media/202206/2022-06-17_1244000.20137094576475434.png)
+         ![Picture4.png](https://www.ricear.com/media/202206/2022-06-17_1244000.20137094576475434.png)
    3. **计算 $two$ 方法**：
 
       $$
       two = two\; \wedge\; n\; \&\; ~one
       $$
 
-      ![Picture5.png](https://notebook.grayson.top/media/202206/2022-06-17_1244010.5028293466336148.png)
+      ![Picture5.png](https://www.ricear.com/media/202206/2022-06-17_1244010.5028293466336148.png)
    4. **返回值**：
 
       1. **以上是对数字的二进制中一位的分析**，**而 `int` 类型的其他 31 位具有相同的运算规则**，**因此可将以上公式直接套用在 32 位数上**。
@@ -13148,7 +13148,7 @@ public int singleNumber(int[] nums) {
    4. 将 $ 12 \% 10 $ 得到 2，之后将 $ 12 / 10$。
    5. 将 $ 1 \% 10 $ 得到 1，之后将 $ 1 / 10$。
       
-      ![1.jpg](https://notebook.grayson.top/media/202201/2022-01-15_1643490.28884188943836187.png)
+      ![1.jpg](https://www.ricear.com/media/202201/2022-01-15_1643490.28884188943836187.png)
 3. 因为要**考虑负数**，**所以上述循环的判断条件是 $x != 0$**。
 4. 同时因为【假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 `[−2^31,  2^31 − 1]`】，所以我们**不能用 `long` 存储最终结果**，而且**有些数字可能是合法范围内的数字**，但是**翻转过来就可能超过范围了**，例如 1147483649，本身是小于最大的 32 位整数 2147483647 的，但是将这个数字反转过来后就变成了 9463847411，这就比最大的 32 位整数还要大了，这样的数字没法存到 `int` 里，所以肯定要返回 0（溢出了），所以我们需要**在反转的过程中不断判断反转的临时结果 $res$ 是否溢出**，**如果溢出的话**，**直接返回 0**，具体判断规则如下：
    1. $res > 214748364 || (res == 214748364 \&\& temp > 7)$，即 $res$ 大于最大的 32 位整数。
@@ -13156,9 +13156,9 @@ public int singleNumber(int[] nums) {
       
       > 注：$temp = x % 10$，即每次取的末尾数字。
       
-      ![2.jpg](https://notebook.grayson.top/media/202201/2022-01-15_1650070.6591399192263269.png)
+      ![2.jpg](https://www.ricear.com/media/202201/2022-01-15_1650070.6591399192263269.png)
       
-      ![3.jpg](https://notebook.grayson.top/media/202201/2022-01-15_1650170.16949562176053135.png)
+      ![3.jpg](https://www.ricear.com/media/202201/2022-01-15_1650170.16949562176053135.png)
 
 ## 3 参考代码
 
@@ -13721,7 +13721,7 @@ public int findNthDigit(int n) {
 
    ![Picture1.png](/media/202202/2022-02-10_1542480.9788386990040487.png)
 5. **可设置指针 $a, b, c$ 指向首个丑数**（即 1），**循环根据递推公式得到下个丑数**，**并每轮将对应指针执行 +1 即可**。
-6. 因此，可采用[动态规划](https://notebook.grayson.top/project-21/doc-87)的方法来解，具体过程如下：
+6. 因此，可采用[动态规划](https://www.ricear.com/project-21/doc-87)的方法来解，具体过程如下：
 
    1. **状态定义**：
 
@@ -14096,7 +14096,7 @@ lRUCache.get(4);    // 返回 4
 
 ## 2 解题思路
 
-> LRU 缓存机制的原理详见[最近最少使用法](https://notebook.grayson.top/project-26/doc-342/#2-5-%E6%9C%80%E8%BF%91%E6%9C%80%E5%B0%91%E4%BD%BF%E7%94%A8%E6%B3%95-Least-Recently-Used--LRU-)。
+> LRU 缓存机制的原理详见[最近最少使用法](https://www.ricear.com/project-26/doc-342/#2-5-%E6%9C%80%E8%BF%91%E6%9C%80%E5%B0%91%E4%BD%BF%E7%94%A8%E6%B3%95-Least-Recently-Used--LRU-)。
 
 ### 2.1 双向链表
 
@@ -14371,7 +14371,7 @@ class LRUCache {
 
 ###### 2.1.3.2.1 问题解析
 
-> LRU 的超时自动删除策略可以参考 Reis 的[过期键删除策略](https://notebook.grayson.top/project-37/doc-812/#1-2-%E8%BF%87%E6%9C%9F%E9%94%AE%E5%88%A0%E9%99%A4%E7%AD%96%E7%95%A5)。
+> LRU 的超时自动删除策略可以参考 Reis 的[过期键删除策略](https://www.ricear.com/project-37/doc-812/#1-2-%E8%BF%87%E6%9C%9F%E9%94%AE%E5%88%A0%E9%99%A4%E7%AD%96%E7%95%A5)。
 
 1. 可以使用一个**定时器线程池**来实现 LRU 的超时自动删除功能，**当添加一个元素时**，**同时将该元素及其对应的超时时间添加到定时器线程池中**，**然后当达到了超时时间时**，**定时器线程自动将该元素从 LRU 缓存中移除**。
 
@@ -14836,7 +14836,7 @@ public class SuperPow {
 
 由于涉及到查找元素，所以我们可以考虑使用二分查找法来判断矩阵中是否含有目标元素，具体如下：
 
-1. 通过[寻找左侧边界的二分查找法](http://notebook.grayson.top/project-21/doc-90)找到不大于目标元素的一行。
+1. 通过[寻找左侧边界的二分查找法](http://www.ricear.com/project-21/doc-90)找到不大于目标元素的一行。
 2. 然后在该行中通过二分查找法判断这一行中是否含有目标元素。
 
 #### 2.2.2 参考代码
@@ -18407,7 +18407,7 @@ class MyQueue {
 
 对于这种问题，我们不要想整体，而应该去想局部。这么一想，可以发现这道题的思路其实很简单。具体来说，仅仅对于位置 `i`，能装下能装 2 格水。
 
-![](http://notebook.grayson.top/media/202103/2021-03-22_161714.png)
+![](http://www.ricear.com/media/202103/2021-03-22_161714.png)
 
 这是因为位置 `i` 能达到的水柱高度和其左边的最高柱子、右边的最高柱子有关，假设这两个柱子的高度分别为 `leftMax` 和 `rightMax`，则位置 `i` 的水柱高度为：
 
@@ -19283,7 +19283,7 @@ lfu.get(4);      // 返回 4
 
 1. 首先理解题意：
    1. 当**缓存满的时候**，**需要删除元素**，**具体删除哪些元素**，**由具体的缓存策略来控制**，主要有下面两种缓存策略：
-      1. [**LRU**](https://notebook.grayson.top/project-21/doc-329)（Least Recently Used）（**看时间**）：
+      1. [**LRU**](https://www.ricear.com/project-21/doc-329)（Least Recently Used）（**看时间**）：
          1. **在缓存满的时候**，**删除缓存里最久未使用的数据**，**然后再放入新元素**。
          2. **数据的访问时间很重要**，**访问时间距离现在越近**，**就越不容易被删除**。
          3. 该种策略就是**喜新厌旧**，**淘汰在缓存里待的时间最久的元素**，**在删除元素的时候**，**只看时间这一维度**。
