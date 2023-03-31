@@ -2994,7 +2994,7 @@ def download_doc_md(request,doc_id):
 
     response = HttpResponse(content_type='text/plain')
     response['Content-Disposition'] = 'attachment; filename={}.md'.format(doc.name)
-    response.write("> 文档来源：[{}](https://www.ricear.com/project-{}/doc-{})。 \n\n {}".format(doc.name, doc.top_doc, doc_id, doc.pre_content.replace(settings.DOMAIN + '/media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
+    response.write("> 文档来源：[{}](https://notebook.ricear.com/project-{}/doc-{})。 \n\n {}".format(doc.name, doc.top_doc, doc_id, doc.pre_content.replace(settings.DOMAIN + '/media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
 
     return response
 
