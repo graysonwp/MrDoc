@@ -321,9 +321,7 @@ def send_email_test(request):
     msg_to = send_emailer  # 收件人邮箱
     try:
         sitename = SysSetting.objects.get(types="basic", name="site_name").value
-        print(sitename)
-    except Exception as e:
-        print(e)
+    except:
         sitename = "MrDoc"
     subject = "{sitename} - 邮箱配置测试".format(sitename=sitename)
     content = "此邮件由管理员配置【{sitename}】邮箱信息时发出！".format(sitename=sitename)
