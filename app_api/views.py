@@ -503,7 +503,7 @@ def upload_img(request):
     ##################
     token = request.GET.get('token', '')
     base64_img = request.POST.get('data','')
-    print(base64_img)
+    logger.info(base64_img)
     try:
         # 验证Token
         token = UserToken.objects.get(token=token)
