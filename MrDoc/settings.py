@@ -262,7 +262,7 @@ else:
 
 # 跨域请求配置
 cors_str = CONFIG.get("cors_origin","allow",fallback=[])
-capacitor_origins = ['http://localhost','capacitor://localhost','172.17.0.3']
+capacitor_origins = ['http://localhost','capacitor://localhost']
 if cors_str == []:
     CORS_ALLOWED_ORIGINS = capacitor_origins
 else:
