@@ -1194,7 +1194,7 @@ def create_doc(request):
     elif request.method == 'POST':
         try:
             project = request.POST.get('project','') # 文集ID
-            parent_doc = request.POST.get('parent_doc','') # 上级文档ID
+            parent_doc = request.POST.get('parent_doc',0) # 上级文档ID
             doc_name = request.POST.get('doc_name','') # 文档标题
             doc_tags = request.POST.get('doc_tag','') # 文档标签
             doc_content = request.POST.get('content','') # 文档内容
