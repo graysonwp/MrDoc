@@ -7,6 +7,7 @@
 from django.utils.translation import gettext_lazy as _
 from django.conf import settings
 from email.mime.text import MIMEText
+from email.header import Header
 from app_admin.models import SysSetting
 from loguru import logger
 import random
@@ -35,6 +36,7 @@ def send_email(to_email,vcode_str):
         passwd = dectry(pwd)  # 发件人邮箱密码
         msg_to = to_email  # 收件人邮箱
         try:
+<<<<<<< HEAD
             sitename = SysSetting.objects.get(types="basic", name="site_name").value
         except:
             sitename = "MrDoc"
@@ -43,6 +45,16 @@ def send_email(to_email,vcode_str):
         msg = MIMEText(content, _subtype='html', _charset='utf-8')
         msg['Subject'] = subject
         msg['From'] = '{}[{}]'.format(sitename, msg_from)
+=======
+            sitename = SysSetting.objects.get(types="basic",name="site_name").value
+        except:
+            sitename = "MrDoc"
+        subject = "MrDoc - 重置密码验证码"
+        content = "你的验证码为：{}，验证码30分钟内有效！".format(vcode_str)
+        msg = MIMEText(content, _subtype='html', _charset='utf-8')
+        msg['Subject'] = subject
+        msg['From'] = Header(sitename,'utf-8').encode() + " <{}>".format(msg_from)
+>>>>>>> upstream/master
         msg['To'] = msg_to
         try:
             # print(smtp_host,smtp_port)
