@@ -17,8 +17,8 @@ tagCurrentDoc = function(){
     $("nav li a").each(function (i) {
         var $me = $(this);
         var lochref = $.trim(window.location.href); // 获取当前URL
-        var mehref = $.trim($me.get(0).href); 
-        if (lochref.indexOf(mehref) != -1) {
+        var mehref = $.trim($me.get(0).href);
+        if (lochref.split('/').at(-2).split('-').at(-1) == mehref.split('/').at(-2)) {
             // console.log($me,lochref,mehref)
             $me.closest("li").addClass("active");
             // 展开当前文档的下级目录
