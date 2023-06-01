@@ -18,7 +18,7 @@ from django.urls import path,include,re_path
 from django.views.static import serve
 from django.conf import settings
 from django.conf.urls import url
-from django.contrib.sitemaps import views
+from MrDoc import views
 from app_doc.sitemaps import SitemapAll
 from app_admin import views as admin_views
 
