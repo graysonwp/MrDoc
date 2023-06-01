@@ -72,7 +72,7 @@ def sitemap(request, sitemaps, section=None,
             raise Http404("No page '%s'" % page)
     response = TemplateResponse(request, template_name, {'urlset': urls},
                                 content_type=content_type)
-    response['X-Robots-Tag'] = None
+    del response['X-Robots-Tag']
     if all_sites_lastmod and lastmod is not None:
         # if lastmod is defined for all sites, set header so as
         # ConditionalGetMiddleware is able to send 304 NOT MODIFIED
