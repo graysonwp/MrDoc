@@ -20,9 +20,9 @@
 </p>
 
 <p align="center">
-<a href="https://doc.mrdoc.pro/project-7/">Installation Manual</a> | 
-<a href="https://doc.mrdoc.pro/project-54/">User Manual</a> |
-<a href="https://doc.mrdoc.pro/project-20/">Document Example</a>
+<a href="https://doc.mrdoc.pro/p/deploy/">Installation Manual</a> | 
+<a href="https://doc.mrdoc.pro/p/user-guide/">User Manual</a> |
+<a href="https://doc.mrdoc.pro/p/example/">Document Example</a>
 </p>
 
 
@@ -37,10 +37,10 @@
 
 Current Platform：
 
-- Web:[instructions](http://mrdoc.zmister.com/project-7/)；
-- Browser Extensions:Supported Chromium Browser,Firefox Browser [Download](https://gitee.com/zmister/mrdoc-webclipper)
-- Desktop: Supported Windows,macOS,Linux [Download](https://gitee.com/zmister/mrdoc-desktop-release/releases/)
-- Mobile APP:supportd Android [Download](https://gitee.com/zmister/mrdoc-app-release)
+- 🌐Web:[instructions](https://doc.mrdoc.pro/p/deploy/)；
+- 💻Browser Extensions:Supported Chromium Browser,Firefox Browser [Download](https://gitee.com/zmister/mrdoc-webclipper)
+- 🗔Desktop: Supported Windows,macOS,Linux [Download](https://gitee.com/zmister/mrdoc-desktop-release/releases/)
+- 📱Mobile APP:supportd Android [Download](https://gitee.com/zmister/mrdoc-app-release)
 
 ## Example Site
 
