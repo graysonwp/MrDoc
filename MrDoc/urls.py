@@ -17,8 +17,13 @@ from django.contrib import admin
 from django.urls import path,include,re_path
 from django.views.static import serve
 from django.conf import settings
+<<<<<<< HEAD
 from django.conf.urls import url
 from MrDoc import views
+=======
+from django.contrib.sitemaps import views
+from django.views.generic import TemplateView
+>>>>>>> upstream/master
 from app_doc.sitemaps import SitemapAll
 from app_admin import views as admin_views
 
@@ -44,6 +49,12 @@ if settings.SITEMAP:
         path('sitemap-<section>.xml', views.sitemap, {'sitemaps': sitemaps,'template_name':'sitemap/sitemap.xml'},
              name='django.contrib.sitemaps.views.sitemap'),  # 站点地图
     ])
+
+if settings.EXTEND_ROOT_TXT:
+    for filename in settings.EXTEND_ROOT_TXT:
+        urlpatterns.append(
+            path(filename,TemplateView.as_view(template_name=filename,content_type="text/plain")),  # 扩展媒体文件
+        )
 
 if settings.DEBUG:
     urlpatterns.append(
