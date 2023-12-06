@@ -270,8 +270,6 @@ else:
 
 # sitemap 站点地图
 SITEMAP = CONFIG.getboolean('sitemap','status',fallback=True)
-<<<<<<< HEAD
-=======
 
 # 自定义文本文件显示
 extend_root_txt = CONFIG.get("extend_root_txt","filename",fallback=[])
@@ -279,4 +277,3 @@ if extend_root_txt == []:
     EXTEND_ROOT_TXT = extend_root_txt
 else:
     EXTEND_ROOT_TXT = extend_root_txt.split(',')
->>>>>>> upstream/master

@@ -17,13 +17,10 @@ from django.contrib import admin
 from django.urls import path,include,re_path
 from django.views.static import serve
 from django.conf import settings
-<<<<<<< HEAD
 from django.conf.urls import url
 from MrDoc import views
-=======
 from django.contrib.sitemaps import views
 from django.views.generic import TemplateView
->>>>>>> upstream/master
 from app_doc.sitemaps import SitemapAll
 from app_admin import views as admin_views
 
