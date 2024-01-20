@@ -428,14 +428,6 @@ def create_project(request):
 @csrf_exempt
 def create_doc(request):
     token = request.GET.get('token', '')
-<<<<<<< HEAD
-    project_id = request.POST.get('pid','')
-    parent_doc = request.POST.get('parent_doc','')
-    doc_title = request.POST.get('title','')
-    doc_content = request.POST.get('doc','')
-    editor_mode = request.POST.get('editor_mode',1)
-    parent_doc = request.POST.get('parent_doc', 0)
-=======
     content_type = request.headers.get('Content-Type', '').lower()
     if 'json' in content_type:
         try:
@@ -453,7 +445,6 @@ def create_doc(request):
         doc_content = request.POST.get('doc', '')
         editor_mode = request.POST.get('editor_mode', 1)
         parent_doc = request.POST.get('parent_doc', 0)
->>>>>>> upstream/master
     try:
         # 验证Token
         token = UserToken.objects.get(token=token)
