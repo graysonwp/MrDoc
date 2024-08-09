@@ -78,6 +78,7 @@ class ReportMD():
         project_toc_list['project_role'] = self.project_data.role
         project_toc_list['toc'] = []
         # 读取指定文集的文档数据
+<<<<<<< HEAD
         data = Doc.objects.filter(top_doc=self.pro_id, parent_doc=0, status=1).order_by("sort")
         # 判断一级文件夹的个数，如果等于 1，则在项目文件夹的下一层新增一个以项目名为名称的文件夹，保证压缩后的文件解压缩时文件目录正确
         if len(data) == 1:
@@ -196,6 +197,37 @@ class ReportMD():
                                 files.write('{}\n{}'.format(extra_info, md_content_3.replace(settings.DOMAIN + '/media/', '/media/').replace('./media/', '/media/').replace('/media/', settings.DOMAIN + '/media/')))
                     top_item['children'].append(sec_item)
             project_toc_list['toc'].append(top_item)
+=======
+        data = Doc.objects.filter(
+            top_doc=self.pro_id,
+            status=1
+        ).order_by('sort', 'create_time').values(
+            'name', 'editor_mode', 'pre_content', 'content', 'parent_doc', 'id'
+        )
+        if data.count() == 0:
+            return None
+        out = {}
+        for p in data:
+            doc_pre_content = p['pre_content']
+            doc_content = p['content']
+            p['name'] = validate_title(p['name'])
+            p['file'] = '{}-{}.md'.format(validate_title(p['name']), p['id'])
+            del p['pre_content']
+            del p['content']
+            out.setdefault(p['parent_doc'], {'children': []})
+            out.setdefault(p['id'], {'children': []})
+            out[p['id']].update(p)
+            out[p['parent_doc']]['children'].append(out[p['id']])
+
+            # 处理文档内的图片，如果使用Markdown编辑器编写则导出Markdown文本，如果使用富文本编辑器编写则导出HTML文本
+            md_content = self.operat_md_media(doc_content) \
+                if p['editor_mode'] in [3] else self.operat_md_media(doc_pre_content)
+            # 新建MD文件
+            file_path = '{}/{}-{}.md'.format(self.project_path, p['name'], p['id'])
+            with open(file_path, 'w', encoding='utf-8') as files:
+                files.write(md_content)
+        project_toc_list['toc'] = out[0]['children']
+>>>>>>> upstream/master
 
         # 写入层级YAML
         # with open('{}/mrdoc.yaml'.format(self.project_path), 'a+', encoding='utf-8') as toc_yaml:
